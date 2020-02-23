@@ -65,8 +65,6 @@ class BayarCepatPaySeeder extends Seeder
 
 //                    $pbc = \App\Builders\BayarCepatPayBuilder::make()->getBalance(collect($user)['id']);
                 }
-//                $pbc = blank($bayarCepatPayLatest) == true ? 0 : $bayarCepatPayLatest->balance;
-
 
                 $bayarCepatPay = new BayarCepatPay([
                     'user_id' => $user->id,
