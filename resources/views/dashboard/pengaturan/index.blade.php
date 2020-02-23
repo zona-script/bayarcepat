@@ -1,6 +1,6 @@
 @extends('layouts.dashboard')
 
-@section('title', 'Aplikasi Sosial dan Edukasi')
+@section('title', 'Pengaturan Toko')
 
 @section('content')
     <div class="hero is-white">

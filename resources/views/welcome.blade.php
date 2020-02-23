@@ -27,8 +27,8 @@
                     </figure>
                 </div>
                 <div class="column is-7">
-                    <h3 class="title is-2 is-bold is-title-reveal has-text-primary">Apa itu {{ getenv('APP_NAME') }}?</h3>
-                    <p class="subtitle is-4">{{ getenv('APP_NAME') }} Adalah Distributor & Server Pulsa h2h Termurah dan Terlengkap yang menyediakan berbagai produk.</p>
+                    <h3 class="title is-2 is-bold is-title-reveal has-text-primary">Apa itu {{ env('APP_NAME') }}?</h3>
+                    <p class="subtitle is-4">{{ env('APP_NAME') }} Adalah Distributor & Server Pulsa h2h Termurah dan Terlengkap yang menyediakan berbagai produk.</p>
                     <p class="title is-4">BUKAN CUMA ITU</p>
                     <p class="subtitle is-4">
                         {{ env('APP_NAME') }} juga aplikasi untuk melakukan transfer uang antar member dan bank.

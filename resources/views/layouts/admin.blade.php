@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title>{{ getenv('APP_NAME') }} - @yield('title')</title>
+    <title>{{ env('APP_NAME') }} - @yield('title')</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!--Core CSS -->
@@ -23,7 +23,7 @@
     <div class="container">
         <div class="navbar-brand">
             <a class="navbar-item" href="/">
-                <span class="logo-text has-text-primary is-bold">{{ getenv('APP_NAME') }}</span>
+                <span class="logo-text has-text-primary is-bold">{{ env('APP_NAME') }}</span>
             </a>
 
             <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
@@ -74,7 +74,7 @@
 {{--    <div class="container">--}}
 {{--        <div class="has-text-centered has-text-white">--}}
 {{--            <p>--}}
-{{--                &copy; 2020 {{ getenv('APP_NAME') }}--}}
+{{--                &copy; 2020 {{ env('APP_NAME') }}--}}
 {{--            </p>--}}
 {{--            <p>HAK CIPTA DI LINDUNGI TUHAN YANG MAHA ESA</p>--}}
 {{--        </div>--}}

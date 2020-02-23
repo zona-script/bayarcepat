@@ -12,26 +12,13 @@
 */
 
 Route::group(['as' => 'web.'], function () {
-    Route::get('/', function () {
-        return view('welcome');
-    })->name('index');
+    Route::get('/', 'WelcomeController@index')->name('index');
 
-    Route::group(['prefix' => 'pages', 'as' => 'pages.'], function () {
-        Route::get('/produk', function () {
-            return view('pages.produk');
-        })->name('produk');
-
-        Route::get('/syarat-dan-ketentuan', function (){
-            return view('pages.tos');
-        })->name('syarat-dan-ketentuan');
-
-        Route::get('/policy-privacy', function (){
-            return view('pages.policy-privacy');
-        })->name('policy-privacy');
-
-        Route::get('/tentang-kami', function () {
-            return view('pages.tentang-kami');
-        })->name('tentang-kami');
+    Route::group(['prefix' => 'pages', 'as' => 'pages.', 'namespace' => 'Pages'], function () {
+        Route::get('/produk', 'PagesController@product')->name('produk');
+        Route::get('/syarat-dan-ketentuan', 'PagesController@tos')->name('syarat-dan-ketentuan');
+        Route::get('/policy-privacy', 'PagesController@privacyPolicy')->name('policy-privacy');
+        Route::get('/tentang-kami', 'PagesController@aboutMe')->name('tentang-kami');
 
     });
 });

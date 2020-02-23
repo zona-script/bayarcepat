@@ -25,36 +25,28 @@ Route::group(['as' => 'web.'], function () {
             Route::post('/', 'TransaksiController@store')->name('store');
         });
 
-        Route::group(['prefix' => 'kirim-uang', 'as' => 'kirim-uang.'], function () {
-            Route::get('/', function () {
-                return view('dashboard.kirim-uang.index');
-            })->name('index');
+        Route::group(['prefix' => 'kirim-uang', 'as' => 'kirim-uang.', 'namespace' => 'SendMoney'], function () {
+            Route::get('/', 'HomeController@index')->name('index');
         });
 
-        Route::group(['prefix' => 'cetak-struk', 'as' => 'cetak-struk.'], function () {
-            Route::get('/', function () {
-                return view('dashboard.cetak-struk.index');
-            })->name('index');
+        Route::group(['prefix' => 'cetak-struk', 'as' => 'cetak-struk.', 'namespace' => 'PrintInvoice'], function () {
+            Route::get('/', 'HomeController@index')->name('index');
         });
 
-        Route::group(['prefix' => 'pengaturan', 'as' => 'pengaturan.'], function () {
-            Route::get('/', function () {
-                return view('dashboard.pengaturan.index');
-            })->name('index');
+        Route::group(['prefix' => 'pengaturan', 'as' => 'pengaturan.', 'namespace' => 'Setting'], function () {
+            Route::get('/', 'HomeController@index')->name('index');
         });
 
         Route::get('/riwayat', 'RiwayatController@index')->name('riwayat.index');
         Route::get('/riwayat/{id}', 'RiwayatController@show')->name('riwayat.show');
 
-        Route::group(['prefix' => 'api', 'as' => 'api.'], function () {
-            Route::get('/', function () {
-                return view('dashboard.api.index');
-            })->name('index');
+        Route::group(['prefix' => 'api', 'as' => 'api.', 'namespace' => 'Api'], function () {
+            Route::get('/', 'HomeController@index')->name('index');
         });
 
-        Route::get('/profile', function () {
-            return view('dashboard.profile.index');
-        })->name('profile');
+        Route::group(['prefix' => 'profile', 'as' => 'profile.', 'namespace' => 'Profile'], function () {
+            Route::get('/', 'HomeController@index')->name('index');
+        });
     });
 
 });

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title>{{ getenv('APP_NAME') }} - @yield('title')</title>
+    <title>{{ env('APP_NAME') }} - @yield('title')</title>
 {{--    <link rel="icon" type="image/png" href="favicon.png"/>--}}
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -26,7 +26,7 @@
     <div class="container">
         <div class="navbar-brand">
             <a class="navbar-item" href="/">
-                <span class="logo-text has-text-primary is-bold">{{ getenv('APP_NAME') }}</span>
+                <span class="logo-text has-text-primary is-bold">{{ env('APP_NAME') }}</span>
             </a>
 
             <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
@@ -68,7 +68,7 @@
                 </a>
 
                 <div class="navbar-item">
-                    <a href="{{ route('web.dashboard.profile') }}" class="button is-primary is-rounded is-outlined">
+                    <a href="{{ route('web.dashboard.profile.index') }}" class="button is-primary is-rounded is-outlined">
                         <span class="icon">
                             <i class="far fa-user"></i>
                         </span>

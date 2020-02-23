@@ -1,13 +1,13 @@
 @extends('layouts.app')
 
-@section('title', 'Platform Gotong Royong Untuk UKM')
+@section('title', 'Produk & Layanan')
 
 @section('content')
     <div class="hero is-medium">
         <div class="hero-body">
             <div class="container has-text-centered">
                 <h2 class="title is-2 has-text-primary">Produk Kami</h2>
-                <p class="subtitle is-3">Layanan yang bisa anda gunakan di {{ getenv('APP_NAME') }}</p>
+                <p class="subtitle is-3">Layanan yang bisa anda gunakan di {{ env('APP_NAME') }}</p>
             </div>
         </div>
     </div>

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Platform Gotong Royong Untuk UKM')
+@section('title', 'Policy Privacy')
 
 @section('content')
 

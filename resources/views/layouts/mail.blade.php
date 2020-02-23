@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>{{ getenv('APP_NAME') }} - @yield('title')</title>
+    <title>{{ env('APP_NAME') }} - @yield('title')</title>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
@@ -13,13 +13,13 @@
 <body>
 <nav class="navbar is-mobile">
     <div class="navbar-brand">
-        <a class="navbar-item" href="{{ getenv('APP_URL') }}">
-            <h1 class="title has-text-primary is-uppercase">{{ getenv('APP_NAME') }}</h1>
+        <a class="navbar-item" href="{{ env('APP_URL') }}">
+            <h1 class="title has-text-primary is-uppercase">{{ env('APP_NAME') }}</h1>
         </a>
     </div>
 
     <div class="navbar-end is-hidden-mobile">
-        <a class="navbar-item" href="{{ getenv('APP_NAME') }}">
+        <a class="navbar-item" href="{{ env('APP_NAME') }}">
             Kunjungi WEB
         </a>
     </div>
@@ -27,7 +27,7 @@
 <div class="hero is-primary has-text-centered">
     <div class="hero-body">
         <div class="container">
-            <h1 class="title is-3">{{ getenv('APP_NAME') }}</h1>
+            <h1 class="title is-3">{{ env('APP_NAME') }}</h1>
         </div>
     </div>
 </div>
@@ -69,9 +69,9 @@
     <div class="container">
         <div class="has-text-centered has-text-white">
             <p>
-                &copy; 2020 {{ getenv('APP_NAME') }}
+                &copy; 2020 {{ env('APP_NAME') }}
             </p>
-            <p>Anda mendapatkan email ini karena anda member dari {{ getenv('APP_NAME') }}</p>
+            <p>Anda mendapatkan email ini karena anda member dari {{ env('APP_NAME') }}</p>
         </div>
     </div>
 </footer>

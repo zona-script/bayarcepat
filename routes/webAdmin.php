@@ -7,9 +7,7 @@ Route::group(['as' => 'web.'], function () {
         'middleware' => ['auth:web', 'role:' . \App\Enums\RoleEnum::$roleAdmin],
         'namespace' => 'Admin'
     ], function () {
-        Route::get('/', function () {
-            return view('admin.index');
-        });
+        Route::get('/', 'IndexController@index');
     });
 
 });
