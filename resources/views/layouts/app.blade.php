@@ -145,22 +145,8 @@
     </div>
 </footer>
 
-<!-- Back To Top Button -->
-<div id="backtotop"><a><i class="fas fa-angle-up"></i></a></div>
-
 <script src="{{ asset('js/app.js') }}"></script>
-
-<!-- Concatenated plugins -->
-{{--<script src="{{ asset('js/library-bundle.js') }}"></script>--}}
-{{--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js"></script>--}}
-{{--<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>--}}
-
-<!--Data-->
-
-<!-- Main js -->
-<script src="{{ asset('js/functions.js') }}"></script>
-{{--<script src="{{ asset('js/main.js') }}"></script>--}}
-
+{{--<script src="{{ asset('js/functions.js') }}"></script>--}}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
 
 <script>
