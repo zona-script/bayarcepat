@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1fc7cadf-dd8e-4988-95f3-5be001769a75" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/BayarCepatPaySeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/BayarCepatPaySeeder.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,7 +217,7 @@
       <workItem from="1582194066647" duration="9451000" />
       <workItem from="1582270382724" duration="22692000" />
       <workItem from="1582297830336" duration="14288000" />
-      <workItem from="1582365787143" duration="31857000" />
+      <workItem from="1582365787143" duration="33095000" />
     </task>
     <servers />
   </component>
