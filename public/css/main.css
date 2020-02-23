@@ -1,0 +1,2182 @@
+/* line 5, src/assets/scss/base/_base.scss */
+body {
+    overflow: hidden
+}
+
+/* line 9, src/assets/scss/base/_base.scss */
+var {
+    font-style: normal
+}
+
+/* line 13, src/assets/scss/base/_base.scss */
+a {
+    color: #3080ff
+}
+
+/* line 21, src/assets/scss/base/_base.scss */
+.title, .subtitle {
+    font-family: "Montserrat", sans-serif;
+    color: #4a4a4a
+}
+
+/* line 25, src/assets/scss/base/_base.scss */
+.title.is-light, .subtitle.is-light {
+    color: #fff
+}
+
+/* line 29, src/assets/scss/base/_base.scss */
+.title.is-bold, .subtitle.is-bold {
+    font-weight: 700
+}
+
+/* line 5, src/assets/scss/base/_helpers.scss */
+.ml-auto {
+    margin-left: auto !important
+}
+
+/* line 9, src/assets/scss/base/_helpers.scss */
+.no-padding {
+    padding: 0 !important
+}
+
+/* line 13, src/assets/scss/base/_helpers.scss */
+.no-margin {
+    margin: 0 !important
+}
+
+/* line 21, src/assets/scss/base/_helpers.scss */
+.muted-text {
+    color: #999 !important
+}
+
+/* line 25, src/assets/scss/base/_helpers.scss */
+.light-text {
+    color: #fff !important
+}
+
+/* line 33, src/assets/scss/base/_helpers.scss */
+.has-slimscroll {
+    overflow-x: hidden !important
+}
+
+/* line 36, src/assets/scss/base/_helpers.scss */
+.has-slimscroll::-webkit-scrollbar {
+    width: 6px !important
+}
+
+/* line 40, src/assets/scss/base/_helpers.scss */
+.has-slimscroll::-webkit-scrollbar-thumb {
+    border-radius: 10px !important;
+    background: rgba(0, 0, 0, 0.2) !important
+}
+
+/* line 50, src/assets/scss/base/_helpers.scss */
+.no-click {
+    pointer-events: none !important
+}
+
+/* line 54, src/assets/scss/base/_helpers.scss */
+.is-vhidden {
+    visibility: hidden !important
+}
+
+/* line 58, src/assets/scss/base/_helpers.scss */
+.is-hidden {
+    display: none !important
+}
+
+/* line 62, src/assets/scss/base/_helpers.scss */
+.is-disabled {
+    pointer-events: none;
+    opacity: 0.4;
+    cursor: default !important
+}
+
+@-webkit-keyframes fadeInLeft {
+    from {
+        -webkit-transform: translate3d(20px, 0, 0);
+        transform: translate3d(20px, 0, 0);
+        opacity: 0
+    }
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        opacity: 1
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        -webkit-transform: translate3d(20px, 0, 0);
+        transform: translate3d(20px, 0, 0);
+        opacity: 0
+    }
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        opacity: 1
+    }
+}
+
+/* line 37, src/assets/scss/base/_utils.scss */
+.preFadeInLeft {
+    opacity: 0
+}
+
+/* line 41, src/assets/scss/base/_utils.scss */
+.fadeInLeft {
+    opacity: 0;
+    -webkit-animation-name: fadeInLeft;
+    animation-name: fadeInLeft
+}
+
+@-webkit-keyframes gelatine {
+    from, to {
+        -webkit-transform: scale(1, 1)
+    }
+    25% {
+        -webkit-transform: scale(0.9, 1.1)
+    }
+    50% {
+        -webkit-transform: scale(1.1, 0.9)
+    }
+    75% {
+        -webkit-transform: scale(0.95, 1.05)
+    }
+}
+
+@keyframes gelatine {
+    from, to {
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1)
+    }
+    25% {
+        -webkit-transform: scale(0.9, 1.1);
+        transform: scale(0.9, 1.1)
+    }
+    50% {
+        -webkit-transform: scale(1.1, 0.9);
+        transform: scale(1.1, 0.9)
+    }
+    75% {
+        -webkit-transform: scale(0.95, 1.05);
+        transform: scale(0.95, 1.05)
+    }
+}
+
+/* line 87, src/assets/scss/base/_utils.scss */
+.gelatine {
+    -webkit-animation: gelatine 0.6s;
+    animation: gelatine 0.6s;
+    -webkit-animation-duration: 0.6s;
+    animation-duration: 0.6s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both
+}
+
+@-webkit-keyframes scaleAnimation {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+
+@keyframes scaleAnimation {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+
+@-webkit-keyframes drawCircle {
+    0% {
+        stroke-dashoffset: 151px
+    }
+    100% {
+        stroke-dashoffset: 0
+    }
+}
+
+@keyframes drawCircle {
+    0% {
+        stroke-dashoffset: 151px
+    }
+    100% {
+        stroke-dashoffset: 0
+    }
+}
+
+@-webkit-keyframes drawCheck {
+    0% {
+        stroke-dashoffset: 36px
+    }
+    100% {
+        stroke-dashoffset: 0
+    }
+}
+
+@keyframes drawCheck {
+    0% {
+        stroke-dashoffset: 36px
+    }
+    100% {
+        stroke-dashoffset: 0
+    }
+}
+
+@-webkit-keyframes fadeOut {
+    0% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeInUp {
+    from {
+        -webkit-transform: translate3d(0, 10px, 0);
+        transform: translate3d(0, 10px, 0);
+        opacity: 0
+    }
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        opacity: 1
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        -webkit-transform: translate3d(0, 10px, 0);
+        transform: translate3d(0, 10px, 0);
+        opacity: 0
+    }
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        opacity: 1
+    }
+}
+
+/* line 171, src/assets/scss/base/_utils.scss */
+.SuccessAnimation.is-primary .SuccessAnimationCircle, .SuccessAnimation.is-primary .SuccessAnimationCheck {
+    stroke: #3080ff
+}
+
+/* line 175, src/assets/scss/base/_utils.scss */
+.SuccessAnimation.is-primary .SuccessAnimationResult {
+    fill: #3080ff
+}
+
+/* line 181, src/assets/scss/base/_utils.scss */
+.SuccessAnimation.is-success .SuccessAnimationCircle, .SuccessAnimation.is-success .SuccessAnimationCheck {
+    stroke: #00D1B2
+}
+
+/* line 185, src/assets/scss/base/_utils.scss */
+.SuccessAnimation.is-success .SuccessAnimationResult {
+    fill: #00D1B2
+}
+
+/* line 190, src/assets/scss/base/_utils.scss */
+.SuccessAnimation .SuccessAnimationCircle {
+    stroke-dasharray: 151px 151px;
+    stroke: #7F00FF
+}
+
+/* line 195, src/assets/scss/base/_utils.scss */
+.SuccessAnimation .SuccessAnimationCheck {
+    stroke-dasharray: 36px 36px;
+    stroke: #7F00FF
+}
+
+/* line 200, src/assets/scss/base/_utils.scss */
+.SuccessAnimation .SuccessAnimationResult {
+    fill: #7F00FF;
+    opacity: 0
+}
+
+/* line 206, src/assets/scss/base/_utils.scss */
+.SuccessAnimation.animated {
+    -webkit-animation: 1s ease-out 0s 1 both scaleAnimation;
+    animation: 1s ease-out 0s 1 both scaleAnimation
+}
+
+/* line 209, src/assets/scss/base/_utils.scss */
+.SuccessAnimation.animated .SuccessAnimationCircle {
+    -webkit-animation: 1s cubic-bezier(0.77, 0, 0.175, 1) 0s 1 both drawCircle, 0.3s linear 0.9s 1 both fadeOut;
+    animation: 1s cubic-bezier(0.77, 0, 0.175, 1) 0s 1 both drawCircle, 0.3s linear 0.9s 1 both fadeOut
+}
+
+/* line 213, src/assets/scss/base/_utils.scss */
+.SuccessAnimation.animated .SuccessAnimationCheck {
+    -webkit-animation: 1s cubic-bezier(0.77, 0, 0.175, 1) 0s 1 both drawCheck, 0.3s linear 0.9s 1 both fadeOut;
+    animation: 1s cubic-bezier(0.77, 0, 0.175, 1) 0s 1 both drawCheck, 0.3s linear 0.9s 1 both fadeOut
+}
+
+/* line 217, src/assets/scss/base/_utils.scss */
+.SuccessAnimation.animated .SuccessAnimationResult {
+    -webkit-animation: 0.3s linear 0.9s both fadeIn;
+    animation: 0.3s linear 0.9s both fadeIn
+}
+
+/* line 226, src/assets/scss/base/_utils.scss */
+#backtotop {
+    position: fixed;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    bottom: 25px;
+    margin: 0 25px 0 0;
+    z-index: 9999;
+    -webkit-transition: 0.35s;
+    transition: 0.35s;
+    -webkit-transform: scale(0.7);
+    transform: scale(0.7);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    z-index: 15
+}
+
+/* line 240, src/assets/scss/base/_utils.scss */
+#backtotop.visible {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: scale(1);
+    transform: scale(1)
+}
+
+/* line 246, src/assets/scss/base/_utils.scss */
+#backtotop.visible a:hover {
+    outline: none;
+    opacity: 0.9;
+    background: #37d1ba;
+}
+
+/* line 252, src/assets/scss/base/_utils.scss */
+#backtotop a {
+    outline: none;
+    text-decoration: none;
+    border: 0 none;
+    display: block;
+    width: 46px;
+    height: 46px;
+    background-color: #31b8a2;
+    opacity: 1;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 26px
+}
+
+/* line 267, src/assets/scss/base/_utils.scss */
+body #backtotop a {
+    outline: none;
+    color: #fff
+}
+
+/* line 272, src/assets/scss/base/_utils.scss */
+#backtotop a:after {
+    outline: none;
+    /*content: "\f106";*/
+    /*font-family: "FontAwesome";*/
+    position: relative;
+    display: block;
+    top: 50%;
+    -webkit-transform: translateY(-55%);
+    transform: translateY(-55%)
+}
+
+/* line 12, src/assets/scss/layout/_layout.scss */
+.hero .hero-foot ul li img {
+    display: block;
+    width: 100%;
+    max-width: 120px;
+    margin: 0 20px
+}
+.hero-foot ul li img{max-width:90px !important;margin:0 10px !important}
+
+/* line 26, src/assets/scss/layout/_layout.scss */
+.footer {
+    padding: 4rem 1.5rem 2rem 1.5rem
+}
+
+/* line 29, src/assets/scss/layout/_layout.scss */
+.footer .title {
+    margin-bottom: 16px
+}
+
+/* line 33, src/assets/scss/layout/_layout.scss */
+.footer .footer-text {
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: .9rem
+}
+
+/* line 39, src/assets/scss/layout/_layout.scss */
+.footer .socials {
+    padding-top: 16px
+}
+
+/* line 42, src/assets/scss/layout/_layout.scss */
+.footer .socials a {
+    margin: 0 10px;
+    font-size: 18px;
+    color: white;
+    -webkit-transition: color .3s;
+    transition: color .3s;
+}
+
+/* line 48, src/assets/scss/layout/_layout.scss */
+.footer .socials a:hover {
+    color: #3080ff
+}
+
+/* line 55, src/assets/scss/layout/_layout.scss */
+.footer .footer-menu li {
+    padding-bottom: 8px;
+    font-family: "Montserrat", sans-serif;
+    font-size: .9rem;
+    color: white;
+}
+
+/* line 61, src/assets/scss/layout/_layout.scss */
+.footer .footer-menu li a {
+    color: white;
+    -webkit-transition: color .3s;
+    transition: color .3s
+}
+
+/* line 65, src/assets/scss/layout/_layout.scss */
+.footer .footer-menu li a:hover {
+    color: #3080ff
+}
+
+/* line 72, src/assets/scss/layout/_layout.scss */
+.footer .copyright {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-top: 4rem
+}
+
+/* line 78, src/assets/scss/layout/_layout.scss */
+.footer .copyright .copyright-text {
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: .9rem
+}
+
+/* line 83, src/assets/scss/layout/_layout.scss */
+.footer .copyright .copyright-text a {
+    color: #3080ff;
+    font-weight: 500
+}
+
+/* line 5, src/assets/scss/layout/_navbar.scss */
+.navbar {
+    background: transparent;
+    /*min-height: 70px;*/
+    z-index: 40;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    border-bottom: solid #31b8a2 1px;
+}
+
+/* line 11, src/assets/scss/layout/_navbar.scss */
+.navbar.is-mobile {
+    background: #fff;
+    border-bottom: 1px solid #ededed
+}
+
+/* line 16, src/assets/scss/layout/_navbar.scss */
+.navbar.is-scrolled {
+    background: #fff;
+    -webkit-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.08);
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.08)
+}
+
+/* line 22, src/assets/scss/layout/_navbar.scss */
+.navbar.is-scrolled .navbar-brand .navbar-burger span {
+    color: #4a4a4a !important
+}
+
+/*!* line 31, src/assets/scss/layout/_navbar.scss *!*/
+/*.navbar.is-scrolled .navbar-menu .navbar-end .navbar-item .navbar-button {*/
+/*    background: #3080ff;*/
+/*    border: 1.2px solid #3080ff;*/
+/*    -webkit-box-shadow: 0 14px 26px -12px rgba(48, 128, 255, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(48, 128, 255, 0.2) !important;*/
+/*    box-shadow: 0 14px 26px -12px rgba(48, 128, 255, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(48, 128, 255, 0.2) !important*/
+/*}*/
+
+/*!* line 36, src/assets/scss/layout/_navbar.scss *!*/
+/*.navbar.is-scrolled .navbar-menu .navbar-end .navbar-item .navbar-button:hover {*/
+/*    background: #3080ff;*/
+/*    color: #fff;*/
+/*    border-color: #3080ff;*/
+/*    -webkit-box-shadow: 0 14px 26px -12px rgba(48, 128, 255, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(48, 128, 255, 0.2) !important;*/
+/*    box-shadow: 0 14px 26px -12px rgba(48, 128, 255, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(48, 128, 255, 0.2) !important*/
+/*}*/
+
+/* line 49, src/assets/scss/layout/_navbar.scss */
+.navbar .navbar-brand img {
+    height: 42px;
+    max-height: 42px;
+    width: auto
+}
+
+/* line 55, src/assets/scss/layout/_navbar.scss */
+.navbar .navbar-brand .logo-text {
+    margin-left: 16px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2rem;
+    color: #4a4a4a;
+    font-weight: bold
+}
+
+/* line 64, src/assets/scss/layout/_navbar.scss */
+.navbar .navbar-item {
+    color: #999;
+    -webkit-transition: all .3s;
+    transition: all .3s
+}
+
+/* line 68, src/assets/scss/layout/_navbar.scss */
+.navbar .navbar-item:hover {
+    color: #4a4a4a
+}
+
+/*!* line 76, src/assets/scss/layout/_navbar.scss *!*/
+/*.navbar .navbar-menu .navbar-end .navbar-item .navbar-button {*/
+/*    height: 44px;*/
+/*    min-width: 130px;*/
+/*    background: #3080ff;*/
+/*    border: 1.2px solid #3080ff*/
+/*}*/
+
+/* line 82, src/assets/scss/layout/_navbar.scss */
+/*.navbar .navbar-menu .navbar-end .navbar-item .navbar-button:hover {*/
+/*    -webkit-box-shadow: 0 14px 26px -12px rgba(48, 128, 255, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(48, 128, 255, 0.2) !important;*/
+/*    box-shadow: 0 14px 26px -12px rgba(48, 128, 255, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(48, 128, 255, 0.2) !important*/
+/*}*/
+
+/* line 5, src/assets/scss/components/_buttons.scss */
+.button {
+    font-size: .9rem;
+    -webkit-transition: all .3s;
+    transition: all .3s
+}
+
+/* line 9, src/assets/scss/components/_buttons.scss */
+.button.is-solid {
+    height: 44px;
+    min-width: 130px;
+    line-height: 1;
+    font-size: .9rem;
+    font-weight: 500
+}
+
+/* line 16, src/assets/scss/components/_buttons.scss */
+.button.is-solid.is-big {
+    height: 48px;
+    min-width: 200px
+}
+
+/* line 21, src/assets/scss/components/_buttons.scss */
+.button.is-solid.raised:hover, .button.is-solid.is-raised {
+    -webkit-box-shadow: -1px 3px 15px 0 rgba(0, 0, 0, 0.06);
+    box-shadow: -1px 3px 15px 0 rgba(0, 0, 0, 0.06)
+}
+
+/*!* line 26, src/assets/scss/components/_buttons.scss *!*/
+/*.button.is-primary {*/
+/*    height: 44px;*/
+/*    min-width: 130px;*/
+/*    background: #3080ff;*/
+/*    border: 1px solid #3080ff;*/
+/*    color: #fff;*/
+/*    line-height: 1;*/
+/*    font-size: .9rem;*/
+/*    font-weight: 500*/
+/*}*/
+
+/*!* line 36, src/assets/scss/components/_buttons.scss *!*/
+/*.button.is-primary.is-big {*/
+/*    height: 48px;*/
+/*    min-width: 200px*/
+/*}*/
+
+/* line 41, src/assets/scss/components/_buttons.scss */
+.button.is-primary.raised:hover, .button.is-primary.is-raised {
+    -webkit-box-shadow: 0 14px 26px -12px rgba(48, 128, 255, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(48, 128, 255, 0.2) !important;
+    box-shadow: 0 14px 26px -12px rgba(48, 128, 255, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(48, 128, 255, 0.2) !important
+}
+
+/* line 46, src/assets/scss/components/_buttons.scss */
+.button.is-secondary {
+    height: 44px;
+    min-width: 130px;
+    background: #00D1B2;
+    border: 1px solid #00D1B2;
+    color: #fff;
+    line-height: 1;
+    font-size: .9rem;
+    font-weight: 500
+}
+
+/* line 56, src/assets/scss/components/_buttons.scss */
+.button.is-secondary.is-big {
+    height: 48px;
+    min-width: 200px
+}
+
+/* line 61, src/assets/scss/components/_buttons.scss */
+.button.is-secondary.raised:hover, .button.is-secondary.is-raised {
+    -webkit-box-shadow: 0 14px 26px -12px rgba(0, 209, 178, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 209, 178, 0.2) !important;
+    box-shadow: 0 14px 26px -12px rgba(0, 209, 178, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 209, 178, 0.2) !important
+}
+
+/* line 5, src/assets/scss/components/_switch.scss */
+.form-switch {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent
+}
+
+/* line 11, src/assets/scss/components/_switch.scss */
+.form-switch i {
+    position: relative;
+    display: inline-block;
+    margin-right: .5rem;
+    width: 46px;
+    height: 26px;
+    background-color: #e6e6e6;
+    border-radius: 23px;
+    vertical-align: text-bottom;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear
+}
+
+/* line 22, src/assets/scss/components/_switch.scss */
+.form-switch i::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 42px;
+    height: 22px;
+    background-color: #fff;
+    border-radius: 11px;
+    -webkit-transform: translate3d(2px, 2px, 0) scale3d(1, 1, 1);
+    transform: translate3d(2px, 2px, 0) scale3d(1, 1, 1);
+    -webkit-transition: all 0.25s linear;
+    transition: all 0.25s linear
+}
+
+/* line 34, src/assets/scss/components/_switch.scss */
+.form-switch i::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 22px;
+    height: 22px;
+    background-color: #fff;
+    border-radius: 11px;
+    -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.24);
+    -webkit-transform: translate3d(2px, 2px, 0);
+    transform: translate3d(2px, 2px, 0);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out
+}
+
+/* line 49, src/assets/scss/components/_switch.scss */
+.form-switch:active i::after {
+    width: 28px;
+    -webkit-transform: translate3d(2px, 2px, 0);
+    transform: translate3d(2px, 2px, 0)
+}
+
+/* line 55, src/assets/scss/components/_switch.scss */
+.form-switch:active input:checked + i::after {
+    -webkit-transform: translate3d(16px, 2px, 0);
+    transform: translate3d(16px, 2px, 0)
+}
+
+/* line 61, src/assets/scss/components/_switch.scss */
+.form-switch input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none
+}
+
+/* line 66, src/assets/scss/components/_switch.scss */
+.form-switch input:checked + i {
+    background-color: #3080ff
+}
+
+/* line 69, src/assets/scss/components/_switch.scss */
+.form-switch input:checked + i::before {
+    -webkit-transform: translate3d(18px, 2px, 0) scale3d(0, 0, 0);
+    transform: translate3d(18px, 2px, 0) scale3d(0, 0, 0)
+}
+
+/* line 73, src/assets/scss/components/_switch.scss */
+.form-switch input:checked + i::after {
+    -webkit-transform: translate3d(22px, 2px, 0);
+    transform: translate3d(22px, 2px, 0)
+}
+
+/* line 5, src/assets/scss/components/_alert.scss */
+.alertify .ajs-dialog {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    margin: auto;
+    border-radius: 8px !important
+}
+
+/* line 12, src/assets/scss/components/_alert.scss */
+.alertify.ajs-maximized .ajs-dialog {
+    top: 50% !important;
+    -webkit-transform: translateY(-50%) !important;
+    transform: translateY(-50%) !important;
+    margin: auto;
+    border-radius: 0 !important
+}
+
+/* line 19, src/assets/scss/components/_alert.scss */
+.ajs-dimmer {
+    background-color: rgba(48, 128, 255, 0.3) !important
+}
+
+/* line 23, src/assets/scss/components/_alert.scss */
+.ajs-header {
+    font-weight: 500 !important;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 8px 8px 0 0 !important;
+    background: #fff !important;
+    border: none !important
+}
+
+/* line 32, src/assets/scss/components/_alert.scss */
+.ajs-commands button {
+    outline: none !important
+}
+
+/* line 37, src/assets/scss/components/_alert.scss */
+.ajs-footer {
+    border-radius: 0 0 6px 6px !important;
+    background: #fff !important;
+    border: none !important
+}
+
+/* line 43, src/assets/scss/components/_alert.scss */
+.ajs-content {
+    font-family: 'Montserrat', sans-serif;
+    font-size: .9rem;
+    padding: 16px 0 !important;
+    color: #999
+}
+
+/* line 49, src/assets/scss/components/_alert.scss */
+.ajs-content b {
+    font-weight: 500 !important;
+    color: #3080ff !important
+}
+
+/* line 55, src/assets/scss/components/_alert.scss */
+.ajs-buttons {
+    padding: 6px 10px
+}
+
+/* line 59, src/assets/scss/components/_alert.scss */
+.ajs-close {
+    outline: none !important
+}
+
+/* line 63, src/assets/scss/components/_alert.scss */
+.ajs-ok {
+    padding: 8px 22px 8px 22px;
+    font-weight: 600;
+    height: 33px;
+    min-width: 82px !important;
+    line-height: 0;
+    text-transform: capitalize !important;
+    font-weight: 500 !important;
+    font-size: .75rem;
+    border-radius: 3px;
+    background: #3080ff !important;
+    color: #fff !important;
+    border: 1px solid #3080ff;
+    border-radius: 100px;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    cursor: pointer;
+    outline: none !important
+}
+
+/* line 81, src/assets/scss/components/_alert.scss */
+.ajs-ok:hover {
+    -webkit-box-shadow: 0 14px 26px -12px rgba(48, 128, 255, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(48, 128, 255, 0.2) !important;
+    box-shadow: 0 14px 26px -12px rgba(48, 128, 255, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(48, 128, 255, 0.2) !important
+}
+
+/* line 86, src/assets/scss/components/_alert.scss */
+.ajs-cancel {
+    padding: 8px 22px 8px 22px;
+    font-weight: 600;
+    height: 33px;
+    min-width: 82px !important;
+    line-height: 0;
+    text-transform: capitalize !important;
+    font-weight: 500 !important;
+    font-size: .75rem;
+    border-radius: 3px;
+    background: #fff !important;
+    color: #999 !important;
+    border: 1px solid #cecece !important;
+    border-radius: 100px;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    cursor: pointer;
+    outline: none !important
+}
+
+/* line 5, src/assets/scss/components/_forms.scss */
+.field {
+    position: relative
+}
+
+/* line 12, src/assets/scss/components/_forms.scss */
+.control.has-validation.has-error > label .error {
+    display: block
+}
+
+/* line 17, src/assets/scss/components/_forms.scss */
+.control.has-validation.has-error .control .input {
+    border-color: #ff3b3c
+}
+
+/* line 21, src/assets/scss/components/_forms.scss */
+.control.has-validation.has-error .control .error-icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+}
+
+/* line 27, src/assets/scss/components/_forms.scss */
+.control.has-validation .control {
+    position: relative
+}
+
+/* line 30, src/assets/scss/components/_forms.scss */
+.control.has-validation .control .input {
+    padding-right: 36px
+}
+
+/* line 34, src/assets/scss/components/_forms.scss */
+.control.has-validation .control .error-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 36px;
+    width: 36px;
+    display: none;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+/* line 44, src/assets/scss/components/_forms.scss */
+.control.has-validation .control .error-icon svg {
+    height: 18px;
+    width: 18px;
+    stroke: #ff3b3c;
+    -webkit-transition: stroke .3s;
+    transition: stroke .3s
+}
+
+/* line 54, src/assets/scss/components/_forms.scss */
+.control.has-icon {
+    position: relative
+}
+
+/* line 57, src/assets/scss/components/_forms.scss */
+.control.has-icon .input {
+    padding-left: 36px
+}
+
+/* line 60, src/assets/scss/components/_forms.scss */
+.control.has-icon .input:focus + .form-icon svg {
+    stroke: #3080ff
+}
+
+/* line 65, src/assets/scss/components/_forms.scss */
+.control.has-icon .form-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 36px;
+    width: 36px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+/* line 75, src/assets/scss/components/_forms.scss */
+.control.has-icon .form-icon svg {
+    height: 18px;
+    width: 18px;
+    stroke: #cecece;
+    -webkit-transition: stroke .3s;
+    transition: stroke .3s
+}
+
+/* line 89, src/assets/scss/components/_forms.scss */
+.input, .textarea {
+    border-color: #e5e5e5;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: all .3s;
+    transition: all .3s
+}
+
+/* line 94, src/assets/scss/components/_forms.scss */
+.input:focus, .textarea:focus {
+    border-color: #eaeaea;
+    -webkit-box-shadow: -1px 3px 15px 0 rgba(0, 0, 0, 0.06) !important;
+    box-shadow: -1px 3px 15px 0 rgba(0, 0, 0, 0.06) !important
+}
+
+/* line 5, src/assets/scss/pages/_landing.scss */
+.boxes-section {
+    padding-bottom: 60px
+}
+
+/* line 9, src/assets/scss/pages/_landing.scss */
+.box-wrap {
+    margin-bottom: 20px
+}
+
+/* line 12, src/assets/scss/pages/_landing.scss */
+.box-wrap.is-pulled {
+    margin-top: -90px
+}
+
+/* line 16, src/assets/scss/pages/_landing.scss */
+.box-wrap.is-pushed {
+    margin-top: 40px
+}
+
+/* line 20, src/assets/scss/pages/_landing.scss */
+.box-wrap .icon-box {
+    width: 100%;
+    border: 1px solid #ededed;
+    border-radius: 8px;
+    background: #fff;
+    /*padding: 30px 20px;*/
+    padding: 10px 20px;
+    -webkit-box-shadow: -1px 3px 15px 0 rgba(0, 0, 0, 0.06);
+    box-shadow: -1px 3px 15px 0 rgba(0, 0, 0, 0.06)
+}
+
+/* line 28, src/assets/scss/pages/_landing.scss */
+.box-wrap .icon-box figure > img {
+    display: block;
+    /*width: 54px*/
+}
+
+/* line 33, src/assets/scss/pages/_landing.scss */
+.box-wrap .icon-box .box-title {
+    font-family: "Montserrat", sans-serif;
+    font-size: .95rem;
+    font-weight: 600;
+    color: #4a4a4a;
+    padding: 6px 0
+}
+
+/* line 41, src/assets/scss/pages/_landing.scss */
+.box-wrap .icon-box p {
+    font-size: .9rem;
+    color: #999
+}
+
+/* line 52, src/assets/scss/pages/_landing.scss */
+.testimonials {
+    padding-top: 60px
+}
+
+/* line 55, src/assets/scss/pages/_landing.scss */
+.testimonials .testimonial-cards {
+    padding: 60px 0;
+    background-size: contain;
+    background-repeat: no-repeat
+}
+
+/* line 60, src/assets/scss/pages/_landing.scss */
+.testimonials .testimonial-cards .testimonial-card {
+    width: 100%;
+    border: 1px solid #ededed;
+    border-radius: 8px;
+    background: #fff;
+    padding: 30px;
+    -webkit-box-shadow: -1px 3px 15px 0 rgba(0, 0, 0, 0.06);
+    box-shadow: -1px 3px 15px 0 rgba(0, 0, 0, 0.06);
+    margin-bottom: 1.5rem
+}
+
+/* line 69, src/assets/scss/pages/_landing.scss */
+.testimonials .testimonial-cards .testimonial-card p {
+    color: #707070
+}
+
+/* line 73, src/assets/scss/pages/_landing.scss */
+.testimonials .testimonial-cards .testimonial-card .customer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: 16px
+}
+
+/* line 78, src/assets/scss/pages/_landing.scss */
+.testimonials .testimonial-cards .testimonial-card .customer img {
+    display: block;
+    height: 44px;
+    width: 44px;
+    border-radius: 50%
+}
+
+/* line 85, src/assets/scss/pages/_landing.scss */
+.testimonials .testimonial-cards .testimonial-card .customer .meta {
+    margin-left: 8px
+}
+
+/* line 88, src/assets/scss/pages/_landing.scss */
+.testimonials .testimonial-cards .testimonial-card .customer .meta span, .testimonials .testimonial-cards .testimonial-card .customer .meta small {
+    display: block;
+    line-height: 1.1
+}
+
+/* line 93, src/assets/scss/pages/_landing.scss */
+.testimonials .testimonial-cards .testimonial-card .customer .meta span {
+    font-family: "Montserrat", sans-serif;
+    font-size: .9rem;
+    font-weight: 600;
+    color: #4a4a4a
+}
+
+/* line 100, src/assets/scss/pages/_landing.scss */
+.testimonials .testimonial-cards .testimonial-card .customer .meta small {
+    color: #999
+}
+
+/* line 113, src/assets/scss/pages/_landing.scss */
+.form-section {
+    background: #fafafa
+}
+
+/* line 116, src/assets/scss/pages/_landing.scss */
+.form-section .form-title {
+    text-align: center;
+    padding-bottom: 40px
+}
+
+/* line 121, src/assets/scss/pages/_landing.scss */
+.form-section .card-form {
+    width: 100%;
+    max-width: 840px;
+    margin: 0 auto;
+    border: 1px solid #ededed;
+    border-radius: 8px;
+    background: #fff;
+    padding: 40px;
+    -webkit-box-shadow: -1px 3px 15px 0 rgba(0, 0, 0, 0.06);
+    box-shadow: -1px 3px 15px 0 rgba(0, 0, 0, 0.06)
+}
+
+/* line 132, src/assets/scss/pages/_landing.scss */
+.form-section .card-form .form-content .inner-form {
+    position: relative;
+    min-height: 400px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-animation: fadeInLeft .5s;
+    animation: fadeInLeft .5s;
+    display: none
+}
+
+/* line 141, src/assets/scss/pages/_landing.scss */
+.form-section .card-form .form-content .inner-form.is-active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+}
+
+/* line 145, src/assets/scss/pages/_landing.scss */
+.form-section .card-form .form-content .inner-form .back-block {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    border: 1px solid #e3e3e3;
+    -webkit-box-shadow: -1px 3px 15px 0 rgba(0, 0, 0, 0.06);
+    box-shadow: -1px 3px 15px 0 rgba(0, 0, 0, 0.06);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #999;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    cursor: pointer
+}
+
+/* line 161, src/assets/scss/pages/_landing.scss */
+.form-section .card-form .form-content .inner-form .back-block:hover {
+    border-color: #3080ff;
+    color: #3080ff
+}
+
+/* line 166, src/assets/scss/pages/_landing.scss */
+.form-section .card-form .form-content .inner-form .back-block svg {
+    height: 18px;
+    width: 18px
+}
+
+/* line 173, src/assets/scss/pages/_landing.scss */
+.form-section .card-form .form-content .inner-form .title-block h3 {
+    margin-bottom: 0
+}
+
+/* line 177, src/assets/scss/pages/_landing.scss */
+.form-section .card-form .form-content .inner-form .title-block h4 {
+    color: #999
+}
+
+/* line 183, src/assets/scss/pages/_landing.scss */
+.form-section .card-form .form-content .inner-form .content-block .radio-box {
+    position: relative
+}
+
+/* line 186, src/assets/scss/pages/_landing.scss */
+.form-section .card-form .form-content .inner-form .content-block .radio-box input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 1
+}
+
+/* line 197, src/assets/scss/pages/_landing.scss */
+.form-section .card-form .form-content .inner-form .content-block .radio-box input:checked + .radio-box-inner {
+    -webkit-box-shadow: -1px 3px 15px 0 rgba(0, 0, 0, 0.06);
+    box-shadow: -1px 3px 15px 0 rgba(0, 0, 0, 0.06)
+}
+
+/* line 200, src/assets/scss/pages/_landing.scss */
+.form-section .card-form .form-content .inner-form .content-block .radio-box input:checked + .radio-box-inner img {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+    opacity: 1
+}
+
+/* line 205, src/assets/scss/pages/_landing.scss */
+.form-section .card-form .form-content .inner-form .content-block .radio-box input:checked + .radio-box-inner .selection-dot {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+}
+
+/* line 212, src/assets/scss/pages/_landing.scss */
+.form-section .card-form .form-content .inner-form .content-block .radio-box .radio-box-inner {
+    position: relative;
+    border: 1px solid #ededed;
+    border-radius: 8px;
+    background: #fff;
+    padding: 24px;
+    -webkit-transition: all .3s;
+    transition: all .3s
+}
+
+/* line 220, src/assets/scss/pages/_landing.scss */
+.form-section .card-form .form-content .inner-form .content-block .radio-box .radio-box-inner .selection-dot {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 26px;
+    width: 26px;
+    border-radius: 50%;
+    background: #3080ff;
+    -webkit-box-shadow: 0 14px 26px -12px rgba(48, 128, 255, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(48, 128, 255, 0.2) !important;
+    box-shadow: 0 14px 26px -12px rgba(48, 128, 255, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(48, 128, 255, 0.2) !important;
+    display: none;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+/* line 233, src/assets/scss/pages/_landing.scss */
+.form-section .card-form .form-content .inner-form .content-block .radio-box .radio-box-inner .selection-dot svg {
+    height: 12px;
+    width: 12px;
+    stroke-width: 3px;
+    stroke: #fff
+}
+
+/* line 241, src/assets/scss/pages/_landing.scss */
+.form-section .card-form .form-content .inner-form .content-block .radio-box .radio-box-inner img {
+    display: block;
+    width: 100%;
+    max-width: 50px;
+    margin: 0 auto;
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+    opacity: .6;
+    -webkit-transition: all .3s;
+    transition: all .3s
+}
+
+/* line 251, src/assets/scss/pages/_landing.scss */
+.form-section .card-form .form-content .inner-form .content-block .radio-box .radio-box-inner h3 {
+    font-family: "Montserrat", sans-serif;
+    font-size: .9rem;
+    font-weight: 500;
+    color: #4a4a4a;
+    margin-top: 6px
+}
+
+/* line 259, src/assets/scss/pages/_landing.scss */
+.form-section .card-form .form-content .inner-form .content-block .radio-box .radio-box-inner p {
+    color: #999;
+    font-size: .8rem
+}
+
+/* line 266, src/assets/scss/pages/_landing.scss */
+.form-section .card-form .form-content .inner-form .content-block .project-types, .form-section .card-form .form-content .inner-form .content-block .budget-types {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+}
+
+/* line 269, src/assets/scss/pages/_landing.scss */
+.form-section .card-form .form-content .inner-form .content-block .project-types .radio-box, .form-section .card-form .form-content .inner-form .content-block .budget-types .radio-box {
+    margin: 8px;
+    width: calc(33.3% - 16px)
+}
+
+/* line 275, src/assets/scss/pages/_landing.scss */
+.form-section .card-form .form-content .inner-form .content-block .services-types {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap
+}
+
+/* line 279, src/assets/scss/pages/_landing.scss */
+.form-section .card-form .form-content .inner-form .content-block .services-types .radio-box {
+    margin: 8px;
+    width: calc(33.3% - 16px)
+}
+
+/* line 283, src/assets/scss/pages/_landing.scss */
+.form-section .card-form .form-content .inner-form .content-block .services-types .radio-box .radio-box-inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 16px
+}
+
+/* line 288, src/assets/scss/pages/_landing.scss */
+.form-section .card-form .form-content .inner-form .content-block .services-types .radio-box .radio-box-inner .meta {
+    margin-left: 16px;
+    text-align: left;
+    line-height: 1.1
+}
+
+/* line 293, src/assets/scss/pages/_landing.scss */
+.form-section .card-form .form-content .inner-form .content-block .services-types .radio-box .radio-box-inner .meta h3 {
+    font-size: .85rem
+}
+
+/* line 297, src/assets/scss/pages/_landing.scss */
+.form-section .card-form .form-content .inner-form .content-block .services-types .radio-box .radio-box-inner .meta span {
+    display: block;
+    font-size: .8rem;
+    color: #999
+}
+
+/* line 304, src/assets/scss/pages/_landing.scss */
+.form-section .card-form .form-content .inner-form .content-block .services-types .radio-box .radio-box-inner img {
+    margin: 0;
+    max-width: 38px
+}
+
+/* line 312, src/assets/scss/pages/_landing.scss */
+.form-section .card-form .form-content .inner-form .content-block .project-scope {
+    max-width: 350px;
+    margin: 0 auto
+}
+
+/* line 316, src/assets/scss/pages/_landing.scss */
+.form-section .card-form .form-content .inner-form .content-block .project-scope .uploader-row {
+    margin-top: 30px
+}
+
+/* line 319, src/assets/scss/pages/_landing.scss */
+.form-section .card-form .form-content .inner-form .content-block .project-scope .uploader-row label {
+    text-align: left
+}
+
+/* line 323, src/assets/scss/pages/_landing.scss */
+.form-section .card-form .form-content .inner-form .content-block .project-scope .uploader-row .uploaders {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 14px;
+    border-radius: 12px;
+    background: #f7f7f7
+}
+
+/* line 330, src/assets/scss/pages/_landing.scss */
+.form-section .card-form .form-content .inner-form .content-block .project-scope .uploader-row .uploaders .uploader {
+    position: relative
+}
+
+/* line 333, src/assets/scss/pages/_landing.scss */
+.form-section .card-form .form-content .inner-form .content-block .project-scope .uploader-row .uploaders .uploader input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: -1
+}
+
+/* line 344, src/assets/scss/pages/_landing.scss */
+.form-section .card-form .form-content .inner-form .content-block .project-scope .uploader-row .uploaders .uploader .uploader-controls {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    min-height: 70px;
+    min-width: 70px;
+    border: 1.8px dashed #cecece;
+    border-radius: 8px;
+    cursor: pointer;
+    -webkit-transition: all .3s;
+    transition: all .3s
+}
+
+/* line 356, src/assets/scss/pages/_landing.scss */
+.form-section .card-form .form-content .inner-form .content-block .project-scope .uploader-row .uploaders .uploader .uploader-controls:hover {
+    border-color: #bababa
+}
+
+/* line 359, src/assets/scss/pages/_landing.scss */
+.form-section .card-form .form-content .inner-form .content-block .project-scope .uploader-row .uploaders .uploader .uploader-controls:hover svg {
+    stroke: #bababa
+}
+
+/* line 364, src/assets/scss/pages/_landing.scss */
+.form-section .card-form .form-content .inner-form .content-block .project-scope .uploader-row .uploaders .uploader .uploader-controls svg {
+    stroke: #cecece;
+    height: 20px;
+    width: 20px;
+    -webkit-transition: stroke .3s;
+    transition: stroke .3s
+}
+
+/* line 376, src/assets/scss/pages/_landing.scss */
+.form-section .card-form .form-content .inner-form .content-block .contact-details {
+    max-width: 350px;
+    margin: 0 auto
+}
+
+/* line 382, src/assets/scss/pages/_landing.scss */
+.form-section .card-form .form-content .inner-form .content-block .contact-details .field .control .form-icon {
+    height: 40px;
+    width: 40px
+}
+
+/* line 390, src/assets/scss/pages/_landing.scss */
+.form-section .card-form .form-content .inner-form .content-block .success-title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.1rem;
+    color: #4a4a4a;
+    font-weight: 600
+}
+
+/* line 397, src/assets/scss/pages/_landing.scss */
+.form-section .card-form .form-content .inner-form .content-block .success-text {
+    font-size: .95rem;
+    color: #999;
+    max-width: 450px;
+    margin: 0 auto
+}
+
+/* line 406, src/assets/scss/pages/_landing.scss */
+.form-section .card-form .form-content .inner-form .image-block img {
+    display: block;
+    width: 100%;
+    max-width: 160px;
+    margin: 0 auto
+}
+
+/* line 415, src/assets/scss/pages/_landing.scss */
+.form-section .card-form .form-content .inner-form .button-block .button {
+    min-width: 180px
+}
+
+/* line 428, src/assets/scss/pages/_landing.scss */
+.grid-wrap {
+    padding-top: 60px
+}
+
+/* line 431, src/assets/scss/pages/_landing.scss */
+.grid-wrap .grid {
+    max-width: 1200px
+}
+
+/* line 435, src/assets/scss/pages/_landing.scss */
+.grid-wrap .grid.are-images-unloaded {
+    opacity: 0
+}
+
+/* line 439, src/assets/scss/pages/_landing.scss */
+.grid-wrap .grid__item, .grid-wrap .grid__col-sizer {
+    width: 32%
+}
+
+/* line 444, src/assets/scss/pages/_landing.scss */
+.grid-wrap .grid__gutter-sizer {
+    width: 2%
+}
+
+/* line 448, src/assets/scss/pages/_landing.scss */
+.grid-wrap .grid.are-images-unloaded .image-grid__item {
+    opacity: 0
+}
+
+/* line 452, src/assets/scss/pages/_landing.scss */
+.grid-wrap .grid__item {
+    margin-bottom: 20px;
+    overflow: hidden;
+    float: left
+}
+
+/* line 458, src/assets/scss/pages/_landing.scss */
+.grid-wrap .grid__item--height1 {
+    height: 140px;
+    background: #EA0
+}
+
+/* line 463, src/assets/scss/pages/_landing.scss */
+.grid-wrap .grid__item--height2 {
+    height: 220px;
+    background: #00D1B2
+}
+
+/* line 468, src/assets/scss/pages/_landing.scss */
+.grid-wrap .grid__item--height3 {
+    height: 300px;
+    background: #19F
+}
+
+/* line 473, src/assets/scss/pages/_landing.scss */
+.grid-wrap .grid__item--width2 {
+    width: 66%
+}
+
+/* line 477, src/assets/scss/pages/_landing.scss */
+.grid-wrap .grid__item img {
+    display: block;
+    max-width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover
+}
+
+/* line 483, src/assets/scss/pages/_landing.scss */
+.grid-wrap .page-load-status {
+    display: none;
+    padding-top: 20px;
+    border-top: 1px solid #DDD;
+    text-align: center;
+    color: #777
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    /* line 12, src/assets/scss/layout/_responsive.scss */
+    .hero-caption .title {
+        font-size: 2.2rem
+    }
+
+    /* line 19, src/assets/scss/layout/_responsive.scss */
+    .testimonial-cards .testimonial-card {
+        padding: 24px
+    }
+
+    /* line 23, src/assets/scss/layout/_responsive.scss */
+    .testimonial-cards .testimonial-card .customer img {
+        height: 34px !important;
+        width: 34px !important
+    }
+
+    /* line 29, src/assets/scss/layout/_responsive.scss */
+    .testimonial-cards .testimonial-card .customer .meta span {
+        font-size: .8rem !important
+    }
+
+    /* line 33, src/assets/scss/layout/_responsive.scss */
+    .testimonial-cards .testimonial-card .customer .meta small {
+        font-size: .75rem !important
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    /* line 49, src/assets/scss/layout/_responsive.scss */
+    .navbar .navbar-brand {
+        height: 70px
+    }
+
+    /* line 52, src/assets/scss/layout/_responsive.scss */
+    .navbar .navbar-brand .navbar-burger {
+        min-width: 70px;
+        min-height: 70px
+    }
+
+    /* line 58, src/assets/scss/layout/_responsive.scss */
+    .navbar .navbar-menu.is-active {
+        text-align: center
+    }
+
+    /* line 61, src/assets/scss/layout/_responsive.scss */
+    .navbar .navbar-menu.is-active .button {
+        width: 100%;
+        max-width: 480px
+    }
+
+    /* line 69, src/assets/scss/layout/_responsive.scss */
+    .hero-caption {
+        padding-top: 80px
+    }
+
+    /* line 72, src/assets/scss/layout/_responsive.scss */
+    .hero-caption .column.is-4 {
+        max-width: 480px;
+        margin: 0 auto;
+        text-align: center
+    }
+
+    /* line 78, src/assets/scss/layout/_responsive.scss */
+    .hero-caption img {
+        max-width: 490px;
+        max-height: 490px;
+        margin: 0 auto
+    }
+
+    /* line 88, src/assets/scss/layout/_responsive.scss */
+    .boxes-section .column:first-child {
+        max-width: 480px;
+        margin: 0 auto;
+        text-align: center
+    }
+
+    /* line 94, src/assets/scss/layout/_responsive.scss */
+    .boxes-section .column:nth-child(2), .boxes-section .column:nth-child(3) {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex
+    }
+
+    /* line 99, src/assets/scss/layout/_responsive.scss */
+    .boxes-section .box-wrap {
+        margin: 8px !important;
+        margin-top: 0 !important;
+        width: calc(50% - 16px) !important
+    }
+
+    /* line 104, src/assets/scss/layout/_responsive.scss */
+    .boxes-section .box-wrap.is-pulled, .boxes-section .box-wrap.is-pushed {
+        margin: 8px !important;
+        margin-top: 0 !important
+    }
+
+    /* line 109, src/assets/scss/layout/_responsive.scss */
+    .boxes-section .box-wrap .icon-box {
+        text-align: center
+    }
+
+    /* line 112, src/assets/scss/layout/_responsive.scss */
+    .boxes-section .box-wrap .icon-box img {
+        margin: 0 auto
+    }
+
+    /* line 120, src/assets/scss/layout/_responsive.scss */
+    .side-feature {
+        padding-bottom: 60px
+    }
+
+    /* line 123, src/assets/scss/layout/_responsive.scss */
+    .side-feature img {
+        display: block;
+        max-width: 320px;
+        margin: 0 auto
+    }
+
+    /* line 129, src/assets/scss/layout/_responsive.scss */
+    .side-feature h3, .side-feature p {
+        max-width: 480px;
+        margin: 0 auto
+    }
+
+    /* line 134, src/assets/scss/layout/_responsive.scss */
+    .side-feature h3 {
+        margin-bottom: 12px
+    }
+
+    /* line 141, src/assets/scss/layout/_responsive.scss */
+    .testimonial-cards .column {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+        align-items: baseline
+    }
+
+    /* line 146, src/assets/scss/layout/_responsive.scss */
+    .testimonial-cards .testimonial-card {
+        margin: 0 10px;
+        width: calc(50% - 20px)
+    }
+
+    /* line 150, src/assets/scss/layout/_responsive.scss */
+    .testimonial-cards .testimonial-card:last-child {
+        margin-bottom: 0
+    }
+
+    /* line 165, src/assets/scss/layout/_responsive.scss */
+    .form-section .card-form .inner-form .content-block .services-types .radio-box .radio-box-inner .meta h3 {
+        font-size: .75rem !important
+    }
+
+    /* line 179, src/assets/scss/layout/_responsive.scss */
+    .footer .footer-text {
+        max-width: 480px
+    }
+}
+
+@media (max-width: 767px) {
+    /* line 192, src/assets/scss/layout/_responsive.scss */
+    .navbar .navbar-brand {
+        height: 70px
+    }
+
+    /* line 195, src/assets/scss/layout/_responsive.scss */
+    .navbar .navbar-brand .navbar-burger {
+        min-width: 70px;
+        min-height: 70px
+    }
+
+    /* line 201, src/assets/scss/layout/_responsive.scss */
+    .navbar .navbar-menu.is-active {
+        text-align: center
+    }
+
+    /* line 204, src/assets/scss/layout/_responsive.scss */
+    .navbar .navbar-menu.is-active .button {
+        width: 100%
+    }
+
+    /* line 211, src/assets/scss/layout/_responsive.scss */
+    .hero-caption {
+        text-align: center
+    }
+
+    /* line 214, src/assets/scss/layout/_responsive.scss */
+    .hero-caption .title {
+        font-size: 2rem
+    }
+
+    /* line 218, src/assets/scss/layout/_responsive.scss */
+    .hero-caption .subtitle {
+        font-size: 1.2rem
+    }
+
+    /* line 228, src/assets/scss/layout/_responsive.scss */
+    .hero-foot ul li img {
+        max-width: 90px !important;
+        margin: 0 10px !important
+    }
+
+    /* line 237, src/assets/scss/layout/_responsive.scss */
+    .box-wrap.is-pulled, .box-wrap.is-pushed {
+        margin-bottom: 20px !important;
+        margin-top: 0 !important
+    }
+
+    /* line 246, src/assets/scss/layout/_responsive.scss */
+    .testimonial-cards .testimonial-card:last-child {
+        margin-bottom: 0
+    }
+
+    /* line 254, src/assets/scss/layout/_responsive.scss */
+    .form-section .card-form {
+        padding: 30px
+    }
+
+    /* line 258, src/assets/scss/layout/_responsive.scss */
+    .form-section .card-form .inner-form .back-block {
+        top: -48px !important;
+        left: 0;
+        right: 0;
+        background: #fff;
+        margin: 0 auto
+    }
+
+    /* line 267, src/assets/scss/layout/_responsive.scss */
+    .form-section .card-form .inner-form .content-block .project-types, .form-section .card-form .inner-form .content-block .budget-types {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding: 16px 0
+    }
+
+    /* line 271, src/assets/scss/layout/_responsive.scss */
+    .form-section .card-form .inner-form .content-block .project-types .radio-box, .form-section .card-form .inner-form .content-block .budget-types .radio-box {
+        width: calc(100% - 16px) !important
+    }
+
+    /* line 276, src/assets/scss/layout/_responsive.scss */
+    .form-section .card-form .inner-form .content-block .services-types {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding: 16px 0
+    }
+
+    /* line 280, src/assets/scss/layout/_responsive.scss */
+    .form-section .card-form .inner-form .content-block .services-types .radio-box {
+        width: calc(100% - 16px) !important
+    }
+
+    /* line 289, src/assets/scss/layout/_responsive.scss */
+    .form-section .card-form .inner-form .content-block .project-scope .uploader-row .uploaders .uploader:last-child {
+        display: none
+    }
+
+    /* line 299, src/assets/scss/layout/_responsive.scss */
+    .form-section .card-form .inner-form .button-block .button {
+        width: 100%
+    }
+
+    /* line 309, src/assets/scss/layout/_responsive.scss */
+    .footer .copyright {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column
+    }
+
+    /* line 312, src/assets/scss/layout/_responsive.scss */
+    .footer .copyright .copyright-logo {
+        margin-bottom: 6px
+    }
+}
+
+/* line 3, node_modules/slick-carousel/slick/slick.scss */
+.slick-slider {
+    position: relative;
+    display: block;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent
+}
+
+/* line 17, node_modules/slick-carousel/slick/slick.scss */
+.slick-list {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    margin: 0;
+    padding: 0
+}
+
+/* line 24, node_modules/slick-carousel/slick/slick.scss */
+.slick-list:focus {
+    outline: none
+}
+
+/* line 28, node_modules/slick-carousel/slick/slick.scss */
+.slick-list.dragging {
+    cursor: pointer;
+    cursor: hand
+}
+
+/* line 33, node_modules/slick-carousel/slick/slick.scss */
+.slick-slider .slick-track, .slick-slider .slick-list {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0)
+}
+
+/* line 42, node_modules/slick-carousel/slick/slick.scss */
+.slick-track {
+    position: relative;
+    left: 0;
+    top: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+/* line 50, node_modules/slick-carousel/slick/slick.scss */
+.slick-track:before, .slick-track:after {
+    content: "";
+    display: table
+}
+
+/* line 56, node_modules/slick-carousel/slick/slick.scss */
+.slick-track:after {
+    clear: both
+}
+
+/* line 60, node_modules/slick-carousel/slick/slick.scss */
+.slick-loading .slick-track {
+    visibility: hidden
+}
+
+/* line 64, node_modules/slick-carousel/slick/slick.scss */
+.slick-slide {
+    float: left;
+    height: 100%;
+    min-height: 1px;
+    display: none
+}
+
+/* line 68, node_modules/slick-carousel/slick/slick.scss */
+[dir="rtl"] .slick-slide {
+    float: right
+}
+
+/* line 71, node_modules/slick-carousel/slick/slick.scss */
+.slick-slide img {
+    display: block
+}
+
+/* line 74, node_modules/slick-carousel/slick/slick.scss */
+.slick-slide.slick-loading img {
+    display: none
+}
+
+/* line 80, node_modules/slick-carousel/slick/slick.scss */
+.slick-slide.dragging img {
+    pointer-events: none
+}
+
+/* line 84, node_modules/slick-carousel/slick/slick.scss */
+.slick-initialized .slick-slide {
+    display: block
+}
+
+/* line 88, node_modules/slick-carousel/slick/slick.scss */
+.slick-loading .slick-slide {
+    visibility: hidden
+}
+
+/* line 92, node_modules/slick-carousel/slick/slick.scss */
+.slick-vertical .slick-slide {
+    display: block;
+    height: auto;
+    border: 1px solid transparent
+}
+
+/* line 98, node_modules/slick-carousel/slick/slick.scss */
+.slick-arrow.slick-hidden {
+    display: none
+}
+
+/* line 45, node_modules/slick-carousel/slick/slick-theme.scss */
+.slick-loading .slick-list {
+    background: #fff url("/assets/fonts/ajax-loader.gif") center center no-repeat
+}
+
+@font-face {
+    font-family: "slick";
+    src: url("/assets/fonts/slick.eot");
+    src: url("/assets/fonts/slick.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/slick.woff") format("woff"), url("/assets/fonts/slick.ttf") format("truetype"), url("/assets/fonts/slick.svg#slick") format("svg");
+    font-weight: normal;
+    font-style: normal
+}
+
+/* line 63, node_modules/slick-carousel/slick/slick-theme.scss */
+.slick-prev, .slick-next {
+    position: absolute;
+    display: block;
+    height: 20px;
+    width: 20px;
+    line-height: 0px;
+    font-size: 0px;
+    cursor: pointer;
+    background: transparent;
+    color: transparent;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    padding: 0;
+    border: none;
+    outline: none
+}
+
+/* line 81, node_modules/slick-carousel/slick/slick-theme.scss */
+.slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus {
+    outline: none;
+    background: transparent;
+    color: transparent
+}
+
+/* line 85, node_modules/slick-carousel/slick/slick-theme.scss */
+.slick-prev:hover:before, .slick-prev:focus:before, .slick-next:hover:before, .slick-next:focus:before {
+    opacity: 1
+}
+
+/* line 89, node_modules/slick-carousel/slick/slick-theme.scss */
+.slick-prev.slick-disabled:before, .slick-next.slick-disabled:before {
+    opacity: .25
+}
+
+/* line 92, node_modules/slick-carousel/slick/slick-theme.scss */
+.slick-prev:before, .slick-next:before {
+    font-family: "slick";
+    font-size: 20px;
+    line-height: 1;
+    color: #fff;
+    opacity: .75;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+/* line 103, node_modules/slick-carousel/slick/slick-theme.scss */
+.slick-prev {
+    left: -25px
+}
+
+/* line 105, node_modules/slick-carousel/slick/slick-theme.scss */
+[dir="rtl"] .slick-prev {
+    left: auto;
+    right: -25px
+}
+
+/* line 109, node_modules/slick-carousel/slick/slick-theme.scss */
+.slick-prev:before {
+    content: "â†"
+}
+
+/* line 111, node_modules/slick-carousel/slick/slick-theme.scss */
+[dir="rtl"] .slick-prev:before {
+    content: "â†’"
+}
+
+/* line 117, node_modules/slick-carousel/slick/slick-theme.scss */
+.slick-next {
+    right: -25px
+}
+
+/* line 119, node_modules/slick-carousel/slick/slick-theme.scss */
+[dir="rtl"] .slick-next {
+    left: -25px;
+    right: auto
+}
+
+/* line 123, node_modules/slick-carousel/slick/slick-theme.scss */
+.slick-next:before {
+    content: "â†’"
+}
+
+/* line 125, node_modules/slick-carousel/slick/slick-theme.scss */
+[dir="rtl"] .slick-next:before {
+    content: "â†"
+}
+
+/* line 133, node_modules/slick-carousel/slick/slick-theme.scss */
+.slick-dotted.slick-slider {
+    margin-bottom: 30px
+}
+
+/* line 137, node_modules/slick-carousel/slick/slick-theme.scss */
+.slick-dots {
+    position: absolute;
+    bottom: -25px;
+    list-style: none;
+    display: block;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    width: 100%
+}
+
+/* line 146, node_modules/slick-carousel/slick/slick-theme.scss */
+.slick-dots li {
+    position: relative;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer
+}
+
+/* line 154, node_modules/slick-carousel/slick/slick-theme.scss */
+.slick-dots li button {
+    border: 0;
+    background: transparent;
+    display: block;
+    height: 20px;
+    width: 20px;
+    outline: none;
+    line-height: 0px;
+    font-size: 0px;
+    color: transparent;
+    padding: 5px;
+    cursor: pointer
+}
+
+/* line 166, node_modules/slick-carousel/slick/slick-theme.scss */
+.slick-dots li button:hover, .slick-dots li button:focus {
+    outline: none
+}
+
+/* line 168, node_modules/slick-carousel/slick/slick-theme.scss */
+.slick-dots li button:hover:before, .slick-dots li button:focus:before {
+    opacity: 1
+}
+
+/* line 172, node_modules/slick-carousel/slick/slick-theme.scss */
+.slick-dots li button:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "â€¢";
+    width: 20px;
+    height: 20px;
+    font-family: "slick";
+    font-size: 6px;
+    line-height: 20px;
+    text-align: center;
+    color: #000;
+    opacity: .25;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+/* line 189, node_modules/slick-carousel/slick/slick-theme.scss */
+.slick-dots li.slick-active button:before {
+    color: #000;
+    opacity: .75
+}
+
+/*# sourceMappingURL=../../../scss */
