@@ -26,11 +26,7 @@
 {{--    <link rel="stylesheet" href="{{ asset('css/main.css') }}">--}}
 {{--    <link rel="stylesheet" href="{{ asset('css/style.css') }}">--}}
 
-    <style>
-        .pad-top-navbar {
-            padding-top: 70px;
-        }
-    </style>
+    <style>.pad-top-navbar {padding-top: 70px;}</style>
     @stack('stack-head')
 </head>
 <body>

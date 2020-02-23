@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1fc7cadf-dd8e-4988-95f3-5be001769a75" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/css.old/app.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css.old/library-bundle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css.old/login.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css.old/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css.old/register.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css.old/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/custom/library-bundle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/custom/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/custom/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-    </list>
+    <list default="true" id="1fc7cadf-dd8e-4988-95f3-5be001769a75" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -229,7 +215,7 @@
       <workItem from="1582194066647" duration="9451000" />
       <workItem from="1582270382724" duration="22692000" />
       <workItem from="1582297830336" duration="14288000" />
-      <workItem from="1582365787143" duration="39003000" />
+      <workItem from="1582365787143" duration="39244000" />
     </task>
     <servers />
   </component>
