@@ -51,7 +51,7 @@
                         <h3 class="title is-2 is-bold is-title-reveal has-text-primary">Mengapa Memilih Kami?</h3>
                         <div class="columns">
                             <div class="column is-10 is-offset-1">
-                                <p class="subtitle has-text-primary">
+                                <p class="subtitle">
                                     Kami merupakan salah satu server pulsa elektrik termurah yang ada di Indonesia. Anda bisa bertransaksi melalui Website dan API untuk melakukan pengisian pulsa All Operator, Pembayaran PLN Prabayar, Voucher Game Online, Beli Paket kuota online dll
                                 </p>
                             </div>

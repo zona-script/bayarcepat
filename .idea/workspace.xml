@@ -2,8 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1fc7cadf-dd8e-4988-95f3-5be001769a75" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/css.old/app.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css.old/library-bundle.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css.old/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css.old/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css.old/register.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css.old/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sass/custom/library-bundle.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sass/custom/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sass/custom/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,24 +183,24 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/sass/custom" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\bayarcepat\resources\views\admin" />
-      <recent name="C:\xampp\htdocs\bayarcepat\resources\views\layouts" />
-      <recent name="C:\xampp\htdocs\bayarcepat\public\js" />
-      <recent name="C:\xampp\htdocs\bayarcepat\resources\js\components\pembelian" />
-      <recent name="C:\xampp\htdocs\bayarcepat\routes" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\bayarcepat\resources\views\dashboard\saldo\deposit" />
       <recent name="C:\xampp\htdocs\bayarcepat\app\JavaH2H\Reformat" />
       <recent name="C:\xampp\htdocs\bayarcepat\resources\views\pages" />
       <recent name="C:\xampp\htdocs\bayarcepat\resources\views\dashboard\profile" />
       <recent name="C:\xampp\htdocs\bayarcepat\resources\views\dashboard\saldo" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\bayarcepat\resources\sass\custom" />
+      <recent name="C:\xampp\htdocs\bayarcepat\public" />
+      <recent name="C:\xampp\htdocs\bayarcepat\resources\views\admin" />
+      <recent name="C:\xampp\htdocs\bayarcepat\resources\views\layouts" />
+      <recent name="C:\xampp\htdocs\bayarcepat\public\js" />
     </key>
   </component>
   <component name="RunManager">
@@ -218,7 +229,7 @@
       <workItem from="1582194066647" duration="9451000" />
       <workItem from="1582270382724" duration="22692000" />
       <workItem from="1582297830336" duration="14288000" />
-      <workItem from="1582365787143" duration="37205000" />
+      <workItem from="1582365787143" duration="39003000" />
     </task>
     <servers />
   </component>

@@ -21,10 +21,10 @@
     <meta property="business:contact_data:website" content="https://bayarcepat.com" />
 
     <!--Core CSS -->
-    <link rel="stylesheet" href="{{ asset('css/library-bundle.css') }}">
+{{--    <link rel="stylesheet" href="{{ asset('css/library-bundle.css') }}">--}}
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/main.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+{{--    <link rel="stylesheet" href="{{ asset('css/main.css') }}">--}}
+{{--    <link rel="stylesheet" href="{{ asset('css/style.css') }}">--}}
 
     <style>
         .pad-top-navbar {

@@ -1,0 +1,194 @@
+.hero-bg {
+    background-image: url("/images/hero-home.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: local;
+    /*background-attachment: fixed;*/
+    background-size: cover;
+}
+.hero-bg-mobile {
+    background: url("/images/hero-mobile.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: local;
+    /*background-attachment: fixed;*/
+    background-size: cover;
+ }
+
+
+.selogan {
+    border-radius: 60%;
+    background: limegreen;
+    padding: 20px;
+    width: 400px;
+    height: 70px;
+}
+
+.img-width-icon {
+    max-width: 65%;
+}
+
+.hero-tentang-kami-bg {
+    /*background-image: url("/images/tentang_papan.png");*/
+    background-image: url("/images/tentang_anak_hero.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: contain 100vw;
+}
+
+.hero-tim-kami-bg {
+    /*background-image: url("/images/tentang_papan.png");*/
+    background-image: url("/images/tim_kami.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: contain;
+}
+
+/*.hero-tentang-kami-bg {*/
+/*     background-image: url("/images/tentang_papan.png");*/
+/*     background-position: center;*/
+/*     background-repeat: no-repeat;*/
+/*     !*background-attachment: local;*!*/
+/*     background-attachment: fixed;*/
+/*     background-size: cover;*/
+/* }*/
+
+/*.hero-tentang-kami-bg {*/
+/*    background: url("/images/tentang_papan.png") no-repeat center center scroll;*/
+/*    background-size: contain;*/
+/*}*/
+
+.has-text-limegreen {
+    color: limegreen !important;
+}
+
+.has-background-limegreen {
+    background: limegreen;
+    color: white;
+}
+
+.has-background-grey-dove {
+    background: #EFF3F4;
+    color: hsl(192,17%,99%) !important;
+}
+
+.features {
+    padding-top: 5rem;
+}
+.box.cta {
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+}
+.card-image > .fa {
+    font-size: 8rem;
+    padding-top: 2rem;
+    padding-bottom: 0rem;
+    color: limegreen;
+}
+
+.card-image > img {
+    font-size: 8rem;
+    padding-top: 2rem;
+    padding-bottom: 0rem;
+    color: limegreen;
+    max-width: 8rem;
+}
+
+.card-content .content {
+    font-size: 14px;
+    margin: 1rem 1rem;
+}
+.card-content .content h4 {
+    font-size: 16px;
+    font-weight: 700;
+}
+.card {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.18);
+    margin-bottom: 2rem;
+}
+.intro {
+    padding: 5rem 0;
+    text-align: center;
+}
+.sandbox {
+    padding: 5rem 0;
+}
+.tile.notification {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.is-shady {
+    animation: flyintoright .4s backwards;
+    background: #fff;
+    box-shadow: rgba(0, 0, 0, .1) 0 1px 0;
+    border-radius: 4px;
+    display: inline-block;
+    margin: 10px;
+    position: relative;
+    transition: all .2s ease-in-out;
+    min-height: 350px;
+}
+.is-shady:hover {
+    box-shadow: 0 10px 16px rgba(0, 0, 0, .13), 0 6px 6px rgba(0, 0, 0, .19);
+}
+
+.is-produk {
+    animation: flyintoright .4s backwards;
+    background: #fff;
+    box-shadow: rgba(0, 0, 0, .1) 0 1px 0;
+    border-radius: 4px;
+    display: inline-block;
+    margin: 10px;
+    position: relative;
+    transition: all .2s ease-in-out;
+    min-height: 350px;
+}
+
+.is-produk:hover {
+    box-shadow: 0 10px 16px rgba(0, 0, 0, .13), 0 6px 6px rgba(0, 0, 0, .19);
+}
+.is-produk-modal {
+    animation: flyintoright .4s backwards;
+    background: #fff;
+    box-shadow: rgba(0, 0, 0, .1) 0 1px 0;
+    border-radius: 4px;
+    display: inline-block;
+    margin: 10px;
+    position: relative;
+    transition: all .2s ease-in-out;
+}
+.is-produk-modal:hover {
+    box-shadow: 0 10px 16px rgba(0, 0, 0, .13), 0 6px 6px rgba(0, 0, 0, .19);
+}
+
+.modal {
+    min-height: 100vh;
+}
+.modal-background {
+    background-color: #ffffff;
+}
+.modal-content {
+    width: 100%;
+    min-height: 100vh;
+    padding-bottom: 20%;
+}
+
+.modal-close {
+    background-color: red;
+}
+
+.modal-img-produk {
+    width: 128px;
+}
+
+#modal-jual, #modal-beli, #modal-donasi, #modal-sewa {
+    padding-top: 120px;
+}
+
+.is-horizontal-center {
+    justify-content: center;
+}
