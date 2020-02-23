@@ -6,7 +6,6 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <title>{{ getenv('APP_NAME') }} - @yield('title')</title>
-{{--    <link rel="icon" type="image/png" href="favicon.png"/>--}}
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="robot" content="index, follow">
     <meta name="googlebot" content="All, Follow, Index" />
@@ -32,12 +31,6 @@
             padding-top: 70px;
         }
     </style>
-
-    <!-- Fonts -->
-{{--    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap" rel="stylesheet">--}}
-{{--    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">--}}
-
-{{--    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>--}}
     @stack('stack-head')
 </head>
 <body>
@@ -45,7 +38,6 @@
     <div class="container">
         <div class="navbar-brand">
             <a class="navbar-item" href="/">
-{{--                <img src="{{ asset('images/logo.png') }}" alt="">--}}
                 <span class="logo-text has-text-primary is-bold">{{ getenv('APP_NAME') }}</span>
             </a>
 

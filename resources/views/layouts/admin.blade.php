@@ -7,7 +7,6 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <title>{{ getenv('APP_NAME') }} - @yield('title')</title>
-{{--    <link rel="icon" type="image/png" href="favicon.png"/>--}}
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!--Core CSS -->
@@ -17,8 +16,6 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
     <!-- Fonts -->
-{{--    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap" rel="stylesheet">--}}
-{{--    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">--}}
     @stack('stack-head')
 </head>
 <body>
