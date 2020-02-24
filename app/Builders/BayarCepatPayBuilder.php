@@ -25,4 +25,12 @@ class BayarCepatPayBuilder
         $user = User::findOrFail($id);
         return $user->balance;
     }
+
+    public static function getRandomUniqueCode($USD = false)
+    {
+        if ($USD) {
+            return 0;
+        }
+        return rand(100, 999);
+    }
 }

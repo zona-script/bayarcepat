@@ -46,8 +46,8 @@
         </div>
 
         <div id="navbarBasicExample" class="navbar-menu">
-            <div class="navbar-end">
-                <a class="navbar-item" href="{{ route('web.pages.produk') }}">
+            <div class="navbar-end has-text-left">
+                <a class="navbar-item" href="{{ route('web.pages.produk.index') }}">
                     Produk & Harga
                 </a>
                 <a class="navbar-item" href="">
@@ -96,10 +96,10 @@
 <footer class="footer has-background-grey-dark">
     <div class="container">
         <div class="columns">
-            <div class="column is-3">
+            <div class="column is-4">
                 <h4 class="title is-3 is-bold has-text-primary">{{ env('APP_NAME') }}</h4>
                 <p class="footer-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ultrices in risus sed fermentum.
+                    kami adalah solusi keuangan terlengkap, anda bisa membeli produk, kirim uang antar bank, kirim uang dari paypal, dan masih banyak lagi.
                 </p>
                 <div class="socials">
                     <a><i class="fab fa-instagram"></i></a>
@@ -108,7 +108,7 @@
                     <a><i class="fab fa-medium"></i></a>
                 </div>
             </div>
-            <div class="column is-2 is-offset-1">
+            <div class="column is-2">
                 <ul class="footer-menu">
                     <li><a href="">Produk & Harga</a></li>
                     <li><a href="">Komunitas</a></li>
@@ -125,7 +125,7 @@
                     <li><a href="{{ route('web.pages.policy-privacy') }}">Kebijakan Privasi</a></li>
                 </ul>
             </div>
-            <div class="column is-5">
+            <div class="column is-4">
                 <h4 class="title is-5 has-text-weight-bold has-text-white">Unduh Aplikasi</h4>
                 <div class="columns">
                     <div class="column"><p class="has-text-white">Masih dalam proses pembuatan</p></div>

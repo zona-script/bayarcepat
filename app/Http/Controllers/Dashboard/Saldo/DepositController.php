@@ -3,11 +3,13 @@
 namespace App\Http\Controllers\Dashboard\Saldo;
 
 use App\Bank;
+use App\Builders\BayarCepatPayBuilder;
 use App\Enums\CurrencyRateEnum;
 use App\Enums\TransactionEnum;
 use App\Http\Controllers\Controller;
 use App\Transaction;
 use Illuminate\Http\Request;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Auth;
 
 class DepositController extends Controller
@@ -19,11 +21,13 @@ class DepositController extends Controller
 
     public function create(Request $request)
     {
+        $banks = Bank::where('type', 'paypal')->get();
         if ($request->input('type') == 'paypal') {
-            return view('dashboard.saldo.deposit.paypal');
+            return view('dashboard.saldo.deposit.paypal', compact('banks'));
         }
 
-        return view('dashboard.saldo.deposit.bank');
+        $banks = Bank::where('type', 'bank')->get();
+        return view('dashboard.saldo.deposit.bank', compact('banks'));
     }
 
     public function store(Request $request)
@@ -31,40 +35,54 @@ class DepositController extends Controller
         $request->validate([
             'bank_id' => 'required',
             'amount_money' => 'required',
+            'bank_account_name' => 'required',
+            'bank_name' => 'required',
+            'bank_account_number' => 'required',
             'note' => 'nullable'
         ]);
-        $bank = Bank::findOrFail($request->input('bank_id'));
 
+        $bank = Bank::findOrFail($request->input('bank_id'))
+            ->toArray();
+
+        $amount = $request->input('amount_money');
+
+        $bank = Arr::add($bank, 'value', $amount);
         if ($request->input('type') == 'paypal') {
             $type = 'paypal';
-            $amount = (int) $request->only('amount_money');
-            $amount = ($amount / CurrencyRateEnum::live()['live_with_fee']);
-            $fee = ceil($amount) * CurrencyRateEnum::$fee;
-            $amount = $amount - $fee;
+            $resultCount = CurrencyRateEnum::live($request->input('amount_money'));
+            $bank = Arr::add($bank, 'value_unique', BayarCepatPayBuilder::getRandomUniqueCode(true));
+            $bank = Arr::add($bank, 'value_total', $resultCount['amount_idr_with_fee']);
+            $bank = Arr::add($bank, 'currency', $resultCount);
+
+            $fee = $resultCount['fee_idr'];
         } else {
-            $amount = $request->only('amount_money');
+            $type = 'bank';
+            $fee = null;
+
+            $uniqueCode = BayarCepatPayBuilder::getRandomUniqueCode(false);
+            $total = (int) $amount + $uniqueCode;
+            $bank = Arr::add($bank, 'value_unique', $uniqueCode);
+            $bank = Arr::add($bank, 'value_total', $total);
         }
+
+        $userBank = $request->only([
+            'bank_account_name',
+            'bank_name',
+            'bank_account_number'
+        ]);
 
         // informasi transaksi
         $transaction = Transaction::create([
             'user_id' => Auth::id(),
             'type' => TransactionEnum::$typeBayarCepatPayDeposit,
-            'message' => $request->only('note'),
-            'information' => $this->formatInformation($bank, $type, $this->formatCurrency($amount))
+//            'message' => $request->only('note', null),
+            'information' => TransactionEnum::makeDepositInformation($bank, $userBank, $type, $fee),
+            'status' => TransactionEnum::$statusProcess
         ]);
 
         return redirect()
-            ->route('web.dashboard.saldo.deposit.create')
-            ->with('success', 'Pengajuan deposit anda sedang di proses. Buka halaman riwayat transaksi untuk melihat status deposit.');
-    }
-
-    private function formatInformation($bank,$type= 'bank', $amount)
-    {
-        return [
-            'payment' => $bank,
-            'type' => $type,
-            'amount' => $amount,
-        ];
+            ->route('web.dashboard.riwayat.show', $transaction->id)
+            ->with('success', 'Pengajuan deposit anda diterima. Buka halaman riwayat transaksi untuk melihat status deposit.');
     }
 
     private function formatCurrency($nominal, $currency = 'idr', $live = 1)

@@ -31,10 +31,13 @@ class WithdrawalController extends Controller
         $transaction = Transaction::create([
             'user_id' => Auth::id(),
             'type' => TransactionEnum::$typeBayarCepatPayWithdrawal,
-            'message' => $request->only('note'),
+            'message' => $request->input('note', null),
             'information' => $request->only([
-                'bank_account_name', 'bank_account_number', 'bank_name',
-                'bank_amount_money', 'note'
+                'bank_account_name',
+                'bank_account_number',
+                'bank_name',
+                'bank_amount_money',
+                'note'
             ])
         ]);
 

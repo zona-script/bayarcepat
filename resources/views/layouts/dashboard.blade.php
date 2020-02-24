@@ -38,7 +38,7 @@
         </div>
 
         <div id="navbarBasicExample" class="navbar-menu">
-            <div class="navbar-end">
+            <div class="navbar-end has-text-left">
                 <a class="navbar-item" href="{{ route('web.dashboard.index') }}">
                     Dashboard
                 </a>

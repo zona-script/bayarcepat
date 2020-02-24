@@ -48,7 +48,7 @@ class BayarCepatBuilder
     public function setInformation($information)
     {
         $this->information = $information;
-        return $information;
+        return $this;
     }
 
     public function setPreviousBalance($previousBalance)
@@ -111,5 +111,20 @@ class BayarCepatBuilder
         $newTransaction->save();
 
         return $newTransaction;
+    }
+
+    public function deposit(Transaction $transaction)
+    {
+        $bayarCepatPay =  (new BayarCepatBuilder())
+            ->setType(BayarCepatPayEnum::$typeIN)
+            ->setUser(collect($transaction)['user_id'])
+            ->setValue(collect($transaction)['information']['bank']['value_total'])
+            ->setInformation(collect($transaction)['id'])
+            ->save();
+
+        $transaction->status = TransactionEnum::$statusSuccess;
+        $transaction->save();
+
+        return $transaction;
     }
 }

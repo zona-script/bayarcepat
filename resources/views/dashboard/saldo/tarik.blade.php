@@ -28,7 +28,7 @@
                                 <p class="control has-icons-left">
                                     <input name="bank_account_number" class="input" type="text" placeholder="Nomor Rekening" required>
                                     <span class="icon is-small is-left">
-                                        <i class="fas fa-alphabet"></i>
+                                        <i class="fas fa-list-ol"></i>
                                 </span>
                                 </p>
                             </div>
@@ -67,7 +67,7 @@
                             <div class="field">
                                 <label>Catatan (optional)</label>
                                 <p class="control">
-                                    <textarea name="note" class="textarea" placeholder="Notes (optiona)" >
+                                    <textarea name="note" class="textarea" placeholder="Tulis catatan disini" >
                                     </textarea>
                                 </p>
                             </div>

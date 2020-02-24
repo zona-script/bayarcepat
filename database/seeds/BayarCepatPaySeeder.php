@@ -38,7 +38,7 @@ class BayarCepatPaySeeder extends Seeder
             $transaction = \App\Transaction::create([
                 'user_id' => $user->id,
                 'type' => \App\Enums\TransactionEnum::$typeBayarCepatPayDeposit,
-                'message' => '',
+                'message' => null,
                 'information' => \App\Enums\TransactionEnum::makeDepositInformation($bank, $userBank),
                 'status' => ($i  % 2 == 0 ? \App\Enums\TransactionEnum::$statusSuccess: \App\Enums\TransactionEnum::$statusWaitingPayment)
             ]);

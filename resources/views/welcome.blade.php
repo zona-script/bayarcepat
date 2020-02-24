@@ -31,7 +31,7 @@
                     <p class="subtitle is-4">{{ env('APP_NAME') }} Adalah Distributor & Server Pulsa h2h Termurah dan Terlengkap yang menyediakan berbagai produk.</p>
                     <p class="title is-4">BUKAN CUMA ITU</p>
                     <p class="subtitle is-4">
-                        {{ env('APP_NAME') }} juga aplikasi untuk melakukan transfer uang antar member dan bank.
+                        {{ env('APP_NAME') }} bisa digunakan untuk melakukan transfer uang antar member, dari paypal ke bank, dari saldo ke semua bank, dan jasa rekening bersama.
                     </p>
                 </div>
                 <div class="column is-5 is-hidden-mobile">

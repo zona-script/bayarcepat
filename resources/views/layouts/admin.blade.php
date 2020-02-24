@@ -10,10 +10,10 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!--Core CSS -->
-    <link rel="stylesheet" href="{{ asset('css/library-bundle.css') }}">
+{{--    <link rel="stylesheet" href="{{ asset('css/library-bundle.css') }}">--}}
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/main.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+{{--    <link rel="stylesheet" href="{{ asset('css/main.css') }}">--}}
+{{--    <link rel="stylesheet" href="{{ asset('css/style.css') }}">--}}
 
     <!-- Fonts -->
     @stack('stack-head')
@@ -36,9 +36,24 @@
 
         <div id="navbarBasicExample" class="navbar-menu">
             <div class="navbar-end">
-                <a class="navbar-item" href="{{ route('web.dashboard.index') }}">
+                <a class="navbar-item" href="{{ route('web.admin.index') }}">
                     Dashboard
                 </a>
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        Saldo
+                    </a>
+
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item" href="{{ route('web.admin.saldo.deposit.index') }}">
+                            Deposit Saldo
+                        </a>
+                        <a class="navbar-item" href="{{ route('web.admin.saldo.penarikan.index') }}">
+                            Penarikan Saldo
+                        </a>
+                    </div>
+                </div>
 
                 <a class="navbar-item" href="">
                     Member

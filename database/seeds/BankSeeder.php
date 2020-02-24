@@ -25,6 +25,14 @@ class BankSeeder extends Seeder
                 'bank_account_name' => 'Fatkul Nur Koirudin',
                 'note' => '',
                 'logo' => ''
+            ],
+            [
+                'bank_name' => 'Paypal #1',
+                'bank_account_number' => 'pay@dibumi.com',
+                'bank_account_name' => 'Fatkul Nur Koirudin',
+                'note' => '',
+                'logo' => '',
+                'type' => 'paypal'
             ]
         ];
 

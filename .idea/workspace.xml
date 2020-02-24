@@ -2,8 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1fc7cadf-dd8e-4988-95f3-5be001769a75" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/saldo/deposit/detail.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/saldo/deposit/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/saldo/penarikan/detail.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/saldo/penarikan/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/harga/ewallet.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/harga/gift-card.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/harga/internet.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/harga/pln.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/harga/pulsa.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/harga/telepon-dan-sms.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/harga/voucher-game.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/harga/wifi.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/laporan/detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/laporan/detail.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Builders/BayarCepatBuilder.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Builders/BayarCepatBuilder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Builders/BayarCepatPayBuilder.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Builders/BayarCepatPayBuilder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Enums/CurrencyRateEnum.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Enums/CurrencyRateEnum.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Enums/TransactionEnum.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Enums/TransactionEnum.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/Saldo/DepositController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/Saldo/DepositController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/Saldo/WithdrawalController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/Saldo/WithdrawalController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Pages/PagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Pages/PagesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/BankSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/BankSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/BayarCepatPaySeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/BayarCepatPaySeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/saldo/deposit/bank.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/saldo/deposit/bank.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/saldo/deposit/paypal.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/saldo/deposit/paypal.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/saldo/tarik.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/saldo/tarik.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/produk.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/produk.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partials/notification.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/notification.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/webAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/webAdmin.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +193,9 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1Xp9VLnAEJoVoubYE1i1CkxpeRQ" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -172,17 +205,17 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/sass/custom" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/saldo/penarikan" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\bayarcepat\resources\views\admin\saldo\penarikan" />
+      <recent name="C:\xampp\htdocs\bayarcepat\resources\views\admin\saldo\deposit" />
       <recent name="C:\xampp\htdocs\bayarcepat\resources\sass\custom" />
       <recent name="C:\xampp\htdocs\bayarcepat\public" />
       <recent name="C:\xampp\htdocs\bayarcepat\resources\views\admin" />
-      <recent name="C:\xampp\htdocs\bayarcepat\resources\views\layouts" />
-      <recent name="C:\xampp\htdocs\bayarcepat\public\js" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\bayarcepat\storage\app\public" />
@@ -219,7 +252,7 @@
       <workItem from="1582270382724" duration="22692000" />
       <workItem from="1582297830336" duration="14288000" />
       <workItem from="1582365787143" duration="41040000" />
-      <workItem from="1582532167173" duration="2244000" />
+      <workItem from="1582532167173" duration="23676000" />
     </task>
     <servers />
   </component>
@@ -243,10 +276,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="437" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1582379051227" />
-    <state x="413" y="123" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1582401613725">
+    <state x="413" y="123" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1582556264036">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="123" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1582401613725" />
+    <state x="413" y="123" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1582556264036" />
     <state x="463" y="123" key="FileChooserDialogImpl" timestamp="1581734169300">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -271,10 +304,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="489" y="199" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1582434675428" />
-    <state x="517" y="296" key="NewPhpFileDialog" timestamp="1582302937441">
+    <state x="517" y="296" key="NewPhpFileDialog" timestamp="1582556453376">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="517" y="296" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1582302937441" />
+    <state x="517" y="296" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1582556453376" />
     <state x="391" y="193" key="com.intellij.ide.util.TipDialog" timestamp="1582534396517">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -283,9 +316,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="408" y="13" key="refactoring.ChangeSignatureDialog/0.0.1366.728@0.0.1366.728" timestamp="1582280922144" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1582462335443">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1582553540732">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1582462335443" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1582553540732" />
   </component>
 </project>

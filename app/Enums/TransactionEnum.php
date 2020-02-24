@@ -82,11 +82,13 @@ class TransactionEnum
         return $data;
     }
 
-    public static function makeDepositInformation($bank, $userBank)
+    public static function makeDepositInformation($bank, $userBank, $type = 'bank', $fee = null)
     {
         return [
             'bank' => $bank,
-            'user_bank' => $userBank
+            'user_bank' => $userBank,
+            'type' => $type,
+            'fee' => $fee
         ];
     }
 }

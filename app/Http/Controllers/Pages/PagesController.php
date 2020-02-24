@@ -7,11 +7,6 @@ use Illuminate\Http\Request;
 
 class PagesController extends Controller
 {
-    public function product()
-    {
-        return view('pages.produk');
-    }
-
     public function tos()
     {
         return view('pages.tos');

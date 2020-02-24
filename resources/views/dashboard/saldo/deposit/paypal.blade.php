@@ -7,7 +7,7 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-6 is-offset-3">
-                    <form action="" method="post">
+                    <form action="{{ route('web.dashboard.saldo.deposit.store') }}" method="post">
                         @csrf
                         <input name="type" value="paypal" type="hidden">
 
@@ -17,7 +17,7 @@
                             <div class="field">
                                 <label>Jumlah Uang (USD)</label>
                                 <p class="control has-icons-left">
-                                    <input class="input" name="amount_money" type="text" placeholder="contoh 1000,5 atau 7,56">
+                                    <input class="input" name="amount_money" type="number"  min="0.01" step="0.01" max="2500" value="00.00" >
                                     <span class="icon is-small is-left">
                                         <i class="fas fa-coins"></i>
                                 </span>
@@ -76,30 +76,66 @@
                                 </table>
                             </div>
 
-
                             <div class="field">
                                 <label>Metode Pembayaran</label>
-
                                 <p class="control has-icons-left">
-                                <span class="select is-fullwidth">
-                                    <select>
-                                        <option>Paypal</option>
-                                    </select>
-
-                                </span>
+                                    <span class="select is-fullwidth">
+                                          <select name="bank_id">
+                                              @foreach($banks as $bank)
+                                                  <option value="{{ $bank->id }}">{{ $bank->bank_name }}</option>
+                                              @endforeach
+                                          </select>
+                                    </span>
                                     <span class="icon is-small is-left">
-                                    <i class="fas fa-globe"></i>
-                                </span>
+                                        <i class="fas fa-globe"></i>
+                                    </span>
                                 </p>
                             </div>
                             <div class="field">
                                 <label>Catatan (optional)</label>
                                 <p class="control">
-                                <textarea name="note" class="textarea" placeholder="Notes (optiona)">
+                                <textarea name="note" class="textarea" placeholder="Notes (optional)">
                                 </textarea>
                                 </p>
                             </div>
-
+                        </div>
+                        <div class="box">
+                            <div class="field">
+                                <h3 class="subtitle">Data Paypal Anda</h3>
+                                <p>
+                                    Silakan isi informasi paypal yang akan digunakan untuk mentransfer.
+                                </p>
+                            </div>
+                            <div class="field">
+                                <label>Nama Bank</label>
+                                <p class="control has-icons-left">
+                                    <input name="bank_name" class="input" type="text" value="paypal">
+                                    <span class="icon is-small is-left">
+                                    <i class="fas fa-coins"></i>
+                                </span>
+                                </p>
+                            </div>
+                            <div class="field">
+                                <label>Email Paypal Anda</label>
+                                <p class="control has-icons-left">
+                                    <input name="bank_account_number" class="input" type="text" placeholder="Email paypal anda">
+                                    <span class="icon is-small is-left">
+                                        <i class="fas fa-coins"></i>
+                                </span>
+                                </p>
+                            </div>
+                            <div class="field">
+                                <label>Nama Paypal Anda</label>
+                                <p class="control has-icons-left">
+                                    <input name="bank_account_name" class="input" type="text" placeholder="Jumlah uang">
+                                    <span class="icon is-small is-left">
+                                    <i class="fas fa-coins"></i>
+                                </span>
+                                </p>
+                            </div>
+                            <div class="notification is-warning">
+                                Anda harus mentransfer dari informasi yang anda masukan.
+                            </div>
                             <div class="field">
                                 <button class="button is-primary is-fullwidth">
                                     <span>Deposit Saldo</span>

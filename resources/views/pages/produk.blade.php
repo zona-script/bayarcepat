@@ -27,7 +27,7 @@
                     <p class="subtitle">Kami menyediakan banyak sekali produk, mulai dari paket internet, pulsa, voucher wifi, voucher game, saldo ewallet, PLN, dan lain sebagainya.</p>
                     <div class="columns">
                         <div class="column">
-                            <a class="box has-text-centered">
+                            <a href="{{ route('web.pages.produk.harga.pulsa') }}" class="box has-text-centered">
                                 <span>
                                 <i class="fas fa-mobile-alt fa-3x"></i>
                                 </span>
@@ -35,7 +35,7 @@
                             </a>
                         </div>
                         <div class="column">
-                            <a class="box has-text-centered">
+                            <a href="{{ route('web.pages.produk.harga.pln') }}" class="box has-text-centered">
                                 <span>
                                 <i class="fas fa-plug fa-3x"></i>
                                 </span>
@@ -43,7 +43,7 @@
                             </a>
                         </div>
                         <div class="column">
-                            <a class="box has-text-centered">
+                            <a href="{{ route('web.pages.produk.harga.paket-data') }}" class="box has-text-centered">
                                 <span>
                                 <i class="fas fa-globe fa-3x"></i>
                                 </span>
@@ -51,7 +51,7 @@
                             </a>
                         </div>
                         <div class="column">
-                            <a class="box has-text-centered">
+                            <a href="{{ route('web.pages.produk.harga.wifi') }}" class="box has-text-centered">
                                 <span>
                                 <i class="fas fa-wifi fa-3x"></i>
                                 </span>
@@ -61,7 +61,7 @@
                     </div>
                     <div class="columns">
                         <div class="column">
-                            <a class="box has-text-centered">
+                            <a href="{{ route('web.pages.produk.harga.nelfon-sms') }}" class="box has-text-centered">
                                 <span>
                                 <i class="fas fa-sms fa-3x"></i>
                                 </span>
@@ -69,7 +69,7 @@
                             </a>
                         </div>
                         <div class="column">
-                            <a class="box has-text-centered">
+                            <a href="{{ route('web.pages.produk.harga.gift-card') }}" class="box has-text-centered">
                                 <span>
                                 <i class="fas fa-gift fa-3x"></i>
                                 </span>
@@ -77,7 +77,7 @@
                             </a>
                         </div>
                         <div class="column">
-                            <a class="box has-text-centered">
+                            <a href="{{ route('web.pages.produk.harga.game-online') }}" class="box has-text-centered">
                                 <span>
                                 <i class="fas fa-trophy fa-3x"></i>
                                 </span>
@@ -85,7 +85,7 @@
                             </a>
                         </div>
                         <div class="column">
-                            <a class="box has-text-centered">
+                            <a href="{{ route('web.pages.produk.harga.ewallet') }}" class="box has-text-centered">
                                 <span>
                                 <i class="fas fa-motorcycle fa-3x"></i>
                                 </span>
@@ -106,7 +106,6 @@
     </div>
     <div class="section">
         <div class="container">
-
             <div class="columns is-vcentered side-feature">
                 <div class="column is-5 is-hidden-desktop is-hidden-tablet">
                     <div class="container">
@@ -123,8 +122,8 @@
                     </div>
                 </div>
                 <div class="column is-7">
-                    <h3 class="title is-2 is-bold is-title-reveal has-text-primary">Kirim Uang</h3>
-                    <p class="subtitle">Anda bisa kirim uang suka suka kamu ke sesama member atau ke bank, untuk kedepannya akan kami tambahkan sesuai permintaan anda.</p>
+                    <h3 class="title is-2 is-bold is-title-reveal has-text-primary">Kirim Uang & Tukar</h3>
+                    <p class="subtitle">Anda bisa kirim uang suka suka kamu ke sesama member atau ke bank, anda juga bisa kirim uang dari paypal ke bank. Untuk kedepannya akan kami tambahkan sesuai permintaan anda.</p>
                     <div class="columns">
                         <div class="column is-6">
                             <a class="box has-text-centered">
@@ -143,10 +142,36 @@
                             </a>
                         </div>
                     </div>
+                    <div class="columns">
+                        <div class="column is-6">
+                            <a class="box has-text-centered">
+                                <span>
+                                <i class="fab fa-paypal fa-3x"></i>
+                                </span>
+                                <p class="subtitle">Dari Paypal ke Bank</p>
+                            </a>
+                        </div>
+                        <div class="column is-6">
+                            <a class="box has-text-centered">
+                                <span>
+                                <i class="fas fa-clock fa-3x"></i>
+                                </span>
+                                <p class="subtitle">Lainnya? tunggu aja</p>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <div class="section is-medium has-background-danger">
+        <div class="container">
+            <div class="has-text-centered">
+                <p class="title has-text-white">Butuh Fitur Lainnya?</p>
+                <p class="subtitle has-text-white">Berikan saran ke kami dan kami akan membuatkan permintaan anda sesegera mungkin.</p>
+            </div>
+        </div>
+    </div>
 
 @endsection
