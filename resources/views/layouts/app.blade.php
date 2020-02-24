@@ -50,8 +50,8 @@
                 <a class="navbar-item" href="{{ route('web.pages.produk.index') }}">
                     Produk & Harga
                 </a>
-                <a class="navbar-item" href="">
-                    Jadi Reseller
+                <a class="navbar-item" href="{{ route('web.pages.membership') }}">
+                    Membership
                 </a>
                 <a class="navbar-item" href="{{ route('web.pages.tentang-kami') }}">
                     Panduan
