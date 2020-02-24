@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1fc7cadf-dd8e-4988-95f3-5be001769a75" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="1fc7cadf-dd8e-4988-95f3-5be001769a75" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -218,6 +216,7 @@
       <workItem from="1582270382724" duration="22692000" />
       <workItem from="1582297830336" duration="14288000" />
       <workItem from="1582365787143" duration="41040000" />
+      <workItem from="1582532167173" duration="723000" />
     </task>
     <servers />
   </component>
@@ -273,10 +272,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="517" y="296" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1582302937441" />
-    <state x="391" y="193" key="com.intellij.ide.util.TipDialog" timestamp="1582365807063">
+    <state x="391" y="193" key="com.intellij.ide.util.TipDialog" timestamp="1582534396517">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="391" y="193" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1582365807063" />
+    <state x="391" y="193" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1582534396517" />
     <state x="408" y="13" key="refactoring.ChangeSignatureDialog" timestamp="1582280922144">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
