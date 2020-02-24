@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1fc7cadf-dd8e-4988-95f3-5be001769a75" name="Default Changelist" comment="" />
+    <list default="true" id="1fc7cadf-dd8e-4988-95f3-5be001769a75" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/laporan/detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/laporan/detail.blade.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -174,19 +177,19 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\bayarcepat\resources\views\dashboard\saldo\deposit" />
-      <recent name="C:\xampp\htdocs\bayarcepat\app\JavaH2H\Reformat" />
-      <recent name="C:\xampp\htdocs\bayarcepat\resources\views\pages" />
-      <recent name="C:\xampp\htdocs\bayarcepat\resources\views\dashboard\profile" />
-      <recent name="C:\xampp\htdocs\bayarcepat\resources\views\dashboard\saldo" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\bayarcepat\resources\sass\custom" />
       <recent name="C:\xampp\htdocs\bayarcepat\public" />
       <recent name="C:\xampp\htdocs\bayarcepat\resources\views\admin" />
       <recent name="C:\xampp\htdocs\bayarcepat\resources\views\layouts" />
       <recent name="C:\xampp\htdocs\bayarcepat\public\js" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\bayarcepat\storage\app\public" />
+      <recent name="C:\xampp\htdocs\bayarcepat\storage\app" />
+      <recent name="C:\xampp\htdocs\bayarcepat\resources\views\dashboard\saldo\deposit" />
+      <recent name="C:\xampp\htdocs\bayarcepat\app\JavaH2H\Reformat" />
+      <recent name="C:\xampp\htdocs\bayarcepat\resources\views\pages" />
     </key>
   </component>
   <component name="RunManager">
@@ -216,7 +219,7 @@
       <workItem from="1582270382724" duration="22692000" />
       <workItem from="1582297830336" duration="14288000" />
       <workItem from="1582365787143" duration="41040000" />
-      <workItem from="1582532167173" duration="723000" />
+      <workItem from="1582532167173" duration="2244000" />
     </task>
     <servers />
   </component>

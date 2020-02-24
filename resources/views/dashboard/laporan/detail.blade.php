@@ -203,7 +203,7 @@
                                     <tr>
                                         <td>1</td>
                                         <td>{{ $transaction->created_at }}</td>
-                                        <td>{{ \App\Enums\JavaH2HStatusEnum::make($transaction->message['data']['status']) }}</td>
+                                        <td>Transaksi dimulai</td>
                                     </tr>
 
                                     @foreach($transaction->callbackResponse as $response)
