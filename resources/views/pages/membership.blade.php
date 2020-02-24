@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
-@section('title', 'Policy Privacy')
+@section('title', 'Paket Membership')
 
 @section('content')
     <div class="hero is-white">
         <div class="hero-body">
             <div class="container has-text-centered">
-                <h2 class="title">Jadi Reseller, Pilih Paket Kesukaanmu</h2>
+                <h2 class="title">Paket Membership, Pilih Paket Kesukaanmu</h2>
                 <h3 class="subtitle">Pilih Paketmu dan mulai jualanmu, jangan pilih yang paling bagus kalau terendah juga bagus</h3>
             </div>
         </div>
