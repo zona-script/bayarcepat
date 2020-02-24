@@ -93,13 +93,29 @@
     @yield('content')
 </div>
 
-{{--<footer class="footer has-background-grey-dark">--}}
-{{--    <div class="container">--}}
-{{--        <div class="has-text-centered has-text-white">--}}
-{{--            <span>Panduan</span> . <span>Api</span>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-{{--</footer>--}}
+<footer class="footer has-background-grey-dark">
+    <div class="columns">
+        <div class="column is-6 is-offset-3">
+            <div class="container has-text-centered">
+
+                <form action="{{ route('logout') }}" method="post">
+                    @csrf
+                    <div class="field">
+                        <button class="button is-white is-outlined">Keluar Akun (Log Out)</button>
+                    </div>
+                </form>
+
+                <hr>
+                <p class="has-text-white">
+                    Copyright &copy; {{ env('APP_NAME') }} <br>
+                    Jika terjadi kesusahan atau butuh bantuan, silakan hubungi kami.
+                    <br>
+                    Anda dapat menghubungi kami di facebook group [bayarcepat], telegram ['bayarcepat], whatsapp [bayarcepat], email bayarcepat@dibumi.com
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
 
 <!-- Back To Top Button -->
 <div id="backtotop"><a><i class="fas fa-angle-up"></i></a></div>

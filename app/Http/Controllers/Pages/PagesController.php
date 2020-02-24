@@ -21,4 +21,9 @@ class PagesController extends Controller
     {
         return view('pages.tentang-kami');
     }
+
+    public function membership()
+    {
+        return view('pages.membership');
+    }
 }
