@@ -4,6 +4,8 @@
 namespace App\Builders;
 
 
+use App\BayarCepatPay;
+use App\Enums\BayarCepatPayEnum;
 use App\User;
 use Illuminate\Support\Facades\Auth;
 
@@ -22,8 +24,22 @@ class BayarCepatPayBuilder
             $id = $userID;
         }
 
-        $user = User::findOrFail($id);
-        return $user->balance;
+//        $user = User::findOrFail($id);
+//        dd($user->balance);
+//        return $user->balance;
+
+        $out = BayarCepatPay::where('user_id', $id)
+            ->where('type', BayarCepatPayEnum::$typeOUT)
+            ->sum('value');
+        $in =  BayarCepatPay::where('user_id', $id)
+            ->where('type', BayarCepatPayEnum::$typeIN)
+            ->sum('value');
+
+        if (blank($in)) {
+            return 0;
+        }
+
+        return ($in - $out);
     }
 
     public static function getRandomUniqueCode($USD = false)

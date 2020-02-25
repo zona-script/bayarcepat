@@ -34,8 +34,15 @@ class TransaksiController extends Controller
         $phoneNumber = $request->input('phone_number');
 
         $product = $this->getProduct($request);
-        $this->validateProductCode($product);
-        $this->validatePrice($product);
+        $validateProduct = $this->validateProductCode($product);
+        if (!blank($validateProduct)) {
+            return $validateProduct;
+        }
+
+        $validatePrice = $this->validatePrice($product);
+        if (!blank($validatePrice)) {
+            return $validatePrice;
+        }
 
         // informasi transaksi
         $transaction = Transaction::create([
@@ -164,6 +171,8 @@ class TransaksiController extends Controller
                 ->route('web.dashboard.transaksi.index')
                 ->with('error', "Produk Tidak ditemukan");
         }
+
+        return null;
     }
 
     // cek saldo
@@ -174,7 +183,9 @@ class TransaksiController extends Controller
         if ($user['balance'] < $product['price']) {
             return redirect()
                 ->route('web.dashboard.transaksi.index')
-                ->with('error', "Saldo anda kurang");
+                ->with('error', "Transaksi Tidak di Proses, Karena Saldo anda kurang.");
         }
+
+        return null;
     }
 }

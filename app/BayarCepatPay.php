@@ -18,6 +18,8 @@ class BayarCepatPay extends Model
         'balance'
     ];
 
+
+    // auth idnya, admin tidak bisa cek.
     public function getBalanceAttribute()
     {
         $out = $this->where('user_id', Auth::id())

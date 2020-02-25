@@ -19,18 +19,18 @@
 <body class="has-background-light" >
 <div class="is-fullpage has-content-centered">
     <div class="columns is-marginless is-fullpage">
-        <div class="column is-half-tablet is-7-desktop is-8-widescreen is-hidden-mobile has-padding-large"
-             data-background="https://demo.creativebulma.net/templates/html/pegasus/assets/images/undraw_nature_fun_n9lv.svg">
-            <div class="has-text-centered login-logo">
-                <svg viewBox="0 0 144 39" xmlns="http://www.w3.org/2000/svg">
-                    <g transform="translate(-17 -32)">
-                        <path fill="currentColor"
-                              d="m61.51 44.26h3.21v13h-3.21zm4.49 8.11c0-3.22 2-5.15 5-5.15s5 1.93 5 5.15-1.93 5.17-5 5.17-5-1.88-5-5.17zm6.82 0c0-1.77-.69-2.81-1.79-2.81s-1.78 1-1.78 2.81.68 2.8 1.78 2.8 1.81-.99 1.81-2.79zm4.46 5.56h3.1c.289.684 1.004 1.094 1.74 1 1.23 0 1.87-.66 1.87-1.64v-1.8h.01c-.541 1.145-1.737 1.843-3 1.75-2.35 0-3.91-1.79-3.91-4.87s1.49-5 4-5c1.296-.069 2.503.691 3 1.89h-.09v-1.81h3.18v9.74c0 2.35-2.08 3.82-5.14 3.82-2.78-.01-4.56-1.28-4.74-3.07zm6.72-5.56c0-1.57-.72-2.56-1.86-2.56s-1.84 1-1.84 2.56.69 2.48 1.84 2.48 1.86-.85 1.86-2.48zm4.45 0c0-3.22 2-5.15 5-5.15s5 1.93 5 5.15-1.94 5.17-5 5.17-4.98-1.88-4.98-5.17zm6.82 0c0-1.77-.7-2.81-1.79-2.81s-1.78 1-1.78 2.81.68 2.8 1.78 2.8 1.81-.99 1.81-2.79zm4.48-7.29c-.001-.023-.001-.047-.001-.07 0-.9.74-1.64 1.64-1.64.899 0 1.64.74 1.64 1.64 0 .899-.74 1.639-1.639 1.64-.013 0-.027.001-.04.001-.86 0-1.569-.702-1.58-1.561zm0 2.36h3.25v9.86h-3.2zm14.94 4.93c0 3.21-1.44 5.07-3.89 5.07-1.282.079-2.484-.654-3-1.83h-.06v4.86h-3.21v-13h3.19v1.76h.06c.499-1.199 1.703-1.962 3-1.9 2.52-.02 3.97 1.83 3.97 5.05zm-3.27 0c0-1.56-.73-2.57-1.86-2.57s-1.84 1-1.85 2.57.72 2.56 1.85 2.56 1.92-.93 1.92-2.55zm8.75-5.16c2.69 0 4.36 1.27 4.38 3.31h-2.93c0-.71-.59-1.15-1.47-1.15s-1.3.34-1.3.85.37.67 1.11.82l2.06.42c2 .42 2.8 1.22 2.8 2.71 0 2-1.85 3.36-4.6 3.36s-4.54-1.32-4.67-3.33h3.11c.09.73.67 1.16 1.61 1.16s1.38-.3 1.38-.83-.3-.62-1.07-.78l-1.86-.39c-1.93-.41-2.94-1.42-2.94-2.93.06-1.96 1.74-3.21 4.45-3.21zm15.4 10.08h-3.11v-1.85h-.06c-.357 1.267-1.556 2.123-2.87 2.05-.037.001-.074.002-.112.002-1.881 0-3.43-1.549-3.43-3.43 0-.094.004-.188.012-.282v-6.33h3.21v5.64c0 1.16.61 1.79 1.61 1.79.895-.007 1.628-.745 1.628-1.64 0-.08-.006-.161-.018-.24v-5.55h3.2zm1.55-9.85h3.12v1.9h.07c.353-1.248 1.513-2.106 2.81-2.08 1.309-.114 2.504.798 2.74 2.09h.14c.41-1.292 1.646-2.153 3-2.09.04-.002.079-.002.119-.002 1.711 0 3.12 1.408 3.12 3.12 0 .077-.003.155-.009.232v6.69h-3.23v-5.87c0-1-.47-1.56-1.38-1.56-.008 0-.015 0-.023 0-.768 0-1.4.632-1.4 1.4 0 .063.004.127.013.19v5.84h-3.06v-5.9c0-1-.49-1.53-1.37-1.53-.004 0-.008 0-.011 0-.785 0-1.43.645-1.43 1.43 0 .06.003.12.011.18v5.82h-3.21z" />
-                        <path fill="currentColor"
-                              d="m55.16 45.11c0-5.42-4.46-9.88-9.88-9.88-2.767 0-5.41 1.162-7.28 3.2h-12.48v26.34h26.35v-12.31c2.091-1.87 3.288-4.545 3.29-7.35zm-5.07 0v.01c0 2.644-2.176 4.82-4.82 4.82s-4.82-2.176-4.82-4.82 2.176-4.82 4.82-4.82c2.64 0 4.815 2.17 4.82 4.81zm-3.29 14.59h-16.21v-16.2h4.94c-.095.531-.146 1.07-.15 1.61.005 5.423 4.467 9.885 9.89 9.89.513-.003 1.024-.046 1.53-.13z" />
-                    </g>
-                </svg>
-            </div>
+        <div class="column is-half-tablet is-7-desktop is-8-widescreen is-hidden-mobile has-padding-large">
+{{--             data-background="https://demo.creativebulma.net/templates/html/pegasus/assets/images/undraw_nature_fun_n9lv.svg">--}}
+{{--            <div class="has-text-centered login-logo">--}}
+{{--                <svg viewBox="0 0 144 39" xmlns="http://www.w3.org/2000/svg">--}}
+{{--                    <g transform="translate(-17 -32)">--}}
+{{--                        <path fill="currentColor"--}}
+{{--                              d="m61.51 44.26h3.21v13h-3.21zm4.49 8.11c0-3.22 2-5.15 5-5.15s5 1.93 5 5.15-1.93 5.17-5 5.17-5-1.88-5-5.17zm6.82 0c0-1.77-.69-2.81-1.79-2.81s-1.78 1-1.78 2.81.68 2.8 1.78 2.8 1.81-.99 1.81-2.79zm4.46 5.56h3.1c.289.684 1.004 1.094 1.74 1 1.23 0 1.87-.66 1.87-1.64v-1.8h.01c-.541 1.145-1.737 1.843-3 1.75-2.35 0-3.91-1.79-3.91-4.87s1.49-5 4-5c1.296-.069 2.503.691 3 1.89h-.09v-1.81h3.18v9.74c0 2.35-2.08 3.82-5.14 3.82-2.78-.01-4.56-1.28-4.74-3.07zm6.72-5.56c0-1.57-.72-2.56-1.86-2.56s-1.84 1-1.84 2.56.69 2.48 1.84 2.48 1.86-.85 1.86-2.48zm4.45 0c0-3.22 2-5.15 5-5.15s5 1.93 5 5.15-1.94 5.17-5 5.17-4.98-1.88-4.98-5.17zm6.82 0c0-1.77-.7-2.81-1.79-2.81s-1.78 1-1.78 2.81.68 2.8 1.78 2.8 1.81-.99 1.81-2.79zm4.48-7.29c-.001-.023-.001-.047-.001-.07 0-.9.74-1.64 1.64-1.64.899 0 1.64.74 1.64 1.64 0 .899-.74 1.639-1.639 1.64-.013 0-.027.001-.04.001-.86 0-1.569-.702-1.58-1.561zm0 2.36h3.25v9.86h-3.2zm14.94 4.93c0 3.21-1.44 5.07-3.89 5.07-1.282.079-2.484-.654-3-1.83h-.06v4.86h-3.21v-13h3.19v1.76h.06c.499-1.199 1.703-1.962 3-1.9 2.52-.02 3.97 1.83 3.97 5.05zm-3.27 0c0-1.56-.73-2.57-1.86-2.57s-1.84 1-1.85 2.57.72 2.56 1.85 2.56 1.92-.93 1.92-2.55zm8.75-5.16c2.69 0 4.36 1.27 4.38 3.31h-2.93c0-.71-.59-1.15-1.47-1.15s-1.3.34-1.3.85.37.67 1.11.82l2.06.42c2 .42 2.8 1.22 2.8 2.71 0 2-1.85 3.36-4.6 3.36s-4.54-1.32-4.67-3.33h3.11c.09.73.67 1.16 1.61 1.16s1.38-.3 1.38-.83-.3-.62-1.07-.78l-1.86-.39c-1.93-.41-2.94-1.42-2.94-2.93.06-1.96 1.74-3.21 4.45-3.21zm15.4 10.08h-3.11v-1.85h-.06c-.357 1.267-1.556 2.123-2.87 2.05-.037.001-.074.002-.112.002-1.881 0-3.43-1.549-3.43-3.43 0-.094.004-.188.012-.282v-6.33h3.21v5.64c0 1.16.61 1.79 1.61 1.79.895-.007 1.628-.745 1.628-1.64 0-.08-.006-.161-.018-.24v-5.55h3.2zm1.55-9.85h3.12v1.9h.07c.353-1.248 1.513-2.106 2.81-2.08 1.309-.114 2.504.798 2.74 2.09h.14c.41-1.292 1.646-2.153 3-2.09.04-.002.079-.002.119-.002 1.711 0 3.12 1.408 3.12 3.12 0 .077-.003.155-.009.232v6.69h-3.23v-5.87c0-1-.47-1.56-1.38-1.56-.008 0-.015 0-.023 0-.768 0-1.4.632-1.4 1.4 0 .063.004.127.013.19v5.84h-3.06v-5.9c0-1-.49-1.53-1.37-1.53-.004 0-.008 0-.011 0-.785 0-1.43.645-1.43 1.43 0 .06.003.12.011.18v5.82h-3.21z" />--}}
+{{--                        <path fill="currentColor"--}}
+{{--                              d="m55.16 45.11c0-5.42-4.46-9.88-9.88-9.88-2.767 0-5.41 1.162-7.28 3.2h-12.48v26.34h26.35v-12.31c2.091-1.87 3.288-4.545 3.29-7.35zm-5.07 0v.01c0 2.644-2.176 4.82-4.82 4.82s-4.82-2.176-4.82-4.82 2.176-4.82 4.82-4.82c2.64 0 4.815 2.17 4.82 4.81zm-3.29 14.59h-16.21v-16.2h4.94c-.095.531-.146 1.07-.15 1.61.005 5.423 4.467 9.885 9.89 9.89.513-.003 1.024-.046 1.53-.13z" />--}}
+{{--                    </g>--}}
+{{--                </svg>--}}
+{{--            </div>--}}
         </div>
         <div class="column has-content-vspaced has-padding-large has-background-white">
             <div>
@@ -38,49 +38,75 @@
                     Buat Akun
                 </p>
                 <p class="subtitle has-text-centered has-text-weight-light">
-                    atau <a href="https://demo.creativebulma.net/templates/html/pegasus/login-v2">masuk</a>
+                    atau <a href="{{ route('login') }}">masuk</a>
                 </p>
             </div>
 
             <div class="columns is-mobile is-centered">
                 <div class="column is-10-mobile is-8-fullhd">
                     <form class="" method="post" action="">
+                        @csrf
                         <div class="section is-paddingless-horizontal is-paddingless-top">
                             <div class="field">
                                 <label class="label">Nama Lengkap</label>
                                 <div class="control">
-                                    <input class="input" type="text" placeholder="e.g JohnWick">
+                                    <input name="name" type="text" class="input @error('name') is-danger @enderror" value="{{ old('name') }}" required>
                                 </div>
+
+                                @error('name')
+                                <p class="has-text-danger" role="alert">
+                                    <span>{{ $message }}</span>
+                                </p>
+                                @enderror
                             </div>
                             <div class="field">
                                 <label class="label">Username</label>
                                 <div class="control">
-                                    <input class="input" type="text" placeholder="e.g JohnWick">
+                                    <input name="username" type="text" class="input @error('username') is-danger @enderror" value="{{ old('username') }}" required>
                                 </div>
+                                @error('username')
+                                <p class="has-text-danger" role="alert">
+                                    <span>{{ $message }}</span>
+                                </p>
+                                @enderror
                             </div>
 
                             <div class="field">
                                 <label class="label">Email address</label>
                                 <div class="control">
-                                    <input class="input" type="email" placeholder="email@example.com">
+                                    <input name="email" type="email" class="input @error('email') is-danger @enderror" value="{{ old('email') }}" required>
                                 </div>
+                                @error('email')
+                                <p class="has-text-danger" role="alert">
+                                    <span>{{ $message }}</span>
+                                </p>
+                                @enderror
                             </div>
 
                             <div class="field">
                                 <label class="label">Password</label>
-                                <input class="input" type="password">
+                                <input name="password" type="password" class="input @error('password') is-danger @enderror" value="{{ old('password') }}" required>
+                                @error('password')
+                                <p class="has-text-danger" role="alert">
+                                    <span>{{ $message }}</span>
+                                </p>
+                                @enderror
                             </div>
 
                             <div class="field">
                                 <label class="label">Confirm Password</label>
-                                <input class="input" type="password">
+                                <input name="password_confirmation" type="password" class="input @error('password_confirmation') is-danger @enderror" value="{{ old('password_confirmation') }}" required>
+                                @error('password_confirmation')
+                                <p class="has-text-danger" role="alert">
+                                    <span>{{ $message }}</span>
+                                </p>
+                                @enderror
                             </div>
 
                             <div class="field">
                                 <div class="control">
                                     <label class="checkbox">
-                                        <input type="checkbox">
-                                        Agree the <a href="">terms and policy</a>.
+                                        Anda mendaftar berarti anda setuju dengan semua <a href="{{ route('web.pages.syarat-dan-ketentuan') }}">syarat dan ketentuan</a>.
                                     </label>
                                 </div>
                             </div>
@@ -94,7 +120,7 @@
             </div>
 
             <p class="has-text-centered has-text-grey">
-                Sudah punya akun? <a href="">Masuk</a>
+                Sudah punya akun? <a href="{{ route('login') }}">Masuk</a>
             </p>
         </div>
     </div>

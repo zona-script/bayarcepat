@@ -19,8 +19,8 @@
 <body class="has-background-light">
 <div class="is-fullpage has-content-centered">
     <div class="columns is-marginless is-fullpage">
-        <div class="column is-half-tablet is-7-desktop is-8-widescreen is-hidden-mobile has-padding-large"
-             data-background="https://source.unsplash.com/random/1600x800">
+        <div class="column is-half-tablet is-7-desktop is-8-widescreen is-hidden-mobile has-padding-large">
+{{--             data-background="https://source.unsplash.com/random/1600x800">--}}
 {{--             data-background="https://demo.creativebulma.net/templates/html/pegasus/assets/images/undraw_nature_fun_n9lv.svg">--}}
 {{--            <div class="has-text-centered login-logo">--}}
 {{--                <svg viewBox="0 0 144 39" xmlns="http://www.w3.org/2000/svg">--}}
@@ -39,7 +39,7 @@
                     Masuk
                 </p>
                 <p class="subtitle has-text-centered has-text-weight-light">
-                    atau <a href="">Buat Akun</a>
+                    atau <a href="{{ route('register') }}">Buat Akun</a>
                 </p>
             </div>
 
@@ -53,19 +53,29 @@
                             <div class="field">
                                 <label class="label">Email atau Username</label>
                                 <div class="control">
-                                    <input class="input" name="email" type="text" placeholder="email atau username" value="{{ old('email') }}" required>
+                                    <input class="input @error('email') is-danger @enderror"  name="email" type="text" placeholder="email atau username" value="{{ old('email') }}" required>
                                 </div>
+                                @error('email')
+                                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
 
                             <div class="field">
                                 <label class="label">Password</label>
-                                <input class="input" name="password" type="password" placeholder="password" required>
+                                <input class="input @error('password') is-danger @enderror"  name="password" type="password" placeholder="password" required>
+                                @error('password')
+                                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
 
                             <div class="field">
                                 <div class="control">
                                     <label class="checkbox">
-                                        <input name="remember" type="checkbox">
+                                        <input name="remember" type="checkbox" {{ old('remember') ? 'checked' : '' }}>
                                         Ingat saya
                                     </label>
                                 </div>
@@ -84,7 +94,7 @@
             </div>
 
             <p class="has-text-centered has-text-grey">
-                Belum punya akun? <a href="">buat akun</a>
+                Belum punya akun? <a href="{{ route('register') }}">buat akun</a>
             </p>
         </div>
     </div>

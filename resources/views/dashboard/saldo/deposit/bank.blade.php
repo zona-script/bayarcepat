@@ -92,47 +92,6 @@
                         </div>
 
                     </form>
-
-                    <div class="box">
-                    </div>
-                    <div class="box">
-                        <h3 class="subtitle is-4">Pembayaran</h3>
-                        <p>Silakan lakukan pembayaran ke Rekening Bank BRI di bawah ini:</p>
-                        <br>
-                        <p>
-                            <img
-                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/BANK_BRI_logo.svg/1280px-BANK_BRI_logo.svg.png"
-                                style="max-width: 128px"></p>
-                        <table class="table is-fullwidth">
-                            <tr>
-                                <td>A/N</td>
-                                <td>:</td>
-                                <td>PT. Urun Dana Usaha</td>
-                            </tr>
-                            <tr>
-                                <td>Norek</td>
-                                <td>:</td>
-                                <td>8212-2121-1212-2121</td>
-                            </tr>
-                            <tr>
-                                <td>Sebesar</td>
-                                <td>:</td>
-                                <td>Rp 1.000.981 (harus sama persis)</td>
-                            </tr>
-                            <tr>
-                                <td colspan="3" class="has-text-centered title is-2">Rp 1.000.981</td>
-                            </tr>
-                        </table>
-
-                        <div class="field">
-                            <button class="button is-primary is-fullwidth">
-                                            <span class="icon">
-                                                <i class="fas fa-money-bill-alt"></i>
-                                            </span>
-                                <span>Konfirmasi</span>
-                            </button>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

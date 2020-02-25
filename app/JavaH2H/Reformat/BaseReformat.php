@@ -53,6 +53,10 @@ class BaseReformat
 
             $itemsUpdate[] = $item;
         }
+
+        // sorting
+        $itemsUpdate = collect($itemsUpdate)->sortBy('price');
+
         return $itemsUpdate;
     }
 

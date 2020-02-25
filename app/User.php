@@ -29,7 +29,7 @@ class User extends Authenticatable implements MustVerifyEmail
         'photo_profile', 'id_card', 'id_card_with_photo',
         'verified', 'complete_identity',
         'store_name', 'store_address', 'store_phone_number',
-        'store_address'
+        'store_logo'
     ];
 
     /**

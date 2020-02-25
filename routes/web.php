@@ -33,8 +33,13 @@ Route::group(['as' => 'web.'], function () {
         Route::get('/tentang-kami', 'PagesController@aboutMe')->name('tentang-kami');
         Route::get('/membership', 'PagesController@membership')->name('membership');
     });
+
+    Route::get('/sitemap.xml', 'SitemapController@index')->name('sitemap');
 });
 
-Auth::routes();
-//Auth::routes(['verify' => true]);
+//Auth::routes();
+Auth::routes([
+    'verify' => true,
+    'register' => true
+]);
 Route::get('/home', 'HomeController@index')->name('home');

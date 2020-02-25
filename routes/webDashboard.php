@@ -35,6 +35,7 @@ Route::group(['as' => 'web.'], function () {
 
         Route::group(['prefix' => 'pengaturan', 'as' => 'pengaturan.', 'namespace' => 'Setting'], function () {
             Route::get('/', 'HomeController@index')->name('index');
+            Route::post('/', 'HomeController@update')->name('update');
         });
 
         Route::get('/riwayat', 'RiwayatController@index')->name('riwayat.index');

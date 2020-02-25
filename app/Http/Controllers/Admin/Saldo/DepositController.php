@@ -30,9 +30,10 @@ class DepositController extends Controller
 
     public function update($id)
     {
-        $transaction = Transaction::with('user')->findOrFail($id);
+        $transaction = Transaction::with('user')
+            ->findOrFail($id);
 
-        BayarCepatBuilder::make()
+        BayarCepatBuilder::make($transaction->user_id)
             ->deposit($transaction);
 
         return redirect()

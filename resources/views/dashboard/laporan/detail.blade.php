@@ -35,6 +35,51 @@
                             <input type="text" class="input" value="{{ $transaction->time }}" disabled>
                         </div>
                     </div>
+                    @if($transaction->type == \App\Enums\TransactionEnum::$typeBayarCepatPayDeposit && $transaction->status == \App\Enums\TransactionEnum::$statusProcess)
+                        <div class="box">
+                            <h3 class="subtitle is-4">Pembayaran</h3>
+                            <p>Silakan lakukan pembayaran ke Rekening bawah ini:</p>
+                            <br>
+                            <p>
+                                <img
+                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/BANK_BRI_logo.svg/1280px-BANK_BRI_logo.svg.png"
+                                    style="max-width: 128px"></p>
+                            <table class="table is-fullwidth">
+                                <tr>
+                                    <td>BANK</td>
+                                    <td>:</td>
+                                    <td>{{ $transaction->information['bank']['bank_name'] }}</td>
+                                </tr>
+                                <tr>
+                                    <td>A/N</td>
+                                    <td>:</td>
+                                    <td>{{ $transaction->information['bank']['bank_account_name'] }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Norek</td>
+                                    <td>:</td>
+                                    <td>{{ $transaction->information['bank']['bank_account_number'] }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Sebesar</td>
+                                    <td>:</td>
+                                    <td>Rp {{ money_format_rupiah($transaction->information['bank']['value_total']) }} (harus sama persis)</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" class="has-text-centered title is-2">Rp {{ money_format_rupiah($transaction->information['bank']['value_total']) }}</td>
+                                </tr>
+                            </table>
+
+                            <div class="field">
+                                <button class="button is-primary is-fullwidth">
+                                            <span class="icon">
+                                                <i class="fas fa-money-bill-alt"></i>
+                                            </span>
+                                    <span>Konfirmasi</span>
+                                </button>
+                            </div>
+                        </div>
+                    @endif
                 </div>
                 <div class="column is-8">
                     <div class="box">
@@ -88,17 +133,18 @@
                             </div>
                             <div class="field">
                                 <label class="label">Nominal</label>
-                                <input type="text" class="input" value="{{ $transaction->information['bank']['value'] }}" disabled>
+                                <input type="text" class="input" value="Rp {{ money_format_rupiah($transaction->information['bank']['value']) }}" disabled>
                             </div>
                             <div class="field">
                                 <label class="label">Kode Unik</label>
-                                <input type="text" class="input" value="{{ $transaction->information['bank']['value_unique'] }}" disabled>
+                                <input type="text" class="input" value="Rp {{ money_format_rupiah($transaction->information['bank']['value_unique']) }}" disabled>
                             </div>
                             <div class="field">
                                 <label class="label">Total Uang Harus Dikirim</label>
-                                <input type="text" class="input" value="{{ $transaction->information['bank']['value_total'] }}" disabled>
+                                <input type="text" class="input" value="Rp {{ money_format_rupiah($transaction->information['bank']['value_total']) }}" disabled>
                             </div>
-                            <hr>
+                    </div>
+                    <div class="box">
                             <div class="field">
                                 <h3 class="title is-4">Informasi Bank Anda</h3>
                             </div>
@@ -218,6 +264,11 @@
                             </div>
                         </div>
                     @endif
+                </div>
+            </div>
+
+            <div class="columns">
+                <div class="column is-6">
                 </div>
             </div>
         </div>

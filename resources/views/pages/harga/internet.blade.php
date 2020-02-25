@@ -39,6 +39,7 @@
                                     <tr>
                                         <th style="width: 20px;">No</th>
                                         <th>Provider</th>
+                                        <th>Deskripsi</th>
                                         <th>Code</th>
                                         <th>Harga</th>
                                     </tr>
@@ -48,6 +49,7 @@
                                         <tr>
                                             <td>{{ $loop->iteration }}</td>
                                             <td>{{ $item->provider_sub }}</td>
+                                            <td>{{ $item->description }}</td>
                                             <td>{{ $item->code }}</td>
                                             <td>{{ $item->price }}</td>
                                         </tr>

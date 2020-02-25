@@ -10,27 +10,71 @@ use Illuminate\Support\Facades\Auth;
 
 class BayarCepatBuilder
 {
-    protected $type;
-    protected $userID;
-    protected $value = '';
-    protected $information = '';
-    protected $previousBalance = 0;
+    public $type;
+    public $userID;
+    public $value = '';
+    public $information = '';
+    public $previousBalance = 0;
 
-    public function __construct()
+    public function __construct($userID = '')
     {
         $this->type = BayarCepatPayEnum::$typeIN;
-        $this->userID = Auth::id();
+
+        if (blank($userID)) {
+            $this->userID = Auth::id();
+        } else {
+            $this->userID = $userID;
+        }
+
+        $this->previousBalance = BayarCepatPayBuilder::make()
+            ->getBalance($this->userID);
     }
 
-    public static function make()
+    public static function make($userID = '')
     {
-        return new BayarCepatBuilder();
+        return new BayarCepatBuilder($userID);
     }
 
-    public function setUser($user)
+    public function setUser(int $user)
     {
-        $this->type = $user;
+        $this->userID = $user;
         return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getType(): int
+    {
+        return $this->type;
+    }
+
+    /**
+     * @return string
+     */
+    public function getValue(): string
+    {
+        return $this->value;
+    }
+
+    /**
+     * @return string
+     */
+    public function getInformation(): string
+    {
+        return $this->information;
+    }
+
+    /**
+     * @return int
+     */
+    public function getPreviousBalance(): int
+    {
+        return $this->previousBalance;
+    }
+
+    public function getUser() {
+        return $this->userID;
     }
 
     public function setType($type)
@@ -64,7 +108,7 @@ class BayarCepatBuilder
             'type' => $this->type,
             'value' => $this->value,
             'information' => $this->information,
-            'previous_balance' => BayarCepatPayBuilder::make()->getBalance($this->userID)
+            'previous_balance' => $this->previousBalance
         ]);
 
         return $bayarcepat;
@@ -113,11 +157,11 @@ class BayarCepatBuilder
         return $newTransaction;
     }
 
-    public function deposit(Transaction $transaction)
+    public function deposit($transaction)
     {
-        $bayarCepatPay =  (new BayarCepatBuilder())
+        $userID = collect($transaction)['user_id'];
+        $bayarCepatPay =  self::make($userID)
             ->setType(BayarCepatPayEnum::$typeIN)
-            ->setUser(collect($transaction)['user_id'])
             ->setValue(collect($transaction)['information']['bank']['value_total'])
             ->setInformation(collect($transaction)['id'])
             ->save();
