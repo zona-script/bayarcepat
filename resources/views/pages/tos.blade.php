@@ -7,8 +7,8 @@
     <div class="hero is-white">
         <div class="hero-body">
             <div class="container has-text-centered">
-                <h2 class="title">Syarat dan Ketentuan</h2>
-                <h3 class="subtitle">Aturan membuat kita semua lebih aman dan nyaman</h3>
+                <h1 class="title">Syarat dan Ketentuan</h1>
+                <h2 class="subtitle">Aturan membuat kita semua lebih aman dan nyaman</h2>
             </div>
         </div>
     </div>

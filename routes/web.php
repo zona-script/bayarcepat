@@ -31,6 +31,7 @@ Route::group(['as' => 'web.'], function () {
         Route::get('/syarat-dan-ketentuan', 'PagesController@tos')->name('syarat-dan-ketentuan');
         Route::get('/policy-privacy', 'PagesController@privacyPolicy')->name('policy-privacy');
         Route::get('/tentang-kami', 'PagesController@aboutMe')->name('tentang-kami');
+        Route::get('/hubungi-kami', 'PagesController@contactMe')->name('hubungi-kami');
         Route::get('/membership', 'PagesController@membership')->name('membership');
     });
 

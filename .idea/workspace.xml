@@ -2,35 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1fc7cadf-dd8e-4988-95f3-5be001769a75" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Enums/PathEnum.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Helpers/all.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/sitemap.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/contact-me.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/BayarCepatPay.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/BayarCepatPay.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Builders/BayarCepatBuilder.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Builders/BayarCepatBuilder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Builders/BayarCepatPayBuilder.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Builders/BayarCepatPayBuilder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Saldo/DepositController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Saldo/DepositController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ApiWeb/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ApiWeb/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/Setting/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/Setting/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/TransaksiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/TransaksiController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/JavaH2H/Reformat/BaseReformat.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/JavaH2H/Reformat/BaseReformat.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/money/SendMoneyComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/money/SendMoneyComponent.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/kirim-uang/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/kirim-uang/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/laporan/detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/laporan/detail.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/pengaturan/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/pengaturan/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/saldo/deposit/bank.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/saldo/deposit/bank.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/harga/internet.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/harga/internet.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/apiWeb.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/apiWeb.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Pages/PagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Pages/PagesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/membership.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/membership.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/policy-privacy.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/policy-privacy.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/produk.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/produk.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/tentang-kami.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/tentang-kami.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/tos.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/tos.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/sitemap.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/sitemap.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/webDashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/webDashboard.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -250,7 +234,7 @@
       <workItem from="1582365787143" duration="41040000" />
       <workItem from="1582532167173" duration="28552000" />
       <workItem from="1582618720117" duration="83000" />
-      <workItem from="1582619413486" duration="18803000" />
+      <workItem from="1582619413486" duration="21135000" />
     </task>
     <servers />
   </component>
@@ -302,10 +286,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="489" y="199" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1582663429945" />
-    <state x="517" y="296" key="NewPhpFileDialog" timestamp="1582671524009">
+    <state x="517" y="296" key="NewPhpFileDialog" timestamp="1582673214492">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="517" y="296" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1582671524009" />
+    <state x="517" y="296" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1582673214492" />
     <state x="391" y="193" key="com.intellij.ide.util.TipDialog" timestamp="1582618791599">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

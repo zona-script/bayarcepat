@@ -8,8 +8,8 @@
     <div class="hero is-white">
         <div class="hero-body">
             <div class="container has-text-centered">
-                <h2 class="title">Kebijakan Privasi</h2>
-                <h3 class="subtitle">kami tau bahwa privasi anda itu penting sekali</h3>
+                <h1 class="title">Kebijakan Privasi</h1>
+                <h2 class="subtitle">kami tau bahwa privasi anda itu penting sekali</h2>
             </div>
         </div>
     </div>

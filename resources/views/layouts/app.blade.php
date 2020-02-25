@@ -53,10 +53,10 @@
                 <a class="navbar-item" href="{{ route('web.pages.membership') }}">
                     Membership
                 </a>
-                <a class="navbar-item" href="{{ route('web.pages.tentang-kami') }}">
+                <a class="navbar-item" href="#">
                     Panduan
                 </a>
-                <a class="navbar-item" href="{{ route('web.pages.tentang-kami') }}">
+                <a class="navbar-item" href="{{ route('web.pages.hubungi-kami') }}">
                     Hubungi Kami
                 </a>
                 @guest
@@ -110,17 +110,17 @@
             </div>
             <div class="column is-2">
                 <ul class="footer-menu">
-                    <li><a href="">Produk & Harga</a></li>
-                    <li><a href="">Komunitas</a></li>
-                    <li><a href="">Server H2H</a></li>
-                    <li><a href="">Metode Pembayaran</a></li>
-                    <li><a href="">Dokumentasi Api</a></li>
+                    <li><a href="{{ route('web.pages.produk.index') }}">Produk & Harga</a></li>
+                    <li><a href="https://www.facebook.com/groups/515510122483803/">Komunitas</a></li>
+                    <li><a href="#">Server Pulsa H2H</a></li>
+                    <li><a href="#">Metode Pembayaran</a></li>
+                    <li><a href="#">Dokumentasi Api</a></li>
                 </ul>
             </div>
             <div class="column is-2">
                 <ul class="footer-menu">
-                    <li><a href="">Tentang Kami</a></li>
-                    <li><a href="">Hubungi Kami</a></li>
+                    <li><a href="{{ route('web.pages.tentang-kami') }}">Tentang Kami</a></li>
+                    <li><a href="{{ route('web.pages.hubungi-kami') }}">Hubungi Kami</a></li>
                     <li><a href="{{ route('web.pages.syarat-dan-ketentuan') }}">Syarat dan Ketentuan</a></li>
                     <li><a href="{{ route('web.pages.policy-privacy') }}">Kebijakan Privasi</a></li>
                 </ul>
