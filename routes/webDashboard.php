@@ -11,6 +11,16 @@ Route::group(['as' => 'web.'], function () {
         Route::post('/', 'DashboardController@update')->name('update');
         Route::post('/verified', 'DashboardController@verified')->name('verified');
 
+        Route::group(['prefix' => 'market', 'as' => 'market.', 'namespace' => 'Market'], function () {
+            Route::get('/', 'HomeController@index')->name('index');
+            Route::group(['prefix' => 'prabayar', 'as' => 'prabayar.'], function () {
+                Route::get('/', 'PrabayarController@index');
+            });
+            Route::group(['prefix' => 'pascabayar', 'as' => 'pascabayar'], function () {
+                Route::get('/', 'PascabayarController@index');
+            });
+        });
+
         Route::group(['prefix' => 'saldo', 'as' => 'saldo.', 'namespace' => 'Saldo'], function () {
             Route::get('/tarik', 'WithdrawalController@create')->name('tarik.create');
             Route::post('/tarik', 'WithdrawalController@store')->name('tarik.store');

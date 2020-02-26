@@ -35,6 +35,9 @@ Vue.component('money-send-money', require('./components/money/SendMoneyComponent
 Vue.component('phonebook-list', require('./components/phonebook/list').default);
 Vue.component('phonebook-add', require('./components/phonebook/add').default);
 
+Vue.component('market-prabayar', require('./components/market/prabayar').default);
+Vue.component('market-pascabayar', require('./components/market/pascabayar').default);
+
 Vue.component(
     'passport-clients',
     require('./components/passport/Clients.vue').default

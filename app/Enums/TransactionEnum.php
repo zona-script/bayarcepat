@@ -15,6 +15,7 @@ class TransactionEnum
     public static $typeBayarCepatPayWithdrawal = 4;
     public static $typeBayarCepatPayRefund = 5;
     public static $typeBayarCepatPayPay = 6;
+    public static $typeMarket = 7;
 
     public static $statusProcess = 1;
     public static $statusCancel = 2;

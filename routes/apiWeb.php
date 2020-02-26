@@ -18,4 +18,13 @@ Route::group(['as' => 'apiweb.', 'namespace' => 'ApiWeb', 'middleware' => ['auth
     Route::get('/user', 'UserController');
     Route::get('/user/index', 'UserController@index');
     Route::get('/balance', 'BalanceController');
+
+    Route::group(['prefix' => 'market', 'as' => 'market.', 'namespace' => 'Market'], function () {
+        Route::group(['prefix' => 'prabayar'], function () {
+            Route::get('/', 'HargaPrabayarController@index');
+        });
+        Route::group(['prefix' => 'pascabayar'], function () {
+            Route::get('/', 'HargaPrabayarController@index');
+        });
+    });
 });

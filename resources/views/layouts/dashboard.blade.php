@@ -47,6 +47,10 @@
                     Tambah Transaksi
                 </a>
 
+                <a class="navbar-item" href="{{ route('web.dashboard.transaksi.index') }}">
+                    Market Place
+                </a>
+
                 <a class="navbar-item" href="{{ route('web.dashboard.kirim-uang.index') }}">
                     Kirim Uang
                 </a>

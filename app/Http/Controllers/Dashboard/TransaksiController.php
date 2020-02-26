@@ -100,7 +100,6 @@ class TransaksiController extends Controller
             $transaction->status = TransactionEnum::$statusFailed;
             $transaction->save();
 
-
             // refund
             BayarCepatBuilder::make()
                 ->refund($transaction);
