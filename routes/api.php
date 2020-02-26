@@ -17,12 +17,12 @@ use Illuminate\Http\Request;
 //    return $request->user();
 //});
 
-Route::get('/', function () {
-    return [
-        'success' => true,
-        'message' => 'Api is running in port 80'
-    ];
-});
+//Route::get('/', function () {
+//    return [
+//        'success' => true,
+//        'message' => 'Api is running in port 80'
+//    ];
+//});
 
 Route::group(['as' => 'api.'], function () {
 
@@ -39,9 +39,9 @@ Route::group(['as' => 'api.'], function () {
         Route::get('/gift-card', 'HargaController@giftCard');
     });
     Route::group(['as' => 'info.', 'prefix' => 'info', 'namespace' => 'Api\Info'], function () {
-        Route::get('/', function () {
-
-        });
+//        Route::get('/', function () {
+//
+//        });
         Route::get('/balance', 'BalanceController');
     });
     Route::group(['as' => 'local.', 'prefix' => 'local', 'namespace' => 'Api\Local'], function () {

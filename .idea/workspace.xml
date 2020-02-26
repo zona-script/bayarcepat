@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1fc7cadf-dd8e-4988-95f3-5be001769a75" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/contact-me.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Pages/PagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Pages/PagesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/membership.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/membership.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/policy-privacy.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/policy-privacy.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/produk.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/produk.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/tentang-kami.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/tentang-kami.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/tos.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/tos.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/sitemap.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/sitemap.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -234,7 +222,7 @@
       <workItem from="1582365787143" duration="41040000" />
       <workItem from="1582532167173" duration="28552000" />
       <workItem from="1582618720117" duration="83000" />
-      <workItem from="1582619413486" duration="21135000" />
+      <workItem from="1582619413486" duration="21877000" />
     </task>
     <servers />
   </component>
