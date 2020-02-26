@@ -158,9 +158,7 @@
                         this.brands = response.data
                     });
 
-                this.brands = null;
-                this.products = null;
-                this.selectedProduct = null;
+                this.resetData();
             },
             onChangeBrand() {
                 this.products = this.brands[this.selectedBrand]
