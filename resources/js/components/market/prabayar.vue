@@ -165,11 +165,8 @@
             },
             onChangeProduct() {
                 this.product = this.brands[this.selectedBrand][this.selectedProduct]
-                console.log(this.product)
-                console.log(this.selectedProduct)
             },
             resetData() {
-                this.selectedCategory= ''
                 this.brands= []
                 this.selectedBrand = ''
                 this.products= []

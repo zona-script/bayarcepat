@@ -2217,11 +2217,8 @@ __webpack_require__.r(__webpack_exports__);
     },
     onChangeProduct: function onChangeProduct() {
       this.product = this.brands[this.selectedBrand][this.selectedProduct];
-      console.log(this.product);
-      console.log(this.selectedProduct);
     },
     resetData: function resetData() {
-      this.selectedCategory = '';
       this.brands = [];
       this.selectedBrand = '';
       this.products = [];
