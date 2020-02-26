@@ -2,22 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1fc7cadf-dd8e-4988-95f3-5be001769a75" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Partners/Digiflazz/Digiflazz.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Partners/Digiflazz/DigiflazzBuilder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/partner.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/Tes.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/market/pascabayar.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/market/prabayar.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/market/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/market/prabayar/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Enums/TransactionEnum.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Enums/TransactionEnum.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/TransaksiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/TransaksiController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/apiWeb.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/apiWeb.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/webDashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/webDashboard.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -238,7 +223,7 @@
       <workItem from="1582532167173" duration="28552000" />
       <workItem from="1582618720117" duration="83000" />
       <workItem from="1582619413486" duration="24816000" />
-      <workItem from="1582705470131" duration="20063000" />
+      <workItem from="1582705470131" duration="20636000" />
     </task>
     <servers />
   </component>
