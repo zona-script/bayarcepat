@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1fc7cadf-dd8e-4988-95f3-5be001769a75" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/undraw_Group_chat_unwm.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/undraw_Group_chat_unwm.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/undraw_Savings_dwkw.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/undraw_Savings_dwkw.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/undraw_segmentation_uioo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/undraw_segmentation_uioo.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -226,7 +222,7 @@
       <workItem from="1582365787143" duration="41040000" />
       <workItem from="1582532167173" duration="28552000" />
       <workItem from="1582618720117" duration="83000" />
-      <workItem from="1582619413486" duration="23291000" />
+      <workItem from="1582619413486" duration="24077000" />
     </task>
     <servers />
   </component>

@@ -137,6 +137,12 @@
             <p>
                 &copy; 2020 {{ config('app.name') }}
             </p>
+            <p>
+                HATI HATI PENIPUAN YANG MENGATASNAMAKAN {{ config('app.name') }}
+                <br>
+                Kami bukan aplikasi untuk peminjaman uang, bukan aplikasi jasa cicilan, bukan aplikasi investasi, bukan aplikasi p2p lending, bukan aplikasi urun dana.
+                <br>
+                Kami tidak berafiliasi dengan website manapun kecuali dengan www.dibumi.com</p>
         </div>
     </div>
 </footer>
