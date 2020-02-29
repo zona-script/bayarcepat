@@ -7,7 +7,7 @@
         <div class="hero-body">
             <div class="container has-text-centered">
                 <h1 class="title">Paket Membership, Pilih Paket Kesukaanmu</h1>
-                <h2 class="subtitle">Pilih Paketmu dan mulai jualanmu, jangan pilih yang paling bagus kalau terendah juga bagus</h2>
+                <h2 class="subtitle">Pendaftaran di {{ config('app.name') }} adalah gratis.</h2>
             </div>
         </div>
     </div>
@@ -41,7 +41,7 @@
 
                 <div class="pricing-plan">
                     <div class="plan-header">Semangka</div>
-                    <div class="plan-price"><span class="plan-price-amount"><span class="plan-price-currency">Rp</span>50ribu</span>/Tahun</div>
+                    <div class="plan-price"><span class="plan-price-amount"><span class="plan-price-currency">Rp</span><s>50ribu</s>0</span>/Tahun</div>
                     <div class="plan-items">
                         <div class="plan-item">Dipakai Untuk Pribadi, Keluarga, Bisnis.</div>
                         <div class="plan-item">Minimal Deposit Rp. 10.000</div>
@@ -64,7 +64,7 @@
 
                 <div class="pricing-plan is-danger is-active">
                     <div class="plan-header">Tomat</div>
-                    <div class="plan-price"><span class="plan-price-amount"><span class="plan-price-currency">Rp</span>55ribu</span>/Tahun</div>
+                    <div class="plan-price"><span class="plan-price-amount"><span class="plan-price-currency">Rp</span><s>55ribu</s>0</span>/Tahun</div>
                     <div class="plan-items">
                         <div class="plan-item">Dipakai Untuk Pribadi, Keluarga, Bisnis.</div>
                         <div class="plan-item">Minimal Deposit Rp. 10.000</div>

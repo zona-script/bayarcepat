@@ -13,6 +13,36 @@
     </div>
 
     <div class="section">
+        <div class="container has-text-centered">
+
+            <div class="columns">
+                <div class="column is-8 is-offset-2">
+                    <h3 class="title is-2 is-bold is-title-reveal has-text-primary">Marketplace</h3>
+                    <p class="subtitle">Tersedia banyak sekali produk atau layanan yang bisa anda beli, mulai dari pulsa, paket data, bayar pln, pdam, dan lain sebagainya.</p>
+                </div>
+            </div>
+
+            <div class="columns">
+                <div class="column is-4 is-offset-2">
+                    <a class="box has-text-centered">
+                                <span>
+                                <i class="fas fa-shopping-bag fa-3x"></i>
+                                </span>
+                        <p class="subtitle">Marketplace Prabayar</p>
+                    </a>
+                </div>
+                <div class="column is-4">
+                    <a class="box has-text-centered">
+                                <span>
+                                <i class="fas fa-plug fa-3x"></i>
+                                </span>
+                        <p class="subtitle">Marketplace Pascabayar</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section">
         <div class="container">
             <div class="columns is-vcentered side-feature">
                 <div class="column is-5 is-hidden-desktop is-hidden-tablet">

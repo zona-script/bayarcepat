@@ -149,7 +149,9 @@
     </div>
 </footer>
 
+{{--@auth--}}
 {{--<script src="{{ asset('js/app.js') }}"></script>--}}
+{{--@endauth--}}
 {{--<script src="{{ asset('js/functions.js') }}"></script>--}}
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
 

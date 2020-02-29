@@ -13,11 +13,11 @@
                     <a href="{{ route('register') }}" class="button is-primary is-rounded is-medium">Gabung</a>
                     <a href="{{ route('login') }}" class="button is-info is-rounded is-medium">Masuk</a>
                 </div>
-                @auth
-                    <div class="section has-text-left">
-                        <pembelian-component></pembelian-component>
-                    </div>
-                @endauth
+{{--                @auth--}}
+{{--                    <div class="section has-text-left">--}}
+{{--                        <pembelian-component></pembelian-component>--}}
+{{--                    </div>--}}
+{{--                @endauth--}}
             </div>
         </div>
     </div>
