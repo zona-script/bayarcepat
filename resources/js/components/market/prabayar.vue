@@ -3,6 +3,19 @@
         <div class="field">
             <h3 class="subtitle">Marketplace Prabayar</h3>
         </div>
+
+<!--        <div class="field">-->
+<!--            <label class="label">Kategori</label>-->
+<!--            <div class="is-fullwidth">-->
+<!--                <v-select label="category" :options="categories"></v-select>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="field">-->
+<!--            <label class="label">Kategori</label>-->
+<!--            <div class="is-fullwidth">-->
+<!--                <v-select label="countryName" :options="countries"></v-select>-->
+<!--            </div>-->
+<!--        </div>-->
         <div class="columns">
             <div class="column is-6">
                 <div class="field">
@@ -15,6 +28,17 @@
                             </option>
                         </select>
                     </div>
+<!--                    <div class="is-fullwidth">-->
+<!--                        <v-select v-model="selectedCategory" label="category" :value="categories" :options="categories" v-on:change="onChangeCategory"></v-select>-->
+
+<!--                        <select v-model="selectedCategory" v-on:change="onChangeCategory">-->
+<!--                            <option disabled>Pilih Kategori Produk</option>-->
+<!--                            <option v-for="(item, key) in categories" v-bind:value="key">-->
+<!--                                {{ item.category }}-->
+<!--                            </option>-->
+<!--                        </select>-->
+<!--                    </div>-->
+<!--                    <p>{{ selectedCategory}} | {{ products }}</p>-->
                 </div>
             </div>
             <div class="column is-6">
@@ -35,14 +59,28 @@
             <div class="column is-12">
                 <div class="field">
                     <label class="label">Pilih Produk</label>
-                    <div class="select is-fullwidth">
-                        <select v-model="selectedProduct" v-on:change="onChangeProduct">
-                            <option disabled>Pilih Kategori Produk</option>
-                            <option v-for="(item, key) in products" v-bind:value="key">
-                                {{ item.product_name }} - Rp {{ item.price }}
-                            </option>
-                        </select>
+                    <div class="is-fullwidth">
+<!--                        <v-select v-model="selectedProduct" label="product_name" :options="products" :reduce="products => products" @input="onChangeProduct" ></v-select>-->
+                        <v-select
+                            v-model="selectedProduct"
+                            label="product_name"
+                            :options="products"
+                            :reduce="product => product"
+                            @input="onChangeProduct"
+                        >
+                            <template v-slot:option="option">
+                                {{ option.product_name + " Rp " + option.price }}
+                            </template>
+                        </v-select>
                     </div>
+<!--                    <div class="select is-fullwidth">-->
+<!--                        <select v-model="selectedProduct" v-on:change="onChangeProduct">-->
+<!--                            <option disabled>Pilih Kategori Produk</option>-->
+<!--                            <option v-for="(item, key) in products" v-bind:value="key">-->
+<!--                                {{ item.product_name }} - Rp {{ item.price }}-->
+<!--                            </option>-->
+<!--                        </select>-->
+<!--                    </div>-->
                 </div>
             </div>
         </div>
@@ -109,15 +147,40 @@
 </template>
 
 <script>
+    import 'vue-select/dist/vue-select.css';
+
     export default {
         name: "prabayar",
         data() {
             return {
+                countries: [
+                    {
+                        countryCode: "CA",
+                        countryName: "Canada"
+                    },
+                    {
+                        countryCode: "CA",
+                        countryName: "Canada"
+                    },
+                    {
+                        countryCode: "CA",
+                        countryName: "Canada"
+                    }
+                ],
                 balance: {
                     balance: 0,
                     balance_number_format: 0
                 },
                 categories: [
+                    {
+                        "category": "Pulsa"
+                    },
+                    {
+                        "category": "PLN"
+                    },
+                    {
+                        "category": "Data"
+                    },
                 ],
                 selectedCategory: '',
                 brands: [],
@@ -162,14 +225,34 @@
             },
             onChangeBrand() {
                 this.products = this.brands[this.selectedBrand]
+                this.resetDataFromBrand();
             },
-            onChangeProduct() {
-                this.product = this.brands[this.selectedBrand][this.selectedProduct]
+            // onChangeProduct() {
+            //     this.product = this.brands[this.selectedBrand][this.selectedProduct]
+            // },
+            onChangeProduct(value) {
+                this.product = value
             },
             resetData() {
                 this.brands= []
                 this.selectedBrand = ''
                 this.products= []
+                this.selectedProduct= ''
+                this.product = {
+                    product_name: '',
+                    category: '',
+                    brand: '',
+                    seller_name: '',
+                    price: '',
+                    buyer_sku_code: '',
+                    buyer_product_status: true,
+                    seller_product_status: true,
+                    stock: '',
+                    multi: true,
+                    desc: ''
+                }
+            },
+            resetDataFromBrand() {
                 this.selectedProduct= ''
                 this.product = {
                     product_name: '',

@@ -42,6 +42,10 @@
                 </p>
             </div>
 
+            <div class="notification is-danger">
+                JANGAN MENDAFTAR DULU, KAMI BELUM BUKA. DATA ANDA AKAN DI HAUS SETIAP 24 JAM.
+            </div>
+
             <div class="columns is-mobile is-centered">
                 <div class="column is-10-mobile is-8-fullhd">
                     <form class="" method="post" action="">

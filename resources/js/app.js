@@ -38,8 +38,12 @@ Vue.component('phonebook-add', require('./components/phonebook/add').default);
 Vue.component('market-prabayar', require('./components/market/prabayar').default);
 Vue.component('market-pascabayar', require('./components/market/pascabayar').default);
 
-
 Vue.component('pages-product', require('./components/pages/ProductComponent').default);
+
+import Vue from 'vue'
+import vSelect from 'vue-select'
+
+Vue.component('v-select', vSelect);
 
 Vue.component(
     'passport-clients',

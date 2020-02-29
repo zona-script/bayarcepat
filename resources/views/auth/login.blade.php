@@ -47,7 +47,7 @@
 
             <div class="columns is-mobile is-centered">
                 <div class="column is-10-mobile is-8-fullhd">
-                    <form class="" method="post" action="">
+{{--                    <form class="" method="post" action="">--}}
                         @csrf
                         <div class="section is-paddingless-horizontal is-paddingless-top">
                             <div class="field">
@@ -89,7 +89,7 @@
                         <div class="has-text-centered">
                             <a class="title is-7 has-text-grey" href="#">Lupa kata sandi ?</a>
                         </div>
-                    </form>
+{{--                    </form>--}}
                 </div>
             </div>
 
