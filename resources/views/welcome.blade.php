@@ -31,12 +31,12 @@
     <div class="section">
         <div class="container">
             <div class="columns is-vcentered side-feature">
-                <div class="column is-5 is-hidden-desktop is-hidden-tablet">
-                    <figure class="image is-1by1">
+                <div class="column is-5 is-hidden-desktop is-hidden-tablet has-text-centered">
+                    <figure class="image is-5by4">
                         <img src="{{ asset('images/undraw_Savings_dwkw.svg') }}" alt="">
                     </figure>
                 </div>
-                <div class="column is-7">
+                <div class="column is-7 has-text-centered-touch">
                     <h3 class="title is-2 is-bold is-title-reveal has-text-primary">Apa itu {{ env('APP_NAME') }}?</h3>
                     <p class="subtitle is-4">{{ env('APP_NAME') }} Adalah Marketplace Distributor & Server Pulsa H2H Termurah dan Terlengkap yang menyediakan berbagai produk (Prabayar & Pascabayar).</p>
                     <p class="title is-4">BUKAN CUMA ITU</p>
@@ -44,7 +44,7 @@
                         {{ env('APP_NAME') }} bisa digunakan untuk melakukan transfer uang antar member, dari paypal ke bank, dari saldo ke semua bank, dan menyediakan jasa rekening bersama.
                     </p>
                 </div>
-                <div class="column is-5 is-hidden-mobile">
+                <div class="column is-5 is-hidden-touch">
                     <figure class="image is-5by4">
                         <img src="{{ asset('images/undraw_Savings_dwkw.svg') }}" alt="">
                     </figure>
