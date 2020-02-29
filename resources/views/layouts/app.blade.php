@@ -140,11 +140,14 @@
             <p>
                 HATI HATI PENIPUAN YANG MENGATASNAMAKAN {{ config('app.name') }}
                 <br>
-                PENDAFTARAN MEMBER DI WEBSITE INI ADALAH GRATIS, JANGAN PERCAYA JIKA DISURUH MEMBAYAR
+                <span class="has-text-weight-bold">PENDAFTARAN MEMBER DI WEBSITE INI ADALAH GRATIS, JANGAN PERCAYA JIKA DISURUH MEMBAYAR</span>
                 <br>
-                Kami bukan aplikasi untuk peminjaman uang online, bukan aplikasi jasa cicilan, bukan aplikasi investasi, bukan aplikasi p2p lending, bukan aplikasi urun dana, bukan aplikasi kredit online.
+                <u>
+                    Kami bukan aplikasi untuk peminjaman uang online, bukan aplikasi jasa cicilan, bukan aplikasi investasi, bukan aplikasi p2p lending, bukan aplikasi urun dana, bukan aplikasi kredit online.
+                </u>
                 <br>
                 Kami tidak berafiliasi dengan website manapun kecuali dengan www.dibumi.com</p>
+            <p>Server by AlibabaCloud</p>
         </div>
     </div>
 </footer>

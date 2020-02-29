@@ -36,7 +36,7 @@
                         <img src="{{ asset('images/undraw_Savings_dwkw.svg') }}" alt="">
                     </figure>
                 </div>
-                <div class="column is-7 has-text-centered-touch">
+                <div class="column is-7 has-text-centered-touch content">
                     <h3 class="title is-2 is-bold is-title-reveal has-text-primary">Apa itu {{ env('APP_NAME') }}?</h3>
                     <p class="subtitle is-4">{{ env('APP_NAME') }} Adalah Marketplace Distributor & Server Pulsa H2H Termurah dan Terlengkap yang menyediakan berbagai produk (Prabayar & Pascabayar).</p>
                     <p class="title is-4">BUKAN CUMA ITU</p>
@@ -192,16 +192,16 @@
     <div class="hero is-medium is-primary is-bold is-fullwidth">
         <div class="hero-body">
             <div class="container has-text-centered">
-                <h3 class="title is-3 has-text-weight-bold">Mulai Jadi Sukses</h3>
-                <p class="subtitle">Jangan tunggu kesuksesan menjemput anda, kenapa tidak anda yang menjemput kesuksesan?</p>
+                <h3 class="title is-3 has-text-weight-bold">Jangan Sampai Kalah Dengan Toko Saingan?</h3>
+                <p class="subtitle">Rezeki emang sudah di atur, tapi usaha tidak akan membohongi hasil. Gunakan {{ config('app.name') }} agar omset meningkat?</p>
                 <p>
-                    <a href="" class="button is-white is-rounded is-medium">Daftar Sekarang</a>
+                    <a href="{{ route('register') }}" class="button is-white is-rounded is-medium">Daftar Sekarang</a>
                 </p>
             </div>
         </div>
     </div>
 
-    <div class="section has-background-white is-fullwidth">
+    <div class="section has-background-white is-fullwidth is-hidden">
         <div class="hero-body">
             <div class="container has-text-centered">
                 <h3 class="title is-3 has-text-weight-bold">Beli Pulsa di {{ env('APP_NAME')  }}: Mudah, Cepat, Tidak Ribet</h3>

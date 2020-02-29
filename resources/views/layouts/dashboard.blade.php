@@ -60,7 +60,7 @@
                 </a>
 
                 <a class="navbar-item" href="{{ route('web.dashboard.riwayat.index') }}">
-                    Riwayat Transaksi
+                    Laporan
                 </a>
 
                 <a class="navbar-item" href="{{ route('web.dashboard.api.index') }}">

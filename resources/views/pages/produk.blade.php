@@ -24,19 +24,21 @@
 
             <div class="columns">
                 <div class="column is-4 is-offset-2">
-                    <a class="box has-text-centered">
-                                <span>
-                                <i class="fas fa-shopping-bag fa-3x"></i>
-                                </span>
+                    <a class="box has-text-centered" style="height: 230px">
+                        <span>
+                            <i class="fas fa-shopping-bag fa-3x"></i>
+                        </span>
                         <p class="subtitle">Marketplace Prabayar</p>
+                        <p>Pulsa Reguler, E-Money & Ewallet, Ojek Online, Paket Internet, PLN, Voucher Game, Pulsa Transfer, Telepon dan SMS, Pulsa Mancanegara.</p>
                     </a>
                 </div>
                 <div class="column is-4">
-                    <a class="box has-text-centered">
-                                <span>
-                                <i class="fas fa-plug fa-3x"></i>
-                                </span>
+                    <a class="box has-text-centered" style="height: 230px">
+                        <span>
+                            <i class="fas fa-tv fa-3x"></i>
+                        </span>
                         <p class="subtitle">Marketplace Pascabayar</p>
+                        <p>PLN Pascabayar, PDAM, HP Pascabayar, Internet Pascabayar, BPJS Kesehatan, Multifinance (Kredit Motor & Asuransi Kesehatan).</p>
                     </a>
                 </div>
             </div>
@@ -54,7 +56,9 @@
                 </div>
                 <div class="column is-7">
                     <h3 class="title is-2 is-bold is-title-reveal has-text-primary">Beli Produk</h3>
-                    <p class="subtitle">Kami menyediakan banyak sekali produk, mulai dari paket internet, pulsa, voucher wifi, voucher game, saldo ewallet, PLN, dan lain sebagainya.</p>
+                    <p class="subtitle">
+                        Kami menyediakan banyak sekali produk, mulai dari paket internet, pulsa, voucher wifi, voucher game, saldo ewallet, PLN, dan lain sebagainya.
+                        Harga produk dibawah ini adalah <u>harga dari server pribadi kami</u>, untuk marketplace harga jauh lebih menarik.</p>
                     <div class="columns">
                         <div class="column">
                             <a href="{{ route('web.pages.produk.harga.pulsa') }}" class="box has-text-centered">
