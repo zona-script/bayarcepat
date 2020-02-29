@@ -3,15 +3,21 @@
 @section('title', 'Bisnis Pembayaran dan Keuangan Dalam Satu Genggaman')
 
 @section('content')
-    <div class="hero is-medium is-white">
+    <div class="hero is-medium is-white" style="background: url('{{ asset('images/wave.svg') }}'); background-repeat: no-repeat; background-position: bottom">
         <div class="hero-body">
             <div class="container has-text-centered">
-                <h1 class="title is-1 has-text-primary">Bayar Cepat</h1>
-                <h2 class="subtitle is-4">Kirim Uang dan Beli atau Bayar Produk Digital Dari Distributor Kesukaanmu</h2>
-                <p class="subtitle is-5 is-uppercase">Buat Toko Anda <u class="has-text-weight-bold has-text-danger">Meningkat</u> Ke <u class="has-text-weight-bold has-text-info">Level Lebih Tinggi</u>.</p>
+                <h1 class="title is-1 has-text-primary">BayarCepat.Com</h1>
+                <div class="columns">
+                    <div class="column is-8 is-offset-2 has-text-centered">
+                        <h2 class="subtitle is-4 is-uppercase">Dengan {{ config('app.name') }} cukup satu akun, dapat digunakan bertransaksi dengan ratusan server sekaligus</h2>
+                    </div>
+                </div>
+                <p class="subtitle is-5 is-lower-alpha">Lupakan cara lama, coba cara baru</p>
+
+                {{--                <p class="subtitle is-5 is-uppercase">Buat Toko Anda <u class="has-text-weight-bold has-text-danger">Meningkat</u> Ke <u class="has-text-weight-bold has-text-info">Level Lebih Tinggi</u>.</p>--}}
                 <div class="has-text-centered">
-                    <a href="{{ route('register') }}" class="button is-primary is-rounded is-medium">Gabung</a>
-                    <a href="{{ route('login') }}" class="button is-info is-rounded is-medium">Masuk</a>
+                    <a href="{{ route('register') }}" class="button is-primary is-rounded is-medium">Coba Sekarang</a>
+{{--                    <a href="{{ route('login') }}" class="button is-info is-rounded is-medium">Masuk</a>--}}
                 </div>
 {{--                @auth--}}
 {{--                    <div class="section has-text-left">--}}
