@@ -7,8 +7,12 @@
         <div class="hero-body">
             <div class="container has-text-centered">
                 <h1 class="title is-1 has-text-primary">Bayar Cepat</h1>
-                <h2 class="subtitle is-4">Kirim Uang Dan Beli apapun dengan cepat, mudah dan aman</h2>
-
+                <h2 class="subtitle is-4">Kirim Uang dan Beli atau Bayar Produk Digital Dari Distributor Kesukaanmu</h2>
+                <p class="subtitle is-5 is-uppercase">Buat Toko Anda <u class="has-text-weight-bold has-text-danger">Meningkat</u> Ke <u class="has-text-weight-bold has-text-info">Level Lebih Tinggi</u>.</p>
+                <div class="has-text-centered">
+                    <a href="{{ route('register') }}" class="button is-primary is-rounded is-medium">Gabung</a>
+                    <a href="{{ route('login') }}" class="button is-info is-rounded is-medium">Masuk</a>
+                </div>
                 @auth
                     <div class="section has-text-left">
                         <pembelian-component></pembelian-component>
@@ -28,10 +32,10 @@
                 </div>
                 <div class="column is-7">
                     <h3 class="title is-2 is-bold is-title-reveal has-text-primary">Apa itu {{ env('APP_NAME') }}?</h3>
-                    <p class="subtitle is-4">{{ env('APP_NAME') }} Adalah Distributor & Server Pulsa h2h Termurah dan Terlengkap yang menyediakan berbagai produk.</p>
+                    <p class="subtitle is-4">{{ env('APP_NAME') }} Adalah Marketplace Distributor & Server Pulsa H2H Termurah dan Terlengkap yang menyediakan berbagai produk (Prabayar & Pascabayar).</p>
                     <p class="title is-4">BUKAN CUMA ITU</p>
                     <p class="subtitle is-4">
-                        {{ env('APP_NAME') }} bisa digunakan untuk melakukan transfer uang antar member, dari paypal ke bank, dari saldo ke semua bank, dan jasa rekening bersama.
+                        {{ env('APP_NAME') }} bisa digunakan untuk melakukan transfer uang antar member, dari paypal ke bank, dari saldo ke semua bank, dan menyediakan jasa rekening bersama.
                     </p>
                 </div>
                 <div class="column is-5 is-hidden-mobile">
@@ -93,7 +97,7 @@
                 <div class="column is-4">
                     <div class="box has-text-centered">
                         <p><span class="has-text-primary"><i class="fas fa-dolly fa-4x"></i></span></p>
-                        <p class="has-text-weight-bold">Produk Pulsa Paling Lengkap</p>
+                        <p class="has-text-weight-bold">Produk Paling Lengkap</p>
                         <p>Tersedia Produk yang lengkap, mulai dari Pulsa All Oprator, Paket Data, Token PLN, Saldo Ewallet, dll.</p>
                     </div>
                 </div>
@@ -193,28 +197,28 @@
 
     <div class="section has-background-white is-fullwidth">
         <div class="hero-body">
-            <div class="container">
+            <div class="container has-text-centered">
+                <h3 class="title is-3 has-text-weight-bold">Beli Pulsa di {{ env('APP_NAME')  }}: Mudah, Cepat, Tidak Ribet</h3>
                 <div class="columns">
-                    <div class="column has-text-centered">
-                        <h3 class="title is-3 has-text-weight-bold">Beli Pulsa di {{ env('APP_NAME')  }}: Mudah, Cepat, Tidak Ribet</h3>
-                        <p class="subtitle">
-                            Kehabisan pulsa? {{ env('APP_NAME')  }} menyediakan layanan isi ulang pulsa kapan saja dan dengan segala macam metode pembayaran, salah satunya adalah lewat paypal (pulsa paypal murah).
-                            Tidak perlu lagi kesulitan online tengah malam karena layanan isi ulang pulsa di {{ env('APP_NAME')  }} aktif 24 jam dan support segala macam jenis pembayaran.
-                            Isi ulang pulsa operator Telkomsel, Indosat, XL, Tri, Axis, Bolt, dan Smartfren dengan beragam nominal yang tersedia mulai dari 1.000 sampai 1.000.000, semua hadir untuk kemudahan anda membeli pulsa secara online.
-                        </p>
-                        <p class="subtitle">
+                    <div class="column is-10 is-offset-1 has-text-centered">
+                        <div class="box subtitle">
+                                Kehabisan pulsa? {{ env('APP_NAME')  }} menyediakan layanan isi ulang pulsa kapan saja dan dengan segala macam metode pembayaran, salah satunya adalah lewat paypal (pulsa paypal murah).
+                                Tidak perlu lagi kesulitan online tengah malam karena layanan isi ulang pulsa di {{ env('APP_NAME')  }} aktif 24 jam dan support segala macam jenis pembayaran.
+                                Isi ulang pulsa operator Telkomsel, Indosat, XL, Tri, Axis, Bolt, dan Smartfren dengan beragam nominal yang tersedia mulai dari 1.000 sampai 1.000.000, semua hadir untuk kemudahan anda membeli pulsa secara online.
+                        </div>
+                        <div class="box subtitle">
                             Kami mendukung berbagai jenis pembayaran untuk melakukan deposit. Kami mendukung metode pembayaran Bank, Kartu Debit, Kartu Kredit dan Paypal.
-                        </p>
-                        <p class="subtitle">
+                        </div>
+                        <div class="box subtitle">
                             Bukan pulsa yang anda cari?
                             Kami juga menyediakan berbagai macam layanan lainnya seperti isi ulang paket data untuk anda yang butuh kuota internet dengan harga murah, pembayaran BPJS, Pembayaran PLN, Voucher Wifi.
                             semua dengan proses yang sangat mudah, cepat, dan customer service yang aktif 24 jam.
-                        </p>
-                        <p class="subtitle">
+                        </div>
+                        <div class="box subtitle">
                             Kami mendukung paypal sepenuhnya. Anda bisa beli pulsa bayar paypal, untuk pembelian pulsa paypal kami menerima akun paypal verified dan akun paypal unverified.
                             Anda bisa beli pulsa bayar dengan paypal mulai dari nominal 1000 sampai 1 juta. Dengan adanya kami, diharapkan beli pulsa dengan paypal dan beli paketan dengan paypal menjadi lebih mudah.
                             Bukan cuma pulsa, anda bisa beli paket data dengan paypal, kuota internet dengan paypal, isi saldo gojek pakai paypal, isi saldo ovo pakai paypal, isi saldo dana dengan paypal, isi saldo linkaja lewat paypal, anda juga bisa beli token pln dengan PLN.
-                        </p>
+                        </div>
                     </div>
                 </div>
             </div>

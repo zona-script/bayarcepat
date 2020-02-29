@@ -14,10 +14,10 @@ Route::group(['as' => 'web.'], function () {
         Route::group(['prefix' => 'market', 'as' => 'market.', 'namespace' => 'Market'], function () {
             Route::get('/', 'HomeController@index')->name('index');
             Route::group(['prefix' => 'prabayar', 'as' => 'prabayar.'], function () {
-                Route::get('/', 'PrabayarController@index');
+                Route::get('/', 'PrabayarController@index')->name('index');
             });
-            Route::group(['prefix' => 'pascabayar', 'as' => 'pascabayar'], function () {
-                Route::get('/', 'PascabayarController@index');
+            Route::group(['prefix' => 'pascabayar', 'as' => 'pascabayar.'], function () {
+                Route::get('/', 'PascabayarController@index')->name('index');
             });
         });
 

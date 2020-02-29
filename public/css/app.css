@@ -1566,7 +1566,7 @@ body #backtotop a {
     /* line 52, src/assets/scss/layout/_responsive.scss */
     .navbar .navbar-brand .navbar-burger {
         min-width: 70px;
-        min-height: 70px
+        /*min-height: 70px*/
     }
 
     /* line 58, src/assets/scss/layout/_responsive.scss */
@@ -1691,13 +1691,13 @@ body #backtotop a {
 @media (max-width: 767px) {
     /* line 192, src/assets/scss/layout/_responsive.scss */
     .navbar .navbar-brand {
-        height: 70px
+        /*height: 70px*/
     }
 
     /* line 195, src/assets/scss/layout/_responsive.scss */
     .navbar .navbar-brand .navbar-burger {
         min-width: 70px;
-        min-height: 70px
+        /*min-height: 70px*/
     }
 
     /* line 201, src/assets/scss/layout/_responsive.scss */

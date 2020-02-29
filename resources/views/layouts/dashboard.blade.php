@@ -47,7 +47,7 @@
                     Tambah Transaksi
                 </a>
 
-                <a class="navbar-item" href="{{ route('web.dashboard.transaksi.index') }}">
+                <a class="navbar-item" href="{{ route('web.dashboard.market.index') }}">
                     Market Place
                 </a>
 

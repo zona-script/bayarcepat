@@ -33,6 +33,7 @@ Route::group(['as' => 'web.'], function () {
         Route::get('/tentang-kami', 'PagesController@aboutMe')->name('tentang-kami');
         Route::get('/hubungi-kami', 'PagesController@contactMe')->name('hubungi-kami');
         Route::get('/membership', 'PagesController@membership')->name('membership');
+        Route::get('/metode-pembayaran', 'PagesController@paymentMethod')->name('payment-method');
     });
 
     Route::get('/sitemap.xml', 'SitemapController@index')->name('sitemap');

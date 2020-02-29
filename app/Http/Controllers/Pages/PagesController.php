@@ -31,4 +31,9 @@ class PagesController extends Controller
     {
         return view('pages.membership');
     }
+
+    public function paymentMethod()
+    {
+        return view('pages.metode-pembayaran');
+    }
 }

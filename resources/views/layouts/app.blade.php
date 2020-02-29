@@ -99,21 +99,21 @@
             <div class="column is-4">
                 <h4 class="title is-3 is-bold has-text-primary">{{ config('app.name') }}</h4>
                 <p class="footer-text">
-                    kami adalah solusi keuangan terlengkap, anda bisa membeli produk, kirim uang antar bank, kirim uang dari paypal, dan masih banyak lagi.
+                    kami adalah Marketplace Distributor H2H produk digital dan non digital. Anda bisa membeli produk, kirim uang antar bank, kirim uang dari paypal, dan masih banyak lagi.
                 </p>
-                <div class="socials">
-                    <a><i class="fab fa-instagram"></i></a>
-                    <a><i class="fab fa-facebook"></i></a>
-                    <a><i class="fab fa-pinterest"></i></a>
-                    <a><i class="fab fa-medium"></i></a>
-                </div>
+{{--                <div class="socials">--}}
+{{--                    <a><i class="fab fa-instagram"></i></a>--}}
+{{--                    <a><i class="fab fa-facebook"></i></a>--}}
+{{--                    <a><i class="fab fa-pinterest"></i></a>--}}
+{{--                    <a><i class="fab fa-medium"></i></a>--}}
+{{--                </div>--}}
             </div>
             <div class="column is-2">
                 <ul class="footer-menu">
                     <li><a href="{{ route('web.pages.produk.index') }}">Produk & Harga</a></li>
                     <li><a href="https://www.facebook.com/groups/515510122483803/">Komunitas</a></li>
-                    <li><a href="#">Server Pulsa H2H</a></li>
-                    <li><a href="#">Metode Pembayaran</a></li>
+{{--                    <li><a href="#">Server Pulsa H2H</a></li>--}}
+                    <li><a href="{{ route('web.pages.payment-method') }}">Metode Pembayaran</a></li>
                     <li><a href="#">Dokumentasi Api</a></li>
                 </ul>
             </div>
@@ -140,7 +140,9 @@
             <p>
                 HATI HATI PENIPUAN YANG MENGATASNAMAKAN {{ config('app.name') }}
                 <br>
-                Kami bukan aplikasi untuk peminjaman uang, bukan aplikasi jasa cicilan, bukan aplikasi investasi, bukan aplikasi p2p lending, bukan aplikasi urun dana.
+                PENDAFTARAN MEMBER DI WEBSITE INI ADALAH GRATIS, JANGAN PERCAYA JIKA DISURUH MEMBAYAR
+                <br>
+                Kami bukan aplikasi untuk peminjaman uang online, bukan aplikasi jasa cicilan, bukan aplikasi investasi, bukan aplikasi p2p lending, bukan aplikasi urun dana, bukan aplikasi kredit online.
                 <br>
                 Kami tidak berafiliasi dengan website manapun kecuali dengan www.dibumi.com</p>
         </div>
