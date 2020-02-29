@@ -38,7 +38,7 @@
                             <i class="fas fa-tv fa-3x"></i>
                         </span>
                         <p class="subtitle">Marketplace Pascabayar</p>
-                        <p>PLN Pascabayar, PDAM, HP Pascabayar, Internet Pascabayar, BPJS Kesehatan, Multifinance (Kredit Motor & Asuransi Kesehatan).</p>
+                        <p>PLN Pascabayar, PDAM, HP Pascabayar, Internet Pascabayar (Speedy, CBN, TelkomPSTN), BPJS Kesehatan, Multifinance (Kredit Motor).</p>
                     </a>
                 </div>
             </div>
