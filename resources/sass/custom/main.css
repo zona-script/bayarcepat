@@ -541,8 +541,8 @@ body #backtotop a {
 
 /* line 49, src/assets/scss/layout/_navbar.scss */
 .navbar .navbar-brand img {
-    height: 42px;
-    max-height: 42px;
+    /*height: 42px;*/
+    /*max-height: 42px;*/
     width: auto
 }
 
