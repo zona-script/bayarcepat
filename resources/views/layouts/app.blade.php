@@ -26,7 +26,7 @@
 {{--    <link rel="stylesheet" href="{{ asset('css/main.css') }}">--}}
 {{--    <link rel="stylesheet" href="{{ asset('css/style.css') }}">--}}
 
-    <style>.pad-top-navbar {padding-top: 70px;}</style>
+    <style>.pad-top-navbar {padding-top: 70px;} .hero-welcome {background: transparent url('/images/wave.svg'); background-repeat: no-repeat; background-attachment: scroll;background-position-y: bottom;}</style>
     @stack('stack-head')
 </head>
 <body>

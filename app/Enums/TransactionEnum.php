@@ -92,4 +92,18 @@ class TransactionEnum
             'fee' => $fee
         ];
     }
+
+    public function makeMarket($phoneNumber, $product, $type = 'prabayar')
+    {
+        $data = [
+            'phone_number' => $phoneNumber,
+            'product' => $product
+        ];
+
+        if (!blank($type)) {
+            $data = Arr::add($data, 'type', $type);
+        }
+
+        return $data;
+    }
 }

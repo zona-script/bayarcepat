@@ -14,4 +14,9 @@ class PrabayarController extends Controller
 
         return view('dashboard.market.prabayar.index', compact('products'));
     }
+
+    public function store(Request $request)
+    {
+        return $request;
+    }
 }

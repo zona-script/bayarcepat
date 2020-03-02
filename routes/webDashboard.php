@@ -15,6 +15,7 @@ Route::group(['as' => 'web.'], function () {
             Route::get('/', 'HomeController@index')->name('index');
             Route::group(['prefix' => 'prabayar', 'as' => 'prabayar.'], function () {
                 Route::get('/', 'PrabayarController@index')->name('index');
+                Route::post('/', 'PrabayarController@store')->name('store');
             });
             Route::group(['prefix' => 'pascabayar', 'as' => 'pascabayar.'], function () {
                 Route::get('/', 'PascabayarController@index')->name('index');

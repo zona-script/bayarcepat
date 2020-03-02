@@ -1,8 +1,9 @@
 <template>
     <div class="box">
-        <div class="field">
+        <div class="content field">
             <h3 class="subtitle">Marketplace Prabayar</h3>
         </div>
+        <hr>
 
 <!--        <div class="field">-->
 <!--            <label class="label">Kategori</label>-->
@@ -91,7 +92,8 @@
             <div class="column is-6">
                 <div class="field">
                     <label class="label">Kode Produk</label>
-                    <input class="input" type="text" disabled v-bind:value="product.buyer_sku_code">
+                    <input class="input" type="text" disabled :value="product.buyer_sku_code">
+                    <input name="product_code" type="hidden" :value="product.buyer_sku_code">
                 </div>
             </div>
             <div class="column is-6">
@@ -127,20 +129,21 @@
             Pastikan nomor belum pernah di isi dalam 24 jam terakhir (terkadang saldo tidak dikembalikan).
         </div>
         <div class="columns">
-            <div class="column is-9">
+            <div class="column is-12">
+<!--            <div class="column is-9">-->
                 <div class="field">
                     <label class="label">No Telepon</label>
-                    <input class="input" type="text">
+                    <input class="input" type="text" name="phone_number">
                 </div>
             </div>
-            <div class="column is-3">
-                <div class="field">
-                    <label class="label">Buku Telepon</label>
-                    <button class="button is-fullwidth is-info is-outlined">List Kontak</button>
-                </div>
-            </div>
+<!--            <div class="column is-3">-->
+<!--                <div class="field">-->
+<!--                    <label class="label">Buku Telepon</label>-->
+<!--                    <div class="button is-fullwidth is-info is-outlined">List Kontak</div>-->
+<!--                </div>-->
+<!--            </div>-->
         </div>
-        <div class="field">
+        <div class="field" v-if="product.buyer_product_status && product.seller_product_status">
             <button class="button is-primary is-fullwidth">Beli Produk</button>
         </div>
     </div>
@@ -153,39 +156,61 @@
         name: "prabayar",
         data() {
             return {
-                countries: [
-                    {
-                        countryCode: "CA",
-                        countryName: "Canada"
-                    },
-                    {
-                        countryCode: "CA",
-                        countryName: "Canada"
-                    },
-                    {
-                        countryCode: "CA",
-                        countryName: "Canada"
-                    }
-                ],
+                // countries: [
+                //     {
+                //         countryCode: "CA",
+                //         countryName: "Canada"
+                //     },
+                //     {
+                //         countryCode: "CA",
+                //         countryName: "Canada"
+                //     },
+                //     {
+                //         countryCode: "CA",
+                //         countryName: "Canada"
+                //     }
+                // ],
                 balance: {
                     balance: 0,
                     balance_number_format: 0
                 },
                 categories: [
                     {
-                        "category": "Pulsa"
-                    },
-                    {
-                        "category": "PLN"
-                    },
-                    {
-                        "category": "Data"
-                    },
+                        "category": "Loading ..."
+                    }
                 ],
                 selectedCategory: '',
-                brands: [],
+                brands: {
+                    loading : {
+                        product_name:'Loading ...',
+                        category: '',
+                        brand: '',
+                        seller_name: '',
+                        price: '0',
+                        buyer_sku_code: '',
+                        buyer_product_status: true,
+                        seller_product_status: true,
+                        stock: '',
+                        multi: true,
+                        desc: ''
+                    },
+                },
                 selectedBrand: '',
-                products: [],
+                products: [
+                    {
+                        product_name:'Loading ...',
+                        category: '',
+                        brand: '',
+                        seller_name: '',
+                        price: '0',
+                        buyer_sku_code: '',
+                        buyer_product_status: true,
+                        seller_product_status: true,
+                        stock: '',
+                        multi: true,
+                        desc: ''
+                    }
+                ],
                 selectedProduct: '',
                 product:{
                     product_name:'',

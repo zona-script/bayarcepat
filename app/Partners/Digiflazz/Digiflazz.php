@@ -111,6 +111,58 @@ class Digiflazz
         return $this->request($this->endPoint, $jsonBody);
     }
 
+
+    /*
+     * Cek Tagihan
+     * PLN, HP, INTERNET, BPJS KESEHATAN, MULTIFINANCE
+     * */
+
+    public function cekTagihan($buyerSKUCode, $customerNumber, $refID)
+    {
+
+        $this->endPoint = $this->setEndPointAppend("transaction");
+        $jsonBody = [
+            "commands"=> "inq-pasca",
+            "username" => $this->username,
+            "buyer_sku_code	" => $buyerSKUCode,
+            "customer_no" => $customerNumber,
+            "ref_id" => $refID,
+            "sign" => $this->signGenerate("ref_id")
+        ];
+
+        return $this->request($this->endPoint, $jsonBody);
+    }
+
+    public function cekTagihanPLN($buyerSKUCode, $customerNumber, $refID = '')
+    {
+        return $this->cekTagihan($buyerSKUCode, $customerNumber, $refID);
+    }
+
+    public function cekTagihanPDAM($buyerSKUCode, $customerNumber, $refID = '')
+    {
+        return $this->cekTagihan($buyerSKUCode, $customerNumber, $refID);
+    }
+
+    public function cekTagihanHP($buyerSKUCode, $customerNumber, $refID = '')
+    {
+        return $this->cekTagihan($buyerSKUCode, $customerNumber, $refID);
+    }
+
+    public function cekTagihanInternet($buyerSKUCode, $customerNumber, $refID = '')
+    {
+        return $this->cekTagihan($buyerSKUCode, $customerNumber, $refID);
+    }
+
+    public function cekTagihanBPJSKesehatan($buyerSKUCode, $customerNumber, $refID = '')
+    {
+        return $this->cekTagihan($buyerSKUCode, $customerNumber, $refID);
+    }
+
+    public function cekTagihanMultifinance($buyerSKUCode, $customerNumber, $refID = '')
+    {
+        return $this->cekTagihan($buyerSKUCode, $customerNumber, $refID);
+    }
+
     public function request($uri, $jsonBody)
     {
         $client = new Client([
@@ -130,6 +182,6 @@ class Digiflazz
 
     protected function signGenerate($keyUniqueEndPoint)
     {
-        return md5($this->username.$this->key.$keyUniqueEndPoint);
+        return md5($this->username . $this->key . $keyUniqueEndPoint);
     }
 }
