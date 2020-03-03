@@ -28,7 +28,7 @@
         </div>
     </div>
 
-    <div class="section">
+    <div class="section hero-welcome-bottom">
         <div class="container">
             <div class="columns is-vcentered side-feature">
                 <div class="column is-5 is-hidden-desktop is-hidden-tablet has-text-centered">
