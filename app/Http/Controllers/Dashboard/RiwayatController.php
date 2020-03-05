@@ -22,8 +22,7 @@ class RiwayatController extends Controller
     public function show($id, Request $request)
     {
         $transaction = Transaction::with('callbackResponse')->where('user_id', Auth::id())
-            ->where('id', $id)
-            ->first();
+            ->findOrFail($id);
 
 //        return $transaction;
         return view('dashboard.laporan.detail', compact('transaction'));

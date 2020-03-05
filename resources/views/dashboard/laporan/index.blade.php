@@ -80,7 +80,7 @@
                                         Rp {{ $transaction->information['bank_amount_money'] }}
                                     @elseif($transaction->type == \App\Enums\TransactionEnum::$typeBayarCepatPayPay)
                                         Pembayaran untuk transaksi nomor {{ $transaction->information['id']}},
-                                        berupa {{ $transaction->information['information']['product']['operator']}}
+{{--                                        berupa {{ $transaction->information['information']['product']['operator']}}--}}
                                         sebesar
                                         Rp {{ $transaction->information['information']['product']['price']}}
                                     @elseif($transaction->type == \App\Enums\TransactionEnum::$typeBayarCepatPayRefund)

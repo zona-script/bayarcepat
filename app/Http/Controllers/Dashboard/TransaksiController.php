@@ -106,12 +106,13 @@ class TransaksiController extends Controller
 
             return redirect()
                 ->route('web.dashboard.transaksi.index')
-                ->with('error', "Transaksi anda tidak dapat diproses.");
+                ->with('error', "Transaksi anda gagal.");
 
         }
 
         return redirect()
-            ->route('web.dashboard.transaksi.index')
+//            ->route('web.dashboard.transaksi.index')
+            ->route('web.dashboard.riwayat.show', $transaction->id)
             ->with('success', "Transaksi berhasil, silakan lihat di halaman riwayat transaksi untuk liat status transaksi");
     }
 

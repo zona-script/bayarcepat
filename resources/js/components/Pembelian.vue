@@ -14,14 +14,14 @@
                                     <option value="" selected>Pilih Produk & Layanan</option>
                                     <option value="pulsa">Pulsa (Pulsa Reguller dan Promo)</option>
                                     <option value="pulsa-transfer">Pulsa Transfer (Tidak Menambah Masa Aktif)</option>
-                                    <option value="pln">Listrik PLN (Pasca Bayar)</option>
+<!--                                    <option value="pln">Listrik PLN (Pasca Bayar)</option>-->
                                     <option value="data">Paket Data (Paket Internet)</option>
                                     <option value="telepon-dan-sms">Paket Telepon dan Paket SMS</option>
                                     <option value="wifi">Wifi (Voucher Wifi.ID)</option>
                                     <option value="gift-card">Gift Card (Google Play & iTunes Gift Card)</option>
                                     <option value="ewallet">Saldo E-wallet & Ojek Online (Gojek, Grab, Ovo, Dana, LinkAja, ShoppePay)</option>
-                                    <option value="transfer-saldo">Transfer Saldo (Kesesama atau Bank Lain)</option>
-                                    <option value="voucher-game">Voucher Game Online (Mobile, Web dan PC)</option>
+                                    <option value="transfer-saldo">Transfer Saldo</option>
+<!--                                    <option value="voucher-game">Voucher Game Online (Mobile, Web dan PC)</option>-->
                                 </select>
                             </div>
                             <span class="icon is-left">

@@ -21,7 +21,7 @@ class CreateTransactionsTable extends Migration
                 ->on('users');
 
             // kategorinya pembelian atau bayarcepatpay
-            $table->unsignedInteger('type')
+            $table->string('type')
                 ->default(\App\Enums\TransactionEnum::$typeProduct);
             $table->string('phone_number')->nullable();
             $table->string('value')->nullable();

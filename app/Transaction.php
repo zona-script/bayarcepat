@@ -11,14 +11,24 @@ class Transaction extends Model
     protected $table = 'transactions';
 
     protected $fillable = [
-        'user_id', 'type', 'phone_number', 'value', 'message', 'information', 'status'
+        'id',
+        'value',
+        'message',
+        'information',
+        'status',
+        'user_id',
+        'type',
+        'phone_number'
     ];
 
     // array, json
     public $casts = [
+        'type' => 'string',
         'message' => 'array',
         'information' => 'array',
     ];
+
+    protected $hidden = [];
 
     protected $appends = ['type_string', 'status_string', 'date', 'time'];
 

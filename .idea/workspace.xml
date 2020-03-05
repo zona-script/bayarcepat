@@ -2,10 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1fc7cadf-dd8e-4988-95f3-5be001769a75" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/images/wave-flip.old.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/wave-flip.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Partners/Digiflazz/DigiflazzEnum.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Enums/BayarCepatPayEnum.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Enums/BayarCepatPayEnum.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Enums/TransactionEnum.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Enums/TransactionEnum.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/Market/PrabayarController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/Market/PrabayarController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/RiwayatController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/RiwayatController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/TransaksiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/TransaksiController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Partners/Digiflazz/Digiflazz.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Partners/Digiflazz/Digiflazz.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Traits/TelegramTrait.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Traits/TelegramTrait.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Transaction.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Transaction.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_02_15_144825_create_transactions_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_02_15_144825_create_transactions_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Pembelian.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Pembelian.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/market/prabayar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/market/prabayar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/laporan/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/laporan/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -312,7 +325,8 @@
       <workItem from="1583064443576" duration="152000" />
       <workItem from="1583132836867" duration="669000" />
       <workItem from="1583137501453" duration="3320000" />
-      <workItem from="1583242778478" duration="1969000" />
+      <workItem from="1583242778478" duration="2842000" />
+      <workItem from="1583254744769" duration="14102000" />
     </task>
     <servers />
   </component>
@@ -340,10 +354,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="450" y="235" key="#com.intellij.ws.actions.HttpClientConvertFromCurlDialog/0.0.1366.728@0.0.1366.728" timestamp="1583064504756" />
-    <state x="413" y="123" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1582713131216">
+    <state x="413" y="123" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1583331605592">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="123" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1582713131216" />
+    <state x="413" y="123" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1583331605592" />
     <state x="463" y="123" key="FileChooserDialogImpl" timestamp="1583242815041">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -364,10 +378,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="187" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1583064596711" />
-    <state x="489" y="199" key="NewPhpClassDialog" timestamp="1582723036445">
+    <state x="489" y="199" key="NewPhpClassDialog" timestamp="1583332046858">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="489" y="199" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1582723036445" />
+    <state x="489" y="199" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1583332046858" />
     <state x="517" y="296" key="NewPhpFileDialog" timestamp="1582969062759">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -380,9 +394,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="408" y="13" key="refactoring.ChangeSignatureDialog/0.0.1366.728@0.0.1366.728" timestamp="1582280922144" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1583247269033">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1583333245246">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1583247269033" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1583333245246" />
   </component>
 </project>

@@ -74,6 +74,10 @@ class Digiflazz
             "sign" => $this->signGenerate("pricelist")
         ];
 
+        if (!blank($code)) {
+            $jsonBody = Arr::add($jsonBody, 'code', $code);
+        }
+
         return $this->request('https://api.digiflazz.com/v1/price-list', $jsonBody);
     }
 
@@ -163,6 +167,36 @@ class Digiflazz
         return $this->cekTagihan($buyerSKUCode, $customerNumber, $refID);
     }
 
+    /* *
+     * BELI
+     * referensi: https://developer.digiflazz.com/api/buyer/topup/
+     * */
+    public function beli($buyerSKUCode, $customerNumber, $refID, $msg = '')
+    {
+        $jsonBody = [
+            "username" => $this->username,
+            "buyer_sku_code	" => "xld10",
+            "customer_no" => "087800001230",
+            "ref_id" => "test1",
+            "sign" => $this->signGenerate("test1")
+        ];
+
+//        $jsonBody = [
+//            "username" => $this->username,
+//            "buyer_sku_code	" => $buyerSKUCode,
+//            "customer_no" => $customerNumber,
+//            "ref_id" => $refID,
+////            "sign" => $this->signGenerate("ref_id")
+//            "sign" => $this->signGenerate($refID)
+//        ];
+
+        if (!blank($msg)) {
+            $jsonBody = Arr::add($jsonBody, 'msg', $msg);
+        }
+
+        return $this->request('https://api.digiflazz.com/v1/transaction', $jsonBody);
+    }
+
     public function request($uri, $jsonBody)
     {
         $client = new Client([
@@ -180,8 +214,11 @@ class Digiflazz
         return collect(json_decode($response->getBody()));
     }
 
-    protected function signGenerate($keyUniqueEndPoint)
+    protected function signGenerate($keyUniqueEndPoint, $force = false)
     {
+        if ($force) {
+            return $keyUniqueEndPoint;
+        }
         return md5($this->username . $this->key . $keyUniqueEndPoint);
     }
 }

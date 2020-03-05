@@ -60,6 +60,8 @@ class TransactionEnum
             return BayarCepatPayEnum::$titleRefund;
         } else if ($number == self::$typeBayarCepatPayPay){
             return BayarCepatPayEnum::$titlePay;
+        } else if ($number == self::$typeMarket){
+            return BayarCepatPayEnum::$titleMarket;
         } else {
             return 'tidak di ketahui (harap hubungi kami)';
         }

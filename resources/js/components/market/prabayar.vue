@@ -128,12 +128,18 @@
             Penjual produk ini membatasi hanya sejumlah 1 (satu) kali pembelian untuk satu nomor telepon dalam waktu satu hari.
             Pastikan nomor belum pernah di isi dalam 24 jam terakhir (terkadang saldo tidak dikembalikan).
         </div>
+
+        <div class="field" v-if="product.category === 'PLN' && product.brand === 'PLN'">
+            <label class="label">No Pelanggan PLN</label>
+            <input class="input" type="text" name="customer_number" required>
+        </div>
+
         <div class="columns">
             <div class="column is-12">
 <!--            <div class="column is-9">-->
                 <div class="field">
                     <label class="label">No Telepon</label>
-                    <input class="input" type="text" name="phone_number">
+                    <input class="input" type="text" name="phone_number" required>
                 </div>
             </div>
 <!--            <div class="column is-3">-->

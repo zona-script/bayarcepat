@@ -11,6 +11,7 @@ class BayarCepatPayEnum
     public static $titleRefund = 'Refund (Pengembalian) Uang';
     public static $titleProduct = 'Pembelian Produk';
     public static $titlePay = 'Pembayaran Transaksi';
+    public static $titleMarket = 'Pembelian Produk Marketplace';
     public static $title = '';
 
     public static $typeIN = 1;
