@@ -1,0 +1,50 @@
+.pad-top-navbar {padding-top: 70px;}
+.hero-welcome {
+    animation: hero-welcome-animation 6s infinite;
+}
+
+.is-animate-color {
+    animation: hero-welcome-animation 6s infinite;
+}
+
+.is-animate-color-button {
+    border: #24A4EA solid 2px;
+    animation: animate-button 6s infinite;
+    -webkit-text-fill-color: white !important;
+}
+
+@keyframes hero-welcome-animation {
+    0% {
+        background:linear-gradient(100deg,#24A4EA,#379DEB 25%,#B76BF0);
+    }
+    25%{
+        background-color:yellow;
+    }
+    50%{
+        background-color:green;
+    }
+    75%{
+        background-color:brown;
+    }
+    100% {
+        background-color: #ff53d2;
+    }
+}
+
+@keyframes animate-button {
+    0% {
+        background-color: purple;
+    }
+    25%{
+        background-color: orange;
+    }
+    50%{
+        background-color: red;
+    }
+    75%{
+        background-color: green;
+    }
+    100% {
+        background-color: deepskyblue;
+    }
+}

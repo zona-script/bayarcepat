@@ -17,7 +17,7 @@
 
                 {{--                <p class="subtitle is-5 is-uppercase">Buat Toko Anda <u class="has-text-weight-bold has-text-danger">Meningkat</u> Ke <u class="has-text-weight-bold has-text-info">Level Lebih Tinggi</u>.</p>--}}
                 <div class="has-text-centered">
-                    <a href="{{ route('register') }}" class="button is-white is-outlined is-rounded is-medium">Mulai Berubah</a>
+                    <a href="{{ route('register') }}" class="button is-white is-rounded is-medium">Mulai Berubah</a>
 {{--                    <a href="{{ route('login') }}" class="button is-info is-rounded is-medium">Masuk</a>--}}
                 </div>
 {{--                @auth--}}
@@ -196,7 +196,7 @@
                 <h3 class="title is-3 has-text-weight-bold">Jangan Sampai Kalah Dengan Toko Saingan?</h3>
                 <p class="subtitle">Rezeki emang sudah di atur, tapi usaha tidak akan membohongi hasil. Gunakan {{ config('app.name') }} agar omset meningkat?</p>
                 <p>
-                    <a href="{{ route('register') }}" class="button is-white is-rounded is-medium">Daftar Sekarang</a>
+                    <a href="{{ route('register') }}" class="button is-white is-rounded is-medium is-animate-color-button">Daftar Sekarang</a>
                 </p>
             </div>
         </div>

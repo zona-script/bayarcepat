@@ -21,11 +21,7 @@
     <meta property="business:contact_data:website" content="https://bayarcepat.com" />
 
     <!--Core CSS -->
-{{--    <link rel="stylesheet" href="{{ asset('css/library-bundle.css') }}">--}}
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-{{--    <link rel="stylesheet" href="{{ asset('css/main.css') }}">--}}
-{{--    <link rel="stylesheet" href="{{ asset('css/style.css') }}">--}}
-    <style>.pad-top-navbar {padding-top: 70px;}  .hero-welcome {background:linear-gradient(100deg,#24A4EA,#379DEB 25%,#B76BF0);}</style>
     @stack('stack-head')
 </head>
 <body>
