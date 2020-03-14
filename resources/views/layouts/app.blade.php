@@ -25,10 +25,7 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 {{--    <link rel="stylesheet" href="{{ asset('css/main.css') }}">--}}
 {{--    <link rel="stylesheet" href="{{ asset('css/style.css') }}">--}}
-
-    <style>.pad-top-navbar {padding-top: 70px;}
-        .hero-welcome {background: transparent url('/images/wave.svg'); background-repeat: no-repeat; background-attachment: scroll;background-position-y: bottom;}  .hero-welcome-bottom {background: transparent url('/images/wave-flip.svg');background-repeat: no-repeat;background-attachment: scroll;margin-top: -1px;}
-    </style>
+    <style>.pad-top-navbar {padding-top: 70px;}  .hero-welcome {background:linear-gradient(100deg,#24A4EA,#379DEB 25%,#B76BF0);}</style>
     @stack('stack-head')
 </head>
 <body>

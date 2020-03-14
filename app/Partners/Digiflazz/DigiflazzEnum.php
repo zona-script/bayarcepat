@@ -41,6 +41,23 @@ class DigiflazzEnum
     public static $_statusPending = '03';
     public static $_statusPendingDFRouterIssue = '99';
 
+    public static $whereSuccess = 'success';
+    public static $wherePending = 'pending';
+    public static $whereFailed= 'gagal';
+
+    public static function where($status = '')
+    {
+        if (self::whereInSuccess($status)) {
+            return 'success';
+        } elseif (self::whereInPending($status)) {
+            return 'pending';
+        } elseif (self::whereInGagal($status)) {
+            return 'gagal';
+        }
+
+        die('GAGAL, HARAP MENGHUBUNGI ADMIN, KODE ERROR 35001');
+    }
+
     public static function whereInSuccess($status = '')
     {
         if ($status == '00') {
@@ -65,7 +82,6 @@ class DigiflazzEnum
 
     public static function whereInGagal($status = '')
     {
-
         $data = ['00', '03', '99'];
 
         foreach ($data as $item) {
@@ -75,5 +91,10 @@ class DigiflazzEnum
         }
 
         return true;
+    }
+
+    public static function whereInFailed($status)
+    {
+        return self::whereInGagal($status);
     }
 }

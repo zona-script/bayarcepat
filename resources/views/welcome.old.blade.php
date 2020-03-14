@@ -2,6 +2,8 @@
 
 @section('title', 'Platform Gotong Royong Untuk UKM')
 
+{{--        /*.hero-welcome {background: transparent url('/images/wave.svg'); background-repeat: no-repeat; background-attachment: scroll;background-position-y: bottom;}  .hero-welcome-bottom {background: transparent url('/images/wave-flip.svg');background-repeat: no-repeat;background-attachment: scroll;margin-top: -1px;}*/
+--}}
 @section('content')
     <div class="hero is-white">
         <div class="hero-body">
