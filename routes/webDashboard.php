@@ -44,6 +44,8 @@ Route::group(['as' => 'web.'], function () {
             Route::get('/', 'HomeController@index')->name('index');
         });
 
+        Route::resource('contact', 'ContactController');
+
         Route::group(['prefix' => 'pengaturan', 'as' => 'pengaturan.', 'namespace' => 'Setting'], function () {
             Route::get('/', 'HomeController@index')->name('index');
             Route::post('/', 'HomeController@update')->name('update');
