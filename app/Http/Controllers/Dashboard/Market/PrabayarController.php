@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Dashboard\Market;
 
 use App\Builders\BayarCepatBuilder;
 use App\CallbackResponse;
+use App\Enums\CallbackEnum;
 use App\Enums\TransactionEnum;
 use App\Http\Controllers\Controller;
 use App\Jobs\ProcessSendMessagetoTelegram;
@@ -89,8 +90,10 @@ class PrabayarController extends Controller
         $callbackResponse = new CallbackResponse([
 //            'transaction_id' => $dataResult['ref_id'],
             'transaction_id' => $transaction->id,
-            'status' => $dataResult['status']
+            'status' => $dataResult['status'],
+            'provider' => CallbackEnum::$providerDigiflazz
         ]);
+
         $callbackResponse->data = $dataResult->toArray();
         $callbackResponse->save();
 

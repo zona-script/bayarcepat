@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Callback;
 
 use App\Builders\BayarCepatBuilder;
 use App\CallbackResponse;
+use App\Enums\CallbackEnum;
 use App\Enums\TransactionEnum;
 use App\Http\Controllers\Controller;
 use App\Transaction;
@@ -31,7 +32,8 @@ class JavaH2HController extends Controller
 
             $callbackResponse = new CallbackResponse([
                 'transaction_id' => $content['trxid_api'],
-                'status' => $content['status']
+                'status' => $content['status'],
+                'provider' => CallbackEnum::$providerJavaH2H
             ]);
             $callbackResponse->data = $content->toArray();
             $callbackResponse->save();

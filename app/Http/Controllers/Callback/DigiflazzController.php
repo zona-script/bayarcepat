@@ -30,21 +30,23 @@ class DigiflazzController extends Controller
             $statusCode = $content['rc'];
             $callbackResponse = new CallbackResponse([
                 'transaction_id' => $content['ref_id'],
-                'status' => $content['status']
+                'status' => $content['status'],
+                'provider' => CallbackEnum::$providerDigiflazz
             ]);
             $callbackResponse->data = $content;
             $callbackResponse->save();
             // end yang baru
 
             // yang lama
-            $content = collect($request->input('data'));
-            $statusCode = $content['rc'];
-            $callbackResponse = new CallbackResponse([
-                'transaction_id' => $content['ref_id'],
-                'status' => $content['status']
-            ]);
-            $callbackResponse->data = $content->toArray();
-            $callbackResponse->save();
+//            $content = collect($request->input('data'));
+//            $statusCode = $content['rc'];
+//            $callbackResponse = new CallbackResponse([
+//                'transaction_id' => $content['ref_id'],
+//                'status' => $content['status'],
+//                'provider' => CallbackEnum::$providerDigiflazz
+//            ]);
+//            $callbackResponse->data = $content->toArray();
+//            $callbackResponse->save();
             // end yang lama
 
 
