@@ -51,3 +51,9 @@
     </div>
 
 @endsection
+
+@push('stack-head')
+    <script !src="">
+        window.alert('AAAAAAAAAAAA')
+    </script>
+@endpush
