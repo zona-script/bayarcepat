@@ -13,9 +13,14 @@ class JavaH2HController extends Controller
 {
     public function __invoke(Request $request)
     {
-        if ($request->has('content')) {
-            $request->validate(['content' => 'required']);
-            $content = collect($request->input('content'));
+
+        $postData = file_get_contents('php://input');
+
+        if (collect($postData)['content']) {
+            $content = collect($postData)['content'];
+            $content = collect($content);
+//            $request->validate(['content' => 'required']);
+//            $content = collect($request->input('content'));
 
 //            $callbackResponse = CallbackResponse::create([
 //                'transaction_id' => $content['trxid_api'],

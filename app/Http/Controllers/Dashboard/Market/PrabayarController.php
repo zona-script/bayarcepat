@@ -113,8 +113,6 @@ class PrabayarController extends Controller
             $transaction->status = TransactionEnum::$statusSuccess;
             $transaction->save();
 
-            return $result;
-
             return redirect()
                 ->route('web.dashboard.riwayat.show', $transaction->id)
                 ->with('success', "Transaksi anda sukses.");
