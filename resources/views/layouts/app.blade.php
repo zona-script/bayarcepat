@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     @stack('stack-head')
 </head>
-<body>
+<body class="is-fullwidth">
 <div class="navbar is-white is-fixed-top" role="navigation" aria-label="main navigation">
     <div class="container">
         <div class="navbar-brand">
@@ -137,10 +137,9 @@
                 <br>
                 <span class="has-text-weight-bold">PENDAFTARAN MEMBER DI WEBSITE INI ADALAH GRATIS, JANGAN PERCAYA JIKA DISURUH MEMBAYAR</span>
                 <br>
-                <u>
+                <u class="box">
                     Kami bukan aplikasi untuk peminjaman uang online, bukan aplikasi jasa cicilan, bukan aplikasi investasi, bukan aplikasi p2p lending, bukan aplikasi urun dana, bukan aplikasi kredit online.
                 </u>
-                <br>
                 Kami tidak berafiliasi dengan website manapun kecuali dengan www.dibumi.com</p>
             <p>Server by AlibabaCloud</p>
         </div>

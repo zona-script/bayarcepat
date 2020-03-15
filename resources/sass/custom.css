@@ -13,6 +13,28 @@
     -webkit-text-fill-color: white !important;
 }
 
+.navbar {
+    animation: animate-navbar 6s infinite;
+}
+
+@keyframes animate-navbar {
+    0% {
+        border-top: mediumspringgreen solid 2px;
+    }
+    25%{
+        border-top: yellow solid 2px;
+    }
+    50%{
+        border-top: purple solid 2px;
+    }
+    75%{
+        border-top: deepskyblue solid 2px;
+    }
+    100% {
+        border-top: deeppink solid 2px;
+    }
+}
+
 @keyframes hero-welcome-animation {
     0% {
         background:linear-gradient(100deg,#24A4EA,#379DEB 25%,#B76BF0);
@@ -21,10 +43,10 @@
         background-color:yellow;
     }
     50%{
-        background-color:green;
+        background-color:limegreen;
     }
     75%{
-        background-color:brown;
+        background-color:deepskyblue;
     }
     100% {
         background-color: #ff53d2;

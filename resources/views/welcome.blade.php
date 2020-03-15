@@ -4,13 +4,13 @@
 
 @section('content')
 
-    <div class="hero is-medium is-primary hero-welcome">
+    <div class="hero is-medium is-fullheight-with-navbar is-primary hero-welcome">
         <div class="hero-body">
             <div class="container has-text-centered">
                 <h1 class="title is-1">{{ config('app.name') }}</h1>
                 <div class="columns">
                     <div class="column is-8 is-offset-2 has-text-centered">
-                        <h2 class="subtitle is-4 is-uppercase">Dengan {{ config('app.name') }} cukup <u>satu akun</u>, dapat digunakan bertransaksi dengan <u>ratusan server</u> sekaligus</h2>
+                        <h2 class="subtitle is-4 is-uppercase">Dengan {{ config('app.name') }} cukup satu akun, dapat digunakan bertransaksi dengan ratusan server sekaligus</h2>
                     </div>
                 </div>
                 <p class="subtitle is-5 is-lower-alpha">Lupakan cara lama, mulai cara baru</p>
