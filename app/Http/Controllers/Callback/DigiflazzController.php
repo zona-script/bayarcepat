@@ -25,16 +25,27 @@ class DigiflazzController extends Controller
         if ($request->header('X-Hub-Signature') == 'sha1='.$signature) {
 //            \Log::info(json_decode($request->getContent(), true));
 
-            $content = collect($request->input('data'));
-
+            // yang baru
+            $content = collect($post_data)['data']->toArray();
             $statusCode = $content['rc'];
+            $callbackResponse = new CallbackResponse([
+                'transaction_id' => $content['ref_id'],
+                'status' => $content['status']
+            ]);
+            $callbackResponse->data = $content;
+            $callbackResponse->save();
+            // end yang baru
 
+            // yang lama
+            $content = collect($request->input('data'));
+            $statusCode = $content['rc'];
             $callbackResponse = new CallbackResponse([
                 'transaction_id' => $content['ref_id'],
                 'status' => $content['status']
             ]);
             $callbackResponse->data = $content->toArray();
             $callbackResponse->save();
+            // end yang lama
 
 
             $transaction = Transaction::where('id', $callbackResponse->transaction_id)->first();

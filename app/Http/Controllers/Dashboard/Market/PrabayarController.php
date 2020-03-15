@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Dashboard\Market;
 
 use App\Builders\BayarCepatBuilder;
+use App\CallbackResponse;
 use App\Enums\TransactionEnum;
 use App\Http\Controllers\Controller;
 use App\Jobs\ProcessSendMessagetoTelegram;
@@ -82,6 +83,17 @@ class PrabayarController extends Controller
         dispatch(new ProcessSendMessagetoTelegramFromMarket($transaction));
 
         $rc = $result["data"]->rc;
+        $dataResult = collect($result['data']);
+
+        // save to callback
+        $callbackResponse = new CallbackResponse([
+//            'transaction_id' => $dataResult['ref_id'],
+            'transaction_id' => $transaction->id,
+            'status' => $dataResult['status']
+        ]);
+        $callbackResponse->data = $dataResult->toArray();
+        $callbackResponse->save();
+
         if (DigiflazzEnum::whereInGagal($rc)) {
             $transaction->status = TransactionEnum::$statusFailed;
             $transaction->save();
@@ -100,6 +112,8 @@ class PrabayarController extends Controller
         } elseif (DigiflazzEnum::whereInSuccess($rc)) {
             $transaction->status = TransactionEnum::$statusSuccess;
             $transaction->save();
+
+            return $result;
 
             return redirect()
                 ->route('web.dashboard.riwayat.show', $transaction->id)
