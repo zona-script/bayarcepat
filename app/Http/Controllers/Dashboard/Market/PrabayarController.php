@@ -95,6 +95,7 @@ class PrabayarController extends Controller
         ]);
 
         $callbackResponse->data = $dataResult->toArray();
+        $callbackResponse->provider = CallbackEnum::$providerDigiflazz;
         $callbackResponse->save();
 
         if (DigiflazzEnum::whereInGagal($rc)) {

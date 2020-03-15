@@ -19,6 +19,8 @@ class VerifyCsrfToken extends Middleware
      * @var array
      */
     protected $except = [
+        'callback-from-partner/digiflazz',
+        'callback-from-partner/javah2h',
         'callback-from-partner/*'
     ];
 }
