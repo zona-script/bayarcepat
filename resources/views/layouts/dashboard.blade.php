@@ -55,17 +55,17 @@
                     Kirim Uang
                 </a>
 
-                <a class="navbar-item" href="{{ route('web.dashboard.cetak-struk.index') }}">
-                    Cetak Struk
-                </a>
+{{--                <a class="navbar-item" href="{{ route('web.dashboard.cetak-struk.index') }}">--}}
+{{--                    Cetak Struk--}}
+{{--                </a>--}}
 
                 <a class="navbar-item" href="{{ route('web.dashboard.riwayat.index') }}">
                     Laporan
                 </a>
 
-                <a class="navbar-item" href="{{ route('web.dashboard.api.index') }}">
-                    Api
-                </a>
+{{--                <a class="navbar-item" href="{{ route('web.dashboard.api.index') }}">--}}
+{{--                    Api--}}
+{{--                </a>--}}
 
                 <a class="navbar-item" href="{{ route('web.dashboard.pengaturan.index') }}">
                     Pengaturan

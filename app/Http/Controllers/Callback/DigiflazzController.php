@@ -34,6 +34,7 @@ class DigiflazzController extends Controller
                 'provider' => CallbackEnum::$providerDigiflazz
             ]);
             $callbackResponse->data = $content;
+            $callbackResponse->provider = CallbackEnum::$providerDigiflazz;
             $callbackResponse->save();
             // end yang baru
 
