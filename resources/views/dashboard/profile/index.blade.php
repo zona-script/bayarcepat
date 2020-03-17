@@ -63,34 +63,53 @@
 
 
                     <div class="box">
-                        <div class="field">
-                            <h3 class="subtitle">Ganti Password</h3>
-                        </div>
-                        <div class="field">
-                            <label class="label">Password Baru</label>
-                            <div class="control has-icons-left">
-                                <input name="password" class="input" type="password" placeholder="password">
-                                <span class="icon is-small is-left">
+                        <form action="{{ route('web.dashboard.profile.password.update') }}" method="post">
+
+                            @csrf
+                            <div class="field">
+                                <h3 class="subtitle">Rubah Password</h3>
+
+                                @foreach ($errors->all() as $error)
+                                    <p class="has-text-danger">{{ $error }}</p>
+                                @endforeach
+
+                            </div>
+                            <div class="field">
+                                <label class="label">Password Sekarang</label>
+                                <div class="control has-icons-left">
+                                    <input name="current_password" class="input" type="password" placeholder="password lama">
+                                    <span class="icon is-small is-left">
                               <i class="fas fa-key"></i>
                             </span>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="field">
-                            <label class="label">Ulangi Password</label>
-                            <div class="control has-icons-left">
-                                <input name="password_confirm" class="input" type="password" placeholder="password">
-                                <span class="icon is-small is-left">
+                            <div class="field">
+                                <label class="label">Password Baru</label>
+                                <div class="control has-icons-left">
+                                    <input name="new_password" class="input" type="password" placeholder="password baru">
+                                    <span class="icon is-small is-left">
                               <i class="fas fa-key"></i>
                             </span>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="field">
-                            <div class="control">
-                                <button class="button is-primary is-fullwidth">Ganti Password</button>
+                            <div class="field">
+                                <label class="label">Ulangi Password Baru</label>
+                                <div class="control has-icons-left">
+                                    <input name="new_confirm_password" class="input" type="password" placeholder="ulangi password baru">
+                                    <span class="icon is-small is-left">
+                              <i class="fas fa-key"></i>
+                            </span>
+                                </div>
                             </div>
-                        </div>
+
+                            <div class="field">
+                                <div class="control">
+                                    <button class="button is-primary is-fullwidth">Ganti Password</button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>

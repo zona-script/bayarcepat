@@ -60,6 +60,7 @@ Route::group(['as' => 'web.'], function () {
 
         Route::group(['prefix' => 'profile', 'as' => 'profile.', 'namespace' => 'Profile'], function () {
             Route::get('/', 'HomeController@index')->name('index');
+            Route::post('/', 'ChangePasswordController@update')->name('password.update');
         });
     });
 

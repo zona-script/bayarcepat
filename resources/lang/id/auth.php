@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'failed' => 'Login gagal, kredensial tidak ditemukan atau passwordnya tidak tepat..',
+    'failed' => 'Login gagal, kredensial tidak ditemukan atau passwordnya tidak tepat.',
     'throttle' => 'Sudah terlalu banyak upaya percobaan login. Mohon menunggu :seconds detik.',
 
 ];
