@@ -6,28 +6,19 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>{{ env('APP_NAME') }} - @yield('title')</title>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-
 </head>
 <body>
-<nav class="navbar is-mobile">
+<nav class="navbar">
     <div class="navbar-brand">
         <a class="navbar-item" href="{{ env('APP_URL') }}">
             <h1 class="title has-text-primary is-uppercase">{{ env('APP_NAME') }}</h1>
-        </a>
-    </div>
-
-    <div class="navbar-end is-hidden-mobile">
-        <a class="navbar-item" href="{{ env('APP_NAME') }}">
-            Kunjungi WEB
         </a>
     </div>
 </nav>
 <div class="hero is-primary has-text-centered">
     <div class="hero-body">
         <div class="container">
-            <h1 class="title is-3">{{ env('APP_NAME') }}</h1>
+            <h1 class="title is-3">@yield('title')</h1>
         </div>
     </div>
 </div>
@@ -65,14 +56,16 @@
     <h3 class="subtitle is-3">Peringatan</h3>
     <p>Email ini hanya ditujukan kepada [NAMA ORANG] dengan alamat email [alamat email]. Jika anda buka [NAMA ORANG] dan bukan pemilik email [alamat email] maka anda tidak diperkenankan untuk membaca atau membuka email ini.</p>
 </div>
-<footer class="footer has-background-grey-dark">
-    <div class="container">
-        <div class="has-text-centered has-text-white">
-            <p>
-                &copy; 2020 {{ env('APP_NAME') }}
-            </p>
-            <p>Anda mendapatkan email ini karena anda member dari {{ env('APP_NAME') }}</p>
-        </div>
+<footer class="footer">
+    <div class="content has-text-centered">
+        <p class="is-small are-small"><strong>Perhatian: </strong> <br>
+            E-mail ini (termasuk seluruh lampirannya, bila ada) hanya ditujukan kepada penerima yang tercantum di atas.
+            Jika Anda bukan penerima yang dituju, maka Anda tidak diperkenankan untuk memanfaatkan, menyebarkan, mendistribusikan, atau menggandakan e-mail ini beserta seluruh lampirannya.
+        </p>
+        <p>
+            &copy; 2020 {{ env('APP_NAME') }}
+        </p>
+        <p>Anda mendapatkan email ini karena anda member dari {{ env('APP_NAME') }}</p>
     </div>
 </footer>
 </body>

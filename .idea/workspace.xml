@@ -2,16 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1fc7cadf-dd8e-4988-95f3-5be001769a75" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/bayarcepat.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/bayarcepat.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/mails/deposit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/mails/invoice/transaction.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Exceptions/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exceptions/Handler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/session.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/session.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/id/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/id/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/profile/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/profile/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/webDashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/webDashboard.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/WelcomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/WelcomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/mail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/mail.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,11 +195,11 @@
       <recent name="C:\xampp\htdocs\bayarcepat\resources\views\admin\saldo\deposit" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\bayarcepat\resources\views\mails" />
       <recent name="C:\xampp\htdocs\bayarcepat\storage\app\public" />
       <recent name="C:\xampp\htdocs\bayarcepat\storage\app" />
       <recent name="C:\xampp\htdocs\bayarcepat\resources\views\dashboard\saldo\deposit" />
       <recent name="C:\xampp\htdocs\bayarcepat\app\JavaH2H\Reformat" />
-      <recent name="C:\xampp\htdocs\bayarcepat\resources\views\pages" />
     </key>
   </component>
   <component name="RestClientSettings">
@@ -335,7 +331,7 @@
       <workItem from="1584252730157" duration="7258000" />
       <workItem from="1584280224351" duration="9156000" />
       <workItem from="1584375430093" duration="9202000" />
-      <workItem from="1584437982199" duration="4416000" />
+      <workItem from="1584437982199" duration="9334000" />
     </task>
     <servers />
   </component>
@@ -391,10 +387,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="489" y="199" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1583509099863" />
-    <state x="517" y="296" key="NewPhpFileDialog" timestamp="1584376646672">
+    <state x="517" y="296" key="NewPhpFileDialog" timestamp="1584447290153">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="517" y="296" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1584376646672" />
+    <state x="517" y="296" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1584447290153" />
     <state x="391" y="193" key="com.intellij.ide.util.TipDialog" timestamp="1584438006718">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
