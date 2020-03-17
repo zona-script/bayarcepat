@@ -137,9 +137,10 @@
                 <br>
                 <span class="has-text-weight-bold">PENDAFTARAN MEMBER DI WEBSITE INI ADALAH GRATIS, JANGAN PERCAYA JIKA DISURUH MEMBAYAR</span>
                 <br>
-                <u class="box">
+                <u>
                     Kami bukan aplikasi untuk peminjaman uang online, bukan aplikasi jasa cicilan, bukan aplikasi investasi, bukan aplikasi p2p lending, bukan aplikasi urun dana, bukan aplikasi kredit online.
                 </u>
+                <br>
                 Kami tidak berafiliasi dengan website manapun kecuali dengan www.dibumi.com</p>
             <p>Server by AlibabaCloud</p>
         </div>

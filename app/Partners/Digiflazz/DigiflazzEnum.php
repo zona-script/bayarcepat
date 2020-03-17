@@ -4,6 +4,8 @@
 namespace App\Partners\Digiflazz;
 
 
+use App\Enums\TransactionEnum;
+
 class DigiflazzEnum
 {
     public static $_00 = '00';
@@ -45,13 +47,25 @@ class DigiflazzEnum
     public static $wherePending = 'pending';
     public static $whereFailed= 'gagal';
 
-    public static function where($status = '')
+    public static function where($status = '', $convertToTransactionStatusCode = false)
     {
         if (self::whereInSuccess($status)) {
+            if (!blank($convertToTransactionStatusCode)) {
+                return TransactionEnum::$statusSuccess;
+            }
+
             return 'success';
         } elseif (self::whereInPending($status)) {
+            if (!blank($convertToTransactionStatusCode)) {
+                return TransactionEnum::$statusProcess;
+            }
+
             return 'pending';
         } elseif (self::whereInGagal($status)) {
+            if (!blank($convertToTransactionStatusCode)) {
+                return TransactionEnum::$statusFailed;
+            }
+
             return 'gagal';
         }
 

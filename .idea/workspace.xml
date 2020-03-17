@@ -2,9 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1fc7cadf-dd8e-4988-95f3-5be001769a75" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/laporan/component/detail-market.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/id/auth.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/id/pagination.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/id/passwords.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/id/validation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/laporan/component/detail-bayarcepatpay-deposit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/laporan/component/detail-bayarcepatpay-pay.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/laporan/component/detail-bayarcepatpay-refund.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/laporan/component/detail-bayarcepatpay-withdrawal.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/laporan/component/detail-product.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/bayarcepat.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/bayarcepat.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Callback/DigiflazzController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Callback/DigiflazzController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/Market/PrabayarController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/Market/PrabayarController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Partners/Digiflazz/DigiflazzEnum.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Partners/Digiflazz/DigiflazzEnum.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/contact/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/contact/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/dashboard/laporan/detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/laporan/detail.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/laporan/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/laporan/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,24 +195,24 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../al-quran-terjemahan" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/lang" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\bayarcepat\public\images" />
-      <recent name="C:\xampp\htdocs\bayarcepat\resources\views\admin\saldo\penarikan" />
-      <recent name="C:\xampp\htdocs\bayarcepat\resources\views\admin\saldo\deposit" />
-      <recent name="C:\xampp\htdocs\bayarcepat\resources\sass\custom" />
-      <recent name="C:\xampp\htdocs\bayarcepat\public" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\bayarcepat\storage\app\public" />
       <recent name="C:\xampp\htdocs\bayarcepat\storage\app" />
       <recent name="C:\xampp\htdocs\bayarcepat\resources\views\dashboard\saldo\deposit" />
       <recent name="C:\xampp\htdocs\bayarcepat\app\JavaH2H\Reformat" />
       <recent name="C:\xampp\htdocs\bayarcepat\resources\views\pages" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\bayarcepat\resources\views\dashboard\laporan\component" />
+      <recent name="C:\xampp\htdocs\bayarcepat\public\images" />
+      <recent name="C:\xampp\htdocs\bayarcepat\resources\views\admin\saldo\penarikan" />
+      <recent name="C:\xampp\htdocs\bayarcepat\resources\views\admin\saldo\deposit" />
+      <recent name="C:\xampp\htdocs\bayarcepat\resources\sass\custom" />
     </key>
   </component>
   <component name="RestClientSettings">
@@ -324,7 +342,9 @@
       <workItem from="1584115936970" duration="33000" />
       <workItem from="1584161769512" duration="7330000" />
       <workItem from="1584252730157" duration="7258000" />
-      <workItem from="1584280224351" duration="7695000" />
+      <workItem from="1584280224351" duration="9156000" />
+      <workItem from="1584375430093" duration="9202000" />
+      <workItem from="1584437982199" duration="1010000" />
     </task>
     <servers />
   </component>
@@ -380,14 +400,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="489" y="199" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1583509099863" />
-    <state x="517" y="296" key="NewPhpFileDialog" timestamp="1584296635642">
+    <state x="517" y="296" key="NewPhpFileDialog" timestamp="1584376646672">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="517" y="296" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1584296635642" />
-    <state x="391" y="193" key="com.intellij.ide.util.TipDialog" timestamp="1584280843101">
+    <state x="517" y="296" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1584376646672" />
+    <state x="391" y="193" key="com.intellij.ide.util.TipDialog" timestamp="1584438006718">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="391" y="193" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1584280843101" />
+    <state x="391" y="193" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1584438006718" />
     <state x="408" y="13" key="refactoring.ChangeSignatureDialog" timestamp="1582280922144">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

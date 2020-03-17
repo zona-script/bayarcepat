@@ -193,7 +193,7 @@
     <div class="hero is-medium is-primary is-bold is-fullwidth">
         <div class="hero-body">
             <div class="container has-text-centered">
-                <h3 class="title is-3 has-text-weight-bold">Jangan Sampai Kalah Dengan Toko Saingan?</h3>
+                <h3 class="title is-3 has-text-weight-bold">Jangan Sampai Kalah Dengan Toko Saingan</h3>
                 <p class="subtitle">Rezeki emang sudah di atur, tapi usaha tidak akan membohongi hasil. Gunakan {{ config('app.name') }} agar omset meningkat?</p>
                 <p>
                     <a href="{{ route('register') }}" class="button is-white is-rounded is-medium is-animate-color-button">Daftar Sekarang</a>

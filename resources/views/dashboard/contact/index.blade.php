@@ -62,7 +62,18 @@
 @endsection
 
 @push('stack-foot')
+{{--    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>--}}
+{{--    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">--}}
+
+{{--    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>--}}
+
     <script>
+        // $(document).ready( function () {
+        //     $('#table_id').DataTable( {
+        //         fixedHeader: true
+        //     } );
+        // });
+
         function submitForm(event){
             var confirmation = confirm("Yakin ingin menghapus data ?") ;
 

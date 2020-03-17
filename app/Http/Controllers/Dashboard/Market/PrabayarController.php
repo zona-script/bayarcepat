@@ -72,10 +72,32 @@ class PrabayarController extends Controller
         try {
             $result = DigiflazzBuilder::make()->beli($productCode, $phoneNumber, collect($transaction)['id']);
         } catch (\Exception $exception) {
+            // merubah statusnya menjadi gagal
+            $transaction->status = TransactionEnum::$statusFailed;
+            $transaction->save();
 
-            // @todo mengembalikan uang & status transaksinya dirubah jadi gagal
-//            return $exception->getMessage();
-//            return $result;
+            // refund
+            BayarCepatBuilder::make()
+                ->refund($transaction);
+
+            // save to callback
+            $callbackResponse = new CallbackResponse([
+//            'transaction_id' => $dataResult['ref_id'],
+                'transaction_id' => $transaction->id,
+                'status' => TransactionEnum::$statusFailed,
+                'provider' => CallbackEnum::$providerDigiflazz
+            ]);
+
+            $callbackResponse->data = collect([
+                'code' => $exception->getCode(),
+                'message' => $exception->getMessage()
+            ]);
+            $callbackResponse->provider = CallbackEnum::$providerDigiflazz;
+            $callbackResponse->save();
+
+            return redirect()
+                ->route('web.dashboard.market.prabayar.index')
+                ->with('error', "Transaksi anda gagal, uang anda sudah direfund. ");
         }
 
         /*
@@ -90,7 +112,7 @@ class PrabayarController extends Controller
         $callbackResponse = new CallbackResponse([
 //            'transaction_id' => $dataResult['ref_id'],
             'transaction_id' => $transaction->id,
-            'status' => $dataResult['status'],
+            'status' => DigiflazzEnum::where($dataResult['status'], true),
             'provider' => CallbackEnum::$providerDigiflazz
         ]);
 
