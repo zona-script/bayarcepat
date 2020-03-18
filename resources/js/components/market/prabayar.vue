@@ -22,7 +22,7 @@
                 <div class="field">
                     <label class="label">Kategori</label>
                     <div class="select is-fullwidth">
-                        <select v-model="selectedCategory" v-on:change="onChangeCategory">
+                        <select v-model="selectedCategory" v-on:change="onChangeCategory" required>
                             <option disabled>Pilih Kategori Produk</option>
                             <option v-for="(item, key) in categories" v-bind:value="key">
                                 {{ item.category }}
@@ -74,14 +74,7 @@
                             </template>
                         </v-select>
                     </div>
-<!--                    <div class="select is-fullwidth">-->
-<!--                        <select v-model="selectedProduct" v-on:change="onChangeProduct">-->
-<!--                            <option disabled>Pilih Kategori Produk</option>-->
-<!--                            <option v-for="(item, key) in products" v-bind:value="key">-->
-<!--                                {{ item.product_name }} - Rp {{ item.price }}-->
-<!--                            </option>-->
-<!--                        </select>-->
-<!--                    </div>-->
+
                 </div>
             </div>
         </div>
@@ -124,6 +117,7 @@
             <label class="label">Deskripsi Produk</label>
             <textarea class="textarea" type="text" disabled>{{ product.desc }}</textarea>
         </div>
+
         <div class="notification is-warning" v-if="!product.multi">
             Penjual produk ini membatasi hanya sejumlah 1 (satu) kali pembelian untuk satu nomor telepon dalam waktu satu hari.
             Pastikan nomor belum pernah di isi dalam 24 jam terakhir (terkadang saldo tidak dikembalikan).
@@ -135,19 +129,22 @@
         </div>
 
         <div class="columns">
-            <div class="column is-12">
-<!--            <div class="column is-9">-->
+<!--            <div class="column is-12">-->
+            <div class="column is-9">
                 <div class="field">
                     <label class="label">No Telepon</label>
-                    <input class="input" type="text" name="phone_number" required>
+                    <input class="input" type="text" name="phone_number" :value="selectedContact.phone_number" required>
                 </div>
             </div>
-<!--            <div class="column is-3">-->
-<!--                <div class="field">-->
-<!--                    <label class="label">Buku Telepon</label>-->
-<!--                    <div class="button is-fullwidth is-info is-outlined">List Kontak</div>-->
-<!--                </div>-->
-<!--            </div>-->
+            <div class="column is-3">
+                <div class="field">
+                    <label class="label">Buku Telepon</label>
+                    <div class="button is-fullwidth is-info is-outlined" v-on:click="showPhoneBook = true">List Kontak</div>
+                </div>
+            </div>
+            <div v-if="showPhoneBook === true">
+                <phonebook-list @close="onClickCloseForm" @selected="onSelectedPhonebook"></phonebook-list>
+            </div>
         </div>
         <div class="field" v-if="product.buyer_product_status && product.seller_product_status">
             <button class="button is-primary is-fullwidth">Beli Produk</button>
@@ -162,20 +159,10 @@
         name: "prabayar",
         data() {
             return {
-                // countries: [
-                //     {
-                //         countryCode: "CA",
-                //         countryName: "Canada"
-                //     },
-                //     {
-                //         countryCode: "CA",
-                //         countryName: "Canada"
-                //     },
-                //     {
-                //         countryCode: "CA",
-                //         countryName: "Canada"
-                //     }
-                // ],
+                showPhoneBook: false,
+                selectedContact: {
+                    phone_number: ''
+                },
                 balance: {
                     balance: 0,
                     balance_number_format: 0
@@ -246,6 +233,12 @@
                 });
         },
         methods: {
+            onClickCloseForm(value) {
+                this.showPhoneBook = false;
+            },
+            onSelectedPhonebook(value) {
+                this.selectedContact = value
+            },
             onChangeCategory() {
                 window.axios.get('/api/web/market/prabayar?category=' + this.categories[this.selectedCategory].category)
                     .then(response => {

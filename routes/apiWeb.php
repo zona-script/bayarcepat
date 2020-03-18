@@ -18,6 +18,11 @@ Route::group(['as' => 'apiweb.', 'namespace' => 'ApiWeb', 'middleware' => ['auth
     Route::get('/user', 'UserController');
     Route::get('/user/index', 'UserController@index');
     Route::get('/balance', 'BalanceController');
+    Route::get('/contact', 'ContactController');
+
+    // deprecated
+    Route::get('/phonebook', 'PhonebookController');
+
 
     Route::group(['prefix' => 'market', 'as' => 'market.', 'namespace' => 'Market'], function () {
         Route::group(['prefix' => 'prabayar'], function () {

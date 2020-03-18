@@ -250,3 +250,11 @@
         </div>
     </div>
 @endsection
+{{--@push('stack-foot')--}}
+{{--    <script>--}}
+{{--        // Warning before leaving the page (back button, or outgoinglink)--}}
+{{--        window.onbeforeunload = function() {--}}
+{{--            return "Apakah anda yakin ingin menutup?";--}}
+{{--        }--}}
+{{--    </script>--}}
+{{--@endpush--}}

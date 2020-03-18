@@ -4,9 +4,11 @@
     <list default="true" id="1fc7cadf-dd8e-4988-95f3-5be001769a75" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/custom.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/produk.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/produk.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/market/prabayar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/market/prabayar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/phonebook/list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/phonebook/list.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/apiWeb.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/apiWeb.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -331,7 +333,7 @@
       <workItem from="1584280224351" duration="9156000" />
       <workItem from="1584375430093" duration="9202000" />
       <workItem from="1584437982199" duration="13988000" />
-      <workItem from="1584499623513" duration="8786000" />
+      <workItem from="1584499623513" duration="18993000" />
     </task>
     <servers />
   </component>
@@ -359,10 +361,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="450" y="235" key="#com.intellij.ws.actions.HttpClientConvertFromCurlDialog/0.0.1366.728@0.0.1366.728" timestamp="1583064504756" />
-    <state x="413" y="123" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1584295128726">
+    <state x="413" y="123" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1584518772526">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="123" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1584295128726" />
+    <state x="413" y="123" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1584518772526" />
     <state x="463" y="123" key="FileChooserDialogImpl" timestamp="1583242815041">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
