@@ -1,6 +1,6 @@
 .pad-top-navbar {padding-top: 70px;}
 .hero-welcome {
-    animation: hero-welcome-animation 6s infinite;
+    animation: hero-welcome-animation 36s infinite;
 }
 
 .is-animate-color {
@@ -9,7 +9,7 @@
 
 .is-animate-color-button {
     border: #24A4EA solid 2px;
-    animation: animate-button 6s infinite;
+    animation: animate-button 18s infinite;
     -webkit-text-fill-color: white !important;
 }
 
