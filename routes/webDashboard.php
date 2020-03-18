@@ -38,6 +38,7 @@ Route::group(['as' => 'web.'], function () {
 
         Route::group(['prefix' => 'kirim-uang', 'as' => 'kirim-uang.', 'namespace' => 'SendMoney'], function () {
             Route::get('/', 'HomeController@index')->name('index');
+            Route::post('/', 'HomeController@store')->name('store');
             Route::post('/send', 'HomeController@store')->name('store');
         });
 

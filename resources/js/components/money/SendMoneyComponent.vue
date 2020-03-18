@@ -24,7 +24,7 @@
             </div>
 
             <div class="box" v-if="sendMoneyTo === 'member'">
-                <form action="/dashboard/kirim-uang/send" method="POST">
+                <form action="/dashboard/kirim-uang/" method="POST">
                     <input type="hidden" name="_token" :value="csrf">
 
                     <h3 class="subtitle is-4">Informasi Tujuan</h3>

@@ -23853,9 +23853,7 @@ var render = function() {
         ? _c("div", { staticClass: "box" }, [
             _c(
               "form",
-              {
-                attrs: { action: "/dashboard/kirim-uang/send", method: "POST" }
-              },
+              { attrs: { action: "/dashboard/kirim-uang/", method: "POST" } },
               [
                 _c("input", {
                   attrs: { type: "hidden", name: "_token" },

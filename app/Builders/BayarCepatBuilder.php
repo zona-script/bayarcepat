@@ -171,4 +171,42 @@ class BayarCepatBuilder
 
         return $transaction;
     }
+
+    public function sendMoney(Transaction $transaction)
+    {
+        $transactionArray = collect($transaction);
+
+        // pengurangan uang dari pengirim
+        $sendMoney = self::make($transactionArray['user_id'])
+            ->setType(BayarCepatPayEnum::$typeOUT)
+            ->setValue($transactionArray['value'])
+            ->setInformation($transactionArray['id'])
+            ->save();
+
+        // menambah uang ke tujuan pengiriman
+        $receiveMoney = self::make($transactionArray['information']['user']['id'])
+            ->setType(BayarCepatPayEnum::$typeIN)
+            ->setValue($transactionArray['value'])
+            ->setInformation($transactionArray['id'])
+            ->save();
+
+        // menulis informasi transaction
+        $trx = Transaction::create([
+            'user_id' => $transactionArray['information']['user']['id'],
+            'type' => TransactionEnum::$typeBayarCepatPayReceiveMoney,
+            'value' => $transactionArray['value'],
+            'information' => [
+                'user' => Auth::user(),
+                'description' => $transactionArray['information']['description'],
+                'money_amount' => $transactionArray['information']['money_amount']
+            ],
+            'status' => TransactionEnum::$statusSuccess
+        ]);
+
+        return [
+            'send_money' => $sendMoney,
+            'receive_money' => $receiveMoney,
+            'transaction' => $trx,
+        ];
+    }
 }

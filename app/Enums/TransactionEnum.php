@@ -12,6 +12,7 @@ class TransactionEnum
     public static $typeProduct = 1;
     public static $typeBayarCepatPayDeposit = 2;
     public static $typeBayarCepatPaySendMoney = 3;
+    public static $typeBayarCepatPayReceiveMoney = 8;
     public static $typeBayarCepatPayWithdrawal = 4;
     public static $typeBayarCepatPayRefund = 5;
     public static $typeBayarCepatPayPay = 6;
@@ -54,6 +55,8 @@ class TransactionEnum
             return BayarCepatPayEnum::$titleDeposit;
         } else if ($number == self::$typeBayarCepatPaySendMoney){
             return BayarCepatPayEnum::$titleSendMoney;
+        } else if ($number == self::$typeBayarCepatPayReceiveMoney){
+            return BayarCepatPayEnum::$titleReceiveMoney;
         } else if ($number == self::$typeBayarCepatPayWithdrawal){
             return BayarCepatPayEnum::$titleWithdrawal;
         } else if ($number == self::$typeBayarCepatPayRefund){
