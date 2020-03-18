@@ -20,57 +20,72 @@
             </div>
 
             <div class="box" v-if="sendMoneyTo === 'member'">
-                <h3 class="subtitle is-4">Informasi Tujuan</h3>
-                <input type="hidden" name="_token" :value="csrf">
-                <div class="field">
-                    <label class="label">Username / No telepon</label>
-                    <p class="control has-icons-left">
-                        <input name="username_or_phone" class="input" type="text" placeholder="username atau nomor telepon" @change="onChangeUsername" v-model="searchKey">
-                        <span class="icon is-small is-left">
+                <form action="/dashboard/kirim-uang/" method="POST">
+                    <input type="hidden" name="_token" :value="csrf">
+
+                    <h3 class="subtitle is-4">Informasi Tujuan</h3>
+                    <input type="hidden" name="_token" :value="csrf">
+                    <div class="field">
+                        <label class="label">Email Pengguna (tujuan transfer)</label>
+                        <p class="control has-icons-left">
+                            <input name="username_or_phone" class="input" type="text" placeholder="username atau nomor telepon" @change="onChangeUsername" v-model="searchKey" required>
+                            <span class="icon is-small is-left">
                                         <i class="fas fa-user"></i>
                                 </span>
-                    </p>
-                    <p class="has-text-weight-light">Kesalahan memasukan username / no telepon menyebabkan uang hilang.</p>
-                </div>
+                        </p>
+                        <p class="has-text-weight-light is-small">Kesalahan memasukan email menyebabkan uang hilang.</p>
+                    </div>
 
-                <div class="field">
-                    <label class="label">Jumlah Uang (Rp)</label>
-                    <p class="control has-icons-left">
-                        <input name="money_amount" class="input" type="number" placeholder="Text input" v-model="money_amount">
-                        <span class="icon is-small is-left">
+                    <div class="field">
+                        <label class="label">Jumlah Uang (Rp)</label>
+                        <p class="control has-icons-left">
+                            <input name="money_amount" class="input" type="number" placeholder="Text input" v-model="money_amount" v-on:change="onChangeAmount" required>
+                            <span class="icon is-small is-left">
                                         <i class="fas fa-coins"></i>
                                 </span>
-                    </p>
-                </div>
-
-                <div class="field" v-if="balance.balance < money_amount">
-                    <div class="notification is-danger">
-                        Saldo anda kurang, tidak bisa mengirim uang lebih dari jumlah saldo anda.
+                        </p>
                     </div>
-                </div>
 
-                <div class="field">
-                    <label class="label">Deskripsi (tidak wajib di isi)</label>
-                    <textarea name="description" class="textarea" placeholder="Tulis informasi pembayaran atau apapun.">
+                    <div class="field" v-if="balance.balance < money_amount">
+                        <div class="notification is-danger">
+                            Saldo anda kurang, tidak bisa mengirim uang lebih dari jumlah saldo anda.
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Deskripsi (tidak wajib di isi)</label>
+                        <textarea name="description" class="textarea" placeholder="Tulis informasi pembayaran atau apapun.">
 
                             </textarea>
-                </div>
+                    </div>
 
-                <div class="field" v-if="balance.balance >= money_amount">
-                    <button class="button is-primary is-fullwidth">
-                        <span>Kirim Uang</span>
-                    </button>
-                </div>
+                    <div class="field" v-if="balance.balance >= money_amount">
+                        <button class="button is-primary is-fullwidth">
+                            <span>Kirim Uang</span>
+                        </button>
+                    </div>
+                </form>
             </div>
             <div class="box" v-if="sendMoneyTo === 'bank'">
                 <h3 class="subtitle is-4">Informasi Rekening</h3>
                 <div class="field">
                     <p>Gunakan menu deposit / penarikan saldo untuk melakukan transfer ke bank.</p>
                 </div>
-                <div class="field">
-                    <a href="/dashboard/saldo/deposit" class="button is-primary is-fullwidth">
-                        <span>Lihat halaman deposit</span>
-                    </a>
+                <div class="columns">
+                    <div class="column is-6">
+                        <div class="field">
+                            <a href="/dashboard/saldo/deposit" class="button is-primary is-fullwidth">
+                                <span>Deposit</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="column is-6">
+                        <div class="field">
+                            <a href="/dashboard/saldo/tarik" class="button is-primary is-fullwidth">
+                                <span>Tarik Saldo</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -102,9 +117,14 @@
         },
         methods: {
             onChangeUsername() {
-              window.axios.get('/api/web/user/index?key=' + event.target.value)
-                  .then(response => this.user = response.data);
-              console.log(this.user)
+                window.axios.get('/api/web/user/index?key=' + event.target.value)
+                    .then(response => this.user = response.data);
+                console.log(this.user)
+            },
+            onChangeAmount() {
+                if (this.money_amount <= 0) {
+                    alert('Harus lebih dari Rp 0');
+                }
             },
         }
     }

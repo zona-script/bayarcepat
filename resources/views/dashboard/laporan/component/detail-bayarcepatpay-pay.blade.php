@@ -1,4 +1,5 @@
 
+<div class="box">
 <div class="field">
     <h3 class="title is-4">Informasi Produk</h3>
 </div>
@@ -32,4 +33,5 @@
 </div>
 <div class="field">
     <a href="{{ route('web.dashboard.riwayat.show', $transaction->information['id']) }}" class="button is-primary is-fullwidth">Lihat Detail</a>
+</div>
 </div>

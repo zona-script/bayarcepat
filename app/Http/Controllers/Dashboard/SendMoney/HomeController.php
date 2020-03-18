@@ -11,4 +11,9 @@ class HomeController extends Controller
     {
         return view('dashboard.kirim-uang.index');
     }
+
+    public function store(Request $request)
+    {
+        return $request;
+    }
 }

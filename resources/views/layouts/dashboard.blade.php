@@ -43,13 +43,28 @@
                     Dashboard
                 </a>
 
-                <a class="navbar-item" href="{{ route('web.dashboard.transaksi.index') }}">
-                    Tambah Transaksi
-                </a>
+{{--                <a class="navbar-item" href="{{ route('web.dashboard.transaksi.index') }}">--}}
+{{--                    Tambah Transaksi--}}
+{{--                </a>--}}
 
-                <a class="navbar-item" href="{{ route('web.dashboard.market.index') }}">
-                    Market Place
-                </a>
+{{--                <a class="navbar-item" href="{{ route('web.dashboard.market.index') }}">--}}
+{{--                    Market Place--}}
+{{--                </a>--}}
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        Market Place
+                    </a>
+
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item" href="{{ route('web.dashboard.market.prabayar.index') }}">
+                            Market Prepaid / Prabayar
+                        </a>
+                        <a class="navbar-item" href="{{ route('web.dashboard.market.pascabayar.index') }}">
+                            Market Postpaid / Pascabayar
+                        </a>
+                    </div>
+                </div>
 
                 <a class="navbar-item" href="{{ route('web.dashboard.kirim-uang.index') }}">
                     Kirim Uang

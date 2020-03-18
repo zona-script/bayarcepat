@@ -1,4 +1,5 @@
 
+<div class="box">
 <div class="field">
     <h3 class="title is-4">Informasi Bank Pembayaran</h3>
 </div>
@@ -52,3 +53,4 @@
         <label class="label">Nama Rekening Bank</label>
         <input type="text" class="input" value="{{ $transaction->information['user_bank']['bank_account_name'] }}" disabled>
     </div>
+</div>

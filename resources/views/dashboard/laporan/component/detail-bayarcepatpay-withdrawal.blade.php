@@ -1,4 +1,6 @@
-<div class="field">
+
+<div class="box">
+    <div class="field">
     <h3 class="title is-4">Informasi Produk</h3>
 </div>
 <div class="field">
@@ -28,4 +30,6 @@
 <div class="field">
     <label class="label">Harga</label>
     <input type="text" class="input" value="{{ $transaction->information['product']['price'] }}" disabled>
+</div>
+
 </div>

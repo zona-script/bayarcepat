@@ -82,7 +82,7 @@
                     @endif
                 </div>
                 <div class="column is-8">
-                    <div class="box">
+{{--                    <div class="box">--}}
                         @if ($transaction->type == \App\Enums\TransactionEnum::$typeProduct)
                             @include('dashboard.laporan.component.detail-product', $transaction)
                         @elseif($transaction->type == \App\Enums\TransactionEnum::$typeBayarCepatPayDeposit)
@@ -96,38 +96,38 @@
                         @else
                             ups .............. oooooooooooooooooo.
                         @endif
-                    </div>
+{{--                    </div>--}}
 
 
-                    @if ($transaction->type == \App\Enums\TransactionEnum::$typeProduct)
-                        <div class="box">
-                            <div class="field">
-                                <h3 class="title is-4">Update Transaksi</h3>
-                                <table class="table table-bordered is-fullwidth">
-                                    <thead>
-                                    <th>No</th>
-                                    <th>Waktu</th>
-                                    <th>Status</th>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>{{ $transaction->created_at }}</td>
-                                        <td>Transaksi dimulai</td>
-                                    </tr>
+{{--                    @if ($transaction->type == \App\Enums\TransactionEnum::$typeProduct)--}}
+{{--                        <div class="box">--}}
+{{--                            <div class="field">--}}
+{{--                                <h3 class="title is-4">Update Transaksi</h3>--}}
+{{--                                <table class="table table-bordered is-fullwidth">--}}
+{{--                                    <thead>--}}
+{{--                                    <th>No</th>--}}
+{{--                                    <th>Waktu</th>--}}
+{{--                                    <th>Status</th>--}}
+{{--                                    </thead>--}}
+{{--                                    <tbody>--}}
+{{--                                    <tr>--}}
+{{--                                        <td>1</td>--}}
+{{--                                        <td>{{ $transaction->created_at }}</td>--}}
+{{--                                        <td>Transaksi dimulai</td>--}}
+{{--                                    </tr>--}}
 
-                                    @foreach($transaction->callbackResponse as $response)
-                                        <tr>
-                                            <td>{{ ($loop->iteration + 1) }}</td>
-                                            <td>{{ $response->created_at }}</td>
-                                            <td>{{ \App\Enums\JavaH2HStatusEnum::make($response->data['status']) }}</td>
-                                        </tr>
-                                    @endforeach
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    @endif
+{{--                                    @foreach($transaction->callbackResponse as $response)--}}
+{{--                                        <tr>--}}
+{{--                                            <td>{{ ($loop->iteration + 1) }}</td>--}}
+{{--                                            <td>{{ $response->created_at }}</td>--}}
+{{--                                            <td>{{ \App\Enums\JavaH2HStatusEnum::make($response->data['status']) }}</td>--}}
+{{--                                        </tr>--}}
+{{--                                    @endforeach--}}
+{{--                                    </tbody>--}}
+{{--                                </table>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    @endif--}}
                 </div>
             </div>
 

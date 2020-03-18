@@ -58,11 +58,11 @@
                     <div class="box">
                         <div class="columns">
                             <div class="column">
-                                <a href="{{ route('web.dashboard.transaksi.index') }}" class="box has-text-centered">
+                                <a href="{{ route('web.dashboard.market.index') }}" class="box has-text-centered">
                                 <span>
                                 <i class="fas fa-phone fa-3x"></i>
                                 </span>
-                                    <p class="subtitle">Transaksi</p>
+                                    <p class="subtitle">Marketplace</p>
                                 </a>
                             </div>
                             <div class="column">
@@ -78,7 +78,7 @@
                                 <span>
                                 <i class="fas fa-clock fa-3x"></i>
                                 </span>
-                                    <p class="subtitle">Riwayat</p>
+                                    <p class="subtitle">Laporan</p>
                                 </a>
                             </div>
                         </div>
