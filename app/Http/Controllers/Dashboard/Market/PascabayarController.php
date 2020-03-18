@@ -11,6 +11,6 @@ class PascabayarController extends Controller
     public function index()
     {
         $products = DigiflazzBuilder::make()->cekHargaPasca();
-        return view('dashboard.market.prabayar.index');
+        return view('dashboard.market.pascabayar.index');
     }
 }

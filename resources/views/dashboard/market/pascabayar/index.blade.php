@@ -1,14 +1,13 @@
 @extends('layouts.dashboard')
 
-@section('title', 'Api')
+@section('title', 'Dashboard')
 
 @section('content')
     <div class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-6 is-offset-3">
+                <div class="column is-8 is-offset-2">
                     <div class="box">
-                        <h3 class="subtitle is-4">Informasi Api</h3>
                         <p>Masih dalam proses pembuatan.</p>
                     </div>
                 </div>
