@@ -96,7 +96,7 @@ class DigiflazzEnum
 
     public static function whereInGagal($status = '')
     {
-        $data = ['00', '03', '99'];
+        $data = ['03', '99'];
 
         foreach ($data as $item) {
             if ($status == $item) {
