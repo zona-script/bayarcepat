@@ -12,13 +12,15 @@
                     <thead>
                     <th>Nama</th>
                     <th>Tipe</th>
-                    <th>Nomor</th>
+                    <th>Nomor Telepon</th>
+                    <th>Nomor Kostumer</th>
                     <th></th>
                     </thead>
                     <tbody>
                     <tr v-for="user in contacts">
                         <td>{{ user.name }}K</td>
                         <td>{{ user.type }}</td>
+                        <td>{{ user.phone_number }}</td>
                         <td>{{ user.customer_number }}</td>
                         <td>
                             <button class="button is-primary" v-on:click="selectContact(user)">Pilih</button>
