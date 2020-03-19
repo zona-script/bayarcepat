@@ -70,7 +70,7 @@
                             @input="onChangeProduct"
                         >
                             <template v-slot:option="option">
-                                {{ option.product_name + " Rp " + option.price }}
+                                {{ option.product_name + " - Rp " + option.price + " [" + buyer_sku_code + "]"}}
                             </template>
                         </v-select>
                     </div>

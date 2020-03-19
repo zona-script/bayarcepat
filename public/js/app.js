@@ -23385,7 +23385,12 @@ var render = function() {
                         _vm._v(
                           "\n                                " +
                             _vm._s(
-                              option.product_name + " Rp " + option.price
+                              option.product_name +
+                                " - Rp " +
+                                option.price +
+                                " [" +
+                                _vm.buyer_sku_code +
+                                "]"
                             ) +
                             "\n                            "
                         )
