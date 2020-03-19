@@ -21,7 +21,7 @@
 {{--    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">--}}
     @stack('stack-head')
 </head>
-<body>
+<body class="is-fullwidth">
 <div class="navbar is-white is-fixed-top" role="navigation" aria-label="main navigation">
     <div class="container">
         <div class="navbar-brand">
