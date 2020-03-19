@@ -13,7 +13,7 @@ class HargaPrabayarController extends Controller
         if ($request->has('category')) {
             return DigiflazzBuilder::make()
                 ->prabayar()
-                ->where('category', [$request->query('category')])
+                ->where('category', [urldecode($request->query('category'))])
                 ->groupBy()
                 ->get();
         }
