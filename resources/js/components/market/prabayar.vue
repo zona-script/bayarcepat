@@ -59,7 +59,7 @@
         <div class="columns">
             <div class="column is-12">
                 <div class="field">
-                    <label class="label">Pilih Produk</label>
+                    <label class="label">Pilih Produk (Gunakan Pencarian Agar Cepat Ketemu)</label>
                     <div class="is-fullwidth">
 <!--                        <v-select v-model="selectedProduct" label="product_name" :options="products" :reduce="products => products" @input="onChangeProduct" ></v-select>-->
                         <v-select

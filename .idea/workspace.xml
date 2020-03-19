@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1fc7cadf-dd8e-4988-95f3-5be001769a75" name="Default Changelist" comment="" />
+    <list default="true" id="1fc7cadf-dd8e-4988-95f3-5be001769a75" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/market/prabayar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/market/prabayar.vue" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -326,7 +329,7 @@
       <workItem from="1584375430093" duration="9202000" />
       <workItem from="1584437982199" duration="13988000" />
       <workItem from="1584499623513" duration="20938000" />
-      <workItem from="1584597205780" duration="2205000" />
+      <workItem from="1584597205780" duration="3228000" />
     </task>
     <servers />
   </component>
