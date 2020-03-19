@@ -16,6 +16,11 @@
 {{--    <link rel="stylesheet" href="{{ asset('css/main.css') }}">--}}
 {{--    <link rel="stylesheet" href="{{ asset('css/style.css') }}">--}}
 
+    <style>
+        body {
+            width: 100% !important;
+        }
+    </style>
     <!-- Fonts -->
 {{--    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap" rel="stylesheet">--}}
 {{--    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">--}}
