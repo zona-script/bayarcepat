@@ -119,8 +119,8 @@
         </div>
 
         <div class="notification is-warning" v-if="!product.multi">
-            Penjual produk ini membatasi hanya sejumlah 1 (satu) kali pembelian untuk satu nomor telepon dalam waktu satu hari.
-            Pastikan nomor belum pernah di isi dalam 24 jam terakhir (terkadang saldo tidak dikembalikan).
+            Pembelian Produk ini dibatasi sejumlah 1 (satu) kali pembelian dalam waktu satu hari untuk setiap nomor telepon / nomor pelanggan.
+            Pastikan nomor belum pernah di isi dalam waktu 24 jam terakhir (terkadang saldo tidak dikembalikan).
         </div>
 
         <div class="field" v-if="product.category === 'PLN' && product.brand === 'PLN'">

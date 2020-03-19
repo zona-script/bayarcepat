@@ -23,9 +23,13 @@ class HargaPrabayarController extends Controller
             ->distinct()
             ->get();
 
-        $collection = collect($data);
-        $sorted = $collection->sortBy('category');
-        return $sorted->values()->all();
+        if ($request->query('sorting', false)) {
+            $collection = collect($data);
+            $sorted = $collection->sortBy('category');
+            return $sorted->values()->all();
+        }
+
+        return $data;
     }
 
     public function pulsa()
