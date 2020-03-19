@@ -18,15 +18,14 @@ class HargaPrabayarController extends Controller
                 ->get();
         }
 
-        return DigiflazzBuilder::make()
+        $data = DigiflazzBuilder::make()
             ->prabayar()
             ->distinct()
             ->get();
 
-        return DigiflazzBuilder::make()
-            ->prabayar()
-            ->groupBy()
-            ->get();
+        $collection = collect($data);
+        $sorted = $collection->sortBy('category');
+        return $sorted->values()->all();
     }
 
     public function pulsa()

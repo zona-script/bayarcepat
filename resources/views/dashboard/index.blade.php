@@ -205,7 +205,7 @@
                                 <div class="field">
                                     <label class="label">Email</label>
                                     <div class="control has-icons-left">
-                                        <input class="input" type="email" value="{{ auth()->user()->email }} }}" disabled>
+                                        <input class="input" type="email" value="{{ auth()->user()->email }}" disabled>
                                         <span class="icon is-small is-left">
                                       <i class="fas fa-envelope"></i>
                                     </span>

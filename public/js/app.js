@@ -2292,7 +2292,7 @@ __webpack_require__.r(__webpack_exports__);
     onChangeCategory: function onChangeCategory() {
       var _this2 = this;
 
-      window.axios.get('/api/web/market/prabayar?category=' + this.categories[this.selectedCategory].category).then(function (response) {
+      window.axios.get('/api/web/market/prabayar?category=' + encodeURI(this.categories[this.selectedCategory].category)).then(function (response) {
         _this2.brands = response.data;
       });
       this.resetData();
