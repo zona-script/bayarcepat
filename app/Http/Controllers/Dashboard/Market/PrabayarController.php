@@ -112,7 +112,7 @@ class PrabayarController extends Controller
         $callbackResponse = new CallbackResponse([
 //            'transaction_id' => $dataResult['ref_id'],
             'transaction_id' => $transaction->id,
-            'status' => DigiflazzEnum::where($dataResult['status'], true),
+            'status' => DigiflazzEnum::where($rc, true),
             'provider' => CallbackEnum::$providerDigiflazz
         ]);
 

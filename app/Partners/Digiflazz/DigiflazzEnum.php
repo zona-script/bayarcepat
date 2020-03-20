@@ -47,7 +47,7 @@ class DigiflazzEnum
     public static $wherePending = 'pending';
     public static $whereFailed= 'gagal';
 
-    public static function where($status = '', $convertToTransactionStatusCode = false)
+    public static function where(int $status, $convertToTransactionStatusCode = false)
     {
         if (self::whereInSuccess($status)) {
             if (!blank($convertToTransactionStatusCode)) {
@@ -72,7 +72,7 @@ class DigiflazzEnum
         die('GAGAL, HARAP MENGHUBUNGI ADMIN, KODE ERROR 35001');
     }
 
-    public static function whereInSuccess($status = '')
+    public static function whereInSuccess(int $status = 0)
     {
         if ($status == '00') {
             return true;
@@ -81,7 +81,7 @@ class DigiflazzEnum
         return false;
     }
 
-    public static function whereInPending($status = '')
+    public static function whereInPending(int $status = 0)
     {
         $data = ['03', '99'];
 
@@ -94,7 +94,7 @@ class DigiflazzEnum
         return false;
     }
 
-    public static function whereInGagal($status = '')
+    public static function whereInGagal(int $status = 0)
     {
         if (self::whereInSuccess($status)) {
             return false;
@@ -115,7 +115,7 @@ class DigiflazzEnum
         return true;
     }
 
-    public static function whereInFailed($status)
+    public static function whereInFailed(int $status)
     {
         return self::whereInGagal($status);
     }
