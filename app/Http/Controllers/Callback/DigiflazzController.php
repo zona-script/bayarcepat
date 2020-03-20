@@ -30,7 +30,8 @@ class DigiflazzController extends Controller
             $statusCode = $content['rc'];
             $callbackResponse = new CallbackResponse([
                 'transaction_id' => $content['ref_id'],
-                'status' => DigiflazzEnum::where($content['status'], true),
+                'status' => DigiflazzEnum::where($statusCode, true),
+//                'status' => DigiflazzEnum::where($content['status'], true),
                 'provider' => CallbackEnum::$providerDigiflazz
             ]);
             $callbackResponse->data = $content;
