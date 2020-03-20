@@ -138,8 +138,8 @@
             </div>
             <div class="column is-3">
                 <div class="field">
-                    <label class="label">Buku Telepon</label>
-                    <div class="button is-fullwidth is-info is-outlined" v-on:click="showPhoneBook = true">List Kontak</div>
+                    <label class="label">Kontak</label>
+                    <div class="button is-fullwidth is-primary is-outlined" v-on:click="showPhoneBook = true">Kontak</div>
                 </div>
             </div>
             <div v-if="showPhoneBook === true">
@@ -242,6 +242,7 @@
             onChangeCategory() {
                 window.axios.get('/api/web/market/prabayar?category=' + encodeURI(this.categories[this.selectedCategory].category))
                     .then(response => {
+                        console.log(encodeURI(this.categories[this.selectedCategory].category))
                         this.brands = response.data
                     });
 

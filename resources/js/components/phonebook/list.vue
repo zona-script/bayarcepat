@@ -4,7 +4,7 @@
         <div class="modal-background"></div>
         <div class="modal-card">
             <div class="modal-card-head">
-                <p class="modal-card-title">Phone Book</p>
+                <p class="modal-card-title">List Kontak</p>
                 <button class="delete" aria-label="close" v-on:click="closeModal"></button>
             </div>
             <section class="modal-card-body">
@@ -13,10 +13,13 @@
                     <th>Nama</th>
                     <th>Tipe</th>
                     <th>Nomor Telepon</th>
-                    <th>Nomor Kostumer</th>
+                    <th>Nomor Konsumen</th>
                     <th></th>
                     </thead>
                     <tbody>
+                    <tr>
+                        <td colspan="5">Setiap pembelian yang digunakan adalah nomor konsumen,</td>
+                    </tr>
                     <tr v-for="user in contacts">
                         <td>{{ user.name }}K</td>
                         <td>{{ user.type }}</td>

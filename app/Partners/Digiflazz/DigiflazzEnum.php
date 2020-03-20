@@ -96,13 +96,21 @@ class DigiflazzEnum
 
     public static function whereInGagal($status = '')
     {
-        $data = ['03', '99'];
-
-        foreach ($data as $item) {
-            if ($status == $item) {
-                return false;
-            }
+        if (self::whereInSuccess($status)) {
+            return false;
         }
+
+        if (self::whereInPending($status)) {
+            return false;
+        }
+
+//        $data = ['00', '03', '99'];
+//
+//        foreach ($data as $item) {
+//            if ($status == $item) {
+//                return false;
+//            }
+//        }
 
         return true;
     }
