@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="1fc7cadf-dd8e-4988-95f3-5be001769a75" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/laporan/component/callback.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/laporan/component/callback.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/laporan/detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/laporan/detail.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/dashboard.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -331,7 +334,7 @@
       <workItem from="1584597205780" duration="3739000" />
       <workItem from="1584613553940" duration="3610000" />
       <workItem from="1584692028204" duration="1004000" />
-      <workItem from="1584695126894" duration="4682000" />
+      <workItem from="1584695126894" duration="6304000" />
     </task>
     <servers />
   </component>

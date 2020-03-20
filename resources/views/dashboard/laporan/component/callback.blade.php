@@ -21,9 +21,23 @@
                         <td>{{ $response->created_at }}</td>
                         <td>{{ transaction_status_to_str($response->status) }}</td>
                     </tr>
-                @endforeach
+
+                    @if ($loop->last)
                 </tbody>
             </table>
         </div>
     </div>
+                    @endif
+
+
+        @if ($response->status == \App\Enums\TransactionEnum::$statusSuccess)
+            <div class="box">
+                <h3 class="title is-4">Update Transaksi</h3>
+                <div class="field">
+                    <label>SN / Serial Number:</label>
+                    <input value="{{ $response->data['sn'] }}" disabled>
+                </div>
+            </div>
+        @endif
+                @endforeach
 @endif

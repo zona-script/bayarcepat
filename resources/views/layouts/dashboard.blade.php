@@ -1,30 +1,33 @@
 <!DOCTYPE html>
 <html lang="en" class="has-navbar-fixed-top">
 <head>
-    <!-- Required meta tags always come first -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title>{{ env('APP_NAME') }} - @yield('title')</title>
-{{--    <link rel="icon" type="image/png" href="favicon.png"/>--}}
+    <title>{{ config('app.name') }} - @yield('title')</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="robot" content="index, follow">
+    <meta name="googlebot" content="All, Follow, Index" />
+    <meta name="description" content="BayarCepat Adalah Distributor & Server Pulsa h2h Termurah dan Terlengkap yang menyediakan berbagai produk. BUKAN CUMA ITU, BayarCepat juga aplikasi untuk melakukan transfer uang antar member dan bank." />
+    <meta name="keywords" content="Distributor, Distributor Pulsa, Server Pulsa, Pulsa H2H, Pulsa Murah, distributor pulsa elektrik termurah dan terpercaya, jual pulsa via paypal, jual pulsa online, jual pulsa murah, jual kuota murah, jual token pln listrik murah, jual paket internet murah, jual voucher game murah" />
+    <meta name="author" content="BayarCepat" />
+    <meta property="business:contact_data:street_address" content="RT.003/RW.001, Ds.Ngambeg, Kec.Pucuk, Lamongan, Jawa Timur" />
+    <meta property="business:contact_data:locality" content="Lamongan" />
+    <meta property="business:contact_data:postal_code" content="62257" />
+    <meta property="business:contact_data:country_name" content="Indonesia" />
+    <meta property="business:contact_data:email" content="bayarcepat@dibumi.com" />
+    <meta property="business:contact_data:phone_number" content="+6285607100255" />
+    <meta property="business:contact_data:website" content="https://bayarcepat.com" />
 
     <!--Core CSS -->
-{{--    <link rel="stylesheet" href="{{ asset('css/library-bundle.css') }}">--}}
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-{{--    <link rel="stylesheet" href="{{ asset('css/main.css') }}">--}}
-{{--    <link rel="stylesheet" href="{{ asset('css/style.css') }}">--}}
-
+    @stack('stack-head')
     <style>
         body {
             width: 100% !important;
         }
     </style>
-    <!-- Fonts -->
-{{--    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap" rel="stylesheet">--}}
-{{--    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">--}}
-    @stack('stack-head')
 </head>
 <body class="is-fullwidth">
 <div class="navbar is-white is-fixed-top" role="navigation" aria-label="main navigation">
