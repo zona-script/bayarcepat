@@ -2292,9 +2292,10 @@ __webpack_require__.r(__webpack_exports__);
     onChangeCategory: function onChangeCategory() {
       var _this2 = this;
 
-      window.axios.get('/api/web/market/prabayar?category=' + this.categories[this.selectedCategory].category).then(function (response) {
-        console.log(_this2.categories[_this2.selectedCategory].category);
-        console.log(encodeURI(_this2.categories[_this2.selectedCategory].category));
+      var category = this.categories[this.selectedCategory].category;
+      window.axios.get('/api/web/market/prabayar?category=' + encodeURIComponent(window.btoa(category))).then(function (response) {
+        // console.log(this.categories[this.selectedCategory].category)
+        // console.log(encodeURI(this.categories[this.selectedCategory].category))
         _this2.brands = response.data;
       });
       this.resetData();

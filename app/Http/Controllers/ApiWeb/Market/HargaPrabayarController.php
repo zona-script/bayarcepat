@@ -11,9 +11,11 @@ class HargaPrabayarController extends Controller
     public function index(Request $request)
     {
         if ($request->has('category')) {
+            $category = base64_decode(urldecode($request->query('category')));
             return DigiflazzBuilder::make()
                 ->prabayar()
-                ->where('category', [urldecode($request->query('category'))])
+                ->where('category', [$category])
+//                ->where('category', [urldecode($request->query('category'))])
                 ->groupBy()
                 ->get();
         }

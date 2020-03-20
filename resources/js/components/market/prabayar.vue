@@ -240,10 +240,11 @@
                 this.selectedContact = value
             },
             onChangeCategory() {
-                window.axios.get('/api/web/market/prabayar?category=' + this.categories[this.selectedCategory].category)
+                let category = this.categories[this.selectedCategory].category;
+                window.axios.get('/api/web/market/prabayar?category=' + encodeURIComponent(window.btoa(category)))
                     .then(response => {
-                        console.log(this.categories[this.selectedCategory].category)
-                        console.log(encodeURI(this.categories[this.selectedCategory].category))
+                        // console.log(this.categories[this.selectedCategory].category)
+                        // console.log(encodeURI(this.categories[this.selectedCategory].category))
                         this.brands = response.data
                     });
 
