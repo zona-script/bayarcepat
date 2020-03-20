@@ -34,11 +34,7 @@
             <div class="box">
                 <h3 class="title is-4">Serial Number</h3>
                 <div class="field">
-                    <table class="table is-fullwidth">
-                        <tr>
-                            <td><p class="title is-2">{{ $response->data['sn'] }}</p></td>
-                        </tr>
-                    </table>
+                    <p class="title is-2">{{ $response->data['sn'] }}</p>
                 </div>
             </div>
         @endif
