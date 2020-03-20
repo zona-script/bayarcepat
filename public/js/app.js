@@ -4630,6 +4630,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "list",
   data: function data() {
@@ -27334,43 +27336,45 @@ var render = function() {
       ]),
       _vm._v(" "),
       _c("section", { staticClass: "modal-card-body" }, [
-        _c("table", { staticClass: "table-bordered table is-fullwidth" }, [
-          _vm._m(0),
-          _vm._v(" "),
-          _c(
-            "tbody",
-            [
-              _vm._m(1),
-              _vm._v(" "),
-              _vm._l(_vm.contacts, function(user) {
-                return _c("tr", [
-                  _c("td", [_vm._v(_vm._s(user.name) + "K")]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v(_vm._s(user.type))]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v(_vm._s(user.phone_number))]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v(_vm._s(user.customer_number))]),
-                  _vm._v(" "),
-                  _c("td", [
-                    _c(
-                      "button",
-                      {
-                        staticClass: "button is-primary",
-                        on: {
-                          click: function($event) {
-                            return _vm.selectContact(user)
+        _c("div", { staticClass: "table-container" }, [
+          _c("table", { staticClass: "table-bordered table is-fullwidth" }, [
+            _vm._m(0),
+            _vm._v(" "),
+            _c(
+              "tbody",
+              [
+                _vm._m(1),
+                _vm._v(" "),
+                _vm._l(_vm.contacts, function(user) {
+                  return _c("tr", [
+                    _c("td", [_vm._v(_vm._s(user.name) + "K")]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(user.type))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(user.phone_number))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(user.customer_number))]),
+                    _vm._v(" "),
+                    _c("td", [
+                      _c(
+                        "button",
+                        {
+                          staticClass: "button is-primary",
+                          on: {
+                            click: function($event) {
+                              return _vm.selectContact(user)
+                            }
                           }
-                        }
-                      },
-                      [_vm._v("Pilih")]
-                    )
+                        },
+                        [_vm._v("Pilih")]
+                      )
+                    ])
                   ])
-                ])
-              })
-            ],
-            2
-          )
+                })
+              ],
+              2
+            )
+          ])
         ])
       ])
     ])
@@ -27388,7 +27392,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("th", [_vm._v("Nomor Telepon")]),
       _vm._v(" "),
-      _c("th", [_vm._v("Nomor Konsumen")]),
+      _c("th", [_vm._v("Nomor Pelanggan")]),
       _vm._v(" "),
       _c("th")
     ])
