@@ -2293,6 +2293,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this2 = this;
 
       window.axios.get('/api/web/market/prabayar?category=' + encodeURI(this.categories[this.selectedCategory].category)).then(function (response) {
+        console.log(_this2.categories[_this2.selectedCategory].category);
         console.log(encodeURI(_this2.categories[_this2.selectedCategory].category));
         _this2.brands = response.data;
       });
