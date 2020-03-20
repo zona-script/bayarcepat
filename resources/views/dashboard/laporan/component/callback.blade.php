@@ -32,10 +32,16 @@
 
         @if ($response->status == \App\Enums\TransactionEnum::$statusSuccess)
             <div class="box">
-                <h3 class="title is-4">Update Transaksi</h3>
+                <h3 class="title is-4">Serial Number</h3>
                 <div class="field">
-                    <label>SN / Serial Number:</label>
-                    <input value="{{ $response->data['sn'] }}" disabled>
+                    <table class="table">
+                        <tr>
+                            <td>SERIAL NUMBER</td>
+                        </tr>
+                        <tr>
+                            <td>{{ $response->data['sn'] }}</td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         @endif
