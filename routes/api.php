@@ -47,4 +47,13 @@ Route::group(['as' => 'api.'], function () {
     Route::group(['as' => 'local.', 'prefix' => 'local', 'namespace' => 'Api\Local'], function () {
         Route::get('/', 'ApiController@index');
     });
+
+    Route::group(['prefix' => 'market', 'as' => 'market.', 'namespace' => 'ApiWeb\Market'], function () {
+        Route::group(['prefix' => 'prabayar'], function () {
+            Route::get('/', 'HargaPrabayarController@index');
+        });
+        Route::group(['prefix' => 'pascabayar'], function () {
+            Route::get('/', 'HargaPrabayarController@index');
+        });
+    });
 });

@@ -28,6 +28,8 @@ Route::group(['as' => 'web.'], function () {
             Route::get('/harga-isi-saldo-gojek-grab-dana-gopay-ovo-linkaja-termurah', 'HargaController@ewallet')->name('harga.ewallet');
         });
 
+        Route::get('/pricing', 'MarketPricingController')->name('market.index');
+
         Route::get('/syarat-dan-ketentuan', 'PagesController@tos')->name('syarat-dan-ketentuan');
         Route::get('/policy-privacy', 'PagesController@privacyPolicy')->name('policy-privacy');
         Route::get('/tentang-kami', 'PagesController@aboutMe')->name('tentang-kami');

@@ -4,6 +4,7 @@ namespace App;
 
 use App\Enums\BayarCepatPayEnum;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Passport\HasApiTokens;
@@ -14,7 +15,7 @@ class User extends Authenticatable implements MustVerifyEmail
     use Notifiable;
     use HasRoles;
     use HasApiTokens;
-
+    use SoftDeletes;
 
     /**
      * The attributes that are mass assignable.
@@ -94,5 +95,25 @@ class User extends Authenticatable implements MustVerifyEmail
     public function contacts()
     {
         return $this->hasMany(Contact::class);
+    }
+
+    public function refferals()
+    {
+        return $this->hasMany(Refferal::class);
+    }
+
+    public function vouchers()
+    {
+        return $this->belongsToMany(Voucher::class, 'user_vouchers');
+    }
+
+    public function userVouchers()
+    {
+        return $this->hasMany(UserVoucher::class);
+    }
+
+    public function supports()
+    {
+        return $this->hasMany(Support::class);
     }
 }

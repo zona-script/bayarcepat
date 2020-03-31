@@ -23,7 +23,6 @@ Route::group(['as' => 'apiweb.', 'namespace' => 'ApiWeb', 'middleware' => ['auth
     // deprecated
     Route::get('/phonebook', 'PhonebookController');
 
-
     Route::group(['prefix' => 'market', 'as' => 'market.', 'namespace' => 'Market'], function () {
         Route::group(['prefix' => 'prabayar'], function () {
             Route::get('/', 'HargaPrabayarController@index');

@@ -5,10 +5,12 @@ namespace App;
 use App\Enums\BayarCepatPayEnum;
 use App\Enums\EasypayTransactionTypEnum;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Facades\Auth;
 
 class BayarCepatPay extends Model
 {
+    use SoftDeletes;
     protected $table = 'bayar_cepat_pays';
     protected $fillable = [
         'user_id', 'type', 'value', 'information', 'previous_balance'

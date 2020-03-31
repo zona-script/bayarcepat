@@ -4,12 +4,14 @@ namespace App\Http\Controllers\Dashboard;
 
 use App\Contact;
 use App\Http\Controllers\Controller;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Auth;
 
 class ContactController extends Controller
 {
+    use SoftDeletes;
     /**
      * Display a listing of the resource.
      *

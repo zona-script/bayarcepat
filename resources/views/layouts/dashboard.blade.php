@@ -21,11 +21,18 @@
     <meta property="business:contact_data:website" content="https://bayarcepat.com" />
 
     <!--Core CSS -->
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+{{--    <link rel="stylesheet" href="{{ asset('css/app.css') }}">--}}
+    <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
     @stack('stack-head')
     <style>
         body {
             width: 100% !important;
+        }
+        #select2-province, select {
+            height: 40px;
+            font-size: 1em;
+            border-radius: 4%;
+            border: solid #c9cbcd 1px;
         }
     </style>
 </head>
@@ -121,26 +128,45 @@
 </div>
 
 <footer class="footer has-background-grey-dark">
-    <div class="columns">
-        <div class="column is-6 is-offset-3">
-            <div class="container has-text-centered">
 
-                <form action="{{ route('logout') }}" method="post">
-                    @csrf
-                    <div class="field">
-                        <button class="button is-white is-outlined">Keluar Akun (Log Out)</button>
-                    </div>
-                </form>
+    <div class="container has-text-centered">
+{{--        <div class="columns">--}}
+{{--            <div class="column is-2">--}}
+{{--                <a href="{{ route('web.dashboard.refferal.index') }}" class="button is-fullwidth is-primary is-rounded is-inverted">Refferal</a>--}}
+{{--            </div>--}}
+{{--            <div class="column is-2">--}}
+{{--                <a class="button is-fullwidth is-primary is-rounded is-inverted">Promo</a>--}}
+{{--            </div>--}}
+{{--            <div class="column is-2">--}}
+{{--                <a class="button is-fullwidth is-primary is-rounded is-inverted">Voucher Saya</a>--}}
+{{--            </div>--}}
+{{--            <div class="column is-2">--}}
+{{--                <a class="button is-fullwidth is-primary is-rounded is-inverted">Ticket & Support</a>--}}
+{{--            </div>--}}
+{{--            <div class="column is-2">--}}
+{{--                <a href="{{ route('web.dashboard.api.index') }}" class="button is-fullwidth is-primary is-rounded is-inverted">Developer Api</a>--}}
+{{--            </div>--}}
+{{--            <div class="column is-2">--}}
+{{--                <form action="{{ route('logout') }}" method="post">--}}
+{{--                    @csrf--}}
+{{--                    <div class="field">--}}
+{{--                        <button class="button is-fullwidth is-primary is-rounded is-inverted">Logout</button>--}}
+{{--                    </div>--}}
+{{--                </form>--}}
+{{--            </div>--}}
+{{--        </div>--}}
 
-                <hr>
-                <p class="has-text-white">
-                    Copyright &copy; {{ env('APP_NAME') }} <br>
-                    Jika terjadi kesusahan atau butuh bantuan, silakan hubungi kami.
-                    <br>
-                    Anda dapat menghubungi kami di facebook group [bayarcepat], telegram ['bayarcepat], whatsapp [bayarcepat], email bayarcepat@dibumi.com
-                </p>
+        <form action="{{ route('logout') }}" method="post">
+            @csrf
+            <div class="field">
+                <button class="button is-primary is-rounded is-inverted">Logout</button>
             </div>
-        </div>
+        </form>
+        <hr>
+        <p class="has-text-white">
+            Copyright &copy; {{ env('APP_NAME') }} <br>
+            Jika terjadi kesusahan atau butuh bantuan, silakan hubungi kami.
+        </p>
     </div>
 </footer>
 

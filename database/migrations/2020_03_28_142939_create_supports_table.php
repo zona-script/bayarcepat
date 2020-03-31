@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePhoneBookTable extends Migration
+class CreateSupportsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,19 @@ class CreatePhoneBookTable extends Migration
      */
     public function up()
     {
-        Schema::create('phone_book', function (Blueprint $table) {
-            $table->bigIncrements('id');
+        Schema::create('supports', function (Blueprint $table) {
+            $table->id();
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')
                 ->references('id')
                 ->on('users');
+            $table->string('title');
+            $table->text('description');
 
-            $table->string('name');
-            $table->string('phone_number');
+            // 1 = kritik & saran, 2 = bantuan transaksi (transaksi), 3 = keuangan (deposit, widrawal, reffund)
+            $table->unsignedMediumInteger('type')
+                ->default(1);
+            $table->dateTime('close_at')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
@@ -34,6 +38,6 @@ class CreatePhoneBookTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('phone_book');
+        Schema::dropIfExists('supports');
     }
 }

@@ -10,11 +10,11 @@
 
                     <div class="box">
 
-                        <div class='is-flex is-horizontal-center'>
-                            <figure class="image is-128x128 has-text-centered">
-                                <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png">
-                            </figure>
-                        </div>
+{{--                        <div class='is-flex is-horizontal-center'>--}}
+{{--                            <figure class="image is-128x128 has-text-centered">--}}
+{{--                                <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png">--}}
+{{--                            </figure>--}}
+{{--                        </div>--}}
 
                         <div class="field">
                             <label class="label">Name</label>

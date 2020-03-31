@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePhoneBookTable extends Migration
+class CreateRefferalsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,18 @@ class CreatePhoneBookTable extends Migration
      */
     public function up()
     {
-        Schema::create('phone_book', function (Blueprint $table) {
-            $table->bigIncrements('id');
+        Schema::create('refferals', function (Blueprint $table) {
+            $table->id();
             $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('user_id_ref');
+
             $table->foreign('user_id')
                 ->references('id')
                 ->on('users');
 
-            $table->string('name');
-            $table->string('phone_number');
+            $table->foreign('user_id_ref')
+                ->references('id')
+                ->on('users');
             $table->timestamps();
             $table->softDeletes();
         });
@@ -34,6 +37,6 @@ class CreatePhoneBookTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('phone_book');
+        Schema::dropIfExists('refferals');
     }
 }

@@ -40,6 +40,8 @@ Vue.component('market-pascabayar', require('./components/market/pascabayar').def
 
 Vue.component('pages-product', require('./components/pages/ProductComponent').default);
 
+Vue.component('price-market-pricing', require('./components/price/MarketPricingComponent').default);
+
 import Vue from 'vue'
 import vSelect from 'vue-select'
 

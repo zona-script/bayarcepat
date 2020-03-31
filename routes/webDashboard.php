@@ -47,6 +47,7 @@ Route::group(['as' => 'web.'], function () {
         });
 
         Route::resource('contact', 'ContactController');
+        Route::resource('refferal', 'Refferal\RefferalController')->only('index');
 
         Route::group(['prefix' => 'pengaturan', 'as' => 'pengaturan.', 'namespace' => 'Setting'], function () {
             Route::get('/', 'HomeController@index')->name('index');
