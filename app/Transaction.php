@@ -18,7 +18,8 @@ class Transaction extends Model
         'status',
         'user_id',
         'type',
-        'phone_number'
+        'phone_number',
+        'is_checkbill'
     ];
 
     // array, json

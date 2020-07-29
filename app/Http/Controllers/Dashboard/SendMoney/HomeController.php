@@ -29,7 +29,7 @@ class HomeController extends Controller
 
         if (blank($user)) {
             return redirect()->route('web.dashboard.kirim-uang.index')
-                ->with('error', 'Pengguna tidak di temukan, harap email anda.');
+                ->with('error', 'Pengguna tidak di temukan.');
         }
 
         $transaction = Transaction::create([

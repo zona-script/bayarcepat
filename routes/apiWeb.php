@@ -28,7 +28,11 @@ Route::group(['as' => 'apiweb.', 'namespace' => 'ApiWeb', 'middleware' => ['auth
             Route::get('/', 'HargaPrabayarController@index');
         });
         Route::group(['prefix' => 'pascabayar'], function () {
-            Route::get('/', 'HargaPrabayarController@index');
+            Route::get('/', 'HargaPascabayarController@index');
         });
     });
+
+    Route::post('/check-postpaid-bill', 'CheckPostpaidBillController')->name('check-postpaid-bill.index');
+    Route::get('/check-postpaid-bill', 'CheckPostpaidBillController')->name('check-postpaid-bill.index.get');
+
 });

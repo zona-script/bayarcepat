@@ -15,16 +15,9 @@
                 </div>
                 <p class="subtitle is-5 is-lower-alpha">Lupakan cara lama, mulai cara baru</p>
 
-                {{--                <p class="subtitle is-5 is-uppercase">Buat Toko Anda <u class="has-text-weight-bold has-text-danger">Meningkat</u> Ke <u class="has-text-weight-bold has-text-info">Level Lebih Tinggi</u>.</p>--}}
                 <div class="has-text-centered">
                     <a href="{{ route('register') }}" class="button is-white is-rounded is-medium">Mulai Berubah</a>
-{{--                    <a href="{{ route('login') }}" class="button is-info is-rounded is-medium">Masuk</a>--}}
                 </div>
-{{--                @auth--}}
-{{--                    <div class="section has-text-left">--}}
-{{--                        <pembelian-component></pembelian-component>--}}
-{{--                    </div>--}}
-{{--                @endauth--}}
             </div>
         </div>
     </div>
@@ -41,7 +34,7 @@
                     <div>
                     <h3 class="title is-2 is-bold is-title-reveal has-text-primary">Apa itu {{ env('APP_NAME') }}?</h3>
                     </div>
-                    <p class="subtitle is-4">{{ env('APP_NAME') }} Adalah Marketplace Distributor & Server Pulsa H2H Termurah dan Terlengkap yang menyediakan berbagai produk (Prabayar & Pascabayar).</p>
+                    <p class="subtitle is-4">{{ env('APP_NAME') }} Adalah Marketplace Produk Digital, Distributor & Server Pulsa H2H Termurah dan Terlengkap yang menyediakan berbagai produk (Prabayar & Pascabayar).</p>
 {{--                    <p class="title is-4">BUKAN CUMA ITU</p>--}}
 {{--                    <p class="subtitle is-4">--}}
 {{--                        {{ env('APP_NAME') }} bisa digunakan untuk melakukan transfer uang antar member, dari paypal ke bank, dari saldo ke semua bank, dan menyediakan jasa rekening bersama.--}}
@@ -207,12 +200,11 @@
         </div>
     </div>
 
-
     <div class="hero is-medium is-primary is-bold is-fullwidth">
         <div class="hero-body">
             <div class="container has-text-centered">
                 <h3 class="title is-3 has-text-weight-bold">Jangan Sampai Kalah Dengan Toko Saingan</h3>
-                <p class="subtitle">Rezeki emang sudah di atur, tapi usaha tidak akan membohongi hasil. Gunakan {{ config('app.name') }} agar omset meningkat?</p>
+                <p class="subtitle">Rezeki emang sudah di atur, tapi usaha tidak akan membohongi hasil. Gunakan {{ config('app.name') }} agar omset lebih meningkat</p>
                 <p>
                     <a href="{{ route('register') }}" class="button is-white is-rounded is-medium is-animate-color-button">Daftar Sekarang</a>
                 </p>
@@ -249,12 +241,137 @@
             </div>
         </div>
     </div>
+
+
+    <div class="section has-background-light is-medium">
+        <div class="container">
+            <div class="content has-text-centered">
+                <h3 class="subtitle is-2">Apa Kata Member?</h3>
+                <div class="columns">
+                    <div class="column is-10 is-offset-1">
+                        <p class="subtitle">
+                            Ini kata Mereka Yang telah bergabung menjadi member di {{ config('app.name') }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column is-4">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-left">
+                                    <figure class="image is-48x48">
+                                        <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+                                    </figure>
+                                </div>
+                                <div class="media-content">
+                                    <p class="title is-4">John Smith</p>
+                                    <p class="subtitle is-6">@johnsmith</p>
+                                </div>
+                            </div>
+
+                            <div class="content">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Phasellus nec iaculis mauris. <a>@bulmaio</a>.
+                                <a href="#">#css</a> <a href="#">#responsive</a>
+                                <br>
+                                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-4">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-left">
+                                    <figure class="image is-48x48">
+                                        <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+                                    </figure>
+                                </div>
+                                <div class="media-content">
+                                    <p class="title is-4">John Smith</p>
+                                    <p class="subtitle is-6">@johnsmith</p>
+                                </div>
+                            </div>
+
+                            <div class="content">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Phasellus nec iaculis mauris. <a>@bulmaio</a>.
+                                <a href="#">#css</a> <a href="#">#responsive</a>
+                                <br>
+                                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-4">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-left">
+                                    <figure class="image is-48x48">
+                                        <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+                                    </figure>
+                                </div>
+                                <div class="media-content">
+                                    <p class="title is-4">John Smith</p>
+                                    <p class="subtitle is-6">@johnsmith</p>
+                                </div>
+                            </div>
+
+                            <div class="content">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Phasellus nec iaculis mauris. <a>@bulmaio</a>.
+                                <a href="#">#css</a> <a href="#">#responsive</a>
+                                <br>
+                                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="notification-modal">
+{{--    <div class="modal is-active" id="notification-modal">--}}
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Pemberitahuan</p>
+                <button class="delete" aria-label="close" onclick="closeNotificationModal()"></button>
+            </header>
+            <section class="modal-card-body">
+                <p class="subtitle">
+                    {{ config('app.name') }} bukanlah aplikasi untuk peminjaman uang online,
+                    bukan aplikasi jasa cicilan, bukan aplikasi investasi, bukan aplikasi p2p lending, bukan aplikasi urun dana, bukan aplikasi kredit online.
+                </p>
+
+                <p class="subtitle">
+                    Pendaftaran member di website ini adalah gratis, alias tanpa di pungut biaya apapun.
+                </p>
+
+                <p class="subtitle">
+                    Sampai saat ini semua transaksi hanya lewat web www.bayarcepat.com dan belum ada aplikasi mobile (dalam proses pembuatan).
+                </p>
+            </section>
+            <footer class="modal-card-foot has-text-right">
+                <button class="button is-primary" onclick="closeNotificationModal()">Tutup Pemberitahuan</button>
+            </footer>
+        </div>
+    </div>
 @endsection
-{{--@push('stack-foot')--}}
-{{--    <script>--}}
-{{--        // Warning before leaving the page (back button, or outgoinglink)--}}
-{{--        window.onbeforeunload = function() {--}}
-{{--            return "Apakah anda yakin ingin menutup?";--}}
-{{--        }--}}
-{{--    </script>--}}
-{{--@endpush--}}
+@push('stack-foot')
+    <script>
+        // Warning before leaving the page (back button, or outgoinglink)
+        // window.onbeforeunload = function() {
+        //     return "Apakah anda yakin ingin menutup?";
+        // }
+        function closeNotificationModal() {
+            var element = document.getElementById("notification-modal");
+            element.classList.remove("is-active");
+        }
+    </script>
+@endpush

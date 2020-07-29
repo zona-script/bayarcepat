@@ -9,6 +9,11 @@ use Illuminate\Support\Str;
 
 class TransactionEnum
 {
+    public static $categoryMarket = 1;
+    public static $categoryProduct = 2;
+    public static $categoryMarketDigital = 3;
+    public static $categoryPayment = 4;
+
     public static $typeProduct = 1;
     public static $typeBayarCepatPayDeposit = 2;
     public static $typeBayarCepatPaySendMoney = 3;

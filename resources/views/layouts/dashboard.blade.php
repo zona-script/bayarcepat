@@ -41,7 +41,7 @@
     <div class="container">
         <div class="navbar-brand">
             <a class="navbar-item" href="/">
-                <span class="logo-text has-text-primary is-bold">{{ env('APP_NAME') }}</span>
+                <span class="logo-text has-text-primary is-bold">{{ config('app.name') }}</span>
             </a>
 
             <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
@@ -186,7 +186,7 @@
 <script src="{{ asset('js/functions.js') }}"></script>
 {{--<script src="{{ asset('js/main.js') }}"></script>--}}
 
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+{{--<script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>--}}
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {

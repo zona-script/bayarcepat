@@ -39,6 +39,7 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
         $this->username = $this->findUsername();
+        $this->redirectTo = route('web.dashboard.index');
     }
 
     /**

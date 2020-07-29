@@ -3,7 +3,7 @@
 @section('title', 'Hubungi Kami')
 
 @section('content')
-    <div class="hero is-white">
+    <div class="hero is-medium is-primary">
         <div class="hero-body">
             <div class="container has-text-centered">
                 <h1 class="title">Hubungi Kami</h1>

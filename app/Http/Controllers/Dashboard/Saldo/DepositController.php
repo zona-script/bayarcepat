@@ -55,6 +55,8 @@ class DepositController extends Controller
             $bank = Arr::add($bank, 'currency', $resultCount);
 
             $fee = $resultCount['fee_idr'];
+
+            $valueTotal = $resultCount['amount_idr_with_fee'];
         } else {
             $type = 'bank';
             $fee = null;
@@ -63,6 +65,8 @@ class DepositController extends Controller
             $total = (int) $amount + $uniqueCode;
             $bank = Arr::add($bank, 'value_unique', $uniqueCode);
             $bank = Arr::add($bank, 'value_total', $total);
+
+            $valueTotal = $total;
         }
 
         $userBank = $request->only([
@@ -75,7 +79,8 @@ class DepositController extends Controller
         $transaction = Transaction::create([
             'user_id' => Auth::id(),
             'type' => TransactionEnum::$typeBayarCepatPayDeposit,
-//            'message' => $request->only('note', null),
+            'value' => $valueTotal,
+            'message' => $request->only('note', null),
             'information' => TransactionEnum::makeDepositInformation($bank, $userBank, $type, $fee),
             'status' => TransactionEnum::$statusProcess
         ]);

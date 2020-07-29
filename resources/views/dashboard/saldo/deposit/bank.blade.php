@@ -40,7 +40,7 @@
                                 </p>
                             </div>
                             <div class="field">
-                                <label>Catatan (optional)</label>
+                                <label>Catatan untuk kami (optional)</label>
                                 <p class="control">
                                     <textarea name="note" class="textarea" placeholder="Notes (optional)">
                                     </textarea>

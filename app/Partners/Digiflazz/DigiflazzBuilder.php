@@ -33,8 +33,16 @@ class DigiflazzBuilder extends Digiflazz
     {
         $dataUpdate = [];
         foreach ($data as $item) {
-            $item->price += PriceEnum::$priceDefault;
-            $dataUpdate[] = $item;
+
+            if (isset($item->price)) {
+                // untuk prabayar yang di update adalah price
+                $item->price += PriceEnum::$priceDefault;
+                $dataUpdate[] = $item;
+            } else {
+                // untuk pascbayar yang di update adalah commission
+                $item->commission += PriceEnum::$priceDefault;
+                $dataUpdate[] = $item;
+            }
         }
         return $dataUpdate;
     }

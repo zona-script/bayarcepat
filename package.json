@@ -28,6 +28,7 @@
     "dependencies": {
         "@creativebulma/bulma-collapsible": "^1.0.4",
         "bulma": "^0.8.0",
-        "vue-select": "^3.4.0"
+        "vue-select": "^3.4.0",
+        "vue-sweetalert2": "^3.0.3"
     }
 }

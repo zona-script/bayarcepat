@@ -3,7 +3,7 @@
 @section('title', 'Paket Membership')
 
 @section('content')
-    <div class="hero is-white">
+    <div class="hero is-medium is-primary">
         <div class="hero-body">
             <div class="container has-text-centered">
                 <h1 class="title">Paket Membership, Pilih Paket Kesukaanmu</h1>
@@ -15,6 +15,9 @@
 
     <div class="section">
         <div class="container">
+            <div class="box has-text-centered">
+                <h3>TIDAK ADA BIAYA MENJADI MEMBER, SEMUANYA DIJAMIN 100% GRATIS DENGAN SEMUA FITUR YANG TERSEDIA</h3>
+            </div>
             <div class="pricing-table">
                 <div class="pricing-plan is-warning">
                     <div class="plan-header">Jeruk</div>

@@ -6,8 +6,8 @@
 
 // Bootstrap
 //@import '~bootstrap/scss/bootstrap';
-
-@import url('https://fonts.googleapis.com/css?family=Quicksand:600&display=swap');
+//
+//@import url('https://fonts.googleapis.com/css?family=Quicksand:600&display=swap');
 @import "bulma";
 
 // Import Component main Sass File
@@ -18,3 +18,5 @@
 @import "custom/style.css";
 
 @import "ext/pricing-table";
+
+@import url('https://fonts.googleapis.com/css?family=Quicksand:600&display=swap');

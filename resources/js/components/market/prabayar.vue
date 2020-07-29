@@ -132,7 +132,7 @@
 <!--            <div class="column is-12">-->
             <div class="column is-9">
                 <div class="field">
-                    <label class="label">No Telepon</label>
+                    <label class="label">No Pelanggan</label>
                     <input class="input" type="text" name="phone_number" :value="selectedContact.phone_number" required>
                 </div>
             </div>

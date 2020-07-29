@@ -32,7 +32,7 @@
                     <div class="field">
                         <label class="label">Email Pengguna (tujuan transfer)</label>
                         <p class="control has-icons-left">
-                            <input name="username_or_phone" class="input" type="text" placeholder="username atau nomor telepon" @change="onChangeUsername" v-model="searchKey" required>
+                            <input name="username_or_phone" class="input" type="email" placeholder="masukan email" @change="onChangeUsername" v-model="searchKey" required>
                             <span class="icon is-small is-left">
                                         <i class="fas fa-user"></i>
                                 </span>

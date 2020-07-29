@@ -20,9 +20,14 @@ class CreateTransactionsTable extends Migration
                 ->references('id')
                 ->on('users');
 
-            // kategorinya pembelian atau bayarcepatpay
+            $table->string('category', 100)->default(\App\Enums\TransactionEnum::$categoryPayment);;
+
+            // type pembelian atau bayarcepatpay
             $table->string('type')
                 ->default(\App\Enums\TransactionEnum::$typeProduct);
+
+            $table->json('product')->nullable();
+
             $table->string('phone_number')->nullable();
             $table->string('value')->nullable();
 
@@ -36,6 +41,10 @@ class CreateTransactionsTable extends Migration
 
             $table->unsignedInteger('status')
                 ->default(\App\Enums\TransactionEnum::$statusProcess);
+
+            // apakah ini checkbill
+            $table->boolean('is_checkbill')
+                ->default(false);
 
             $table->timestamps();
             $table->softDeletes();

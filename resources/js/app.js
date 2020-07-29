@@ -39,11 +39,20 @@ Vue.component('market-prabayar', require('./components/market/prabayar').default
 Vue.component('market-pascabayar', require('./components/market/pascabayar').default);
 
 Vue.component('pages-product', require('./components/pages/ProductComponent').default);
-
 Vue.component('price-market-pricing', require('./components/price/MarketPricingComponent').default);
+
+
+// check bill
+Vue.component('market-pascabayar-checkbill-pln', require('./components/market/pascabayar/CheckBillPln').default);
+// Vue.component('market-pascabayar-checkbill-pln', {
+//     props: ['result'],
+//     template: require('./components/market/pascabayar/CheckBillPln').default
+// });
 
 import Vue from 'vue'
 import vSelect from 'vue-select'
+import VueSweetalert2 from 'vue-sweetalert2';
+Vue.use(VueSweetalert2);
 
 Vue.component('v-select', vSelect);
 

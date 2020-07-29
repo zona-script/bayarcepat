@@ -123,18 +123,17 @@ class Digiflazz
 
     public function cekTagihan($buyerSKUCode, $customerNumber, $refID)
     {
-
-        $this->endPoint = $this->setEndPointAppend("transaction");
         $jsonBody = [
             "commands"=> "inq-pasca",
             "username" => $this->username,
             "buyer_sku_code	" => $buyerSKUCode,
             "customer_no" => $customerNumber,
             "ref_id" => $refID,
-            "sign" => $this->signGenerate("ref_id")
+//            "sign" => $this->signGenerate("ref_id")
+            "sign" => $this->signGenerate($refID)
         ];
 
-        return $this->request($this->endPoint, $jsonBody);
+        return $this->request('https://api.digiflazz.com/v1/transaction', $jsonBody);
     }
 
     public function cekTagihanPLN($buyerSKUCode, $customerNumber, $refID = '')

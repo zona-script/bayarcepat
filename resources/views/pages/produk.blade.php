@@ -44,6 +44,8 @@
             </div>
         </div>
     </div>
+
+    <!--
     <div class="section">
         <div class="container">
             <div class="columns is-vcentered side-feature">
@@ -138,6 +140,8 @@
             </div>
         </div>
     </div>
+
+    -->
     <div class="section">
         <div class="container">
             <div class="columns is-vcentered side-feature">
