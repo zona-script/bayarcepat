@@ -23,12 +23,15 @@ Route::group(['as' => 'apiweb.', 'namespace' => 'ApiWeb', 'middleware' => ['auth
     // deprecated
     Route::get('/phonebook', 'PhonebookController');
 
-    Route::group(['prefix' => 'market', 'as' => 'market.', 'namespace' => 'Market'], function () {
-        Route::group(['prefix' => 'prabayar'], function () {
-            Route::get('/', 'HargaPrabayarController@index');
+    Route::group(['prefix' => 'products', 'as' => 'products.', 'namespace' => 'Products'], function () {
+        Route::group(['prefix' => 'prepaid'], function () {
+            Route::get('/', 'PrepaidController@index');
+            Route::post('/', 'PrepaidController@store');
         });
-        Route::group(['prefix' => 'pascabayar'], function () {
-            Route::get('/', 'HargaPascabayarController@index');
+        Route::group(['prefix' => 'postpaid'], function () {
+            Route::get('/', 'PostpaidController@index');
+            Route::post('/check', 'PostpaidController@checkbill');
+            Route::post('/', 'PostpaidController@store');
         });
     });
 

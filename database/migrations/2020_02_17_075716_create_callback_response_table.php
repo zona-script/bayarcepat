@@ -16,9 +16,6 @@ class CreateCallbackResponseTable extends Migration
         Schema::create('callback_response', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('transaction_id');
-//            $table->foreign('transaction_id')
-//                ->references('id')
-//                ->on('transactions');
             $table->string('provider')
                 ->default('javah2h');
             $table->json('data')

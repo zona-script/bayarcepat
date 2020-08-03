@@ -11,16 +11,23 @@ Route::group(['as' => 'web.'], function () {
         Route::post('/', 'DashboardController@update')->name('update');
         Route::post('/verified', 'DashboardController@verified')->name('verified');
 
-        Route::group(['prefix' => 'market', 'as' => 'market.', 'namespace' => 'Market'], function () {
-            Route::get('/', 'HomeController@index')->name('index');
-            Route::group(['prefix' => 'prabayar', 'as' => 'prabayar.'], function () {
-                Route::get('/', 'PrabayarController@index')->name('index');
-                Route::post('/', 'PrabayarController@store')->name('store');
-            });
-            Route::group(['prefix' => 'pascabayar', 'as' => 'pascabayar.'], function () {
-                Route::get('/', 'PascabayarController@index')->name('index');
-            });
+        Route::group(['prefix' => 'prepaid', 'as' => 'prepaid.', 'namespace' => 'Prepaid'], function () {
+            Route::get('/', 'PrepaidController@index')->name('index');
         });
+        Route::group(['prefix' => 'postpaid', 'as' => 'postpaid.', 'namespace' => 'Postpaid'], function () {
+            Route::get('/', 'PostpaidController@index')->name('index');
+        });
+
+//        Route::group(['prefix' => 'market', 'as' => 'market.', 'namespace' => 'Market'], function () {
+//            Route::get('/', 'HomeController@index')->name('index');
+//            Route::group(['prefix' => 'prabayar', 'as' => 'prabayar.'], function () {
+//                Route::get('/', 'PrabayarController@index')->name('index');
+//                Route::post('/', 'PrabayarController@store')->name('store');
+//            });
+//            Route::group(['prefix' => 'pascabayar', 'as' => 'pascabayar.'], function () {
+//                Route::get('/', 'PascabayarController@index')->name('index');
+//            });
+//        });
 
         Route::group(['prefix' => 'saldo', 'as' => 'saldo.', 'namespace' => 'Saldo'], function () {
             Route::get('/tarik', 'WithdrawalController@create')->name('tarik.create');

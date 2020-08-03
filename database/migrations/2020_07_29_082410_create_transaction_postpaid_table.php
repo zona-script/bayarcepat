@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePhoneBookTable extends Migration
+class CreateTransactionPostpaidTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,16 @@ class CreatePhoneBookTable extends Migration
      */
     public function up()
     {
-        Schema::create('phone_book', function (Blueprint $table) {
-            $table->bigIncrements('id');
+        Schema::create('transaction_postpaids', function (Blueprint $table) {
+            $table->id();
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')
                 ->references('id')
                 ->on('users');
 
-            $table->string('name');
-            $table->string('phone_number');
+            $table->unsignedBigInteger('price');
+            $table->json('price_detail')->nullable();
+
             $table->timestamps();
             $table->softDeletes();
         });
@@ -34,6 +35,6 @@ class CreatePhoneBookTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('phone_book');
+        Schema::dropIfExists('transaction_postpaid');
     }
 }

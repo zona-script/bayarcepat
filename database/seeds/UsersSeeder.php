@@ -48,7 +48,6 @@ class UsersSeeder extends Seeder
             'phone_number' => '085000000002',
             'password' => \Illuminate\Support\Facades\Hash::make('12345678')
         ]);
-        $user->assignRole(\App\Enums\RoleEnum::$roleConsumer);
         $user->assignRole(\App\Enums\RoleEnum::$roleDeveloper);
         unset($user);
 
@@ -60,8 +59,6 @@ class UsersSeeder extends Seeder
             'password' => \Illuminate\Support\Facades\Hash::make('12345678')
         ]);
         $user->assignRole(\App\Enums\RoleEnum::$roleConsumer);
-        $user->assignRole(\App\Enums\RoleEnum::$roleReseller);
-        $user->assignRole(\App\Enums\RoleEnum::$roleDeveloper);
         unset($user);
 
         $user = \App\User::create([
@@ -71,8 +68,6 @@ class UsersSeeder extends Seeder
             'phone_number' => '085000000004',
             'password' => \Illuminate\Support\Facades\Hash::make('12345678')
         ]);
-        $user->assignRole(\App\Enums\RoleEnum::$roleConsumer);
-        $user->assignRole(\App\Enums\RoleEnum::$roleReseller);
         $user->assignRole(\App\Enums\RoleEnum::$roleDeveloper);
         unset($user);
     }

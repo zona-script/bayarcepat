@@ -17,12 +17,15 @@ class CreateVouchersTable extends Migration
             $table->id();
 
             // 1 = voucher saldo, 2 = potongan harga
-            $table->unsignedMediumInteger('type')->default(1);
+            $table->unsignedMediumInteger('type')
+                ->default(1);
             $table->string('code')->unique();
             $table->string('title')->nullable();
             $table->text('description')->nullable();
+
+            // jumah voucher
             $table->unsignedInteger('number')
-                ->nullable();
+                ->nullable()->default(1);
             $table->dateTime('expired_at')
                 ->nullable();
             $table->timestamps();

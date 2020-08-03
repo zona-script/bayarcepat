@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUserVouchersTable extends Migration
+class CreateTransactionPaymentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,20 +13,25 @@ class CreateUserVouchersTable extends Migration
      */
     public function up()
     {
-        Schema::create('user_vouchers', function (Blueprint $table) {
+        // tabel untuk pembayaran
+        Schema::create('transaction_payments', function (Blueprint $table) {
             $table->id();
+
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')
                 ->references('id')
                 ->on('users');
-            $table->unsignedBigInteger('voucher_id');
-            $table->foreign('voucher_id')
-                ->references('id')
-                ->on('vouchers');
 
-            $table->dateTime('used_at')
-                ->nullable();
+            // prepaid = 1 , postpaid = 2, smm = 3
+            $table->unsignedSmallInteger('type');
 
+            // id transaction_prepaid, transaction_postpaid
+            $table->string('transaction_identity');
+
+            $table->text('message')->nullable();
+            $table->text('message_from_server')->nullable();
+
+            $table->unsignedBigInteger('amount');
             $table->timestamps();
             $table->softDeletes();
         });
@@ -39,6 +44,6 @@ class CreateUserVouchersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user_vouchers');
+        Schema::dropIfExists('transaction_payments');
     }
 }

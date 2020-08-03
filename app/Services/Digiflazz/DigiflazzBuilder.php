@@ -1,6 +1,5 @@
 <?php
 
-
 namespace App\Partners\Digiflazz;
 
 
@@ -9,13 +8,13 @@ use App\Enums\PriceEnum;
 class DigiflazzBuilder extends Digiflazz
 {
     // data asli hasil dari response
-    protected $realData;
+    public $realData;
 
     // data dari realData di update harganya
-    protected $rawData;
+    public $rawData;
 
     // dari rawData di ambil datanya saja
-    protected $data;
+    public $data;
 
     public static function make()
     {
@@ -53,7 +52,7 @@ class DigiflazzBuilder extends Digiflazz
         return $this;
     }
 
-    public function pascabayar(string $code = '')
+    public function pascabayar(string $code = ' ')
     {
         $this->initialize($this->getPascabayar($code));
         return $this;

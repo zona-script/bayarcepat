@@ -1,11 +1,10 @@
 <?php
-
-namespace App\Partners\Digiflazz;
+namespace App\Services\Digiflazz\Buyer;
 
 use GuzzleHttp\Client;
 use Illuminate\Support\Arr;
 
-class Digiflazz
+class DigiflazzConnection
 {
     protected $apiKey;
     protected $username;
@@ -52,7 +51,7 @@ class Digiflazz
         return $this;
     }
 
-    public function cekSaldo()
+    public function checkBalance()
     {
         $jsonBody = [
             "cmd" => "deposit",
@@ -63,10 +62,7 @@ class Digiflazz
         return $this->request('https://api.digiflazz.com/v1/cek-saldo', $jsonBody);
     }
 
-    /*
-     * Cek harga
-     * prepaid or pasca */
-    public function cekHarga($cmd = 'prepaid', $code = '')
+    public function price($cmd = 'prepaid', $code = '')
     {
         $jsonBody = [
             "cmd" => $cmd,
@@ -81,29 +77,8 @@ class Digiflazz
         return $this->request('https://api.digiflazz.com/v1/price-list', $jsonBody);
     }
 
-    public function cekHargaPrepaid($code = '')
+    public function createDeposit($amount = '', $bank = 'MANDIRI', $ownerName)
     {
-        return $this->cekHarga('prepaid', $code);
-    }
-
-    public function cekHargaPasca($code = '')
-    {
-        return $this->cekHarga('pasca', $code);
-    }
-
-    public function getPrabayar($code = '')
-    {
-        return $this->cekHarga('prepaid', $code);
-    }
-
-    public function getPascabayar($code = '')
-    {
-        return $this->cekHarga('pasca', $code);
-    }
-
-    public function deposit($amount, $bank, $ownerName)
-    {
-        $this->endPoint = $this->setEndPointAppend("deposit");
         $jsonBody = [
             "username" => $this->username,
             "amount" => $amount,
@@ -112,7 +87,7 @@ class Digiflazz
             "sign" => $this->signGenerate("deposit")
         ];
 
-        return $this->request($this->endPoint, $jsonBody);
+        return $this->request('https://api.digiflazz.com/v1/deposit', $jsonBody);
     }
 
 
@@ -120,8 +95,7 @@ class Digiflazz
      * Cek Tagihan
      * PLN, HP, INTERNET, BPJS KESEHATAN, MULTIFINANCE
      * */
-
-    public function cekTagihan($buyerSKUCode, $customerNumber, $refID)
+    public function checkBillPostpaid($buyerSKUCode, $customerNumber, $refID, $testing = false)
     {
         $jsonBody = [
             "commands"=> "inq-pasca",
@@ -129,65 +103,37 @@ class Digiflazz
             "buyer_sku_code	" => $buyerSKUCode,
             "customer_no" => $customerNumber,
             "ref_id" => $refID,
-//            "sign" => $this->signGenerate("ref_id")
             "sign" => $this->signGenerate($refID)
         ];
+
+        if ($testing) {
+            $jsonBody = Arr::add($jsonBody, 'testing', $testing);
+        }
 
         return $this->request('https://api.digiflazz.com/v1/transaction', $jsonBody);
     }
 
-    public function cekTagihanPLN($buyerSKUCode, $customerNumber, $refID = '')
+    public function buyPrepaid($buyerSKUCode, $customerNumber, $refID, $testing = false, $msg = '')
     {
-        return $this->cekTagihan($buyerSKUCode, $customerNumber, $refID);
-    }
-
-    public function cekTagihanPDAM($buyerSKUCode, $customerNumber, $refID = '')
-    {
-        return $this->cekTagihan($buyerSKUCode, $customerNumber, $refID);
-    }
-
-    public function cekTagihanHP($buyerSKUCode, $customerNumber, $refID = '')
-    {
-        return $this->cekTagihan($buyerSKUCode, $customerNumber, $refID);
-    }
-
-    public function cekTagihanInternet($buyerSKUCode, $customerNumber, $refID = '')
-    {
-        return $this->cekTagihan($buyerSKUCode, $customerNumber, $refID);
-    }
-
-    public function cekTagihanBPJSKesehatan($buyerSKUCode, $customerNumber, $refID = '')
-    {
-        return $this->cekTagihan($buyerSKUCode, $customerNumber, $refID);
-    }
-
-    public function cekTagihanMultifinance($buyerSKUCode, $customerNumber, $refID = '')
-    {
-        return $this->cekTagihan($buyerSKUCode, $customerNumber, $refID);
-    }
-
-    /* *
-     * BELI
-     * referensi: https://developer.digiflazz.com/api/buyer/topup/
-     * */
-    public function beli($buyerSKUCode, $customerNumber, $refID, $msg = '')
-    {
-        $jsonBody = [
-            "username" => $this->username,
-            "buyer_sku_code	" => "xld10",
-            "customer_no" => "087800001230",
-            "ref_id" => "test1",
-            "sign" => $this->signGenerate("test1")
-        ];
-
 //        $jsonBody = [
 //            "username" => $this->username,
-//            "buyer_sku_code	" => $buyerSKUCode,
-//            "customer_no" => $customerNumber,
-//            "ref_id" => $refID,
-////            "sign" => $this->signGenerate("ref_id")
-//            "sign" => $this->signGenerate($refID)
+//            "buyer_sku_code	" => "xld10",
+//            "customer_no" => "087800001230",
+//            "ref_id" => "test1",
+//            "sign" => $this->signGenerate("test1")
 //        ];
+
+        $jsonBody = [
+            "username" => $this->username,
+            "buyer_sku_code	" => $buyerSKUCode,
+            "customer_no" => $customerNumber,
+            "ref_id" => $refID,
+            "sign" => $this->signGenerate($refID)
+        ];
+
+        if ($testing) {
+            $jsonBody = Arr::add($jsonBody, 'testing', $testing);
+        }
 
         if (!blank($msg)) {
             $jsonBody = Arr::add($jsonBody, 'msg', $msg);
@@ -210,14 +156,17 @@ class Digiflazz
             'json' => $jsonBody
         ]);
         unset($client);
+
         return collect(json_decode($response->getBody()));
     }
 
+    // create sign signature
     protected function signGenerate($keyUniqueEndPoint, $force = false)
     {
         if ($force) {
             return $keyUniqueEndPoint;
         }
+
         return md5($this->username . $this->key . $keyUniqueEndPoint);
     }
 }

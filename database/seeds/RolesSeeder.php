@@ -12,8 +12,9 @@ class RolesSeeder extends Seeder
     public function run()
     {
         $items = [
-            'admin', 'consumer', 'reseller', 'developer'
+            'admin', 'consumer', 'developer'
         ];
+
         foreach ($items as $item){
             \Spatie\Permission\Models\Role::create([
                 'name' => $item

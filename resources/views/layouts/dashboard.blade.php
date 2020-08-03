@@ -58,25 +58,36 @@
                     Dashboard
                 </a>
 
-{{--                <a class="navbar-item" href="{{ route('web.dashboard.transaksi.index') }}">--}}
-{{--                    Tambah Transaksi--}}
-{{--                </a>--}}
-
-{{--                <a class="navbar-item" href="{{ route('web.dashboard.market.index') }}">--}}
-{{--                    Market Place--}}
-{{--                </a>--}}
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-item">
+                        <span class="has-text-black">Marketplace</span>
+                    </a>
+                    <div class="navbar-dropdown">
+                        <a href="{{ route('web.dashboard.prepaid.index') }}" class="navbar-item">
+                            Prepaid
+                        </a>
+                        <a class="navbar-item">
+                            Postpaid
+                        </a>
+                        <a class="navbar-item">
+                            SMM Panel
+                        </a>
+                    </div>
+                </div>
 
                 <div class="navbar-item has-dropdown is-hoverable">
                     <a class="navbar-link">
-                        Market Place
+                        <span class="has-text-black">Riwayat</span>
                     </a>
-
                     <div class="navbar-dropdown">
-                        <a class="navbar-item" href="{{ route('web.dashboard.market.prabayar.index') }}">
-                            Market Prepaid / Prabayar
+                        <a href="{{ route('web.dashboard.prepaid.index') }}" class="navbar-item">
+                            Transaksi Prepaid
                         </a>
-                        <a class="navbar-item" href="{{ route('web.dashboard.market.pascabayar.index') }}">
-                            Market Postpaid / Pascabayar
+                        <a class="navbar-item">
+                            Transaksi Postpaid
+                        </a>
+                        <a class="navbar-item">
+                            Transaksi SMM Panel
                         </a>
                     </div>
                 </div>
@@ -84,10 +95,6 @@
                 <a class="navbar-item" href="{{ route('web.dashboard.kirim-uang.index') }}">
                     Kirim Uang
                 </a>
-
-{{--                <a class="navbar-item" href="{{ route('web.dashboard.cetak-struk.index') }}">--}}
-{{--                    Cetak Struk--}}
-{{--                </a>--}}
 
                 <a class="navbar-item" href="{{ route('web.dashboard.riwayat.index') }}">
                     Laporan
@@ -101,27 +108,38 @@
                     Pengaturan
                 </a>
 
-                <div class="navbar-item">
-                    <a href="{{ route('web.dashboard.profile.index') }}" class="button is-primary is-rounded is-outlined">
-                        <span class="icon">
-                            <i class="far fa-user"></i>
-                        </span>
-                        <span>Profile</span>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        Profile
                     </a>
+
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item">
+                            Saldo Rp {{ auth()->user()->balance_number_format }}
+                        </a>
+                        <hr class="navbar-divider">
+                        <a href="{{ route('web.dashboard.profile.index') }}" class="navbar-item">
+                            Profile
+                        </a>
+                        <a class="navbar-item">
+                            Logout
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-{{--<div style="padding-top: 52px"></div>--}}
-{{--<div style="padding-top: 72px"></div>--}}
 
-<div class="columns">
-    <div class="column is-6 is-offset-3">
-        @include('partials.notification')
-        @include('partials.erros')
-    </div>
-</div>
+{{--<div class="columns">--}}
+{{--    <div class="column is-6 is-offset-3">--}}
+{{--        @include('partials.notification')--}}
+{{--        @include('partials.erros')--}}
+{{--    </div>--}}
+{{--</div>--}}
+
+@include('partials.notification')
+@include('partials.erros')
 
 <div id="app">
     @yield('content')
@@ -130,32 +148,6 @@
 <footer class="footer has-background-grey-dark">
 
     <div class="container has-text-centered">
-{{--        <div class="columns">--}}
-{{--            <div class="column is-2">--}}
-{{--                <a href="{{ route('web.dashboard.refferal.index') }}" class="button is-fullwidth is-primary is-rounded is-inverted">Refferal</a>--}}
-{{--            </div>--}}
-{{--            <div class="column is-2">--}}
-{{--                <a class="button is-fullwidth is-primary is-rounded is-inverted">Promo</a>--}}
-{{--            </div>--}}
-{{--            <div class="column is-2">--}}
-{{--                <a class="button is-fullwidth is-primary is-rounded is-inverted">Voucher Saya</a>--}}
-{{--            </div>--}}
-{{--            <div class="column is-2">--}}
-{{--                <a class="button is-fullwidth is-primary is-rounded is-inverted">Ticket & Support</a>--}}
-{{--            </div>--}}
-{{--            <div class="column is-2">--}}
-{{--                <a href="{{ route('web.dashboard.api.index') }}" class="button is-fullwidth is-primary is-rounded is-inverted">Developer Api</a>--}}
-{{--            </div>--}}
-{{--            <div class="column is-2">--}}
-{{--                <form action="{{ route('logout') }}" method="post">--}}
-{{--                    @csrf--}}
-{{--                    <div class="field">--}}
-{{--                        <button class="button is-fullwidth is-primary is-rounded is-inverted">Logout</button>--}}
-{{--                    </div>--}}
-{{--                </form>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-
         <form action="{{ route('logout') }}" method="post">
             @csrf
             <div class="field">

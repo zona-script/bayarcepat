@@ -41,7 +41,6 @@ class RoleEnum
         return [
             self::$roleAdmin,
             self::$roleConsumer,
-            self::$roleReseller,
             self::$roleDeveloper
         ];
     }

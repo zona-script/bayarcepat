@@ -15,9 +15,28 @@ window.Vue = require('vue');
  *
  * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
  */
+
+// const files = require.context('./', true, /\.vue$/i)
+// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
+
+// Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+// Vue.component('pembelian-component', require('./components/Pembelian').default);
+// Vue.component('form-pembelian-pulsa', require('./components/pembelian/PulsaComponent').default);
+// Vue.component('form-pembelian-pulsa-transfer', require('./components/pembelian/PulsaTransferComponent').default);
+// Vue.component('form-pembelian-paket-data', require('./components/pembelian/DataComponent').default);
+// Vue.component('form-pembelian-pln', require('./components/pembelian/PlnComponent').default);
+// Vue.component('form-pembelian-telepon-dan-sms', require('./components/pembelian/TeleponDanSmsComponent').default);
+// Vue.component('form-pembelian-wifi', require('./components/pembelian/WifiComponent').default);
+// Vue.component('form-pembelian-gift-card', require('./components/pembelian/GiftCardComponent').default);
+// Vue.component('form-pembelian-ewallet', require('./components/pembelian/EwalletComponent').default);
+// Vue.component('form-pembelian-voucher-game', require('./components/pembelian/VoucherGameComponent').default);
+
 Vue.component('money-send-money', require('./components/money/SendMoneyComponent').default);
 Vue.component('phonebook-list', require('./components/phonebook/list').default);
 Vue.component('phonebook-add', require('./components/phonebook/add').default);
+
+// Vue.component('market-prabayar', require('./components/market/prabayar').default);
+// Vue.component('market-pascabayar', require('./components/market/pascabayar').default);
 
 Vue.component('pages-product', require('./components/pages/ProductComponent').default);
 Vue.component('price-market-pricing', require('./components/price/MarketPricingComponent').default);
@@ -37,10 +56,17 @@ Vue.component('prepaid-index', require('./components/prepaid/Index').default);
 Vue.component('postpaid-index', require('./components/postpaid/Index').default);
 
 
+// check bill
+// Vue.component('market-pascabayar-checkbill-pln', require('./components/market/pascabayar/CheckBillPln').default);
+// Vue.component('market-pascabayar-checkbill-pln', {
+//     props: ['result'],
+//     template: require('./components/market/pascabayar/CheckBillPln').default
+// });
+
 import Vue from 'vue'
 import vSelect from 'vue-select'
-// import VueSweetalert2 from 'vue-sweetalert2';
-// Vue.use(VueSweetalert2);
+import VueSweetalert2 from 'vue-sweetalert2';
+Vue.use(VueSweetalert2);
 
 Vue.component('v-select', vSelect);
 

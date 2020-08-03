@@ -13,7 +13,7 @@ class CreateBankTable extends Migration
      */
     public function up()
     {
-        Schema::create('bank', function (Blueprint $table) {
+        Schema::create('banks', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('type')->default('bank');
             $table->string('bank_name')->nullable();
@@ -21,6 +21,7 @@ class CreateBankTable extends Migration
             $table->string('bank_account_number')->nullable();
             $table->text('note')->nullable();
             $table->text('logo')->nullable();
+            $table->boolean('status')->default(true); // true = aktif, false = tidak aktif
             $table->timestamps();
             $table->softDeletes();
         });
@@ -33,6 +34,6 @@ class CreateBankTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('bank');
+        Schema::dropIfExists('banks');
     }
 }

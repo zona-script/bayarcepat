@@ -60,21 +60,23 @@ class User extends Authenticatable implements MustVerifyEmail
 
     public function getBalanceAttribute()
     {
-        $result = $this->bayarCepatPays()->first();
+//        $result = $this->balance()
+//            ->orderBy('created_at', 'desc')
+//            ->first();
+        $result = Balances::where('user_id', $this->id)
+            ->orderBy('id', 'desc')
+            ->first();
+
         if (blank($result)) {
             return 0;
         }
 
-        return $result->balance;
+        return $result->previous_balance;
     }
     public function getBalanceNumberFormatAttribute()
     {
-        $result = $this->bayarCepatPays()->first();
-        if (blank($result)) {
-            return 0;
-        }
-
-        return number_format($result->balance, '0', ',','.');
+        $result = $this->getBalanceAttribute();
+        return number_format($result, '0', ',','.');
     }
 
     public function transactions()
@@ -82,9 +84,9 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->hasMany(Transaction::class);
     }
 
-    public function bayarCepatPays()
+    public function balance()
     {
-        return $this->hasMany(BayarCepatPay::class);
+        return $this->hasMany(Balances::class);
     }
 
     public function phonebooks()

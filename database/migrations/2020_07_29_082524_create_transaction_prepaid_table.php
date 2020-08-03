@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUserVouchersTable extends Migration
+class CreateTransactionPrepaidTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,19 +13,22 @@ class CreateUserVouchersTable extends Migration
      */
     public function up()
     {
-        Schema::create('user_vouchers', function (Blueprint $table) {
+        Schema::create('transaction_prepaid', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')
                 ->references('id')
                 ->on('users');
-            $table->unsignedBigInteger('voucher_id');
-            $table->foreign('voucher_id')
-                ->references('id')
-                ->on('vouchers');
 
-            $table->dateTime('used_at')
-                ->nullable();
+            $table->string('ref_id')->unique();
+            $table->json('product')->nullable();
+            $table->string('customer_number')->nullable();
+            $table->text('message')->nullable();
+            $table->text('information')->nullable();
+            $table->unsignedInteger('status')
+                ->default(\App\Enums\PrepaidEnum::STATUS_PROCESS);
+
+            $table->unsignedBigInteger('price');
 
             $table->timestamps();
             $table->softDeletes();
@@ -39,6 +42,6 @@ class CreateUserVouchersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user_vouchers');
+        Schema::dropIfExists('transaction_prepaid');
     }
 }

@@ -23,8 +23,12 @@ class CreateContactsTable extends Migration
 
             $table->string('phone_number');
             $table->string('name');
-            $table->string('type')->nullable();
-            $table->string('customer_number')->nullable();
+            $table->string('type')
+                ->nullable();
+            $table->string('customer_number')
+                ->nullable();
+            $table->json('raw_column')
+                ->nullable();
             $table->timestamps();
 
             $table->softDeletes();

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateBayarCepatPaysTable extends Migration
+class CreateUserBankTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,23 +13,20 @@ class CreateBayarCepatPaysTable extends Migration
      */
     public function up()
     {
-        Schema::create('bayar_cepat_pays', function (Blueprint $table) {
+        Schema::create('user_banks', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')
                 ->references('id')
                 ->on('users');
 
-            // type in / out
-            $table->unsignedInteger('type')
-                ->default(\App\Enums\TransactionEnum::$statusProcess);
+            $table->string('type')->default('bank');
 
-            $table->unsignedBigInteger('value');
-
-            // informasi pembayaran untuk apa (id transaksi)
-            $table->string('information')->nullable();
-
-            $table->unsignedBigInteger('previous_balance')->nullable();
+            $table->string('bank_name')->nullable();
+            $table->string('bank_account_name')->nullable();
+            $table->string('bank_account_number')->nullable();
+            $table->text('note')->nullable();
+            $table->text('logo')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
@@ -42,6 +39,6 @@ class CreateBayarCepatPaysTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('bayar_cepat_pays');
+        Schema::dropIfExists('user_banks');
     }
 }
