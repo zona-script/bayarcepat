@@ -1899,6 +1899,302 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/dashboard/social-media-marketing/IndexComponent.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/dashboard/social-media-marketing/IndexComponent.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "IndexComponent",
+  data: function data() {
+    return {
+      categories: [],
+      products: [],
+      // real data from init
+      csrf: document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
+      selectedCategory: {},
+      selectedProduct: {},
+      // produk yang dipilih ketika tombol beli di klik
+      columns: [{
+        label: 'Action',
+        field: this.funcBuyButton,
+        html: true
+      }, {
+        label: 'Nama Produk',
+        field: 'name'
+      }, {
+        label: 'Harga',
+        field: 'price'
+      }, {
+        label: 'Min',
+        field: 'min'
+      }, {
+        label: 'Max',
+        field: 'max'
+      }, {
+        label: 'Status',
+        field: this.tableColumnStatus,
+        html: true
+      }],
+      rows: [],
+      showFormIsActive: false,
+      showFormBuyButton: true,
+      hasError: false
+    };
+  },
+  mounted: function mounted() {
+    var _this = this;
+
+    window.axios.get('/api/products/social-media-marketing').then(function (response) {
+      _this.products = response.data;
+      _this.categories = response.data;
+
+      _this.initializeData();
+    });
+  },
+  created: function created() {},
+  methods: {
+    initializeData: function initializeData() {
+      var i, j;
+      var rows = [],
+          products = [];
+
+      for (i = 0; i < this.products.length; i++) {
+        products = this.products[i].products;
+
+        for (j = 0; j < products.length; j++) {
+          rows.push(products[j]);
+        }
+      }
+
+      this.rows = rows;
+    },
+    onCategory: function onCategory() {
+      this.rows = this.selectedCategory.products;
+    },
+    funcBuyButton: function funcBuyButton(rowObj) {
+      return '<button class="button is-primary is-fullwidth">Beli</button>';
+    },
+    showBuyForm: function showBuyForm(params) {
+      // https://xaksis.github.io/vue-good-table/guide/configuration/table-events.html#on-row-click
+      this.showFormIsActive = true;
+      this.selectedProduct = params.row;
+    },
+    closeBuyForm: function closeBuyForm() {
+      this.showFormIsActive = false;
+    },
+    tableColumnStatus: function tableColumnStatus(rowObj) {
+      if (rowObj) {
+        return '<span class="tag is-primary">tersedia</span>';
+      }
+
+      return '<span class="tag is-danger">tidak tersedia</span>';
+    },
+    onClickCheckBill: function onClickCheckBill() {
+      var _this2 = this;
+
+      var result;
+      var params = {
+        buyer_sku_code: this.selectedProduct.buyer_sku_code,
+        customer_number: this.customerNumber
+      };
+
+      if (this.customerNumber === '') {
+        this.$alert("no pelanggan masih kosong.", '', 'warning');
+      } else {
+        window.axios.post('/api/web/products/postpaid/check', params).then(function (response) {
+          result = response.data;
+
+          if (result.status) {
+            _this2.$alert(result.message, 'Berhasil melakukan pengecekan', 'success');
+
+            _this2.showResult = true;
+          } else {
+            _this2.$alert(result.message, 'Transaksi Tidak berhasil', 'error');
+          }
+        });
+      }
+    },
+    onClickBuyButton: function onClickBuyButton() {
+      var _this3 = this;
+
+      var result;
+      var params = {
+        buyer_sku_code: this.selectedProduct.buyer_sku_code,
+        customer_number: this.customerNumber
+      };
+
+      if (this.customerNumber === '') {
+        this.$alert("no pelanggan masih kosong.", '', 'warning');
+      } else {
+        window.axios.post('/api/web/products/prepaid', params).then(function (response) {
+          result = response.data;
+
+          if (result.status) {
+            _this3.$alert(result.message, 'Pembelian Berhasil', 'success');
+          } else {
+            _this3.$alert(result.message, 'Transaksi Tidak berhasil', 'error');
+          }
+
+          _this3.resetForm();
+        });
+      }
+    },
+    resetForm: function resetForm() {
+      this.selectedProduct = {};
+      this.showFormIsActive = false;
+      this.customerNumber = '';
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/money/SendMoneyComponent.vue?vue&type=script&lang=js&":
 /*!***********************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/money/SendMoneyComponent.vue?vue&type=script&lang=js& ***!
@@ -37682,6 +37978,360 @@ if (typeof window !== 'undefined' && window.Vue) {
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/dashboard/social-media-marketing/IndexComponent.vue?vue&type=template&id=43ccefe7&scoped=true&":
+/*!**************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/dashboard/social-media-marketing/IndexComponent.vue?vue&type=template&id=43ccefe7&scoped=true& ***!
+  \**************************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("div", { staticClass: "columns" }, [
+      _c("div", { staticClass: "column" }, [
+        _c("div", { staticClass: "field" }, [
+          _c("label", { staticClass: "label" }, [_vm._v("Kategori Layanan")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "control" }, [
+            _c("div", { staticClass: "select is-fullwidth is-primary" }, [
+              _c(
+                "select",
+                {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.selectedCategory,
+                      expression: "selectedCategory"
+                    }
+                  ],
+                  on: {
+                    change: [
+                      function($event) {
+                        var $$selectedVal = Array.prototype.filter
+                          .call($event.target.options, function(o) {
+                            return o.selected
+                          })
+                          .map(function(o) {
+                            var val = "_value" in o ? o._value : o.value
+                            return val
+                          })
+                        _vm.selectedCategory = $event.target.multiple
+                          ? $$selectedVal
+                          : $$selectedVal[0]
+                      },
+                      _vm.onCategory
+                    ]
+                  }
+                },
+                [
+                  _c("option", { attrs: { disabled: "" } }, [
+                    _vm._v("Pilih Kategori Layanan")
+                  ]),
+                  _vm._v(" "),
+                  _vm._l(_vm.categories, function(category) {
+                    return _c("option", { domProps: { value: category } }, [
+                      _vm._v(_vm._s(category.name))
+                    ])
+                  })
+                ],
+                2
+              )
+            ])
+          ])
+        ])
+      ])
+    ]),
+    _vm._v(" "),
+    _c(
+      "div",
+      { staticClass: "container" },
+      [
+        _c(
+          "vue-good-table",
+          {
+            attrs: {
+              columns: _vm.columns,
+              rows: _vm.rows,
+              "search-options": {
+                enabled: true,
+                placeholder: "Cari produk ..."
+              },
+              "pagination-options": {
+                enabled: true,
+                mode: "records",
+                rowsPerPageLabel: "Jumlah perhalaman",
+                ofLabel: "dari"
+              }
+            },
+            on: { "on-row-click": _vm.showBuyForm }
+          },
+          [
+            _c("div", { attrs: { slot: "emptystate" }, slot: "emptystate" }, [
+              _vm._v(
+                "\n                Produk masih belum tersedia atau masih menghubungkan layanan.\n            "
+              )
+            ])
+          ]
+        )
+      ],
+      1
+    ),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        staticClass: "modal",
+        class: {
+          "is-active": _vm.showFormIsActive,
+          "text-danger": _vm.hasError
+        }
+      },
+      [
+        _c("div", { staticClass: "modal-background" }),
+        _vm._v(" "),
+        _c("div", { staticClass: "modal-card" }, [
+          _c("header", { staticClass: "modal-card-head" }, [
+            _c("p", { staticClass: "modal-card-title" }, [
+              _vm._v("Form Pembelian")
+            ]),
+            _vm._v(" "),
+            _c("button", {
+              staticClass: "delete",
+              attrs: { "aria-label": "close" },
+              on: { click: _vm.closeBuyForm }
+            })
+          ]),
+          _vm._v(" "),
+          _vm.selectedProduct.seller_product_status &&
+          _vm.selectedProduct.buyer_product_status
+            ? _c("section", { staticClass: "modal-card-body" }, [
+                _c("div", { staticClass: "columns" }, [
+                  _c("div", { staticClass: "column" }, [
+                    _c("div", { staticClass: "field" }, [
+                      _c("label", { staticClass: "label" }, [
+                        _vm._v("Nama Produk")
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "control" }, [
+                        _c("input", {
+                          staticClass: "input",
+                          attrs: { type: "text", disabled: "" },
+                          domProps: { value: _vm.selectedProduct.product_name }
+                        })
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "column" }, [
+                    _c("div", { staticClass: "field" }, [
+                      _c("label", { staticClass: "label" }, [_vm._v("Brand")]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "control" }, [
+                        _c("input", {
+                          staticClass: "input",
+                          attrs: { type: "text", disabled: "" },
+                          domProps: { value: _vm.selectedProduct.brand }
+                        })
+                      ])
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "columns" }, [
+                  _c("div", { staticClass: "column" }, [
+                    _c("div", { staticClass: "field" }, [
+                      _c("label", { staticClass: "label" }, [
+                        _vm._v("Kode Produk")
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "control" }, [
+                        _c("input", {
+                          staticClass: "input",
+                          attrs: { type: "text", disabled: "" },
+                          domProps: {
+                            value: _vm.selectedProduct.buyer_sku_code
+                          }
+                        })
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "column" }, [
+                    _c("div", { staticClass: "field" }, [
+                      _c("label", { staticClass: "label" }, [_vm._v("Stok")]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "control" }, [
+                        _c("input", {
+                          staticClass: "input",
+                          attrs: { type: "text", disabled: "" },
+                          domProps: {
+                            value: _vm.selectedProduct.unlimited_stock
+                              ? "Tanpa batas"
+                              : _vm.selectedProduct.stock
+                          }
+                        })
+                      ])
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "field" }, [
+                  _c("label", { staticClass: "label" }, [_vm._v("Deskripsi")]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "control" }, [
+                    _c(
+                      "textarea",
+                      { staticClass: "textarea", attrs: { disabled: "" } },
+                      [_vm._v(_vm._s(_vm.selectedProduct.desc))]
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "field" }, [
+                  _c("label", { staticClass: "label" }, [
+                    _vm._v("No Pelanggan")
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "control" }, [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.customerNumber,
+                          expression: "customerNumber"
+                        }
+                      ],
+                      staticClass: "input",
+                      attrs: {
+                        type: "text",
+                        placeholder: "No Telepon / No Pelanggan"
+                      },
+                      domProps: { value: _vm.customerNumber },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.customerNumber = $event.target.value
+                        }
+                      }
+                    })
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "field" }, [
+                  _c(
+                    "button",
+                    {
+                      staticClass: "button is-primary is-fullwidth",
+                      on: { click: _vm.onClickCheckBill }
+                    },
+                    [_vm._v("Cek Tagihan")]
+                  ),
+                  _vm._v(
+                    "\n                    *) Klik cek tagihan untuk mengetahui jumlah tagihan yang harus dibayarkan.\n                "
+                  )
+                ]),
+                _vm._v(" "),
+                _vm.showResult
+                  ? _c("div", { staticClass: "field" }, [_vm._m(0)])
+                  : _vm._e()
+              ])
+            : _c("section", { staticClass: "modal-card-body" }, [_vm._m(1)]),
+          _vm._v(" "),
+          _vm.selectedProduct.seller_product_status &&
+          _vm.selectedProduct.buyer_product_status
+            ? _c("footer", { staticClass: "modal-card-foot" }, [
+                _c(
+                  "button",
+                  {
+                    staticClass: "button is-success",
+                    on: { click: _vm.onClickBuyButton }
+                  },
+                  [_vm._v("Bayar Tagihan")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "button",
+                  { staticClass: "button", on: { click: _vm.closeBuyForm } },
+                  [_vm._v("Tutup Form")]
+                )
+              ])
+            : _c("footer", { staticClass: "modal-card-foot" }, [
+                _c(
+                  "button",
+                  { staticClass: "button", on: { click: _vm.closeBuyForm } },
+                  [_vm._v("Tutup Form")]
+                )
+              ])
+        ])
+      ]
+    )
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "box" }, [
+      _c("h3", { staticClass: "subtitle" }, [
+        _vm._v("Jumlah yang harus dibayar")
+      ]),
+      _vm._v(" "),
+      _c("h3", { staticClass: "title" }, [_vm._v("Rp XXXX")]),
+      _vm._v(" "),
+      _c("div", { staticClass: "content" }, [
+        _c("ul", [
+          _c("li", [
+            _vm._v("sebelum klik order, pastikan saldo anda mencukupi")
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _vm._v(
+              "produk yang tidak support multi transaksi, dalam 24 jam hanya diperbolehkan order 1 kali untuk setiap no telepon/no pelanggan."
+            )
+          ]),
+          _vm._v(" "),
+          _c("li", [_vm._v("pastikan waktu order bukan pada jam cut off.")]),
+          _vm._v(" "),
+          _c("li", [
+            _vm._v(
+              'Transaksi akan tetap dilanjutkan setelah anda melakukan klik tombol "beli sekarang" dan tidak bisa dibatalkan, meskipun klik tombol "tutup form".'
+            )
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "notification is-danger" }, [
+      _vm._v("\n                    Produk saat ini tidak tersedia."),
+      _c("br"),
+      _vm._v(
+        "Jangan khawatir, engineering kami sedang memperbaiki masalah ini.\n                "
+      )
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/money/SendMoneyComponent.vue?vue&type=template&id=e50dae42&scoped=true&":
 /*!***************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/money/SendMoneyComponent.vue?vue&type=template&id=e50dae42&scoped=true& ***!
@@ -55885,7 +56535,9 @@ vue__WEBPACK_IMPORTED_MODULE_3___default.a.component('vue-good-table', vue_good_
 vue__WEBPACK_IMPORTED_MODULE_3___default.a.component('prepaid-index', __webpack_require__(/*! ./components/prepaid/Index */ "./resources/js/components/prepaid/Index.vue")["default"]);
 vue__WEBPACK_IMPORTED_MODULE_3___default.a.component('prepaid-history-index', __webpack_require__(/*! ./components/prepaid/history/Index */ "./resources/js/components/prepaid/history/Index.vue")["default"]);
 vue__WEBPACK_IMPORTED_MODULE_3___default.a.component('postpaid-index', __webpack_require__(/*! ./components/postpaid/Index */ "./resources/js/components/postpaid/Index.vue")["default"]);
-vue__WEBPACK_IMPORTED_MODULE_3___default.a.component('send-money-index', __webpack_require__(/*! ./components/sendmoney/IndexComponent */ "./resources/js/components/sendmoney/IndexComponent.vue")["default"]);
+vue__WEBPACK_IMPORTED_MODULE_3___default.a.component('send-money-index', __webpack_require__(/*! ./components/sendmoney/IndexComponent */ "./resources/js/components/sendmoney/IndexComponent.vue")["default"]); // social media marketing
+
+vue__WEBPACK_IMPORTED_MODULE_3___default.a.component('dashboard-social-media-marketing-index', __webpack_require__(/*! ./components/dashboard/social-media-marketing/IndexComponent */ "./resources/js/components/dashboard/social-media-marketing/IndexComponent.vue")["default"]);
 vue__WEBPACK_IMPORTED_MODULE_3___default.a.component('v-select', vue_select__WEBPACK_IMPORTED_MODULE_4___default.a);
 vue__WEBPACK_IMPORTED_MODULE_3___default.a.component('passport-clients', __webpack_require__(/*! ./components/passport/Clients.vue */ "./resources/js/components/passport/Clients.vue")["default"]);
 vue__WEBPACK_IMPORTED_MODULE_3___default.a.component('passport-authorized-clients', __webpack_require__(/*! ./components/passport/AuthorizedClients.vue */ "./resources/js/components/passport/AuthorizedClients.vue")["default"]);
@@ -55942,6 +56594,75 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     encrypted: true
 // });
+
+/***/ }),
+
+/***/ "./resources/js/components/dashboard/social-media-marketing/IndexComponent.vue":
+/*!*************************************************************************************!*\
+  !*** ./resources/js/components/dashboard/social-media-marketing/IndexComponent.vue ***!
+  \*************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _IndexComponent_vue_vue_type_template_id_43ccefe7_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./IndexComponent.vue?vue&type=template&id=43ccefe7&scoped=true& */ "./resources/js/components/dashboard/social-media-marketing/IndexComponent.vue?vue&type=template&id=43ccefe7&scoped=true&");
+/* harmony import */ var _IndexComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./IndexComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/dashboard/social-media-marketing/IndexComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _IndexComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _IndexComponent_vue_vue_type_template_id_43ccefe7_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _IndexComponent_vue_vue_type_template_id_43ccefe7_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "43ccefe7",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/dashboard/social-media-marketing/IndexComponent.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/dashboard/social-media-marketing/IndexComponent.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************!*\
+  !*** ./resources/js/components/dashboard/social-media-marketing/IndexComponent.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_IndexComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./IndexComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/dashboard/social-media-marketing/IndexComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_IndexComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/dashboard/social-media-marketing/IndexComponent.vue?vue&type=template&id=43ccefe7&scoped=true&":
+/*!********************************************************************************************************************************!*\
+  !*** ./resources/js/components/dashboard/social-media-marketing/IndexComponent.vue?vue&type=template&id=43ccefe7&scoped=true& ***!
+  \********************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_IndexComponent_vue_vue_type_template_id_43ccefe7_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./IndexComponent.vue?vue&type=template&id=43ccefe7&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/dashboard/social-media-marketing/IndexComponent.vue?vue&type=template&id=43ccefe7&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_IndexComponent_vue_vue_type_template_id_43ccefe7_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_IndexComponent_vue_vue_type_template_id_43ccefe7_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
 
 /***/ }),
 

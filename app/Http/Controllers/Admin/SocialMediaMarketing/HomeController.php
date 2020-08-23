@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin\SocialMediaMarketing;
 
 use App\Http\Controllers\Controller;
+use App\PanelProduct;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -10,11 +11,13 @@ class HomeController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\Response|\Illuminate\View\View
      */
     public function index()
     {
+        $panelProducts = PanelProduct::get();
 
+        return view('admin.social-media-marketing.index', compact('panelProducts'));
     }
 
     /**

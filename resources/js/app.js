@@ -26,6 +26,9 @@ Vue.component('prepaid-history-index', require('./components/prepaid/history/Ind
 Vue.component('postpaid-index', require('./components/postpaid/Index').default);
 Vue.component('send-money-index', require('./components/sendmoney/IndexComponent').default);
 
+// social media marketing
+Vue.component('dashboard-social-media-marketing-index', require('./components/dashboard/social-media-marketing/IndexComponent').default);
+
 Vue.component('v-select', vSelect);
 
 Vue.component(

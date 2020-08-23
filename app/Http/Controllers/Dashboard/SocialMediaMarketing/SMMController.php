@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Dashboard\SocialMediaMarketing;
 
 use App\Http\Controllers\Controller;
+use App\PanelProduct;
 use Illuminate\Http\Request;
 
 class SMMController extends Controller
@@ -14,9 +15,6 @@ class SMMController extends Controller
      */
     public function index()
     {
-        $smm = [];
-
-        return $smm;
         return view('dashboard.social-media-marketing.index');
     }
 

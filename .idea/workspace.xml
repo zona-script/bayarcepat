@@ -20,53 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1fc7cadf-dd8e-4988-95f3-5be001769a75" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/commandlinetools/Laravel_8_8_20__11_44_PM.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/commandlinetools/schemas/frameworkDescriptionVersion1.1.4.xsd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Enums/TransactionWalletEnum.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Services/MoneyTransfer/MoneyTransfer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Services/MoneyTransfer/MoneyTransferFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Services/MoneyTransfer/ReceiveMoney.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Services/MoneyTransfer/SendMoney.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Services/Transactions/TransactionAbstract.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Services/Transactions/TransactionFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Services/Transactions/TransactionInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Services/Transactions/TransactionPrepaid.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/undraw_Mobile_pay_re_sjb8.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/undraw_payments_21w6.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/admin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/admin/manage/BankComponent.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/admin/manage/UserComponent.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/prepaid/history/Index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/sendmoney/IndexComponent.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/manage/bank/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/manage/user/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/social-media-marketing/provider-panel/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/social-media-marketing/provider-panel/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/social-media-marketing/provider-panel/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/social-media-marketing/provider-panel/show.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/prepaid/history/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/send-money/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/social-media-marketing/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Enums/TransactionPanelEnum.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/dashboard/social-media-marketing/IndexComponent.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/social-media-marketing/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Enums/PrepaidEnum.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Enums/PrepaidEnum.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Enums/UniqueCode.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Enums/UniqueCode.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/SendMoney/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/SendMoney/HomeControllerX.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/TransactionPrepaid.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/TransactionPrepaid.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/SocialMediaMarketing/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/SocialMediaMarketing/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/SocialMediaMarketing/SMMController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/SocialMediaMarketing/SMMController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/prepaid/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/prepaid/Index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/social-media-marketing/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/social-media-marketing/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/apiWeb.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/apiWeb.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/webAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/webAdmin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/webDashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/webDashboard.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -255,19 +220,19 @@
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\app-project\bayarcepat\resources\views\pages\price" />
-      <recent name="C:\xampp\htdocs\bayarcepat\resources\views\mails" />
-      <recent name="C:\xampp\htdocs\bayarcepat\storage\app\public" />
-      <recent name="C:\xampp\htdocs\bayarcepat\storage\app" />
-      <recent name="C:\xampp\htdocs\bayarcepat\resources\views\dashboard\saldo\deposit" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\app-project\bayarcepat\public\images" />
       <recent name="C:\app-project\bayarcepat\resources\js\components\admin\manage" />
       <recent name="C:\app-project\bayarcepat\resources\js" />
       <recent name="C:\app-project\bayarcepat\database\migrations" />
       <recent name="C:\app-project\bayarcepat\resources\js\components" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\app-project\bayarcepat\app\Http\Controllers\Api\Products" />
+      <recent name="C:\app-project\bayarcepat\resources\views\pages\price" />
+      <recent name="C:\xampp\htdocs\bayarcepat\resources\views\mails" />
+      <recent name="C:\xampp\htdocs\bayarcepat\storage\app\public" />
+      <recent name="C:\xampp\htdocs\bayarcepat\storage\app" />
     </key>
   </component>
   <component name="RestClientSettings">
@@ -449,7 +414,7 @@
       <workItem from="1597764270018" duration="2391000" />
       <workItem from="1597936452978" duration="175000" />
       <workItem from="1598008807198" duration="17547000" />
-      <workItem from="1598201523779" duration="407000" />
+      <workItem from="1598201523779" duration="7155000" />
     </task>
     <servers />
   </component>
@@ -481,30 +446,34 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="363" y="99" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1366.728@0.0.1366.728" timestamp="1596073408950" />
-    <state x="184" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1597027464109">
+    <state x="184" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1598204869643">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="184" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1597027464109" />
+    <state x="184" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1598204869643" />
     <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1596120510112">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1596120510112" />
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1597026747462">
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1598204022363">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1597026747462" />
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1598204022363" />
     <state x="463" y="123" key="FileChooserDialogImpl" timestamp="1597396458900">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="123" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1597396458900" />
-    <state x="486" y="86" key="NewPhpClassDialog" timestamp="1597027251556">
+    <state x="486" y="86" key="NewPhpClassDialog" timestamp="1598208692692">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="486" y="86" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1597027251556" />
-    <state x="517" y="287" key="NewPhpFileDialog" timestamp="1598021377964">
+    <state x="486" y="86" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1598208692692" />
+    <state x="517" y="287" key="NewPhpFileDialog" timestamp="1598202434051">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="517" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1598021377964" />
+    <state x="517" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1598202434051" />
+    <state x="285" y="0" width="587" height="728" key="find.popup" timestamp="1598202428530">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="285" y="0" width="587" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1598202428530" />
     <state x="339" y="162" key="run.anything.popup" timestamp="1598020797908">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

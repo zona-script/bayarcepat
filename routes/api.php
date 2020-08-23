@@ -17,14 +17,19 @@ use Illuminate\Http\Request;
 //    return $request->user();
 //});
 
-//Route::get('/', function () {
-//    return [
-//        'success' => true,
-//        'message' => 'Api is running in port 80'
-//    ];
-//});
+Route::get('/', function () {
+    return [
+        'success' => true,
+        'message' => 'Api is running in port 80'
+    ];
+});
 
 Route::group(['as' => 'api.'], function () {
+
+    // api untuk product
+    Route::group(['as' => 'products.', 'prefix' => 'products', 'namespace' => 'Api\Products'], function () {
+        Route::get('/social-media-marketing', 'SocialMediaMarketingController@index');
+    });
 
     Route::group(['as' => 'users.', 'prefix' => 'users', 'namespace' => 'Api\Users'], function () {
         Route::get('/username', 'UsernameController@index');
