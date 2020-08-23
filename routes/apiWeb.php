@@ -27,11 +27,15 @@ Route::group(['as' => 'apiweb.', 'namespace' => 'ApiWeb', 'middleware' => ['auth
         Route::group(['prefix' => 'prepaid'], function () {
             Route::get('/', 'PrepaidController@index');
             Route::post('/', 'PrepaidController@store');
+
+            Route::get('/history', 'HistoryPrepaidController@index');
         });
         Route::group(['prefix' => 'postpaid'], function () {
             Route::get('/', 'PostpaidController@index');
             Route::post('/check', 'PostpaidController@checkbill');
             Route::post('/', 'PostpaidController@store');
+
+            Route::get('/history', 'HistoryPostpaidController@index');
         });
     });
 

@@ -13,10 +13,20 @@ Route::group(['as' => 'web.'], function () {
 
         Route::group(['prefix' => 'prepaid', 'as' => 'prepaid.', 'namespace' => 'Prepaid'], function () {
             Route::get('/', 'PrepaidController@index')->name('index');
+            Route::view('/history', 'dashboard.prepaid.history.index');
+//            Route::get('/history', 'HistoryController@index')->name('history.index');
         });
+
         Route::group(['prefix' => 'postpaid', 'as' => 'postpaid.', 'namespace' => 'Postpaid'], function () {
             Route::get('/', 'PostpaidController@index')->name('index');
         });
+
+        Route::group(['prefix' => 'social-media-marketing', 'as' => 'social-media-marketing.', 'namespace' => 'SocialMediaMarketing'], function () {
+            Route::get('/', 'SMMController@index')->name('index');
+        });
+
+        Route::resource('/send-money', 'SendMoney\HomeController');
+
 
 //        Route::group(['prefix' => 'market', 'as' => 'market.', 'namespace' => 'Market'], function () {
 //            Route::get('/', 'HomeController@index')->name('index');
@@ -43,11 +53,11 @@ Route::group(['as' => 'web.'], function () {
             Route::post('/', 'TransaksiController@store')->name('store');
         });
 
-        Route::group(['prefix' => 'kirim-uang', 'as' => 'kirim-uang.', 'namespace' => 'SendMoney'], function () {
-            Route::get('/', 'HomeController@index')->name('index');
-            Route::post('/', 'HomeController@store')->name('store');
-            Route::post('/send', 'HomeController@store')->name('store');
-        });
+//        Route::group(['prefix' => 'kirim-uang', 'as' => 'kirim-uang.', 'namespace' => 'SendMoney'], function () {
+//            Route::get('/', 'HomeController@index')->name('index');
+//            Route::post('/', 'HomeController@store')->name('store');
+//            Route::post('/send', 'HomeController@store')->name('store');
+//        });
 
         Route::group(['prefix' => 'cetak-struk', 'as' => 'cetak-struk.', 'namespace' => 'PrintInvoice'], function () {
             Route::get('/', 'HomeController@index')->name('index');

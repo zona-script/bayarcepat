@@ -153,8 +153,10 @@
                 >
                     <button class="button is-success"
                             @click="onClickBuyButton"
-                            v-if="customerNumber !== '' && selectedProduct.start_cut_off === '' && selectedProduct.end_cut_off === '' "
+                            v-on:click="showModalBuyButton = false"
+                            v-if="showModalBuyButton"
                     >Beli Sekarang</button>
+                    <button v-else class="button is-primary is-loading is-disabled" disabled></button>
 
                     <button class="button" @click="closeBuyForm">Tutup Form</button>
                 </footer>
@@ -182,7 +184,6 @@
                 selectedBrand: {},
                 selectedProduct: {}, // produk yang dipilih ketika tombol beli di klik
                 customerNumber: '',
-
                 columns: [
                     {
                         label: 'Action',
@@ -219,15 +220,14 @@
                 rows: [],
 
                 showFormIsActive: false,
-                hasError: false
+                hasError: false,
+                showModalBuyButton: false
             }
         },
         mounted() {
             window.axios.get('/api/web/products/prepaid')
                 .then(response => {
                     this.dataInit = response.data
-                    // console.log(response.data)
-
                     this.initializeData()
                 })
         },
@@ -300,6 +300,7 @@
                 // https://xaksis.github.io/vue-good-table/guide/configuration/table-events.html#on-row-click
                 this.showFormIsActive = true
                 this.selectedProduct = params.row
+                this.showModalBuyButton = true
             },
             closeBuyForm() {
                 this.resetForm()
@@ -320,13 +321,17 @@
                 }
 
                 if (this.customerNumber === '') {
+                    this.showModalBuyButton = true
                     this.$alert("no telepon/pelanggan masih kosong.", '', 'warning');
                 } else {
                     window.axios.post('/api/web/products/prepaid', params)
                         .then(response => {
+                            this.showModalBuyButton = true
                             result = response.data
                             if(result.status) {
-                                this.$alert(result.message, 'Pembelian Berhasil', 'success')
+                                this.$alert(result.message, 'Pembelian Berhasil', 'success').then(() => {
+                                    alert('dsfdsfdsfdsf')
+                                });
                             } else {
                                 this.$alert(result.message, 'Transaksi Tidak berhasil', 'error')
                             }
@@ -334,13 +339,21 @@
                         })
                 }
             },
-            onClickBuyButtonChangeBuyButton() {
-            },
             resetForm() {
                 this.selectedProduct = {}
                 this.showFormIsActive = false
                 this.customerNumber = ''
+                this.showModalBuyButton = true
             }
+        },
+        watch: {
+            customerNumber: function (val) {
+                if (this.customerNumber === '') {
+                    this.showModalBuyButton = false
+                } else {
+                    this.showModalBuyButton = true
+                }
+            },
         }
     }
 </script>

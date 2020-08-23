@@ -5,6 +5,8 @@ namespace App\Enums;
 
 
 use App\Transaction;
+use Illuminate\Support\Carbon;
+use Illuminate\Support\Str;
 
 class UniqueCode
 {
@@ -24,5 +26,14 @@ class UniqueCode
         } while(blank($transaction));
 
         return $randomValue;
+    }
+
+    public static function providerPanel()
+    {
+        $randomValue = rand(1, 999);
+        $result = md5(Carbon::now()->toDateTimeString() . ' ' . Str::random(16). ' ' . $randomValue);
+        $result = Str::limit($result, 50);
+
+        return $result;
     }
 }

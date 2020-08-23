@@ -92,7 +92,7 @@
                     </div>
                 </div>
 
-                <a class="navbar-item" href="{{ route('web.dashboard.kirim-uang.index') }}">
+                <a class="navbar-item" href="{{ route('web.dashboard.send-money.index') }}">
                     Kirim Uang
                 </a>
 

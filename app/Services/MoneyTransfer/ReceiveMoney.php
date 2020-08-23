@@ -1,10 +1,10 @@
 <?php
 
 
-namespace App\Services\Wallets;
+namespace App\Services\MoneyTransfer;
 
 
-class ReceiveMoney extends Wallet
+class ReceiveMoney extends MoneyTransfer
 {
     public function makeTransaction()
     {

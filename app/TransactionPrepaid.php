@@ -36,11 +36,7 @@ class TransactionPrepaid extends Model
 
     public function getStatusRawAttribute()
     {
-        try {
-            return PrepaidEnum::findStatus($this->status);
-        } catch (\Exception $e) {
-            throw new \Exception('Unknow Status');
-        }
+        return PrepaidEnum::findStatus($this->status);
     }
 
     public function getDateAttribute()

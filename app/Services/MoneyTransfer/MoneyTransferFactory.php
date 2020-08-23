@@ -2,7 +2,7 @@
 
 namespace App\Services\MoneyTransfer;
 
-class WalletFactory
+class MoneyTransferFactory
 {
     public static function make($user, $username, $amount, $message = '')
     {

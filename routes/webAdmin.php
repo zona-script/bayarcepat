@@ -10,6 +10,45 @@ Route::group(['as' => 'web.'], function () {
         Route::get('/', 'IndexController@index')->name('index');
 
         Route::group([
+            'as' => 'manage.',
+            'prefix' => 'manage',
+            'namespace' => 'Manage'
+        ], function () {
+            Route::resource('/user', 'UserController');
+            Route::resource('/bank', 'BankController');
+        });
+
+        Route::group([
+            'as' => 'social-media-marketing.',
+            'prefix' => 'social-media-marketing',
+            'namespace' => 'SocialMediaMarketing'
+        ], function () {
+            Route::resource('/', 'HomeController');
+            Route::resource('/provider-panel', 'ProviderPanelController');
+            Route::resource('/provider-panel-sync', 'ProviderPanelSyncController');
+        });
+        Route::group([
+            'as' => 'product.',
+            'prefix' => 'product',
+            'namespace' => 'product'
+        ], function () {
+        });
+
+        Route::group([
+            'as' => 'transaction.',
+            'prefix' => 'transaction',
+            'namespace' => 'transaction'
+        ], function () {
+        });
+
+        Route::group([
+            'as' => 'wallet.',
+            'prefix' => 'wallet',
+            'namespace' => 'wallet'
+        ], function () {
+        });
+
+        Route::group([
             'as' => 'saldo.',
             'prefix' => 'saldo',
             'namespace' => 'Saldo'

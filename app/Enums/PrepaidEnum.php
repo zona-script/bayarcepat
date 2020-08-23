@@ -250,17 +250,14 @@ class PrepaidEnum
 
     public static function findStatus($search = '1', $key = 'code')
     {
-        if ($key != 'code' || $key != 'message') {
-            throw new \Exception("key $key not found in status");
-        }
-
-        foreach (self::RESPONSE as $response) {
+//        foreach (self::RESPONSE as $response) {
+        foreach (self::STATUS as $response) {
             if ($response[$key] == $search) {
-                return $response;
+                return $response['message'];
             }
         }
 
-        return [];
+        return 'tidak diketahui [HARAP MENGHUBUNGI ADMIN]';
     }
 
     public static function isStatusEnum($searchRC, $searchStatus)

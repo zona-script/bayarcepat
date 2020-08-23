@@ -3,29 +3,29 @@
 @section('title', 'Bisnis Pembayaran dan Keuangan Dalam Satu Genggaman')
 
 @section('content')
-
-    <div class="hero is-medium is-fullheight-with-navbar is-primary hero-welcome">
+    <div class="hero is-fullheight-with-navbar is-primary">
         <div class="hero-body">
-            <div class="container has-text-centered">
-                <h1 class="title is-1">{{ config('app.name') }}</h1>
+            <div class="container">
                 <div class="columns">
-                    <div class="column is-8 is-offset-2 has-text-centered">
-                        <h2 class="subtitle is-4 is-uppercase">Dengan {{ config('app.name') }} cukup satu akun, dapat digunakan bertransaksi dengan ratusan server sekaligus</h2>
+                    <div class="column has-text-centered-touch">
+                        <h1 class="title is-1">{{ config('app.name') }}</h1>
+                        <h2 class="subtitle is-4 is-uppercase">Cukup satu akun, bisa bertransaksi dengan ratusan server sekaligus</h2>
+                        <p class="subtitle is-5 is-lower-alpha">Lupakan yang lama, pindah disini aja</p>
+                        <a href="{{ route('register') }}" class="button is-white is-rounded is-medium">Mulai Gabung</a>
                     </div>
-                </div>
-                <p class="subtitle is-5 is-lower-alpha">Lupakan cara lama, mulai cara baru</p>
-
-                <div class="has-text-centered">
-                    <a href="{{ route('register') }}" class="button is-white is-rounded is-medium">Mulai Berubah</a>
+                    <div class="column has-text-centered is-hidden-touch">
+                        <p>
+                            <img src="{{ asset('images/undraw_Mobile_pay_re_sjb8.svg')  }}" alt="BayarCepat Payments" style="width: 480px">
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="section hero-welcome-bottom">
+    <div class="section hero-welcome-bottom has-background-light">
         <div class="container">
             <div class="columns is-vcentered">
-                <div class="column is-5 is-hidden-desktop is-hidden-tablet has-text-centered">
+                <div class="column is-5 is-hidden-desktop is-hidden-touch has-text-centered">
                     <figure class="image is-5by4">
                         <img src="{{ asset('images/undraw_Savings_dwkw.svg') }}" alt="">
                     </figure>
@@ -34,11 +34,7 @@
                     <div>
                     <h3 class="title is-2 is-bold is-title-reveal has-text-primary">Apa itu {{ env('APP_NAME') }}?</h3>
                     </div>
-                    <p class="subtitle is-4">{{ env('APP_NAME') }} Adalah Marketplace Produk Digital, Distributor & Server Pulsa H2H Termurah dan Terlengkap yang menyediakan berbagai produk (Prabayar & Pascabayar).</p>
-{{--                    <p class="title is-4">BUKAN CUMA ITU</p>--}}
-{{--                    <p class="subtitle is-4">--}}
-{{--                        {{ env('APP_NAME') }} bisa digunakan untuk melakukan transfer uang antar member, dari paypal ke bank, dari saldo ke semua bank, dan menyediakan jasa rekening bersama.--}}
-{{--                    </p>--}}
+                    <p class="subtitle is-4">{{ env('APP_NAME') }} Adalah Marketplace Produk Digital, Social Media Marketing, Distributor & Server Pulsa H2H Termurah dan Terlengkap yang menyediakan berbagai produk (Prabayar & Pascabayar).</p>
                 </div>
                 <div class="column is-5 is-hidden-touch">
                     <figure class="image is-5by4">
@@ -202,12 +198,18 @@
 
     <div class="hero is-medium is-primary is-bold is-fullwidth">
         <div class="hero-body">
-            <div class="container has-text-centered">
-                <h3 class="title is-3 has-text-weight-bold">Jangan Sampai Kalah Dengan Toko Saingan</h3>
-                <p class="subtitle">Rezeki emang sudah di atur, tapi usaha tidak akan membohongi hasil. Gunakan {{ config('app.name') }} agar omset lebih meningkat</p>
-                <p>
-                    <a href="{{ route('register') }}" class="button is-white is-rounded is-medium is-animate-color-button">Daftar Sekarang</a>
-                </p>
+            <div class="columns">
+                <div class="column is-6 is-offset-3">
+                    <div class="box has-text-centered">
+                        <h3 class="title is-3 has-text-black">Jangan Sampai Kalah !!!</h3>
+                        <br>
+                        <p class="subtitle has-text-black-bis">Rezeki emang sudah di atur, tapi usaha tidak akan membohongi hasil. Gunakan {{ config('app.name') }} agar keuntungan lebih meningkat</p>
+                        <br>
+                        <p>
+                            <a href="{{ route('register') }}" class="button is-primary is-rounded is-medium">Daftar Sekarang</a>
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

@@ -20,56 +20,53 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1fc7cadf-dd8e-4988-95f3-5be001769a75" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Enums/Balance.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Enums/PrepaidEnum.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ApiWeb/Products/PostpaidController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ApiWeb/Products/PrepaidController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/Postpaid/PostpaidController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/Prepaid/PrepaidController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Services/BalanceTitle.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Services/Digiflazz/Buyer/DigiflazzBuyer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Services/Digiflazz/Buyer/DigiflazzConnection.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Services/RandomRefID.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Traits/DigiflazzTrait.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_02_17_165607_create_user_bank_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/app.old.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/postpaid/Index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/prepaid/Index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/postpaid/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/prepaid/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/commandlinetools/Laravel_8_8_20__11_44_PM.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/commandlinetools/schemas/frameworkDescriptionVersion1.1.4.xsd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Enums/TransactionWalletEnum.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Services/MoneyTransfer/MoneyTransfer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Services/MoneyTransfer/MoneyTransferFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Services/MoneyTransfer/ReceiveMoney.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Services/MoneyTransfer/SendMoney.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Services/Transactions/TransactionAbstract.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Services/Transactions/TransactionFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Services/Transactions/TransactionInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Services/Transactions/TransactionPrepaid.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/undraw_Mobile_pay_re_sjb8.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/undraw_payments_21w6.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/admin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/admin/manage/BankComponent.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/admin/manage/UserComponent.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/prepaid/history/Index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/sendmoney/IndexComponent.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/manage/bank/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/manage/user/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/social-media-marketing/provider-panel/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/social-media-marketing/provider-panel/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/social-media-marketing/provider-panel/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/social-media-marketing/provider-panel/show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/prepaid/history/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/send-money/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/social-media-marketing/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Bank.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Bank.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/BayarCepatPay.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Enums/RoleEnum.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Enums/RoleEnum.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ApiWeb/Market/HargaPascabayarController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ApiWeb/Market/HargaPrabayarController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Partners/Digiflazz/Digiflazz.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Digiflazz/Digiflazz.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Partners/Digiflazz/DigiflazzBuilder.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Digiflazz/DigiflazzBuilder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Partners/Digiflazz/DigiflazzEnum.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Digiflazz/DigiflazzEnum.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_02_15_145233_create_bayar_cepat_pays_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_02_15_145233_create_balances_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_02_17_075716_create_callback_response_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_02_17_075716_create_callback_response_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_02_17_165607_create_bank_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_02_17_165607_create_bank_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_02_21_155600_create_phone_book_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_07_29_082410_create_transaction_postpaid_checkbills_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_15_073512_create_contacts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_15_073512_create_contacts_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_28_135032_create_vouchers_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_28_135032_create_vouchers_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_28_135250_create_user_vouchers_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_28_135250_create_user_vouchers_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/BayarCepatPaySeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/BalanceSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/RolesSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/RolesSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/UsersSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/UsersSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/dashboard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Enums/PrepaidEnum.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Enums/PrepaidEnum.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Enums/UniqueCode.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Enums/UniqueCode.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/SendMoney/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/SendMoney/HomeControllerX.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/TransactionPrepaid.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/TransactionPrepaid.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/prepaid/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/prepaid/Index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/dashboard/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partials/notification.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/notification.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/apiWeb.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/apiWeb.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/webAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/webAdmin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/webDashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/webDashboard.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,12 +95,20 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+        <option value="JavaScript File" />
         <option value="Vue Single File Component" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/fatkulnurk/bayarcepat" />
+      </set>
+    </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -243,25 +248,26 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/images" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\app-project\bayarcepat\resources\js" />
-      <recent name="C:\app-project\bayarcepat\database\migrations" />
-      <recent name="C:\app-project\bayarcepat\resources\js\components" />
-      <recent name="C:\app-project\bayarcepat\resources\views\dashboard\prepaid" />
-      <recent name="C:\app-project\bayarcepat\resources\views\dashboard\postpaid" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\app-project\bayarcepat\resources\views\pages\price" />
       <recent name="C:\xampp\htdocs\bayarcepat\resources\views\mails" />
       <recent name="C:\xampp\htdocs\bayarcepat\storage\app\public" />
       <recent name="C:\xampp\htdocs\bayarcepat\storage\app" />
       <recent name="C:\xampp\htdocs\bayarcepat\resources\views\dashboard\saldo\deposit" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\app-project\bayarcepat\public\images" />
+      <recent name="C:\app-project\bayarcepat\resources\js\components\admin\manage" />
+      <recent name="C:\app-project\bayarcepat\resources\js" />
+      <recent name="C:\app-project\bayarcepat\database\migrations" />
+      <recent name="C:\app-project\bayarcepat\resources\js\components" />
     </key>
   </component>
   <component name="RestClientSettings">
@@ -348,6 +354,7 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -429,12 +436,25 @@
       <workItem from="1596025133722" duration="9865000" />
       <workItem from="1596074603751" duration="51111000" />
       <workItem from="1596334832001" duration="24908000" />
-      <workItem from="1596460442011" duration="3009000" />
+      <workItem from="1596460442011" duration="7366000" />
+      <workItem from="1596515401685" duration="637000" />
+      <workItem from="1596555465471" duration="4103000" />
+      <workItem from="1596598766355" duration="21000" />
+      <workItem from="1596600009151" duration="1389000" />
+      <workItem from="1596895551374" duration="93000" />
+      <workItem from="1596905027763" duration="8473000" />
+      <workItem from="1596984915599" duration="8315000" />
+      <workItem from="1597396430400" duration="30000" />
+      <workItem from="1597760674097" duration="1881000" />
+      <workItem from="1597764270018" duration="2391000" />
+      <workItem from="1597936452978" duration="175000" />
+      <workItem from="1598008807198" duration="17547000" />
+      <workItem from="1598201523779" duration="407000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -453,41 +473,45 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="4" key="#Plugins/0.0.1366.728@0.0.1366.728" timestamp="1596074639549" />
+    <state x="488" y="45" key="#com.intellij.ide.util.MemberChooser" timestamp="1596906012163">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="488" y="45" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1596906012163" />
     <state x="363" y="99" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1596073408950">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="363" y="99" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1366.728@0.0.1366.728" timestamp="1596073408950" />
-    <state x="184" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1596246098326">
+    <state x="184" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1597027464109">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="184" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1596246098326" />
+    <state x="184" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1597027464109" />
     <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1596120510112">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1596120510112" />
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1596381596699">
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1597026747462">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1596381596699" />
-    <state x="463" y="123" key="FileChooserDialogImpl" timestamp="1588085437504">
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1597026747462" />
+    <state x="463" y="123" key="FileChooserDialogImpl" timestamp="1597396458900">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="123" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1588085437504" />
-    <state x="486" y="86" key="NewPhpClassDialog" timestamp="1596266940602">
+    <state x="463" y="123" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1597396458900" />
+    <state x="486" y="86" key="NewPhpClassDialog" timestamp="1597027251556">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="486" y="86" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1596266940602" />
-    <state x="517" y="287" key="NewPhpFileDialog" timestamp="1596037087365">
+    <state x="486" y="86" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1597027251556" />
+    <state x="517" y="287" key="NewPhpFileDialog" timestamp="1598021377964">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="517" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1596037087365" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1596358956802">
+    <state x="517" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1598021377964" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1598020797908">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1596358956802" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1596132903744">
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1598020797908" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1596911750553">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1596132903744" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1596911750553" />
   </component>
 </project>

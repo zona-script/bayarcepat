@@ -26,34 +26,17 @@ use Illuminate\Http\Request;
 
 Route::group(['as' => 'api.'], function () {
 
-    Route::group(['as' => 'local.', 'prefix' => 'harga', 'namespace' => 'Api\Harga'], function () {
-        Route::get('/', 'HargaController@index');
-        Route::get('/pulsa', 'HargaController@pulsa');
-        Route::get('/pln', 'HargaController@pln');
-        Route::get('/voucher-game', 'HargaController@voucherGame');
-        Route::get('/internet', 'HargaController@internet');
-        Route::get('/ewallet', 'HargaController@ewallet');
-        Route::get('/sms-dan-telepon', 'HargaController@smsDanTelepon');
-        Route::get('/pulsa-transfer', 'HargaController@pulsaTransfer');
-        Route::get('/wifi', 'HargaController@wifi');
-        Route::get('/gift-card', 'HargaController@giftCard');
-    });
-    Route::group(['as' => 'info.', 'prefix' => 'info', 'namespace' => 'Api\Info'], function () {
-//        Route::get('/', function () {
-//
-//        });
-        Route::get('/balance', 'BalanceController');
-    });
-    Route::group(['as' => 'local.', 'prefix' => 'local', 'namespace' => 'Api\Local'], function () {
-        Route::get('/', 'ApiController@index');
+    Route::group(['as' => 'users.', 'prefix' => 'users', 'namespace' => 'Api\Users'], function () {
+        Route::get('/username', 'UsernameController@index');
     });
 
-    Route::group(['prefix' => 'market', 'as' => 'market.', 'namespace' => 'ApiWeb\Market'], function () {
-        Route::group(['prefix' => 'prabayar'], function () {
-            Route::get('/', 'HargaPrabayarController@index');
-        });
-        Route::group(['prefix' => 'pascabayar'], function () {
-            Route::get('/', 'HargaPrabayarController@index');
-        });
+    Route::resource('send-money', 'SendMoney/HomeController');
+
+    Route::group(['as' => 'info.', 'prefix' => 'info', 'namespace' => 'Api\Info'], function () {
+        Route::get('/balance', 'BalanceController');
+    });
+
+    Route::group(['as' => 'local.', 'prefix' => 'local', 'namespace' => 'Api\Local'], function () {
+        Route::get('/', 'ApiController@index');
     });
 });

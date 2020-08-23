@@ -1,20 +1,17 @@
-/**
- * First we will load all of this project's JavaScript dependencies which
- * includes Vue and other libraries. It is a great starting point when
- * building robust, powerful web applications using Vue and Laravel.
- */
-
 require('./bootstrap');
 
 window.Vue = require('vue');
 
-/**
- * The following block of code may be used to automatically register your
- * Vue components. It will recursively scan this directory for the Vue
- * components and automatically register them with their "basename".
- *
- * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
- */
+import VueGoodTablePlugin from 'vue-good-table';
+import 'vue-good-table/dist/vue-good-table.css'
+import { VueGoodTable } from 'vue-good-table';
+import VueSimpleAlert from "vue-simple-alert";
+import Vue from 'vue'
+import vSelect from 'vue-select'
+
+Vue.use(VueGoodTablePlugin);
+Vue.use(VueSimpleAlert);
+
 Vue.component('money-send-money', require('./components/money/SendMoneyComponent').default);
 Vue.component('phonebook-list', require('./components/phonebook/list').default);
 Vue.component('phonebook-add', require('./components/phonebook/add').default);
@@ -22,25 +19,12 @@ Vue.component('phonebook-add', require('./components/phonebook/add').default);
 Vue.component('pages-product', require('./components/pages/ProductComponent').default);
 Vue.component('price-market-pricing', require('./components/price/MarketPricingComponent').default);
 
-import VueGoodTablePlugin from 'vue-good-table';
-// import the styles
-import 'vue-good-table/dist/vue-good-table.css'
-Vue.use(VueGoodTablePlugin);
-import { VueGoodTable } from 'vue-good-table';
-
-import VueSimpleAlert from "vue-simple-alert";
-Vue.use(VueSimpleAlert);
-
 // add to component
 Vue.component('vue-good-table', VueGoodTable)
 Vue.component('prepaid-index', require('./components/prepaid/Index').default);
+Vue.component('prepaid-history-index', require('./components/prepaid/history/Index').default);
 Vue.component('postpaid-index', require('./components/postpaid/Index').default);
-
-
-import Vue from 'vue'
-import vSelect from 'vue-select'
-// import VueSweetalert2 from 'vue-sweetalert2';
-// Vue.use(VueSweetalert2);
+Vue.component('send-money-index', require('./components/sendmoney/IndexComponent').default);
 
 Vue.component('v-select', vSelect);
 

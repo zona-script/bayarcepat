@@ -34,20 +34,24 @@ export default {
         return {
             columns: [
                 {
-                    label: 'Bank',
-                    field: 'bank_name',
+                    label: 'ID',
+                    field: 'id',
                 },
                 {
-                    label: 'Tipe',
-                    field: 'type',
+                    label: 'Nama',
+                    field: 'name',
                 },
                 {
-                    label: 'Nama Akun',
-                    field: 'bank_account_name',
+                    label: 'Email',
+                    field: 'email',
                 },
                 {
-                    label: 'Nomor Akun',
-                    field: 'bank_account_number',
+                    label: 'Username',
+                    field: 'username',
+                },
+                {
+                    label: 'Verified',
+                    field: 'verified',
                 },
                 {
                     label: 'Action',

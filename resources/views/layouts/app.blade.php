@@ -42,9 +42,30 @@
 
         <div id="navbarBasicExample" class="navbar-menu">
             <div class="navbar-end has-text-left">
-                <a class="navbar-item" href="{{ route('web.pages.produk.index') }}">
-                    Produk & Harga
-                </a>
+{{--                <a class="navbar-item" href="{{ route('web.pages.produk.index') }}">--}}
+{{--                    Produk & Harga--}}
+{{--                </a>--}}
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        Produk & Layanan
+                    </a>
+
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item">
+                            Produk Prabayar (Prepaid)
+                        </a>
+                        <a class="navbar-item">
+                            Produk Pascabayar (Postpaid)
+                        </a>
+                        <a class="navbar-item">
+                            Produk Social Media & Marketing
+                        </a>
+                        <hr class="navbar-divider">
+                        <a class="navbar-item">
+                            Report an issue
+                        </a>
+                    </div>
+                </div>
                 <a class="navbar-item" href="{{ route('web.pages.membership') }}">
                     Membership
                 </a>
@@ -96,34 +117,74 @@
                 <p class="footer-text">
                     kami adalah Marketplace Distributor H2H produk digital dan non digital. Anda bisa membeli produk, kirim uang antar bank, kirim uang dari paypal, dan masih banyak lagi.
                 </p>
-{{--                <div class="socials">--}}
-{{--                    <a><i class="fab fa-instagram"></i></a>--}}
-{{--                    <a><i class="fab fa-facebook"></i></a>--}}
-{{--                    <a><i class="fab fa-pinterest"></i></a>--}}
-{{--                    <a><i class="fab fa-medium"></i></a>--}}
-{{--                </div>--}}
+                <div class="socials">
+                    <a><i class="fab fa-instagram"></i></a>
+                    <a><i class="fab fa-facebook"></i></a>
+                    <a><i class="fab fa-pinterest"></i></a>
+                    <a><i class="fab fa-medium"></i></a>
+                </div>
             </div>
-            <div class="column is-2">
+            <div class="column is-3">
+                <h4 class="title is-5 has-text-weight-bold has-text-white">Produk & Layanan</h4>
                 <ul class="footer-menu">
-                    <li><a href="{{ route('web.pages.produk.index') }}">Produk & Harga</a></li>
-                    <li><a href="https://www.facebook.com/groups/515510122483803/">Komunitas</a></li>
-{{--                    <li><a href="#">Server Pulsa H2H</a></li>--}}
-                    <li><a href="{{ route('web.pages.payment-method') }}">Metode Pembayaran</a></li>
+                    <li><a href="#">Produk Prepaid (Prabayar)</a></li>
+                    <li><a href="#">Produk Postpaid (Pascabayar)</a></li>
+                    <li><a href="#">Produk Social Media & Marketing</a></li>
                     <li><a href="#">Dokumentasi Api</a></li>
                 </ul>
             </div>
-            <div class="column is-2">
+            <div class="column is-3">
+                <h4 class="title is-5 has-text-weight-bold has-text-white">Tentang Kami</h4>
                 <ul class="footer-menu">
                     <li><a href="{{ route('web.pages.tentang-kami') }}">Tentang Kami</a></li>
                     <li><a href="{{ route('web.pages.hubungi-kami') }}">Hubungi Kami</a></li>
                     <li><a href="{{ route('web.pages.syarat-dan-ketentuan') }}">Syarat dan Ketentuan</a></li>
                     <li><a href="{{ route('web.pages.policy-privacy') }}">Kebijakan Privasi</a></li>
+                    <li><a href="https://www.facebook.com/groups/515510122483803/">Komunitas</a></li>
+                    <li><a href="{{ route('web.pages.payment-method') }}">Metode Pembayaran</a></li>
                 </ul>
             </div>
-            <div class="column is-4">
+            <div class="column is-2">
                 <h4 class="title is-5 has-text-weight-bold has-text-white">Unduh Aplikasi</h4>
                 <div class="columns">
                     <div class="column"><p class="has-text-white">Masih dalam proses pembuatan</p></div>
+                </div>
+            </div>
+        </div>
+        <div class="columns">
+            <div class="column is-6">
+                <div class="container has-text-left has-text-white">
+                    <p>PERINGATAN !!!</p>
+                    <p>
+                        HATI HATI PENIPUAN YANG MENGATASNAMAKAN {{ config('app.name') }}
+                        <br>
+                        <u>
+                            Kami bukan aplikasi untuk peminjaman uang online, bukan aplikasi jasa cicilan, bukan aplikasi investasi, bukan aplikasi p2p lending, bukan aplikasi urun dana, bukan aplikasi kredit online.
+                        </u>
+                    </p>
+                </div>
+            </div>
+            <div class="column is-6">
+                <div class="container has-text-left has-text-white">
+                    <p>HUBUNGI KAMI</p>
+                    <p>
+                        <span class="icon has-text-white">
+  <i class="fas fa-map-marker-alt"></i>
+</span>
+                        <span>jl. gebang wetan no.23B Gebang Putih, Sukolilo, Surabaya (60117).</span>
+                    </p>
+                    <p>
+                        <span class="icon has-text-white">
+  <i class="fas fa-phone"></i>
+</span>
+                        <span>+62856xxxxxxxx</span>
+                    </p>
+                    <p>
+                        <span class="icon has-text-white">
+  <i class="fas fa-envelope"></i>
+</span>
+                        <span>bayarcepat@dibumi.com</span>
+                    </p>
                 </div>
             </div>
         </div>
@@ -132,17 +193,6 @@
             <p>
                 &copy; 2020 {{ config('app.name') }}
             </p>
-            <p>
-                HATI HATI PENIPUAN YANG MENGATASNAMAKAN {{ config('app.name') }}
-                <br>
-                <span class="has-text-weight-bold">PENDAFTARAN MEMBER DI WEBSITE INI ADALAH GRATIS, JANGAN PERCAYA JIKA DISURUH MEMBAYAR</span>
-                <br>
-                <u>
-                    Kami bukan aplikasi untuk peminjaman uang online, bukan aplikasi jasa cicilan, bukan aplikasi investasi, bukan aplikasi p2p lending, bukan aplikasi urun dana, bukan aplikasi kredit online.
-                </u>
-                <br>
-                Kami tidak berafiliasi dengan website manapun kecuali dengan www.dibumi.com</p>
-            <p>Server by AlibabaCloud</p>
         </div>
     </div>
 </footer>

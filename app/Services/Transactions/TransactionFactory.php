@@ -2,14 +2,26 @@
 
 namespace App\Services\Transactions;
 
-class Transaction
+use App\User;
+
+class TransactionFactory
 {
-    public function createPrepaid($user)
+    public function createPrepaid($user, $productCode, $customerNumber)
     {
 
     }
 
-    public function createPrepaid($user)
+    public function createPostpaid($user, $productCode, $customerNumber, $phoneNumber = '')
+    {
+
+    }
+
+    public function checkPostpaidBill($user, $buyerSkucode, $customerNumber)
+    {
+
+    }
+
+    public function createSMM($user, $productCode, $customerNumber)
     {
 
     }
