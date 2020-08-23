@@ -10,7 +10,7 @@ use App\Transaction;
 use App\User;
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class HomeControllerX extends Controller
 {
     public function index()
     {
