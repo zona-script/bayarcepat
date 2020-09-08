@@ -33,7 +33,7 @@
 {{--            </div>--}}
         </div>
         <div class="column has-content-vspaced has-padding-large has-background-white">
-            <div>
+            <div class="field">
                 <p class="title has-text-centered has-text-weight-light">
                     Buat Akun
                 </p>
@@ -42,90 +42,94 @@
                 </p>
             </div>
 
-            <div class="notification is-danger">
-                JANGAN MENDAFTAR DULU, KAMI BELUM BUKA. DATA ANDA AKAN DI HAUS SETIAP 24 JAM.
+            <div class="field">
+                <div class="notification is-danger">
+                    Terima kasih atas minat anda, sayangnya saat ini pendaftaran sedang di tutup. Karena terlalu banyak yang ingin bergabung, sehingga kemampuan server kami masih belum mencukupi, saat ini kami sedang melakukan upgrade server, member yang sudah terdaftar masih dapat bertransaksi secara normal.
+                </div>
             </div>
 
             <div class="columns is-mobile is-centered">
                 <div class="column is-10-mobile is-8-fullhd">
-                    <form class="" method="post" action="">
-                        @csrf
+{{--                    <form class="" method="post" action="">--}}
+{{--                        @csrf--}}
                         <div class="section is-paddingless-horizontal is-paddingless-top">
-                            <div class="field">
-                                <label class="label">Nama Lengkap</label>
-                                <div class="control">
-                                    <input name="name" type="text" class="input @error('name') is-danger @enderror" value="{{ old('name') }}" required>
-                                </div>
+{{--                            <div class="field">--}}
+{{--                                <label class="label">Nama Lengkap</label>--}}
+{{--                                <div class="control">--}}
+{{--                                    <input name="name" type="text" class="input @error('name') is-danger @enderror" value="{{ old('name') }}" placeholder="Nama Lengkap" required>--}}
+{{--                                </div>--}}
 
-                                @error('name')
-                                <p class="has-text-danger" role="alert">
-                                    <span>{{ $message }}</span>
-                                </p>
-                                @enderror
-                            </div>
-                            <div class="field">
-                                <label class="label">Username</label>
-                                <div class="control">
-                                    <input name="username" type="text" class="input @error('username') is-danger @enderror" value="{{ old('username') }}" required>
-                                </div>
-                                @error('username')
-                                <p class="has-text-danger" role="alert">
-                                    <span>{{ $message }}</span>
-                                </p>
-                                @enderror
-                            </div>
+{{--                                @error('name')--}}
+{{--                                <p class="has-text-danger" role="alert">--}}
+{{--                                    <span>{{ $message }}</span>--}}
+{{--                                </p>--}}
+{{--                                @enderror--}}
+{{--                            </div>--}}
+{{--                            <div class="field">--}}
+{{--                                <label class="label">Username</label>--}}
+{{--                                <div class="control">--}}
+{{--                                    <input name="username" type="text" class="input @error('username') is-danger @enderror" value="{{ old('username') }}" placeholder="Username (tanpa spasi)" required>--}}
+{{--                                </div>--}}
+{{--                                @error('username')--}}
+{{--                                <p class="has-text-danger" role="alert">--}}
+{{--                                    <span>{{ $message }}</span>--}}
+{{--                                </p>--}}
+{{--                                @enderror--}}
+{{--                            </div>--}}
+
+{{--                            <div class="field">--}}
+{{--                                <label class="label">Alamat Email</label>--}}
+{{--                                <div class="control">--}}
+{{--                                    <input name="email" type="email" class="input @error('email') is-danger @enderror" value="{{ old('email') }}" placeholder="alamat email" required>--}}
+{{--                                </div>--}}
+{{--                                @error('email')--}}
+{{--                                <p class="has-text-danger" role="alert">--}}
+{{--                                    <span>{{ $message }}</span>--}}
+{{--                                </p>--}}
+{{--                                @enderror--}}
+{{--                            </div>--}}
+
+{{--                            <div class="field">--}}
+{{--                                <label class="label">Kata Sandi</label>--}}
+{{--                                <input name="password" type="password" class="input @error('password') is-danger @enderror" value="{{ old('password') }}" placeholder="Kata Sandi" required>--}}
+{{--                                @error('password')--}}
+{{--                                <p class="has-text-danger" role="alert">--}}
+{{--                                    <span>{{ $message }}</span>--}}
+{{--                                </p>--}}
+{{--                                @enderror--}}
+{{--                            </div>--}}
+
+{{--                            <div class="field">--}}
+{{--                                <label class="label">Ulangi Kata Sandi</label>--}}
+{{--                                <input name="password_confirmation" type="password" class="input @error('password_confirmation') is-danger @enderror" value="{{ old('password_confirmation') }}" placeholder="Ulangi Kata Sandi" required>--}}
+{{--                                @error('password_confirmation')--}}
+{{--                                <p class="has-text-danger" role="alert">--}}
+{{--                                    <span>{{ $message }}</span>--}}
+{{--                                </p>--}}
+{{--                                @enderror--}}
+{{--                            </div>--}}
+
+{{--                            <div class="field">--}}
+{{--                                <label class="checkbox">--}}
+{{--                                    Anda mendaftar berarti anda setuju dengan semua <a href="{{ route('web.pages.syarat-dan-ketentuan') }}">syarat dan ketentuan</a>.--}}
+{{--                                </label>--}}
+{{--                            </div>--}}
+
+{{--                            <div class="field">--}}
+{{--                                <button class="button is-primary is-fullwidth">Buat Akun</button>--}}
+{{--                            </div>--}}
 
                             <div class="field">
-                                <label class="label">Email address</label>
-                                <div class="control">
-                                    <input name="email" type="email" class="input @error('email') is-danger @enderror" value="{{ old('email') }}" required>
-                                </div>
-                                @error('email')
-                                <p class="has-text-danger" role="alert">
-                                    <span>{{ $message }}</span>
+                                <p class="has-text-centered has-text-grey">
+                                    Sudah punya akun? <a href="{{ route('login') }}">Masuk ke Akun</a>
                                 </p>
-                                @enderror
                             </div>
 
-                            <div class="field">
-                                <label class="label">Password</label>
-                                <input name="password" type="password" class="input @error('password') is-danger @enderror" value="{{ old('password') }}" required>
-                                @error('password')
-                                <p class="has-text-danger" role="alert">
-                                    <span>{{ $message }}</span>
-                                </p>
-                                @enderror
-                            </div>
-
-                            <div class="field">
-                                <label class="label">Confirm Password</label>
-                                <input name="password_confirmation" type="password" class="input @error('password_confirmation') is-danger @enderror" value="{{ old('password_confirmation') }}" required>
-                                @error('password_confirmation')
-                                <p class="has-text-danger" role="alert">
-                                    <span>{{ $message }}</span>
-                                </p>
-                                @enderror
-                            </div>
-
-                            <div class="field">
-                                <div class="control">
-                                    <label class="checkbox">
-                                        Anda mendaftar berarti anda setuju dengan semua <a href="{{ route('web.pages.syarat-dan-ketentuan') }}">syarat dan ketentuan</a>.
-                                    </label>
-                                </div>
-                            </div>
                         </div>
 
-                        <div class="field is-grouped">
-                            <button class="button is-primary is-fullwidth">Buat Akun</button>
-                        </div>
-                    </form>
+{{--                    </form>--}}
                 </div>
             </div>
-
-            <p class="has-text-centered has-text-grey">
-                Sudah punya akun? <a href="{{ route('login') }}">Masuk</a>
-            </p>
         </div>
     </div>
 
