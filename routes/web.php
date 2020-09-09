@@ -10,11 +10,21 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+//
+//Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+//    return view('dashboard');
+//})->name('dashboard');
 
 Route::group(['as' => 'web.'], function () {
     Route::get('/', 'WelcomeController@index')->name('index');
 
     Route::group(['prefix' => 'pages', 'as' => 'pages.', 'namespace' => 'Pages'], function () {
+
+        Route::group(['prefix' => 'products', 'as' => 'products.', 'namespace' => 'Products'], function () {
+            Route::get('/prepaid', 'PrepaidController')->name('prepaid');
+            Route::get('/postpaid', 'PostpaidController')->name('postpaid');
+            Route::get('/social-media-marketing', 'SMMController')->name('smm');
+        });
 
         Route::group(['prefix' => 'produk', 'as' => 'produk.', 'namespace' => 'Produk'], function () {
             Route::get('/', 'HomeController@product')->name('index');

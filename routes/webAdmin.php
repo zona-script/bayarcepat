@@ -23,7 +23,7 @@ Route::group(['as' => 'web.'], function () {
             'prefix' => 'social-media-marketing',
             'namespace' => 'SocialMediaMarketing'
         ], function () {
-            Route::resource('/', 'HomeController');
+            Route::resource('/home', 'HomeController');
             Route::resource('/provider-panel', 'ProviderPanelController');
             Route::resource('/provider-panel-sync', 'ProviderPanelSyncController');
         });

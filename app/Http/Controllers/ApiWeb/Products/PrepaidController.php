@@ -95,7 +95,7 @@ class PrepaidController extends Controller
             'user_id' => Auth::id(),
             'type' => Balance::OUT,
             'amount' => $product['price'],
-            'title' => \App\Services\BalanceTitle::TRANSACTION_PREPAID,
+            'title' => \App\Enums\BalanceTitle::TRANSACTION_PREPAID,
             'trx_id' => $transactionPrepaid->id,
             'previous_balance' => (Auth::user()->balance - $product['price'])
         ]);
@@ -109,7 +109,7 @@ class PrepaidController extends Controller
                 'user_id' => Auth::id(),
                 'type' => Balance::OUT,
                 'amount' => $product['price'],
-                'title' => \App\Services\BalanceTitle::TRANSACTION_REFUND_PREPAID,
+                'title' => \App\Enums\BalanceTitle::TRANSACTION_REFUND_PREPAID,
                 'trx_id' => $transactionPrepaid->id,
                 'previous_balance' => (Auth::user()->balance + $product['price'])
             ]);

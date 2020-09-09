@@ -15,7 +15,7 @@
     </section>
     <div class="section">
         <div class="container">
-            <prepaid-index></prepaid-index>
+            <dashboard-prepaid-index></dashboard-prepaid-index>
         </div>
         </div>
     </div>

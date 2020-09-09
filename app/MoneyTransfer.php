@@ -11,9 +11,10 @@ class MoneyTransfer extends Model
         'id',
         'sender_user_id',
         'received_user_id',
-        'type',
         'amount',
         'message',
+        'message_from_server',
+        'status'
     ];
 
     public function sender()

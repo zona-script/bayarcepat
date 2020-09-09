@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Services\Digiflazz\Buyer\DigiflazzBuyer;
+use Carbon\Carbon;
 use DebugBar\DebugBar;
 use Illuminate\Support\ServiceProvider;
 
@@ -27,7 +28,12 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        \Debugbar::disable();
+
+        config(['app.locale' => 'id']);
+        Carbon::setLocale('id');
+        date_default_timezone_set('Asia/Jakarta');
+
+//        \Debugbar::disable();
         //
     }
 }

@@ -28,6 +28,6 @@ class TransactionMail extends Mailable
      */
     public function build()
     {
-        return $this->view('mails.invoice.transaction');
+        return $this->subject('aaaaaaaaaaaaaaaaaaaa')->view('mails.invoice.transaction');
     }
 }

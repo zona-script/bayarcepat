@@ -13,6 +13,7 @@ class TransactionWallet extends Model
     protected $fillable = [
         'user_id',
         'bank',
+        'user_bank',
         'unique_code',
         'amount',
         'total_amount',
@@ -23,6 +24,7 @@ class TransactionWallet extends Model
     ];
 
     protected $casts = [
-        'bank' => 'array'
+        'bank' => 'array',
+        'user_bank' => 'array',
     ];
 }

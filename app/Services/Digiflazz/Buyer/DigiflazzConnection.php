@@ -1,11 +1,13 @@
 <?php
 namespace App\Services\Digiflazz\Buyer;
 
+use App\Traits\StorageServicesTrait;
 use GuzzleHttp\Client;
 use Illuminate\Support\Arr;
 
 class DigiflazzConnection
 {
+    use StorageServicesTrait;
     protected $apiKey;
     protected $username;
     protected $sign='';
@@ -74,7 +76,15 @@ class DigiflazzConnection
             $jsonBody = Arr::add($jsonBody, 'code', $code);
         }
 
-        return $this->request('https://api.digiflazz.com/v1/price-list', $jsonBody);
+        $data = $this->request('https://api.digiflazz.com/v1/price-list', $jsonBody);
+
+        $pathName = 'digiflazz-' . $cmd . '.json';
+        if ($this->existJson($pathName)) {
+            return $this->readJson($pathName);
+        }
+        $this->saveJson($pathName, $data);
+
+        return $data;
     }
 
     public function createDeposit($amount = '', $bank = 'MANDIRI', $ownerName)

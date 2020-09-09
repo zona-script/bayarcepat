@@ -20,6 +20,8 @@
     <meta property="business:contact_data:phone_number" content="+6285607100255" />
     <meta property="business:contact_data:website" content="https://bayarcepat.com" />
 
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
     <!--Core CSS -->
 {{--    <link rel="stylesheet" href="{{ asset('css/app.css') }}">--}}
     <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
@@ -59,58 +61,72 @@
                 </a>
 
                 <div class="navbar-item has-dropdown is-hoverable">
-                    <a class="navbar-item">
-                        <span class="has-text-black">Marketplace</span>
+                    <a class="navbar-link">
+                        <span class="has-text-black">Pembelian & Transaksi</span>
                     </a>
                     <div class="navbar-dropdown">
                         <a href="{{ route('web.dashboard.prepaid.index') }}" class="navbar-item">
-                            Prepaid
+                            <span class="icon"><i class="fas fa-mobile-alt"></i></span>
+                            <span>Order Prepaid</span>
                         </a>
-                        <a class="navbar-item">
-                            Postpaid
+                        <a href="{{ route('web.dashboard.prepaid.history') }}" class="navbar-item">
+                            <span class="icon"><i class="fas fa-history"></i></span>
+                            <span>Riwayat Transaksi Prepaid</span>
                         </a>
-                        <a class="navbar-item">
-                            SMM Panel
+                        <a href="{{ route('web.dashboard.postpaid.index') }}" class="navbar-item">
+                            <span class="icon"><i class="fas fa-broadcast-tower"></i></span>
+                            <span>Order Postpaid</span>
+                        </a>
+                        <a href="{{ route('web.dashboard.postpaid.history') }}" class="navbar-item">
+                            <span class="icon"><i class="fas fa-history"></i></span>
+                            <span>Riwayat Transaksi Postpaid</span>
+                        </a>
+                        <a href="{{ route('web.dashboard.social-media-marketing.index') }}" class="navbar-item">
+                            <span class="icon"><i class="fas fa-hashtag"></i></span>
+                            <span>Order SMM Panel</span>
+                        </a>
+                        <a href="{{ route('web.dashboard.social-media-marketing.history') }}" class="navbar-item">
+                            <span class="icon"><i class="fas fa-history"></i></span>
+                            <span>Riwayat Transaksi SMM Panel</span>
                         </a>
                     </div>
                 </div>
 
                 <div class="navbar-item has-dropdown is-hoverable">
                     <a class="navbar-link">
-                        <span class="has-text-black">Riwayat</span>
+                        <span class="has-text-black">Keuangan</span>
                     </a>
                     <div class="navbar-dropdown">
-                        <a href="{{ route('web.dashboard.prepaid.index') }}" class="navbar-item">
-                            Transaksi Prepaid
+                        <a href="{{ route('web.dashboard.send-money.index') }}" class="navbar-item">
+                            <span class="icon"><i class="fas fa-paper-plane"></i></span>
+                            <span>Kirim Uang</span>
                         </a>
-                        <a class="navbar-item">
-                            Transaksi Postpaid
+                        <a href="{{ route('web.dashboard.send-money.index') }}" class="navbar-item">
+                            <span class="icon"><i class="fas fa-history"></i></span>
+                            <span>Riwayat Pengiriman</span>
                         </a>
-                        <a class="navbar-item">
-                            Transaksi SMM Panel
+                        <a href="{{ route('web.dashboard.balance.deposit.index') }}" class="navbar-item">
+                            <span class="icon"><i class="fas fa-money-bill"></i></span>
+                            <span>Deposit Uang</span>
+                        </a>
+                        <a href="{{ route('web.dashboard.balance.deposit.index') }}" class="navbar-item">
+                            <span class="icon"><i class="fas fa-coins"></i></span>
+                            <span>Penarikan Uang</span>
+                        </a>
+                        <a href="#" class="navbar-item">
+                            <span class="icon"><i class="fas fa-hashtag"></i></span>
+                            <span>Riwayat Deposit & Penarikan</span>
+                        </a>
+                        <a href="#" class="navbar-item">
+                            <span class="icon"><i class="fas fa-credit-card"></i></span>
+                            <span>Rekening Bank</span>
                         </a>
                     </div>
                 </div>
 
-                <a class="navbar-item" href="{{ route('web.dashboard.send-money.index') }}">
-                    Kirim Uang
-                </a>
-
-                <a class="navbar-item" href="{{ route('web.dashboard.riwayat.index') }}">
-                    Laporan
-                </a>
-
-{{--                <a class="navbar-item" href="{{ route('web.dashboard.api.index') }}">--}}
-{{--                    Api--}}
-{{--                </a>--}}
-
-                <a class="navbar-item" href="{{ route('web.dashboard.pengaturan.index') }}">
-                    Pengaturan
-                </a>
-
                 <div class="navbar-item has-dropdown is-hoverable">
                     <a class="navbar-link">
-                        Profile
+                        Pengaturan
                     </a>
 
                     <div class="navbar-dropdown">
@@ -119,10 +135,20 @@
                         </a>
                         <hr class="navbar-divider">
                         <a href="{{ route('web.dashboard.profile.index') }}" class="navbar-item">
-                            Profile
+                            <span class="icon"><i class="fas fa-user-alt"></i></span>
+                            <span>Profile</span>
+                        </a>
+                        <a class="navbar-item" href="{{ route('web.dashboard.pengaturan.index') }}">
+                            <span class="icon"><i class="fas fa-store-alt"></i></span>
+                            <span>Data Toko</span>
+                        </a>
+                        <a class="navbar-item" href="{{ route('web.dashboard.api.index') }}">
+                            <span class="icon"><i class="fas fa-code"></i></span>
+                            <span>Developer Api</span>
                         </a>
                         <a class="navbar-item">
-                            Logout
+        <span class="icon"><i class="fas fa-sign-out-alt"></i></span>
+                            <span>Logout</span>
                         </a>
                     </div>
                 </div>

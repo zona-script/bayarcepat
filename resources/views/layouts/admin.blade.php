@@ -86,8 +86,8 @@
                         <a class="navbar-item">
                             Kelola Panel Provider
                         </a>
-                        <a class="navbar-item">
-                            Kelola Panel Produk
+                        <a href="{{ route('web.admin.social-media-marketing.home.index') }}" class="navbar-item">
+                            Kelola SMM
                         </a>
                     </div>
                 </div>

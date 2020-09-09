@@ -2,10 +2,11 @@
 namespace App\Services\Digiflazz\Buyer;
 
 use App\Enums\PriceEnum;
+use App\Services\Digiflazz\DigiflazzInterface;
 use App\Traits\DigiflazzTrait;
 use Illuminate\Support\Str;
 
-class DigiflazzBuyer {
+class DigiflazzBuyer implements DigiflazzInterface {
     public $connection;
     // raw result after request
     private $realData;

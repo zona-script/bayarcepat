@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Dashboard\SendMoney;
+namespace App\Http\Controllers\Dashboard\SendMoneyY;
 
 use App\Builders\BayarCepatBuilder;
 use App\Builders\BayarCepatPayBuilder;

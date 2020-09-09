@@ -15,7 +15,7 @@
     </section>
     <div class="section">
         <div class="container">
-            <postpaid-index></postpaid-index>
+            <dashboard-postpaid-index></dashboard-postpaid-index>
         </div>
     </div>
     </div>

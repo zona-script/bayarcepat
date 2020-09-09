@@ -1,9 +1,15 @@
 <?php
 
-namespace App\Http\Controllers\Dashboard\Sendmoney;
+namespace App\Http\Controllers\Dashboard\SendMoney;
 
 use App\Http\Controllers\Controller;
+use App\MoneyTransfer;
+use App\Services\MoneyTransfer\MoneyTransferFactory;
+use App\Services\MoneyTransfer\SendMoney;
+use App\Services\TransactionWallet\TransactionWalletFactory;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Validator;
 
 class HomeController extends Controller
 {
@@ -31,11 +37,48 @@ class HomeController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return array
      */
     public function store(Request $request)
     {
-        //
+        $resultValidator = Validator::make($request->all(), [
+            'username' => 'required|string|max:150',
+            'amount' => 'required|integer|min:1',
+            'message' => 'nullable|string',
+        ]);
+
+        if ($resultValidator->fails()) {
+            return [
+                'status' => false,
+                'message' => 'Gagal melakukan pengiriman uang',
+                'data' => $request->all()
+            ];
+        }
+
+        $user = Auth::user();
+        $username = $request->username;
+        $amount = (integer) $request->amount;
+
+        if ($user->balance >= $amount) {
+            $moneyTransfer = MoneyTransferFactory::make(
+                $user,
+                $username,
+                $amount,
+                $request->message
+            );
+
+            return [
+                'status' => $moneyTransfer['status'],
+                'message' => $moneyTransfer['message'],
+                'data' => $moneyTransfer['data']
+            ];
+        }
+
+        return [
+            'status' => false,
+            'message' => 'Saldo tidak mencukupi',
+            'data' => $request->all()
+        ];
     }
 
     /**
