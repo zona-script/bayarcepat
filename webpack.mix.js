@@ -11,9 +11,8 @@ const mix = require('laravel-mix');
  |
  */
 
-// mix.js('node_modules/@creativebulma/bulma-collapsible/dist/js/bulma-collapsible.min.js', 'public/js');
-mix.js('resources/js/app.js', 'public/js')
-    .js('resources/js/admin.js', 'public/js')
-   .sass('resources/sass/app.scss', 'public/css')
-   .sass('resources/sass/dashboard.scss', 'public/css');
-// mix.browserSync('127.0.0.1:8000');
+mix.js('resources/js/app.js', 'public/js').postCss('resources/css/app.css', 'public/css', [
+    require('postcss-import'),
+    require('tailwindcss'),
+]).sass('resources/sass/app.scss', 'public/sass')
+.sass('resources/sass/dashboard.scss', 'public/css');

@@ -52,8 +52,8 @@ Vue.use(VueSimpleAlert);
 
 // add to component
 Vue.component('vue-good-table', VueGoodTable)
-Vue.component('prepaid-index', require('./components/prepaid/Index').default);
-Vue.component('postpaid-index', require('./components/postpaid/Index').default);
+Vue.component('prepaid-index', require('./components/dashboard/prepaid/Index').default);
+Vue.component('postpaid-index', require('./components/dashboard/postpaid/Index').default);
 
 
 // check bill

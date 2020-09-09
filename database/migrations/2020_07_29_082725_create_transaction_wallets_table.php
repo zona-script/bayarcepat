@@ -23,7 +23,8 @@ class CreateTransactionWalletsTable extends Migration
                 ->on('users');
 
             // record dari bank
-            $table->json('bank');
+            $table->json('bank')->nullable();
+            $table->json('user_bank')->nullable();
             $table->unsignedBigInteger('unique_code')->nullable(); // only for deposit
             $table->unsignedBigInteger('amount');
             $table->unsignedBigInteger('total_amount');

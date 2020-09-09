@@ -14,34 +14,15 @@ class CreateUsersTable extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->id();
             $table->string('name');
+            $table->string('username');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-
-            $table->string('phone_number')->nullable()->unique();
-            $table->string('username')->unique()->unique();
-            $table->string('country')->nullable();
-            $table->string('province')->nullable();
-            $table->string('city')->nullable();
-            $table->string('postal_code')->nullable();
-            $table->text('address')->nullable();
-            $table->text('bio')->nullable();
-
-            $table->text('photo_profile')->nullable();
-            $table->text('id_card')->nullable();
-            $table->text('id_card_with_photo')->nullable();
-
-            $table->dateTime('complete_identity')->nullable();
-            $table->dateTime('verified')->nullable();
-
-            $table->text('store_logo')->nullable();
-            $table->string('store_name')->nullable();
-            $table->string('store_phone_number')->nullable();
-            $table->text('store_address')->nullable();
-
             $table->rememberToken();
+            $table->string('current_team_id')->nullable();
+            $table->text('profile_photo_path')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

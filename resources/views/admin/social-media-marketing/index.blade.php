@@ -5,6 +5,9 @@
 @section('content')
     <div class="section">
         <div class="container">
+            <div class="field">
+                <a href="{{ route('web.admin.social-media-marketing.provider-panel.index') }}" class="button is-primary is-fullwidth">Provider Panel</a>
+            </div>
             <div class="table-container">
                 <table class="table is-fullwidth is-bordered display" id="table_id">
                     <thead>

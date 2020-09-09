@@ -20,13 +20,13 @@ class CreateUserBankTable extends Migration
                 ->references('id')
                 ->on('users');
 
-            $table->string('type')->default('bank');
+            $table->unsignedBigInteger('bank_master_id');
+            $table->foreign('bank_master_id')
+                ->references('id')
+                ->on('bank_master');
 
-            $table->string('bank_name')->nullable();
             $table->string('bank_account_name')->nullable();
             $table->string('bank_account_number')->nullable();
-            $table->text('note')->nullable();
-            $table->text('logo')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

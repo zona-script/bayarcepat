@@ -26,12 +26,12 @@ class CreateMoneyTransfersTable extends Migration
                 ->references('id')
                 ->on('users');
 
-
-            // 1 = send, 2 = received
-            $table->tinyInteger('type');
-
             $table->unsignedBigInteger('amount');
-            $table->text('message');
+            $table->text('message')->nullable();
+            $table->text('message_from_server')->nullable();
+
+            // 1 = success, 2 = failed
+            $table->unsignedTinyInteger('status')->default(1);
             $table->timestamps();
             $table->softDeletes();
         });

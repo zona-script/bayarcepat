@@ -14,6 +14,14 @@
                     </div>
                 </div>
             </div>
+            <div class="column is-5">
+                <div class="field">
+                    <label class="label">Jangan Lupa Baca Petunjuk Order</label>
+                    <div class="control">
+                        <a href="#petunjuk_order" class="button is-warning is-fullwidth">Baca Petunjuk Order</a>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="container">
             <vue-good-table
@@ -40,80 +48,11 @@
             <div class="modal-background"></div>
             <div class="modal-card">
                 <header class="modal-card-head">
-                    <p class="modal-card-title">Form Pembelian</p>
-                    <button class="delete" aria-label="close" @click="closeBuyForm"></button>
+                    <p class="modal-card-title">Form Pembelian SMM</p>
+                    <button class="delete is-danger" aria-label="close" @click="closeBuyForm"></button>
                 </header>
-                <section class="modal-card-body" v-if="selectedProduct.seller_product_status && selectedProduct.buyer_product_status">
-                    <div class="columns">
-                        <div class="column">
-                            <div class="field">
-                                <label class="label">Nama Produk</label>
-                                <div class="control">
-                                    <input class="input" type="text" v-bind:value="selectedProduct.product_name" disabled>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <div class="field">
-                                <label class="label">Brand</label>
-                                <div class="control">
-                                    <input class="input" type="text" v-bind:value="selectedProduct.brand" disabled>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="columns">
-                        <div class="column">
-                            <div class="field">
-                                <label class="label">Kode Produk</label>
-                                <div class="control">
-                                    <input class="input" type="text" v-bind:value="selectedProduct.buyer_sku_code" disabled>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <div class="field">
-                                <label class="label">Stok</label>
-                                <div class="control">
-                                    <input class="input" type="text" v-bind:value="selectedProduct.unlimited_stock ? 'Tanpa batas': selectedProduct.stock" disabled>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label class="label">Deskripsi</label>
-                        <div class="control">
-                            <textarea class="textarea" disabled>{{ selectedProduct.desc }}</textarea>
-                        </div>
-                    </div>
-
-                    <div class="field">
-                        <label class="label">No Pelanggan</label>
-                        <div class="control">
-                            <input class="input" type="text" placeholder="No Telepon / No Pelanggan" v-model="customerNumber">
-                        </div>
-                    </div>
-
-                    <div class="field">
-                        <button class="button is-primary is-fullwidth" @click="onClickCheckBill">Cek Tagihan</button>
-                        *) Klik cek tagihan untuk mengetahui jumlah tagihan yang harus dibayarkan.
-                    </div>
-
-                    <div class="field" v-if="showResult">
-                        <div class="box">
-                            <h3 class="subtitle">Jumlah yang harus dibayar</h3>
-                            <h3 class="title">Rp XXXX</h3>
-                            <div class="content">
-                                <ul>
-                                    <li>sebelum klik order, pastikan saldo anda mencukupi</li>
-                                    <li>produk yang tidak support multi transaksi, dalam 24 jam hanya diperbolehkan order 1 kali untuk setiap no telepon/no pelanggan.</li>
-                                    <li>pastikan waktu order bukan pada jam cut off.</li>
-                                    <li>Transaksi akan tetap dilanjutkan setelah anda melakukan klik tombol "beli sekarang" dan tidak bisa dibatalkan, meskipun klik tombol "tutup form".</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
+                <section class="modal-card-body" v-if="!selectedProduct.active">
+                    <dashboard-social-media-marketing-order-form v-bind:props-product=this.selectedProduct></dashboard-social-media-marketing-order-form>
                 </section>
 
                 <section class="modal-card-body" v-else>
@@ -122,18 +61,9 @@
                     </div>
                 </section>
 
-                <footer class="modal-card-foot"
-                        v-if="selectedProduct.seller_product_status && selectedProduct.buyer_product_status"
-                >
-                    <button class="button is-success"
-                            @click="onClickBuyButton"
-                    >Bayar Tagihan</button>
-
-                    <button class="button" @click="closeBuyForm">Tutup Form</button>
-                </footer>
-                <footer class="modal-card-foot" v-else>
-                    <button class="button" @click="closeBuyForm">Tutup Form</button>
-                </footer>
+<!--                <footer class="modal-card-foot">-->
+<!--                    <button class="button is-danger is-fullwidth" @click="closeBuyForm">Tutup Form</button>-->
+<!--                </footer>-->
             </div>
         </div>
     </div>
@@ -161,15 +91,15 @@ export default {
                     field: 'name',
                 },
                 {
-                    label: 'Harga',
+                    label: 'Harga (per 1000)',
                     field: 'price',
                 },
                 {
-                    label: 'Min',
+                    label: 'Minimal',
                     field: 'min',
                 },
                 {
-                    label: 'Max',
+                    label: 'Maksimal',
                     field: 'max',
                 },
                 {
@@ -224,55 +154,11 @@ export default {
             this.showFormIsActive = false
         },
         tableColumnStatus(rowObj) {
-            if (rowObj) {
+            if (rowObj.active) {
                 return '<span class="tag is-primary">tersedia</span>'
             }
 
             return '<span class="tag is-danger">tidak tersedia</span>'
-        },
-        onClickCheckBill() {
-            let result
-            let params = {
-                buyer_sku_code: this.selectedProduct.buyer_sku_code,
-                customer_number: this.customerNumber
-            }
-
-            if (this.customerNumber === '') {
-                this.$alert("no pelanggan masih kosong.", '', 'warning');
-            } else {
-                window.axios.post('/api/web/products/postpaid/check', params)
-                    .then(response => {
-                        result = response.data
-                        if(result.status) {
-                            this.$alert(result.message, 'Berhasil melakukan pengecekan', 'success')
-                            this.showResult = true
-                        } else {
-                            this.$alert(result.message, 'Transaksi Tidak berhasil', 'error')
-                        }
-                    })
-            }
-        },
-        onClickBuyButton() {
-            let result
-            let params = {
-                buyer_sku_code: this.selectedProduct.buyer_sku_code,
-                customer_number: this.customerNumber
-            }
-
-            if (this.customerNumber === '') {
-                this.$alert("no pelanggan masih kosong.", '', 'warning');
-            } else {
-                window.axios.post('/api/web/products/prepaid', params)
-                    .then(response => {
-                        result = response.data
-                        if(result.status) {
-                            this.$alert(result.message, 'Pembelian Berhasil', 'success')
-                        } else {
-                            this.$alert(result.message, 'Transaksi Tidak berhasil', 'error')
-                        }
-                        this.resetForm();
-                    })
-            }
         },
         resetForm() {
             this.selectedProduct = {}

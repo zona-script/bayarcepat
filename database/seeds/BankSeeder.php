@@ -13,31 +13,23 @@ class BankSeeder extends Seeder
     {
         $banks = [
             [
-                'bank_name' => 'Bank Mandiri',
+                'bank_master_id' => 1,
                 'bank_account_number' => '891739817181',
                 'bank_account_name' => 'Fatkul Nur Koirudin',
-                'note' => '',
-                'logo' => ''
+                'note' => ''
             ],
             [
-                'bank_name' => 'Bank Bri',
-                'bank_account_number' => '398273982',
+                'bank_master_id' => 3,
+                'bank_account_number' => '29187687181',
                 'bank_account_name' => 'Fatkul Nur Koirudin',
-                'note' => '',
-                'logo' => ''
+                'note' => ''
             ],
-            [
-                'bank_name' => 'Paypal #1',
-                'bank_account_number' => 'pay@dibumi.com',
-                'bank_account_name' => 'Fatkul Nur Koirudin',
-                'note' => '',
-                'logo' => '',
-                'type' => 'paypal'
-            ]
         ];
 
+        $userBank = [];
         foreach ($banks as $bank)
         {
+            $userBank = $bank;
             \App\Bank::create($bank);
         }
     }
