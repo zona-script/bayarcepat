@@ -15,20 +15,32 @@
     <div class="section">
         <div class="container">
             <div class="content">
-                <p>*) Semua harga terakhir update pada {{ date('d-m-Y') }} jam {{ date("h:i") }}</p>
+                <div class="tags are-medium">
+                    @foreach ($products as $category)
+                        <a href="#{{ $category['slug'] }}" class="tag is-primary is-medium">{{ $category['name'] }}</a>
+                    @endforeach
+                </div>
+                <div class="is-dashed">
+                    <ul>
+                        <li>
+                            Semua harga di update pada {{ date('d-m-Y') }} jam {{ date("h:i") }}.
+                        </li>
+                        <li>Harga yang ditampilkan adalah harga paling murah.</li>
+                    </ul>
+                </div>
                 @foreach ($products as $category)
+                    <div id="{{ $category['slug'] }}"></div>
                     <div class="has-text-centered">
                         <h3 class="subtitle">Harga {{ $category['name'] }}</h3>
                     </div>
                     @foreach ($category['products'] as $brands)
                         <div class="table-container">
-                            <table class="table is-bordered">
+                            <table class="table is-hoverable">
                                 <thead>
                                 <tr>
-                                    <td colspan="4"><strong class="title is-6">Harga {{ $category['name'] }} {{ $brands['name'] }} Termurah</strong></td>
+                                    <td colspan="4"><strong class="title is-6 is-capitalized">Harga {{ $category['name'] }} {{ $brands['name'] }} Termurah</strong></td>
                                 </tr>
-                                <tr>
-                                    <td style="width: 140px">BRAND</td>
+                                <tr class="has-text-weight-light">
                                     <td>NAMA</td>
                                     <td style="width: 120px">STATUS</td>
                                     <td style="width: 120px">HARGA</td>
@@ -45,10 +57,9 @@
                                     $product = collect($item)->sortBy('price')->values()->first();
                                     ?>
                                     <tr>
-                                        <td>{{ $product->brand }}</td>
-                                        <td>{{ $product->product_name }}</td>
+                                        <td>({{ $product->brand }}) {{ $product->product_name }}</td>
                                         <td><span class="tag is-primary">Tersedia</span></td>
-                                        <td><span class="has-text-weight-bold">{{ $product->price }}</span></td>
+                                        <td><span class="has-text-weight-bold">{{ number_format_rupiah($product->price) }}</span></td>
                                     </tr>
                                 @endforeach
                                 </tbody>

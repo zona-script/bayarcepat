@@ -7,7 +7,7 @@ namespace App\Enums;
 class RoleEnum
 {
     public static $roleAdmin = 'admin';
-    public static $roleConsumer = 'consumer';
+    public static $roleBuyer = 'buyer';
     public static $roleReseller = 'reseller';
     public static $roleDeveloper = 'developer';
 
@@ -17,10 +17,10 @@ class RoleEnum
             self::$roleAdmin
         ];
     }
-    public static function getCosumer()
+    public static function getConsumer()
     {
         return [
-            self::$roleConsumer
+            self::$roleBuyer
         ];
     }
     public static function getReseller()
@@ -40,7 +40,7 @@ class RoleEnum
     {
         return [
             self::$roleAdmin,
-            self::$roleConsumer,
+            self::$roleBuyer,
             self::$roleDeveloper
         ];
     }

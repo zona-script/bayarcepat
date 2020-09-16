@@ -6,6 +6,7 @@ use App\Services\Digiflazz\Buyer\DigiflazzBuyer;
 use Carbon\Carbon;
 use DebugBar\DebugBar;
 use Illuminate\Support\ServiceProvider;
+use Inertia\Inertia;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -33,7 +34,8 @@ class AppServiceProvider extends ServiceProvider
         Carbon::setLocale('id');
         date_default_timezone_set('Asia/Jakarta');
 
-//        \Debugbar::disable();
-        //
+        \Debugbar::disable();
+
+        Inertia::setRootView('layouts.dashboard');
     }
 }

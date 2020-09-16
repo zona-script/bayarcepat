@@ -43,7 +43,10 @@
     <div class="container">
         <div class="navbar-brand">
             <a class="navbar-item" href="/">
-                <span class="logo-text has-text-primary is-bold">{{ config('app.name') }}</span>
+                <h1 class="title is-4 has-text-primary is-uppercase">
+                    <svg width="20" height="20" id="face-i-d" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8,21H4a1,1,0,0,1-1-1V16" style="fill: none; stroke: rgb(0, 0, 0); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path><path d="M16,21h4a1,1,0,0,0,1-1V16" style="fill: none; stroke: rgb(0, 0, 0); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path><path d="M3,16v4a1,1,0,0,0,1,1H8" style="fill: none; stroke: rgb(0, 0, 0); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path><path d="M3,8V4A1,1,0,0,1,4,3H8" style="fill: none; stroke: rgb(0, 0, 0); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path><path d="M21,8V4a1,1,0,0,0-1-1H16" style="fill: none; stroke: rgb(0, 0, 0); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path><path d="M12,7v3c0,1,0,3-2,3M8,9V7m8,2V7M8,16a6.08,6.08,0,0,0,8,0" style="fill: none; stroke: rgb(0, 0, 0); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path></svg>
+                    <span class="has-text-dark">BayarCepat</span>
+                </h1>
             </a>
 
             <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
@@ -73,6 +76,7 @@
                             <span class="icon"><i class="fas fa-history"></i></span>
                             <span>Riwayat Transaksi Prepaid</span>
                         </a>
+                        <hr class="navbar-divider">
                         <a href="{{ route('web.dashboard.postpaid.index') }}" class="navbar-item">
                             <span class="icon"><i class="fas fa-broadcast-tower"></i></span>
                             <span>Order Postpaid</span>
@@ -81,6 +85,7 @@
                             <span class="icon"><i class="fas fa-history"></i></span>
                             <span>Riwayat Transaksi Postpaid</span>
                         </a>
+                        <hr class="navbar-divider">
                         <a href="{{ route('web.dashboard.social-media-marketing.index') }}" class="navbar-item">
                             <span class="icon"><i class="fas fa-hashtag"></i></span>
                             <span>Order SMM Panel</span>
@@ -101,10 +106,11 @@
                             <span class="icon"><i class="fas fa-paper-plane"></i></span>
                             <span>Kirim Uang</span>
                         </a>
-                        <a href="{{ route('web.dashboard.send-money.index') }}" class="navbar-item">
+                        <a href="{{ route('web.dashboard.send-money.history.index') }}" class="navbar-item">
                             <span class="icon"><i class="fas fa-history"></i></span>
                             <span>Riwayat Pengiriman</span>
                         </a>
+                        <hr class="navbar-divider">
                         <a href="{{ route('web.dashboard.balance.deposit.index') }}" class="navbar-item">
                             <span class="icon"><i class="fas fa-money-bill"></i></span>
                             <span>Deposit Uang</span>
@@ -113,11 +119,12 @@
                             <span class="icon"><i class="fas fa-coins"></i></span>
                             <span>Penarikan Uang</span>
                         </a>
-                        <a href="#" class="navbar-item">
-                            <span class="icon"><i class="fas fa-hashtag"></i></span>
+                        <a href="{{ route('web.dashboard.balance.history.index') }}" class="navbar-item">
+                            <span class="icon"><i class="fas fa-history"></i></span>
                             <span>Riwayat Deposit & Penarikan</span>
                         </a>
-                        <a href="#" class="navbar-item">
+                        <hr class="navbar-divider">
+                        <a href="{{ route('web.dashboard.bank.index') }}" class="navbar-item">
                             <span class="icon"><i class="fas fa-credit-card"></i></span>
                             <span>Rekening Bank</span>
                         </a>
@@ -167,9 +174,16 @@
 @include('partials.notification')
 @include('partials.erros')
 
-<div id="app">
-    @yield('content')
-</div>
+
+@yield('content')
+
+@if (isset($page))
+    @inertia
+@endif
+
+{{--<div id="app">--}}
+{{--    @yield('content')--}}
+{{--</div>--}}
 
 <footer class="footer has-background-grey-dark">
 
@@ -187,9 +201,6 @@
         </p>
     </div>
 </footer>
-
-<!-- Back To Top Button -->
-<div id="backtotop"><a><i class="fas fa-angle-up"></i></a></div>
 
 <script src="{{ asset('js/app.js') }}"></script>
 

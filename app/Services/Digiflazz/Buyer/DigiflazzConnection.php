@@ -76,12 +76,12 @@ class DigiflazzConnection
             $jsonBody = Arr::add($jsonBody, 'code', $code);
         }
 
-        $data = $this->request('https://api.digiflazz.com/v1/price-list', $jsonBody);
 
         $pathName = 'digiflazz-' . $cmd . '.json';
-        if ($this->existJson($pathName)) {
-            return $this->readJson($pathName);
-        }
+//        if ($this->existJson($pathName)) {
+//            return $this->readJson($pathName);
+//        }
+        $data = $this->request('https://api.digiflazz.com/v1/price-list', $jsonBody);
         $this->saveJson($pathName, $data);
 
         return $data;

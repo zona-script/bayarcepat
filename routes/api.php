@@ -13,10 +13,6 @@ use Illuminate\Http\Request;
 |
 */
 
-//Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-//    return $request->user();
-//});
-
 Route::get('/', function () {
     return [
         'success' => true,
@@ -25,7 +21,18 @@ Route::get('/', function () {
     ];
 });
 
-Route::group(['as' => 'api.'], function () {
+
+Route::group(['as' => 'api.', 'middleware' => 'auth:sanctum'], function () {
+
+    Route::resource('/user-bank', 'Api\UserBank\HomeController');
+    Route::resource('/bank-master', 'Api\BankMasterController');
+
+
+    Route::group(['as'=>'balance.', 'prefix' => 'balance', 'namespace' => 'Api\Balance'], function () {
+        Route::resource('/deposit', 'DepositController');
+        Route::resource('/withdrawal', 'WithdrawalController');
+    });
+
 
     // api untuk product
     Route::group(['as' => 'products.', 'prefix' => 'products', 'namespace' => 'Api\Products'], function () {

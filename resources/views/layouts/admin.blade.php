@@ -54,7 +54,7 @@
 
         <div id="navbarBasicExample" class="navbar-menu">
             <div class="navbar-end has-text-left">
-                <a class="navbar-item" href="{{ route('web.dashboard.index') }}">
+                <a class="navbar-item" href="{{ route('web.admin.index') }}">
                     Dashboard
                 </a>
 
@@ -83,7 +83,7 @@
                         <a class="navbar-item">
                             Kelola Postpaid
                         </a>
-                        <a class="navbar-item">
+                        <a href="{{ route('web.admin.social-media-marketing.provider-panel.index') }}" class="navbar-item">
                             Kelola Panel Provider
                         </a>
                         <a href="{{ route('web.admin.social-media-marketing.home.index') }}" class="navbar-item">
@@ -143,13 +143,12 @@
 @include('partials.notification')
 @include('partials.erros')
 
-<div class="section">
-    <div class="container">
-        <div id="app">
-            @yield('content')
-        </div>
-    </div>
-</div>
+
+@yield('content')
+
+@if (isset($page))
+    @inertia
+@endif
 
 <!-- Back To Top Button -->
 <div id="backtotop"><a><i class="fas fa-angle-up"></i></a></div>

@@ -14,11 +14,15 @@ use Illuminate\Http\Request;
 */
 
 Route::group(['as' => 'apiweb.', 'namespace' => 'ApiWeb', 'middleware' => ['auth:web']], function () {
+
+    Route::resource('/user-bank', 'UserBank\HomeController');
+
     Route::get('/', 'UserController');
     Route::get('/user', 'UserController');
     Route::get('/user/index', 'UserController@index');
     Route::get('/balance', 'BalanceController');
     Route::get('/contact', 'ContactController');
+
 
     // deprecated
     Route::get('/phonebook', 'PhonebookController');

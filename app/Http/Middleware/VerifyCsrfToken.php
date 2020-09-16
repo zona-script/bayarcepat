@@ -11,7 +11,7 @@ class VerifyCsrfToken extends Middleware
      *
      * @var bool
      */
-    protected $addHttpCookie = true;
+//    protected $addHttpCookie = true;
 
     /**
      * The URIs that should be excluded from CSRF verification.
@@ -19,6 +19,7 @@ class VerifyCsrfToken extends Middleware
      * @var array
      */
     protected $except = [
+        'api/*',
         'callback-from-partner/digiflazz',
         'callback-from-partner/javah2h',
         'callback-from-partner/*'

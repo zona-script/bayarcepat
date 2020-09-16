@@ -11,8 +11,9 @@
 |
 */
 //
+
 //Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-//    return view('dashboard');
+//    return Inertia\Inertia::render('Dashboard');
 //})->name('dashboard');
 
 Route::group(['as' => 'web.'], function () {
@@ -52,8 +53,8 @@ Route::group(['as' => 'web.'], function () {
 });
 
 //Auth::routes();
-Auth::routes([
-    'verify' => true,
-    'register' => true
-]);
+//Auth::routes([
+//    'verify' => true,
+//    'register' => true
+//]);
 Route::get('/home', 'HomeController@index')->name('home');

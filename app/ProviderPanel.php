@@ -13,13 +13,13 @@ class ProviderPanel extends Model
     protected $guarded = [];
 
     protected $casts = [
+        'credential' => 'array',
         'config' => 'array',
-        'result_data' => 'array',
-        'trx_credential' => 'array',
-        'trx_get_profile' => 'array',
-        'trx_get_services' => 'array',
-        'trx_check_status' => 'array',
-        'trx_create_order' => 'array',
+        'format_data' => 'array',
+        'get_profile_append_data' => 'array',
+        'get_services_append_data' => 'array',
+        'check_status_append_data' => 'array',
+        'create_order_append_data' => 'array',
     ];
 
     public function panelProducts()
@@ -30,5 +30,40 @@ class ProviderPanel extends Model
     public function products()
     {
         return $this->panelProducts();
+    }
+
+//    public function getTrxCredentialAttribute($value)
+//    {
+//        return json_decode($value);
+//    }
+
+    public function setCredentialAttribute($value)
+    {
+        $this->attributes['credential'] = $this->cleaningText($value);
+    }
+
+    public function setGetProfileAppendDataAttribute($value)
+    {
+        $this->attributes['get_profile_append_data'] = $this->cleaningText($value);
+    }
+
+    public function setGetServiceAppendDataAttribute($value)
+    {
+        $this->attributes['get_services_append_data'] = $this->cleaningText($value);
+    }
+
+    public function setCheckStatusAppendDataAttribute($value)
+    {
+        $this->attributes['check_status_append_data'] = $this->cleaningText($value);
+    }
+
+    public function setCreateOrderAppendDataAttribute($value)
+    {
+        $this->attributes['create_order_append_data'] = $this->cleaningText($value);
+    }
+
+    private function cleaningText($value)
+    {
+        return preg_replace( "/\r|\n/", "", $value);
     }
 }

@@ -27,30 +27,14 @@ class Handler extends ExceptionHandler
         'password_confirmation',
     ];
 
-    /**
-     * Report or log an exception.
-     *
-     * @param  \Exception  $exception
-     * @return void
-     *
-     * @throws \Exception
-     */
-    public function report(Throwable $exception)
-    {
-        parent::report($exception);
-    }
 
     /**
-     * Render an exception into an HTTP response.
+     * Register the exception handling callbacks for the application.
      *
-     * @param \Illuminate\Http\Request $request
-     * @param \Exception $exception
-     * @return \Symfony\Component\HttpFoundation\Response
-     *
-     * @throws Throwable
+     * @return void
      */
-    public function render($request, Throwable $exception)
+    public function register()
     {
-        return parent::render($request, $exception);
+        //
     }
 }

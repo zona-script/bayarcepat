@@ -42,21 +42,16 @@ class ProviderPanelController extends Controller
         $request->validate([
             'name' => 'required',
             'website' => 'required',
-            'api_url' => 'required',
-            'api_id' => 'nullable',
-            'api_key' => 'nullable',
-            'api_username' => 'nullable',
-            'api_password' => 'nullable',
             'note' => 'nullable',
-            'active' => 'required',
+            'is_active' => 'required',
+            'credential' => 'required|json'
         ]);
 
-        $uniqueCode = UniqueCode::providerPanel();
-
         $config = [
-            'result_in' => $request->input('config_result_in', ''),
-            'status_available' => $request->input('config_status_available', false),
-            'status' => $request->input('config_status', true)
+            'result_in' => $request->input('config_result_in', 'data'),
+            'field_status_available' => $request->input('config_field_status_available', true),
+            'field_status_in' => $request->input('config_field_status_in', true),
+            'filed_status_success_if_status' => $request->input('config_status', true)
         ];
 
         $resultData = [
@@ -66,31 +61,33 @@ class ProviderPanelController extends Controller
             'min' => $request->input('result_data_min', 'min'),
             'max' => $request->input('result_data_max', 'max'),
             'category' => $request->input('result_data_category', 'category'),
-            'note' => $request->input('result_data_note', 'note'),
+            'note' => $request->input('result_data_note', 'description'),
         ];
 
         $providerPanel = ProviderPanel::create([
-            'code' => $uniqueCode,
             'name' => $request->input('name', ''),
             'website' => $request->input('website', ''),
-            'api_url' => $request->input('api_url', ''),
-            'api_id' => $request->input('api_id', ''),
-            'api_key' => $request->input('api_key', ''),
-            'api_username' => $request->input('api_username', ''),
-            'api_password' => $request->input('api_password', ''),
             'note' => $request->input('note', ''),
-            'active' => $request->input('active', false),
+            'is_active' => $request->input('active', false),
+            'credential' => $request->input('credential'),
             'config' => $config,
-            'result_data' => $resultData,
-            'trx_credential' => $request->input('credential', []),
-            'trx_get_profile_url' => $request->input('trx_get_profile_url', ''),
-            'trx_get_profile' => $request->input('trx_get_profile', []),
-            'trx_get_services_url' => $request->input('trx_get_services_url', ''),
-            'trx_get_services' => $request->input('trx_get_services', []),
-            'trx_check_status_url' => $request->input('trx_check_status_url', ''),
-            'trx_check_status' => $request->input('trx_check_status', []),
-            'trx_create_order_url' => $request->input('trx_create_order_url', ''),
-            'trx_create_order' => $request->input('trx_create_order', []),
+            'format_data' => $resultData,
+            'get_profile_url' => $request->input('get_profile_url', ''),
+            'get_profile_append_data' => json_encode($request->input('get_profile_append_data', [])),
+            'get_profile_http_method' => $request->input('get_profile_http_method', 'POST'),
+
+            'get_services_url' => $request->input('get_services_url', ''),
+            'get_services_append_data' => $request->input('get_services_append_data', []),
+            'get_services_http_method' => $request->input('get_services_http_method', 'POST'),
+
+            'check_status_url' => $request->input('check_status_url', ''),
+            'check_status_append_data' => json_encode($request->input('check_status_append_data', [])),
+            'check_status_http_method' => $request->input('check_status_http_method', 'POST'),
+
+            'create_order_url' => $request->input('create_order_url', ''),
+            'create_order_append_data' => json_encode($request->input('create_order_append_data', [])),
+            'create_order_http_method' => $request->input('create_order_http_method', 'POST'),
+
         ]);
 
         return redirect()

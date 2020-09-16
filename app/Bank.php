@@ -19,6 +19,8 @@ class Bank extends Model
         'logo'
     ];
 
+    protected $with = ['bankMaster'];
+
     public function bankMaster() {
         return $this->belongsTo(BankMaster::class);
     }

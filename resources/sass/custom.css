@@ -19,19 +19,19 @@
 
 @keyframes animate-navbar {
     0% {
-        border-top: mediumspringgreen solid 2px;
+        border-bottom: #eee1e1 solid 2px;
     }
     25%{
-        border-top: yellow solid 2px;
+        border-bottom: #e3e3e3 solid 2px;
     }
     50%{
-        border-top: purple solid 2px;
+        border-bottom: #e9ebf3 solid 2px;
     }
     75%{
-        border-top: deepskyblue solid 2px;
+        border-bottom: #e6f7ec solid 2px;
     }
     100% {
-        border-top: deeppink solid 2px;
+        border-bottom: #edf2f7 solid 2px;
     }
 }
 

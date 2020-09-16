@@ -3,6 +3,7 @@
 @section('title', 'Dashboard')
 
 @section('content')
+    <h1>ssssss</h1>
     <div class="section">
         <div class="container">
             <div class="columns">

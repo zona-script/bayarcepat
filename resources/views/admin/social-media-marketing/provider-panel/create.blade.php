@@ -3,6 +3,18 @@
 @section('title', 'Tambah SMM')
 
 @section('content')
+    <section class="hero is-primary">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">
+                   Tambah Provider
+                </h1>
+                <h2 class="subtitle">
+                    Menambahkan provider baru, harap di perhatikan penulisan.
+                </h2>
+            </div>
+        </div>
+    </section>
     <div class="section">
         <div class="container">
             <div class="columns">
@@ -24,46 +36,16 @@
                                 </div>
                             </div>
                             <div class="field">
-                                <label class="label">Api URL</label>
-                                <div class="control">
-                                    <input name="api_url" class="input" type="text" placeholder="Tulis disini" required>
-                                </div>
-                            </div>
-                            <div class="field">
-                                <label class="label">Api ID (optional)</label>
-                                <div class="control">
-                                    <input name="api_id" class="input" type="text" placeholder="Tulis disini">
-                                </div>
-                            </div>
-                            <div class="field">
-                                <label class="label">Api Key (optional)</label>
-                                <div class="control">
-                                    <input name="api_key" class="input" type="text" placeholder="Tulis disini">
-                                </div>
-                            </div>
-                            <div class="field">
-                                <label class="label">Api Username (optional)</label>
-                                <div class="control">
-                                    <input name="api_username" class="input" type="text" placeholder="Tulis disini">
-                                </div>
-                            </div>
-                            <div class="field">
-                                <label class="label">Api Password (optional)</label>
-                                <div class="control">
-                                    <input name="api_password" class="input" type="text" placeholder="Tulis disini">
-                                </div>
-                            </div>
-                            <div class="field">
                                 <label class="label">Note (optional)</label>
                                 <div class="control">
                                     <textarea name="note" class="textarea"></textarea>
                                 </div>
                             </div>
                             <div class="field">
-                                <label class="label">Active</label>
+                                <label class="label">IS Active</label>
                                 <div class="control">
                                     <div class="select is-fullwidth">
-                                        <select name="active" required>
+                                        <select name="is_active" required>
                                             <option value="1">True</option>
                                             <option value="0">False</option>
                                         </select>
@@ -71,6 +53,19 @@
                                 </div>
                             </div>
                         </div>
+
+
+                        <div class="box">
+                            <div class="field">
+                                <label class="label">Credential</label>
+                                <div class="control">
+                                    <textarea name="credential" class="textarea" required>{
+    "api_key": "98687ngngugguyfhhnfh"
+}</textarea>
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="box">
                             <div class="field">
                                 <h3 class="subtitle">Config (config)</h3>
@@ -82,10 +77,10 @@
                                 </div>
                             </div>
                             <div class="field">
-                                <label class="label">status_available</label>
+                                <label class="label">field_status_available ?</label>
                                 <div class="control">
                                     <div class="select is-fullwidth">
-                                        <select name="config_status_available" required>
+                                        <select name="config_field_status_available" required>
                                             <option value="1">True</option>
                                             <option value="0">False</option>
                                         </select>
@@ -93,7 +88,13 @@
                                 </div>
                             </div>
                             <div class="field">
-                                <label class="label">status</label>
+                                <label class="label">field_status_in</label>
+                                <div class="control">
+                                    <input name="config_field_status_in" class="input" type="text" value="status" required>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="label">filed_status_success_if_status</label>
                                 <div class="control">
                                     <div class="select is-fullwidth">
                                         <select name="config_status" required>
@@ -147,78 +148,118 @@
                             <div class="field">
                                 <label class="label">note</label>
                                 <div class="control">
-                                    <input name="result_data_note" class="input" value="note" required>
+                                    <input name="result_data_note" class="input" value="description" required>
                                 </div>
                             </div>
                         </div>
 
                         <div class="box">
                             <div class="field">
-                                <label class="label">Credential</label>
+                                <label class="label">get_profile_url</label>
                                 <div class="control">
-                                    <textarea name="credential" class="textarea" required>{
-    "api_key": "api_key"
-}</textarea>
+                                    <input name="get_profile_url" class="input" value="">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="label">get_profile_append_data (json)</label>
+                                <div class="control">
+                                    <textarea name="get_profile_append_data" class="textarea"></textarea>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="label">get_profile_http_method</label>
+                                <div class="control">
+                                    <div class="select is-fullwidth">
+                                        <select name="get_profile_http_method">
+                                            @foreach (get_all_http_method() as $method)
+                                                <option value="{{ $method }}">{{ $method }}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
+
                         <div class="box">
                             <div class="field">
-                                <label class="label">trx_get_profile_url (optional)</label>
+                                <label class="label">get_services_url</label>
                                 <div class="control">
-                                    <input name="trx_get_profile_url" class="input" value="">
+                                    <input name="get_services_url" class="input" value="">
                                 </div>
                             </div>
                             <div class="field">
-                                <label class="label">trx_get_profile</label>
+                                <label class="label">get_services_append_data (json)</label>
                                 <div class="control">
-                                    <textarea name="trx_get_profile" class="textarea"></textarea>
+                                    <textarea name="get_services_append_data" class="textarea"></textarea>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="label">get_services_http_method</label>
+                                <div class="control">
+                                    <div class="select is-fullwidth">
+                                        <select name="get_services_http_method">
+                                            @foreach (get_all_http_method() as $method)
+                                                <option value="{{ $method }}">{{ $method }}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
+
                         <div class="box">
                             <div class="field">
-                                <label class="label">trx_get_services_url (optional)</label>
+                                <label class="label">check_status_url</label>
                                 <div class="control">
-                                    <input name="trx_get_services_url" class="input" value="">
+                                    <input name="check_status_url" class="input" value="">
                                 </div>
                             </div>
                             <div class="field">
-                                <label class="label">trx_get_services</label>
+                                <label class="label">check_status_append_data (json)</label>
                                 <div class="control">
-                                    <textarea name="trx_get_services" class="textarea"></textarea>
+                                    <textarea name="check_status_append_data" class="textarea"></textarea>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="label">check_status_http_method</label>
+                                <div class="control">
+                                    <div class="select is-fullwidth">
+                                        <select name="check_status_http_method">
+                                            @foreach (get_all_http_method() as $method)
+                                                <option value="{{ $method }}">{{ $method }}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="box">
-                            <div class="field">
-                                <label class="label">trx_check_status_url (optional)</label>
-                                <div class="control">
-                                    <input name="trx_check_status_url" class="input" value="">
-                                </div>
-                            </div>
-                            <div class="field">
-                                <label class="label">trx_check_status</label>
-                                <div class="control">
-                                    <textarea name="trx_check_status" class="textarea"></textarea>
-                                </div>
-                            </div>
-                        </div>
 
                         <div class="box">
                             <div class="field">
-                                <label class="label">trx_create_order_url (optional)</label>
+                                <label class="label">create_order_url</label>
                                 <div class="control">
-                                    <input name="trx_create_order_url" class="input" value="">
+                                    <input name="create_order_url" class="input" value="">
                                 </div>
                             </div>
                             <div class="field">
-                                <label class="label">trx_create_order</label>
+                                <label class="label">create_order_append_data (json)</label>
                                 <div class="control">
-                                    <textarea name="trx_create_order" class="textarea"></textarea>
+                                    <textarea name="create_order_append_data" class="textarea"></textarea>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="label">create_order_http_method</label>
+                                <div class="control">
+                                    <div class="select is-fullwidth">
+                                        <select name="create_order_http_method">
+                                            @foreach (get_all_http_method() as $method)
+                                                <option value="{{ $method }}">{{ $method }}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -21,15 +21,28 @@
     <meta property="business:contact_data:website" content="https://bayarcepat.com" />
 
     <!--Core CSS -->
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('sass/app.css') }}">
     @stack('stack-head')
+    <style>
+        .is-dashed {
+            border: dashed 2px #e3e3e3;
+            padding: 0 10px 10px 10px;
+            margin-bottom: 30px;
+        }
+        .is-dashed-no-mp {
+            border: dashed 2px #e3e3e3;
+        }
+    </style>
 </head>
 <body class="is-fullwidth">
 <div class="navbar is-white is-fixed-top" role="navigation" aria-label="main navigation">
     <div class="container">
         <div class="navbar-brand">
             <a class="navbar-item" href="/">
-                <span class="logo-text has-text-primary is-bold">{{ config('app.name') }}</span>
+                <h1 class="title is-4 has-text-primary is-uppercase">
+                    <svg width="20" height="20" id="face-i-d" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8,21H4a1,1,0,0,1-1-1V16" style="fill: none; stroke: rgb(0, 0, 0); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path><path d="M16,21h4a1,1,0,0,0,1-1V16" style="fill: none; stroke: rgb(0, 0, 0); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path><path d="M3,16v4a1,1,0,0,0,1,1H8" style="fill: none; stroke: rgb(0, 0, 0); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path><path d="M3,8V4A1,1,0,0,1,4,3H8" style="fill: none; stroke: rgb(0, 0, 0); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path><path d="M21,8V4a1,1,0,0,0-1-1H16" style="fill: none; stroke: rgb(0, 0, 0); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path><path d="M12,7v3c0,1,0,3-2,3M8,9V7m8,2V7M8,16a6.08,6.08,0,0,0,8,0" style="fill: none; stroke: rgb(0, 0, 0); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path></svg>
+                    <span class="has-text-dark">BayarCepat</span>
+                </h1>
             </a>
 
             <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
@@ -42,27 +55,20 @@
 
         <div id="navbarBasicExample" class="navbar-menu">
             <div class="navbar-end has-text-left">
-{{--                <a class="navbar-item" href="{{ route('web.pages.produk.index') }}">--}}
-{{--                    Produk & Harga--}}
-{{--                </a>--}}
                 <div class="navbar-item has-dropdown is-hoverable">
                     <a class="navbar-link">
                         Produk & Layanan
                     </a>
 
                     <div class="navbar-dropdown">
-                        <a class="navbar-item">
+                        <a href="{{ route('web.pages.products.prepaid') }}" class="navbar-item">
                             Produk Prabayar (Prepaid)
                         </a>
-                        <a class="navbar-item">
+                        <a href="{{ route('web.pages.products.postpaid') }}" class="navbar-item">
                             Produk Pascabayar (Postpaid)
                         </a>
-                        <a class="navbar-item">
+                        <a href="{{ route('web.pages.products.smm') }}" class="navbar-item">
                             Produk Social Media & Marketing
-                        </a>
-                        <hr class="navbar-divider">
-                        <a class="navbar-item">
-                            Report an issue
                         </a>
                     </div>
                 </div>
@@ -99,26 +105,20 @@
     </div>
 </div>
 
-{{--@if(\Illuminate\Support\Facades\Request::route()->getName() != 'web.index')--}}
-{{--<div style="padding-top: 110px"></div>--}}
-{{--@endif--}}
-{{--<div style="padding-top: 70px"></div>--}}
-{{--<div class="pad-top-navbar"></div>--}}
-
 <div id="app">
     @yield('content')
 </div>
 
-<footer class="footer has-background-grey-dark">
+<footer class="footer has-background-black">
     <div class="container">
         <div class="columns">
             <div class="column is-4">
                 <h4 class="title is-3 is-bold has-text-primary">{{ config('app.name') }}</h4>
-                <p class="footer-text">
+                <p class="footer-text has-text-justified">
                     kami adalah Marketplace Distributor H2H produk digital dan non digital. Anda bisa membeli produk, kirim uang antar bank, kirim uang dari paypal, dan masih banyak lagi.
                 </p>
                 <div class="socials">
-                    <a><i class="fab fa-instagram"></i></a>
+                    <a><span class="has-text-light"><i class="fab fa-instagram"></i></span></a>
                     <a><i class="fab fa-facebook"></i></a>
                     <a><i class="fab fa-pinterest"></i></a>
                     <a><i class="fab fa-medium"></i></a>
@@ -152,13 +152,13 @@
             </div>
         </div>
         <div class="columns">
-            <div class="column is-6">
+            <div class="column is-6 is-dashed">
                 <div class="container has-text-left has-text-white">
-                    <p>PERINGATAN !!!</p>
-                    <p>
-                        HATI HATI PENIPUAN YANG MENGATASNAMAKAN {{ config('app.name') }}
+                    <p class="has-text-danger">PERINGATAN !!!</p>
+                    <p class="is-uppercase">
+                        HATI HATI PENIPUAN ATAS NAMA {{ config('app.name') }}
                         <br>
-                        <u>
+                        <u class="has-text-justified">
                             Kami bukan aplikasi untuk peminjaman uang online, bukan aplikasi jasa cicilan, bukan aplikasi investasi, bukan aplikasi p2p lending, bukan aplikasi urun dana, bukan aplikasi kredit online.
                         </u>
                     </p>
@@ -193,6 +193,7 @@
             <p>
                 &copy; 2020 {{ config('app.name') }}
             </p>
+            <p>Dibangun dengan sepenuh <span class="has-text-danger"><i class="fas fa-heart"></i></span> di Indonesia</p>
         </div>
     </div>
 </footer>

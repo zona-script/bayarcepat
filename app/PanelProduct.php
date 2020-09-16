@@ -16,4 +16,10 @@ class PanelProduct extends Model
     {
         return $this->hasOne(ProviderPanel::class);
     }
+
+    public function setIsAvailableAttribute($value)
+    {
+        $this->attributes['is_available'] = number_or_numeric_to_boolean($value);
+    }
+
 }

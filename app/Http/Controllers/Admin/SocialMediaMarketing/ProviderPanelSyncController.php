@@ -74,61 +74,74 @@ class ProviderPanelSyncController extends Controller
      */
     public function update(Request $request, $id)
     {
+//        $rx = Http::asForm()->post('https://lollipop-smm.com/api/services', [
+//            'api_id' => '7623',
+//            'api_key' => '0f4140-66b39b-91920a-8895df-7a7bf9',
+//        ]);
+//        return $rx;
+
         $providerPanel = ProviderPanel::findOrFail($id);
 
-        if (blank($providerPanel->trx_get_services_url)) {
-            abort(500, 'Data Provider Panel Kosong');
-        }
-
         $providerPanelArr = collect($providerPanel)->toArray();
-        $credential = collect(json_decode($providerPanel->trx_credential))->toArray();
-        $trxGetService = collect(json_decode($providerPanel->trx_get_services))->toArray();
-        $payloadGetService = [];
+        $payload = $providerPanel->credential;
 
-        foreach ($credential as $key => $item) {
-            $payloadGetService[$key] = $providerPanelArr[$item];
+        $url = $providerPanelArr['get_services_url'];
+        $customPayload = $providerPanelArr['get_services_append_data'];
+        $httpMethod = $providerPanelArr['get_services_http_method'];
+
+        $customPayload = [
+            'x-request-from' => 'www.bayarcepat.com',
+            'x-security-engine' => 'fex-indonesia',
+            'x-defence' => 'anonymous-exception-defender',
+        ];
+
+        foreach ($customPayload as $key => $value) {
+            $payload = Arr::add($payload, $key, $value);
         }
 
-        foreach ($trxGetService as $key => $item) {
-            $payloadGetService[$key] = $providerPanelArr[$item];
+        $response = Http::asForm()->post($url, $payload);
+        $responseBody = collect(json_decode($response->body()))->toArray();
+
+//        return response()->json(\GuzzleHttp\json_decode($response->body()));
+
+        if (!$response->ok()) {
+            echo "GAGAL <hr>";
+            die(json_encode($responseBody));
         }
 
-        $response = Http::asForm()->post($providerPanel->trx_get_services_url, $payloadGetService);
-
-        if (blank($providerPanel->config['result_in'])) {
-            $products = json_decode($response->body());
-        } else {
-            $temp = collect(json_decode($response->body()))->toArray();
-            $products = $temp[$providerPanel->config['result_in']];
-        }
-
-        foreach ($products as $product) {
-            $productArr = collect($product)->toArray();
-            $resultData = $providerPanel->result_data;
-
-            try {
-                PanelProduct::create([
-                    'provider_panel_id' => $providerPanel->id,
-                    'service_id' => $productArr[$resultData['service_id']],
-                    'name' => $productArr[$resultData['name']],
-                    'price' => $productArr[$resultData['price']],
-                    'min' => $productArr[$resultData['min']],
-                    'max' => $productArr[$resultData['max']],
-                    'category' => $productArr[$resultData['category']],
-                    'note' => $productArr[$resultData['note']],
-                ]);
-            } catch (QueryException $exception) {
-                $panelProduct = PanelProduct::where('service_id', $productArr[$resultData['service_id']])
-                    ->where('provider_panel_id', $providerPanel->id)
-                    ->first();
-
-                $providerPanel->price = $productArr[$resultData['price']];
-                $providerPanel->min = $productArr[$resultData['min']];
-                $providerPanel->max = $productArr[$resultData['max']];
-                $providerPanel->note = $productArr[$resultData['note']];
-                $providerPanel->save();
+        if (!blank($providerPanel->config)) {
+            if (
+                isset($providerPanel->config['result_in']) &&
+                isset($providerPanel->config['field_status_available']) &&
+                isset($providerPanel->config['field_status_in']) &&
+                isset($providerPanel->config['field_status_success_if_status'])
+            ) {
+                if ($providerPanel->config['field_status_available']) {
+                    $status = $responseBody[$providerPanel->config['field_status_in']];
+                    if ($status == $providerPanel->config['field_status_success_if_status']) {
+                        if ($providerPanel->config['result_in'] == '#' || blank($providerPanel->config['result_in'])) {
+                            $products = $responseBody;
+                        } else {
+                            $products = $responseBody[$providerPanel->config['result_in']];
+                        }
+                    }else {
+                        die('sikron Tidak berhasil' . json_encode($responseBody));
+                    }
+                } else {
+                    if ($providerPanel->config['result_in'] == '#' || blank($providerPanel->config['result_in'])) {
+                        $products = $responseBody;
+                    } else {
+                        $products = $responseBody[$providerPanel->config['result_in']];
+                    }
+                }
+            } else {
+                die('config terdapat kesalahan dalam penamaan');
             }
+        } else {
+            die('config belum di setting');
         }
+
+        $this->insertData($products, $providerPanel);
 
         return redirect()
             ->route('web.admin.social-media-marketing.provider-panel.show', $providerPanel->id)
@@ -144,5 +157,36 @@ class ProviderPanelSyncController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    private function insertData($products, $providerPanel) {
+        foreach ($products as $product) {
+            $productArr = collect($product)->toArray();
+            $resultData = $providerPanel->format_data;
+
+            try {
+                PanelProduct::create([
+                    'provider_panel_id' => $providerPanel->id,
+                    'service_id' => $productArr[$resultData['service_id']],
+                    'name' => $productArr[$resultData['name']],
+                    'price' => $productArr[$resultData['price']],
+                    'min' => $productArr[$resultData['min']],
+                    'max' => $productArr[$resultData['max']],
+                    'category' => $productArr[$resultData['category']],
+                    'note' => $productArr[$resultData['note']] ?? '',
+                ]);
+            } catch (QueryException $exception) {
+                $panelProduct = PanelProduct::where('service_id', $productArr[$resultData['service_id']])
+                    ->where('provider_panel_id', $providerPanel->id)
+                    ->first();
+
+                $panelProduct->price = $productArr[$resultData['price']];
+                $panelProduct->min = $productArr[$resultData['min']];
+                $panelProduct->max = $productArr[$resultData['max']];
+                $panelProduct->note = $productArr[$resultData['note']] ?? '';
+                $providerPanel->save();
+            }
+        }
+
     }
 }

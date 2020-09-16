@@ -18,6 +18,7 @@ class WelcomeController extends Controller
 //        Mail::to(Auth::user())->send(new TransactionMail());
 //        Mail::to('dries@example.com')->send(new TransactionMail());
 //        return new TransactionMail();
+//        return \auth()->user();
         return view('welcome');
     }
 }

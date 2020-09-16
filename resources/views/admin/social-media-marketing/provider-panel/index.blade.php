@@ -7,6 +7,16 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-10 is-offset-1">
+                    <div class="content">
+                        <ul>
+                            <li>https://lollipop-smm.com/api/documentation</li>
+                            <li>https://smmbos.com/page/api_documentation</li>
+                            <li>https://spetr-media.com/api/documentation</li>
+                            <li>https://bakulsosmed.co.id/api/documentation.php</li>
+                            <li></li>
+                            <li>https://mediamax.id/dokumentasi-api.php</li>
+                        </ul>
+                    </div>
                     <div class="box">
                         <p>
                             <a href="{{ route('web.admin.social-media-marketing.provider-panel.create') }}" class="button is-primary">Tambah Data</a>

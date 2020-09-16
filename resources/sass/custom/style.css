@@ -192,3 +192,97 @@
 .is-horizontal-center {
     justify-content: center;
 }
+
+/* main.css */
+
+/* line 26, src/assets/scss/layout/_layout.scss */
+.footer {
+    padding: 4rem 1.5rem 2rem 1.5rem
+}
+
+/* line 29, src/assets/scss/layout/_layout.scss */
+.footer .title {
+    margin-bottom: 16px
+}
+
+/* line 33, src/assets/scss/layout/_layout.scss */
+.footer .footer-text {
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: .9rem
+}
+
+/* line 39, src/assets/scss/layout/_layout.scss */
+.footer .socials {
+    padding-top: 16px
+}
+
+/* line 42, src/assets/scss/layout/_layout.scss */
+.footer .socials a {
+    margin: 0 10px;
+    font-size: 18px;
+    color: white;
+    -webkit-transition: color .3s;
+    transition: color .3s;
+}
+
+/* line 48, src/assets/scss/layout/_layout.scss */
+.footer .socials a:hover {
+    color: #3080ff
+}
+
+/* line 55, src/assets/scss/layout/_layout.scss */
+.footer .footer-menu li {
+    padding-bottom: 8px;
+    font-family: "Montserrat", sans-serif;
+    font-size: .9rem;
+    color: white;
+}
+
+/* line 61, src/assets/scss/layout/_layout.scss */
+.footer .footer-menu li a {
+    color: white;
+    -webkit-transition: color .3s;
+    transition: color .3s
+}
+
+/* line 65, src/assets/scss/layout/_layout.scss */
+.footer .footer-menu li a:hover {
+    color: #3080ff
+}
+
+/* line 72, src/assets/scss/layout/_layout.scss */
+.footer .copyright {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-top: 4rem
+}
+
+/* line 78, src/assets/scss/layout/_layout.scss */
+.footer .copyright .copyright-text {
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: .9rem
+}
+
+/* line 83, src/assets/scss/layout/_layout.scss */
+.footer .copyright .copyright-text a {
+    color: #3080ff;
+    font-weight: 500
+}
+
+/* inline */
+.is-dotted {
+    border: dotted 2px #44b086 !important
+}
+
+.is-dashed {
+    border: dashed 2px #44b086 !important
+}

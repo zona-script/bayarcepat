@@ -27,6 +27,7 @@ class CreateUserBankTable extends Migration
 
             $table->string('bank_account_name')->nullable();
             $table->string('bank_account_number')->nullable();
+            $table->text('notes')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

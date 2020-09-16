@@ -11,6 +11,8 @@ class UserBank extends Model
 
     protected $guarded = [];
 
+    protected $with = ['bankMaster'];
+
     public function bankMaster() {
         return $this->belongsTo(BankMaster::class);
     }

@@ -7,11 +7,15 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Auth;
+use Inertia\Inertia;
 
 class DashboardController extends Controller
 {
     public function index()
     {
+        return Inertia::render('Dashboard/Index', [
+            'user' => Auth::user()
+        ]);
         $provinces = LocationEnum::provinsi();
         $cities = LocationEnum::kabupaten();
         return view('dashboard.index', compact('provinces', 'cities'));

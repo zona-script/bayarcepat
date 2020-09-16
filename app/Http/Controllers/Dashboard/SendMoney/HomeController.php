@@ -10,16 +10,19 @@ use App\Services\TransactionWallet\TransactionWalletFactory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
+use Inertia\Inertia;
+use Inertia\Response;
 
 class HomeController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\Response|\Illuminate\View\View
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\Response|\Illuminate\View\View | Response
      */
     public function index()
     {
+        return Inertia::render('Dashboard/Sendmoney/Index');
         return view('dashboard.send-money.index');
     }
 
@@ -89,7 +92,7 @@ class HomeController extends Controller
      */
     public function show($id)
     {
-        //
+
     }
 
     /**

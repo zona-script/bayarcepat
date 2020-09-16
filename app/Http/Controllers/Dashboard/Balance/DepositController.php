@@ -3,19 +3,35 @@
 namespace App\Http\Controllers\Dashboard\Balance;
 
 use App\Bank;
+use App\BankMaster;
 use App\Builders\BayarCepatPayBuilder;
 use App\Enums\CurrencyRateEnum;
 use App\Enums\TransactionEnum;
 use App\Http\Controllers\Controller;
 use App\Transaction;
+use App\UserBank;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Auth;
+use Inertia\Inertia;
 
 class DepositController extends Controller
 {
     public function index()
     {
+        $banks = BankMaster::with('bank')
+            ->whereHas('bank', function (Builder $query) {
+                $query->where('status', 1);
+            })
+            ->get();
+
+//        $userBanks = UserBank::where('user_id', \auth()->id())->get();
+
+        return Inertia::render('Dashboard/Balance/Deposit/Index', [
+            'banks' => $banks,
+//            'userBanks' => $userBanks,
+        ]);
         return view('dashboard.balance.deposit.index');
     }
 
