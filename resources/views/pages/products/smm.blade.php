@@ -24,6 +24,11 @@
                     <li>Max = jumlah order paling banyak yang bisa dilakukan untuk satu target tertentu.</li>
                     <li>Price = harga yang berlaku untuk setiap 1000.</li>
                 </ul>
+
+                @if (blank($products))
+                    <h3 class="title is-primary">SAAT INI PRODUK MASIH KOSONG</h3>
+                @endif
+
                 @foreach ($products as $key => $category)
                     <h3 class="subtitle">Harga Layanan {{ $category['name'] }}</h3>
                     <div class="table-container">
