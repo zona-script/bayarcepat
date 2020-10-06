@@ -2,6 +2,9 @@
 
 use App\BayarCepatPay;
 use App\Enums\BayarCepatPayEnum;
+use App\Models\Bank;
+use App\Models\BankMaster;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Auth;
 
@@ -14,12 +17,12 @@ class BalanceSeeder extends Seeder
      */
     public function run()
     {
-        $user = \App\User::first();
-        $bankMaster = \App\BankMaster::first();
-        $bank = \App\Bank::first();
+        $user = User::first();
+        $bankMaster = BankMaster::first();
+        $bank = Bank::first();
 
 
-        $userBank = \App\UserBank::create([
+        $userBank = \App\Models\UserBank::create([
             'user_id' => $user->id,
             'bank_master_id' => $bankMaster->id,
             'bank_account_number' => '29187687181',

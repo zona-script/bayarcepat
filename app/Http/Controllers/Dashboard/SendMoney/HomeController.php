@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Dashboard\SendMoney;
 
 use App\Http\Controllers\Controller;
-use App\MoneyTransfer;
+use App\Models\MoneyTransfer;
 use App\Services\MoneyTransfer\MoneyTransferFactory;
 use App\Services\MoneyTransfer\SendMoney;
 use App\Services\TransactionWallet\TransactionWalletFactory;

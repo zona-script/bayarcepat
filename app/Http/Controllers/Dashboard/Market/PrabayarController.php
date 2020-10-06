@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Dashboard\Market;
 
 use App\Builders\BayarCepatBuilder;
-use App\CallbackResponse;
+use App\Models\CallbackResponse;
 use App\Enums\CallbackEnum;
 use App\Enums\TransactionEnum;
 use App\Http\Controllers\Controller;
@@ -11,7 +11,7 @@ use App\Jobs\ProcessSendMessagetoTelegram;
 use App\Jobs\ProcessSendMessagetoTelegramFromMarket;
 use App\Partners\Digiflazz\DigiflazzBuilder;
 use App\Partners\Digiflazz\DigiflazzEnum;
-use App\Transaction;
+use App\Models\Transaction;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 

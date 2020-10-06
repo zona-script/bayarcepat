@@ -6,7 +6,7 @@ use App\Builders\BayarCepatBuilder;
 use App\Enums\BayarCepatPayEnum;
 use App\Enums\TransactionEnum;
 use App\Http\Controllers\Controller;
-use App\Transaction;
+use App\Models\Transaction;
 use Illuminate\Http\Request;
 
 class DepositController extends Controller

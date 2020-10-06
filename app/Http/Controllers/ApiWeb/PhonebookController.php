@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\ApiWeb;
 
 use App\Http\Controllers\Controller;
-use App\Phonebook;
+use App\Models\Phonebook;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 

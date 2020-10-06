@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\Admin\SocialMediaMarketing;
 
 use App\Http\Controllers\Controller;
-use App\PanelProduct;
-use App\ProviderPanel;
+use App\Models\PanelProduct;
+use App\Models\ProviderPanel;
 use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;

@@ -5,7 +5,7 @@ namespace App\Services\MoneyTransfer;
 use App\Enums\Balance;
 use App\Enums\BalanceTitle;
 use App\Services\Balance\BalanceFactory;
-use App\User;
+use App\Models\User;
 
 class MoneyTransfer
 {
@@ -51,7 +51,7 @@ class MoneyTransfer
         }
 
 
-        $moneyTransfer = \App\MoneyTransfer::create([
+        $moneyTransfer = \App\Models\MoneyTransfer::create([
             'sender_user_id' => $this->userSender->id,
             'received_user_id' => $this->userReceiver->id,
             'amount' => $this->amount,

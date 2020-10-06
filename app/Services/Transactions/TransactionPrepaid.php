@@ -1,14 +1,12 @@
 <?php
 
-
 namespace App\Services\Transactions;
 
-
-use App\Balances;
+use App\Models\Balances;
 use App\Enums\Balance;
 use App\Enums\PrepaidEnum;
 use App\Services\RandomRefID;
-use App\TransactionPrepaidResponse;
+use App\Models\TransactionPrepaidResponse;
 use Illuminate\Support\Facades\Auth;
 
 class TransactionPrepaid extends TransactionAbstract
@@ -35,7 +33,7 @@ class TransactionPrepaid extends TransactionAbstract
             ]);
         }
 
-        $transactionPrepaid = \App\TransactionPrepaid::create([
+        $transactionPrepaid = \App\Models\TransactionPrepaid::create([
             'user_id' => Auth::id(),
             'ref_id' => $refId,
             'product' => $product,

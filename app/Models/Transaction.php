@@ -1,13 +1,15 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use App\Enums\TransactionEnum;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Carbon;
 
 class Transaction extends Model
 {
+    use HasFactory;
     protected $table = 'transactions';
 
     protected $fillable = [

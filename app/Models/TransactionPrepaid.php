@@ -1,8 +1,9 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use App\Enums\PrepaidEnum;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Carbon;
@@ -10,6 +11,7 @@ use Illuminate\Support\Carbon;
 class TransactionPrepaid extends Model
 {
     use SoftDeletes;
+    use HasFactory;
     protected $table = 'transaction_prepaid';
 
     protected $fillable = [

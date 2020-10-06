@@ -1,14 +1,16 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use App\Traits\ModelDateTimeTrait;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class TransactionWallet extends Model
 {
     use SoftDeletes;
+    use HasFactory;
     use ModelDateTimeTrait;
     protected $table = 'transaction_wallets';
 

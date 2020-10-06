@@ -3,12 +3,12 @@
 namespace App\Http\Controllers\Callback;
 
 use App\Builders\BayarCepatBuilder;
-use App\CallbackResponse;
+use App\Models\CallbackResponse;
 use App\Enums\CallbackEnum;
 use App\Enums\TransactionEnum;
 use App\Http\Controllers\Controller;
 use App\Partners\Digiflazz\DigiflazzEnum;
-use App\Transaction;
+use App\Models\Transaction;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 

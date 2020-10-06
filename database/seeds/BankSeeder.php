@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Bank;
 use Illuminate\Database\Seeder;
 
 class BankSeeder extends Seeder
@@ -30,7 +31,7 @@ class BankSeeder extends Seeder
         foreach ($banks as $bank)
         {
             $userBank = $bank;
-            \App\Bank::create($bank);
+            Bank::create($bank);
         }
     }
 }

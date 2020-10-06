@@ -1,10 +1,8 @@
 <?php
 
-
 namespace App\Services\Balance;
 
-
-use App\Balances;
+use App\Models\Balances;
 
 class PreviousBalance
 {

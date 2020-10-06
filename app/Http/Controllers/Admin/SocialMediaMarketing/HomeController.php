@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Admin\SocialMediaMarketing;
 
 use App\Http\Controllers\Controller;
-use App\PanelProduct;
+use App\Models\PanelProduct;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller

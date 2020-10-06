@@ -4,10 +4,9 @@
 namespace App\Traits;
 
 
-use App\BayarCepatPay;
+use App\Models\BayarCepatPay;
 use App\Telegram\TelegramBuilder;
-use App\Transaction;
-use Illuminate\Support\Facades\Auth;
+use App\Models\Transaction;
 
 trait TelegramTrait
 {

@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers\Api\UserBank;
 
-use App\BankMaster;
+use App\Models\BankMaster;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Api\UserBankStore;
-use App\UserBank;
+use App\Models\UserBank;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 

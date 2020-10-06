@@ -3,10 +3,9 @@
 
 namespace App\Builders;
 
-
-use App\BayarCepatPay;
+use App\Models\BayarCepatPay;
 use App\Enums\BayarCepatPayEnum;
-use App\User;
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 
 class BayarCepatPayBuilder

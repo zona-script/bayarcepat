@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\ApiWeb;
 
-use App\Contact;
+use App\Models\Contact;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;

@@ -1,13 +1,15 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use App\Traits\ModelDateTimeTrait;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class MoneyTransfer extends Model
 {
     use ModelDateTimeTrait;
+    use HasFactory;
     protected $table = 'money_transfers';
     protected $fillable = [
         'id',

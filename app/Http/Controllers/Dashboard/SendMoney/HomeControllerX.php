@@ -6,8 +6,8 @@ use App\Builders\BayarCepatBuilder;
 use App\Builders\BayarCepatPayBuilder;
 use App\Enums\TransactionEnum;
 use App\Http\Controllers\Controller;
-use App\Transaction;
-use App\User;
+use App\Models\Transaction;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class HomeControllerX extends Controller

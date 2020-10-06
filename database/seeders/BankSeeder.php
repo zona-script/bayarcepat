@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use App\Models\Bank;
 
 class BankSeeder extends Seeder
 {
@@ -32,7 +33,7 @@ class BankSeeder extends Seeder
         foreach ($banks as $bank)
         {
             $userBank = $bank;
-            \App\Bank::create($bank);
+            Bank::create($bank);
         }
     }
 }

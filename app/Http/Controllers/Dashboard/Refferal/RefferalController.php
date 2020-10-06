@@ -3,9 +3,8 @@
 namespace App\Http\Controllers\Dashboard\Refferal;
 
 use App\Http\Controllers\Controller;
-use App\Refferal;
+use App\Models\Refferal;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
 class RefferalController extends Controller
 {
@@ -16,7 +15,6 @@ class RefferalController extends Controller
      */
     public function index()
     {
-//        $refferals = Auth::user()->refferals()->get();
         $refferals = Refferal::with(['refferal'])->get();
 
         return view('dashboard.refferal.index', compact('refferals'));

@@ -2,10 +2,10 @@
 
 namespace App\Builders;
 
-use App\BayarCepatPay;
+use App\Models\BayarCepatPay;
 use App\Enums\BayarCepatPayEnum;
 use App\Enums\TransactionEnum;
-use App\Transaction;
+use App\Models\Transaction;
 use Illuminate\Support\Facades\Auth;
 
 class BayarCepatBuilder

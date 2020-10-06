@@ -4,7 +4,7 @@
 namespace App\Enums;
 
 
-use App\Transaction;
+use App\Models\Transaction;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Str;
 

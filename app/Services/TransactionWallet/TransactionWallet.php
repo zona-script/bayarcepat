@@ -56,7 +56,7 @@ class TransactionWallet
         $amount = $this->amount;
         $totalAmount = $uniqueCode + $this->amount;
 
-        $trxWallet = \App\TransactionWallet::create([
+        $trxWallet = \App\Models\TransactionWallet::create([
             'user_id' => $this->user->id,
             'bank' => $this->bank,
             'user_bank' => $this->userBank,

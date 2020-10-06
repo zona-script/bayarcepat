@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class UsersSeeder extends Seeder
@@ -11,7 +12,7 @@ class UsersSeeder extends Seeder
      */
     public function run()
     {
-        $user = \App\User::create([
+        $user = User::create([
             'name' => 'Fatkul Nur Koirudin',
             'username' => 'fatkulnurk',
             'email' => 'fatkulnurk@gmail.com',
@@ -21,7 +22,7 @@ class UsersSeeder extends Seeder
         $user->assignRole(\App\Enums\RoleEnum::getAll());
         unset($user);
 
-        $user = \App\User::create([
+        $user = User::create([
             'name' => 'Aminatus Sadiyah',
             'username' => 'aminatus',
             'email' => 'ami@dibumi.com',
@@ -31,7 +32,7 @@ class UsersSeeder extends Seeder
         $user->assignRole(\App\Enums\RoleEnum::getAll());
         unset($user);
 
-        $user = \App\User::create([
+        $user = User::create([
             'name' => 'Aku siapa hayoo',
             'username' => 'admin',
             'email' => 'admin@bayarcepat.com',
@@ -41,7 +42,7 @@ class UsersSeeder extends Seeder
         $user->assignRole(\App\Enums\RoleEnum::$roleAdmin);
         unset($user);
 
-        $user = \App\User::create([
+        $user = User::create([
             'name' => 'Aku siapa hayoo',
             'username' => 'developer',
             'email' => 'developer@bayarcepat.com',
@@ -51,7 +52,7 @@ class UsersSeeder extends Seeder
         $user->assignRole(\App\Enums\RoleEnum::$roleDeveloper);
         unset($user);
 
-        $user = \App\User::create([
+        $user = User::create([
             'name' => 'Aku siapa hayoo',
             'username' => 'reseller',
             'email' => 'reseller@bayarcepat.com',
@@ -61,7 +62,7 @@ class UsersSeeder extends Seeder
         $user->assignRole(\App\Enums\RoleEnum::$roleConsumer);
         unset($user);
 
-        $user = \App\User::create([
+        $user = User::create([
             'name' => 'Aku siapa hayoo',
             'username' => 'consumer',
             'email' => 'consumer@bayarcepat.com',

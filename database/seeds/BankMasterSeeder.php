@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\BankMaster;
 use Illuminate\Database\Seeder;
 
 class BankMasterSeeder extends Seeder
@@ -559,7 +560,7 @@ class BankMasterSeeder extends Seeder
         foreach ($banks as $bank)
         {
             $bank = collect($bank)->toArray();
-            \App\BankMaster::create([
+            BankMaster::create([
                 'name' => $bank['name'],
                 'code' => $bank['code'],
                 'logo' => '',

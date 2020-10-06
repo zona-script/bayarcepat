@@ -77,12 +77,12 @@ class DigiflazzConnection
         }
 
 // offline development
-//        $pathName = 'digiflazz-' . $cmd . '.json';
-//        if ($this->existJson($pathName)) {
-//            return $this->readJson($pathName);
-//        }
+        $pathName = 'digiflazz-' . $cmd . '.json';
+        if ($this->existJson($pathName)) {
+            return $this->readJson($pathName);
+        }
         $data = $this->request('https://api.digiflazz.com/v1/price-list', $jsonBody);
-//        $this->saveJson($pathName, $data);
+        $this->saveJson($pathName, $data);
 
         return $data;
     }

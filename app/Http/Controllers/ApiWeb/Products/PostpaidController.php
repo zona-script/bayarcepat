@@ -5,7 +5,7 @@ namespace App\Http\Controllers\ApiWeb\Products;
 use App\Http\Controllers\Controller;
 use App\Services\Digiflazz\Buyer\DigiflazzBuyer;
 use App\Services\RandomRefID;
-use App\TransactionPostpaidCheckbills;
+use App\Models\TransactionPostpaidCheckbills;
 use Illuminate\Http\Request;
 
 class PostpaidController extends Controller

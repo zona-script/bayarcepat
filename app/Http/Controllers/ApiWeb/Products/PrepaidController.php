@@ -2,18 +2,17 @@
 
 namespace App\Http\Controllers\ApiWeb\Products;
 
-use App\Balances;
+use App\Models\Balances;
 use App\Enums\Balance;
 use App\Enums\PrepaidEnum;
 use App\Http\Controllers\Controller;
 use App\Partners\Digiflazz\DigiflazzBuilder;
 use App\Services\Digiflazz\Buyer\DigiflazzBuyer;
 use App\Services\RandomRefID;
-use App\TransactionPrepaid;
-use App\TransactionPrepaidResponse;
+use App\Models\TransactionPrepaid;
+use App\Models\TransactionPrepaidResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Str;
 
 class PrepaidController extends Controller
 {

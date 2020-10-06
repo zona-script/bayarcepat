@@ -2,7 +2,7 @@
 
 namespace App\Services\Transactions;
 
-use App\User;
+use App\Models\User;
 
 class TransactionFactory
 {

@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\Api\Balance;
 
-use App\Bank;
-use App\BankMaster;
+use App\Models\Bank;
+use App\Models\BankMaster;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Api\Balance\DepositStore;
-use App\UserBank;
+use App\Models\UserBank;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 

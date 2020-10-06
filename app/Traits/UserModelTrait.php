@@ -1,17 +1,15 @@
 <?php
 
-
 namespace App\Traits;
 
-
-use App\Balances;
-use App\Contact;
-use App\Phonebook;
-use App\Refferal;
-use App\Support;
-use App\Transaction;
-use App\UserVoucher;
-use App\Voucher;
+use App\Models\Balances;
+use App\Models\Contact;
+use App\Models\Phonebook;
+use App\Models\Refferal;
+use App\Models\Support;
+use App\Models\Transaction;
+use App\Models\UserVoucher;
+use App\Models\Voucher;
 use Spatie\Permission\Traits\HasRoles;
 
 trait UserModelTrait

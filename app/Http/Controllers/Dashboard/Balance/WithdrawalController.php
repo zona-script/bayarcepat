@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Dashboard\Balance;
 use App\Enums\BankEnum;
 use App\Enums\TransactionEnum;
 use App\Http\Controllers\Controller;
-use App\Transaction;
+use App\Models\Transaction;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 

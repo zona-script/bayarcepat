@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin\SocialMediaMarketing;
 
 use App\Enums\UniqueCode;
 use App\Http\Controllers\Controller;
-use App\ProviderPanel;
+use App\Models\ProviderPanel;
 use Illuminate\Http\Request;
 
 class ProviderPanelController extends Controller

@@ -19,7 +19,7 @@ class MoneyTransferFactory
 
     public static function history($user, $orderBy = 'id', $sortBy = 'desc')
     {
-        return \App\MoneyTransfer::where('sender_user_id', $user->id)
+        return \App\Models\MoneyTransfer::where('sender_user_id', $user->id)
             ->where('received_user_id', $user->id)
             ->orderBy($orderBy, $sortBy)
             ->get();

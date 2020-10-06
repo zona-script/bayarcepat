@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers\Dashboard\Balance;
 
-use App\Bank;
-use App\BankMaster;
+use App\Models\Bank;
+use App\Models\BankMaster;
 use App\Builders\BayarCepatPayBuilder;
 use App\Enums\CurrencyRateEnum;
 use App\Enums\TransactionEnum;
 use App\Http\Controllers\Controller;
-use App\Transaction;
-use App\UserBank;
+use App\Models\Transaction;
+use App\Models\UserBank;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;

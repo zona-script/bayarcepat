@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers\Dashboard\Balance;
 
-use App\BankMaster;
+use App\Models\BankMaster;
 use App\Http\Controllers\Controller;
-use App\TransactionWallet;
-use App\UserBank;
+use App\Models\TransactionWallet;
+use App\Models\UserBank;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Inertia\Inertia;

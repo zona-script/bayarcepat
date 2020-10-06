@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\ApiWeb\Products;
 
 use App\Http\Controllers\Controller;
-use App\TransactionPrepaid;
+use App\Models\TransactionPrepaid;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 

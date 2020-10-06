@@ -10,7 +10,7 @@ use App\JavaH2H\JavaH2HBuilder;
 use App\Jobs\ProcessSendMessagetoTelegram;
 use App\Telegram\TelegramBuilder;
 use App\Traits\TelegramTrait;
-use App\Transaction;
+use App\Models\Transaction;
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Auth;

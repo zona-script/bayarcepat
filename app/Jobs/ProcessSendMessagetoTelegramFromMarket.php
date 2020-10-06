@@ -3,7 +3,7 @@
 namespace App\Jobs;
 
 use App\Traits\TelegramTrait;
-use App\Transaction;
+use App\Models\Transaction;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
