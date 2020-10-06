@@ -67216,11 +67216,6 @@ var Ziggy = {
       "methods": ["POST"],
       "domain": null
     },
-    "web.dashboard.cetak-struk.index": {
-      "uri": "dashboard\/cetak-struk",
-      "methods": ["GET", "HEAD"],
-      "domain": null
-    },
     "web.dashboard.bank.index": {
       "uri": "dashboard\/bank",
       "methods": ["GET", "HEAD"],
@@ -67291,33 +67286,8 @@ var Ziggy = {
       "methods": ["DELETE"],
       "domain": null
     },
-    "web.dashboard.refferal.index": {
-      "uri": "dashboard\/refferal",
-      "methods": ["GET", "HEAD"],
-      "domain": null
-    },
-    "web.dashboard.pengaturan.index": {
-      "uri": "dashboard\/pengaturan",
-      "methods": ["GET", "HEAD"],
-      "domain": null
-    },
-    "web.dashboard.pengaturan.update": {
-      "uri": "dashboard\/pengaturan",
-      "methods": ["POST"],
-      "domain": null
-    },
-    "web.dashboard.riwayat.index": {
-      "uri": "dashboard\/riwayat",
-      "methods": ["GET", "HEAD"],
-      "domain": null
-    },
-    "web.dashboard.riwayat.show": {
-      "uri": "dashboard\/riwayat\/{id}",
-      "methods": ["GET", "HEAD"],
-      "domain": null
-    },
     "web.dashboard.api.index": {
-      "uri": "dashboard\/api",
+      "uri": "dashboard\/developer-api",
       "methods": ["GET", "HEAD"],
       "domain": null
     },
@@ -67328,6 +67298,21 @@ var Ziggy = {
     },
     "web.dashboard.profile.password.update": {
       "uri": "dashboard\/profile",
+      "methods": ["POST"],
+      "domain": null
+    },
+    "web.dashboard.refferal.index": {
+      "uri": "dashboard\/refferal",
+      "methods": ["GET", "HEAD"],
+      "domain": null
+    },
+    "web.dashboard.pengaturan.index": {
+      "uri": "dashboard\/setting",
+      "methods": ["GET", "HEAD"],
+      "domain": null
+    },
+    "web.dashboard.pengaturan.update": {
+      "uri": "dashboard\/setting",
       "methods": ["POST"],
       "domain": null
     },
@@ -67768,21 +67753,6 @@ var Ziggy = {
     },
     "api.local.": {
       "uri": "api\/local",
-      "methods": ["GET", "HEAD"],
-      "domain": null
-    },
-    "apiweb.": {
-      "uri": "api\/web\/contact",
-      "methods": ["GET", "HEAD"],
-      "domain": null
-    },
-    "apiweb.check-postpaid-bill.index": {
-      "uri": "api\/web\/check-postpaid-bill",
-      "methods": ["POST"],
-      "domain": null
-    },
-    "apiweb.check-postpaid-bill.index.get": {
-      "uri": "api\/web\/check-postpaid-bill",
       "methods": ["GET", "HEAD"],
       "domain": null
     }

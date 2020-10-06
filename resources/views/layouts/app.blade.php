@@ -17,7 +17,7 @@
     <meta property="business:contact_data:postal_code" content="62257" />
     <meta property="business:contact_data:country_name" content="Indonesia" />
     <meta property="business:contact_data:email" content="bayarcepat@dibumi.com" />
-    <meta property="business:contact_data:phone_number" content="+6285607100255" />
+    <meta property="business:contact_data:phone_number" content="+6281414145152" />
     <meta property="business:contact_data:website" content="https://bayarcepat.com" />
 
     <!--Core CSS -->
@@ -115,7 +115,8 @@
             <div class="column is-4">
                 <h4 class="title is-3 is-bold has-text-primary">{{ config('app.name') }}</h4>
                 <p class="footer-text has-text-justified">
-                    kami adalah Marketplace Distributor H2H produk digital dan non digital. Anda bisa membeli produk, kirim uang antar bank, kirim uang dari paypal, dan masih banyak lagi.
+                    {{ config('app.name') }} Adalah Marketplace, Distributtor H2H & Aggregator untuk produk digital dan non digital.
+                    Anda bisa membeli produk prabayar, pascabayar, ataupun layanan Social Media Marketing (cocok untuk buzzer atau influencer).
                 </p>
                 <div class="socials">
                     <a><span class="has-text-light"><i class="fab fa-instagram"></i></span></a>
@@ -177,7 +178,7 @@
                         <span class="icon has-text-white">
   <i class="fas fa-phone"></i>
 </span>
-                        <span>+62856xxxxxxxx</span>
+                        <span>+628141414xxxx</span>
                     </p>
                     <p>
                         <span class="icon has-text-white">
@@ -193,15 +194,11 @@
             <p>
                 &copy; 2020 {{ config('app.name') }}
             </p>
-            <p>Dibangun dengan sepenuh <span class="has-text-danger"><i class="fas fa-heart"></i></span> di Indonesia</p>
+            <p class="has-text-uppercase">Dibangun Dengan Sepenuh <span class="has-text-danger"><i class="fas fa-heart"></i></span> di (Lamongan) Indonesia & (Tallinn) Estonia</p>
         </div>
     </div>
 </footer>
 
-{{--@auth--}}
-{{--<script src="{{ asset('js/app.js') }}"></script>--}}
-{{--@endauth--}}
-{{--<script src="{{ asset('js/functions.js') }}"></script>--}}
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
 
 <script>

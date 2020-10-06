@@ -153,23 +153,19 @@
                             <span class="icon"><i class="fas fa-code"></i></span>
                             <span>Developer Api</span>
                         </a>
-                        <a class="navbar-item">
-        <span class="icon"><i class="fas fa-sign-out-alt"></i></span>
-                            <span>Logout</span>
-                        </a>
+                        <form action="{{ route('logout') }}" method="POST">
+                            @csrf
+                            <a class="navbar-item">
+                                <span class="icon"><i class="fas fa-sign-out-alt"></i></span>
+                                <button>Logout</button>
+                            </a>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-{{--<div class="columns">--}}
-{{--    <div class="column is-6 is-offset-3">--}}
-{{--        @include('partials.notification')--}}
-{{--        @include('partials.erros')--}}
-{{--    </div>--}}
-{{--</div>--}}
 
 @include('partials.notification')
 @include('partials.erros')
@@ -249,3 +245,9 @@
 <!--Pages-->
 </body>
 </html>
+<script>
+    import Button from "../../js/Jetstream/Button";
+    export default {
+        components: {Button}
+    }
+</script>

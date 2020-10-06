@@ -44,29 +44,23 @@ Route::group(['as' => 'web.'], function () {
             Route::post('/deposit/create', 'DepositController@store')->name('deposit.store');
         });
 
-        Route::group(['prefix' => 'cetak-struk', 'as' => 'cetak-struk.', 'namespace' => 'PrintInvoice'], function () {
-            Route::get('/', 'HomeController@index')->name('index');
-        });
-
         Route::resource('/bank', 'Bank\HomeController');
         Route::resource('contact', 'ContactController');
-        Route::resource('refferal', 'Refferal\RefferalController')->only('index');
 
-        Route::group(['prefix' => 'pengaturan', 'as' => 'pengaturan.', 'namespace' => 'Setting'], function () {
-            Route::get('/', 'HomeController@index')->name('index');
-            Route::post('/', 'HomeController@update')->name('update');
-        });
-
-        Route::get('/riwayat', 'RiwayatController@index')->name('riwayat.index');
-        Route::get('/riwayat/{id}', 'RiwayatController@show')->name('riwayat.show');
-
-        Route::group(['prefix' => 'api', 'as' => 'api.', 'namespace' => 'Api'], function () {
+        Route::group(['prefix' => 'developer-api', 'as' => 'api.', 'namespace' => 'Api'], function () {
             Route::get('/', 'HomeController@index')->name('index');
         });
 
         Route::group(['prefix' => 'profile', 'as' => 'profile.', 'namespace' => 'Profile'], function () {
             Route::get('/', 'HomeController@index')->name('index');
             Route::post('/', 'ChangePasswordController@update')->name('password.update');
+        });
+
+        Route::resource('refferal', 'Refferal\RefferalController')->only('index');
+
+        Route::group(['prefix' => 'setting', 'as' => 'pengaturan.', 'namespace' => 'Setting'], function () {
+            Route::get('/', 'HomeController@index')->name('index');
+            Route::post('/', 'HomeController@update')->name('update');
         });
     });
 

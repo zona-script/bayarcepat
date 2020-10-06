@@ -47,14 +47,10 @@ Route::group(['as' => 'api.', 'middleware' => 'auth:sanctum'], function () {
         });
     });
 
-    //@endlive
-
-
-
     Route::resource('/user-bank', 'Api\UserBank\HomeController');
     Route::resource('/bank-master', 'Api\BankMasterController');
 
-
+    //@endlive
     Route::group(['as'=>'balance.', 'prefix' => 'balance', 'namespace' => 'Api\Balance'], function () {
         Route::resource('/deposit', 'DepositController');
         Route::resource('/withdrawal', 'WithdrawalController');
