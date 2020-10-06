@@ -1,6 +1,5 @@
 <template>
     <div>
-
         <section class="hero is-primary">
             <div class="hero-body">
                 <div class="container">
@@ -243,11 +242,14 @@
             }
         },
         mounted() {
-            window.axios.get('/api/web/products/prepaid')
+            window.axios.get(this.route('api.products.prepaid.index').url())
                 .then(response => {
                     this.dataInit = response.data
                     this.initializeData()
                 })
+                .catch(error => {
+                    this.$alert(error.response.message, 'Gagal Mengambil Data', 'error')
+                });
         },
         created() {
         },
@@ -342,7 +344,8 @@
                     this.showModalBuyButton = true
                     this.$alert("no telepon/pelanggan masih kosong.", '', 'warning');
                 } else {
-                    window.axios.post('/api/web/products/prepaid', params)
+                    // window.axios.post('/api/web/products/prepaid', params)
+                    window.axios.post(this.route('api.products.prepaid.store').url(), params)
                         .then(response => {
                             this.showModalBuyButton = true
                             result = response.data
@@ -355,6 +358,9 @@
                             }
                             this.resetForm();
                         })
+                        .catch(error => {
+                            this.$alert(error.response.message, 'Transaksi Tidak berhasil', 'error')
+                        });
                 }
             },
             resetForm() {

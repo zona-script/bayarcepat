@@ -23,6 +23,33 @@ Route::get('/', function () {
 
 
 Route::group(['as' => 'api.', 'middleware' => 'auth:sanctum'], function () {
+    //@live
+
+    // api untuk product
+    Route::group(['as' => 'products.', 'prefix' => 'products', 'namespace' => 'Api\Products'], function () {
+        Route::group(['as' => 'prepaid.', 'prefix' => 'prepaid'], function () {
+            Route::get('/', 'PrepaidController@index')->name('index');
+            Route::post('/', 'PrepaidController@store')->name('store');
+
+            Route::get('/history', 'HistoryPrepaidController@index')->name('history.index');;
+        });
+
+        Route::group(['as' => 'postpaid.', 'prefix' => 'postpaid'], function () {
+            Route::get('/', 'PostpaidController@index')->name('index');
+            Route::post('/check', 'PostpaidController@checkbill')->name('check');
+            Route::post('/', 'PostpaidController@store')->name('store');
+
+            Route::get('/history', 'HistoryPostpaidController@index')->name('history.index');
+        });
+
+        Route::group(['as' => 'social-media-marketing.', 'prefix' => 'postpaid'], function () {
+            Route::get('/social-media-marketing', 'SocialMediaMarketingController@index')->name('index');
+        });
+    });
+
+    //@endlive
+
+
 
     Route::resource('/user-bank', 'Api\UserBank\HomeController');
     Route::resource('/bank-master', 'Api\BankMasterController');
@@ -33,11 +60,6 @@ Route::group(['as' => 'api.', 'middleware' => 'auth:sanctum'], function () {
         Route::resource('/withdrawal', 'WithdrawalController');
     });
 
-
-    // api untuk product
-    Route::group(['as' => 'products.', 'prefix' => 'products', 'namespace' => 'Api\Products'], function () {
-        Route::get('/social-media-marketing', 'SocialMediaMarketingController@index');
-    });
 
     Route::group(['as' => 'users.', 'prefix' => 'users', 'namespace' => 'Api\Users'], function () {
         Route::get('/username', 'UsernameController@index');

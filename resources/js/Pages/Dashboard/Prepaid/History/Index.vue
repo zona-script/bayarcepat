@@ -153,7 +153,7 @@
             }
         },
         mounted() {
-            window.axios.get('/api/web/products/prepaid/history')
+            window.axios.get(this.route('api.products.prepaid.history.index').url())
                 .then(response => {
                     this.data = response.data
                     this.rows = this.data

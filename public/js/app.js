@@ -4259,10 +4259,12 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     var _this = this;
 
-    window.axios.get('/api/web/products/postpaid').then(function (response) {
+    window.axios.get(this.route('api.products.postpaid.index').url()).then(function (response) {
       _this.dataInit = response.data;
 
       _this.initializeData();
+    })["catch"](function (error) {
+      _this.$alert(error.response.message, 'Gagal mengambil data', 'error');
     });
   },
   created: function created() {},
@@ -4327,7 +4329,7 @@ __webpack_require__.r(__webpack_exports__);
       if (this.customerNumber === '') {
         this.$alert("no pelanggan masih kosong.", '', 'warning');
       } else {
-        window.axios.post('/api/web/products/postpaid/check', params).then(function (response) {
+        window.axios.post(this.route('api.products.postpaid.check').url(), params).then(function (response) {
           result = response.data;
 
           if (result.status) {
@@ -4337,6 +4339,8 @@ __webpack_require__.r(__webpack_exports__);
           } else {
             _this2.$alert(result.message, 'Transaksi Tidak berhasil', 'error');
           }
+        })["catch"](function (error) {
+          _this2.$alert(error.response.message, 'Transaksi Tidak berhasil', 'error');
         });
       }
     },
@@ -4352,7 +4356,7 @@ __webpack_require__.r(__webpack_exports__);
       if (this.customerNumber === '') {
         this.$alert("no pelanggan masih kosong.", '', 'warning');
       } else {
-        window.axios.post('/api/web/products/prepaid', params).then(function (response) {
+        window.axios.post(this.route('api.products.postpaid.store').url(), params).then(function (response) {
           result = response.data;
 
           if (result.status) {
@@ -4362,6 +4366,8 @@ __webpack_require__.r(__webpack_exports__);
           }
 
           _this3.resetForm();
+        })["catch"](function (error) {
+          _this3.$alert(error.response.message, 'Transaksi Tidak berhasil', 'error');
         });
       }
     },
@@ -4532,7 +4538,7 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     var _this = this;
 
-    window.axios.get('/api/web/products/prepaid/history').then(function (response) {
+    window.axios.get(this.route('api.products.prepaid.history.index').url()).then(function (response) {
       _this.data = response.data;
       _this.rows = _this.data;
     });
@@ -4584,7 +4590,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
 //
 //
 //
@@ -4825,10 +4830,12 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     var _this = this;
 
-    window.axios.get('/api/web/products/prepaid').then(function (response) {
+    window.axios.get(this.route('api.products.prepaid.index').url()).then(function (response) {
       _this.dataInit = response.data;
 
       _this.initializeData();
+    })["catch"](function (error) {
+      _this.$alert(error.response.message, 'Gagal Mengambil Data', 'error');
     });
   },
   created: function created() {},
@@ -4920,7 +4927,8 @@ __webpack_require__.r(__webpack_exports__);
         this.showModalBuyButton = true;
         this.$alert("no telepon/pelanggan masih kosong.", '', 'warning');
       } else {
-        window.axios.post('/api/web/products/prepaid', params).then(function (response) {
+        // window.axios.post('/api/web/products/prepaid', params)
+        window.axios.post(this.route('api.products.prepaid.store').url(), params).then(function (response) {
           _this2.showModalBuyButton = true;
           result = response.data;
 
@@ -4933,6 +4941,8 @@ __webpack_require__.r(__webpack_exports__);
           }
 
           _this2.resetForm();
+        })["catch"](function (error) {
+          _this2.$alert(error.response.message, 'Transaksi Tidak berhasil', 'error');
         });
       }
     },
@@ -67206,6 +67216,11 @@ var Ziggy = {
       "methods": ["POST"],
       "domain": null
     },
+    "web.dashboard.cetak-struk.index": {
+      "uri": "dashboard\/cetak-struk",
+      "methods": ["GET", "HEAD"],
+      "domain": null
+    },
     "web.dashboard.bank.index": {
       "uri": "dashboard\/bank",
       "methods": ["GET", "HEAD"],
@@ -67239,11 +67254,6 @@ var Ziggy = {
     "web.dashboard.bank.destroy": {
       "uri": "dashboard\/bank\/{bank}",
       "methods": ["DELETE"],
-      "domain": null
-    },
-    "web.dashboard.cetak-struk.index": {
-      "uri": "dashboard\/cetak-struk",
-      "methods": ["GET", "HEAD"],
       "domain": null
     },
     "web.dashboard.contact.index": {
@@ -67531,6 +67541,46 @@ var Ziggy = {
       "methods": ["POST"],
       "domain": null
     },
+    "api.products.prepaid.index": {
+      "uri": "api\/products\/prepaid",
+      "methods": ["GET", "HEAD"],
+      "domain": null
+    },
+    "api.products.prepaid.store": {
+      "uri": "api\/products\/prepaid",
+      "methods": ["POST"],
+      "domain": null
+    },
+    "api.products.prepaid.history.index": {
+      "uri": "api\/products\/prepaid\/history",
+      "methods": ["GET", "HEAD"],
+      "domain": null
+    },
+    "api.products.postpaid.index": {
+      "uri": "api\/products\/postpaid",
+      "methods": ["GET", "HEAD"],
+      "domain": null
+    },
+    "api.products.postpaid.check": {
+      "uri": "api\/products\/postpaid\/check",
+      "methods": ["POST"],
+      "domain": null
+    },
+    "api.products.postpaid.store": {
+      "uri": "api\/products\/postpaid",
+      "methods": ["POST"],
+      "domain": null
+    },
+    "api.products.postpaid.history.index": {
+      "uri": "api\/products\/postpaid\/history",
+      "methods": ["GET", "HEAD"],
+      "domain": null
+    },
+    "api.products.social-media-marketing.index": {
+      "uri": "api\/products\/postpaid\/social-media-marketing",
+      "methods": ["GET", "HEAD"],
+      "domain": null
+    },
     "api.user-bank.index": {
       "uri": "api\/user-bank",
       "methods": ["GET", "HEAD"],
@@ -67671,11 +67721,6 @@ var Ziggy = {
       "methods": ["DELETE"],
       "domain": null
     },
-    "api.products.": {
-      "uri": "api\/products\/social-media-marketing",
-      "methods": ["GET", "HEAD"],
-      "domain": null
-    },
     "api.users.": {
       "uri": "api\/users\/username",
       "methods": ["GET", "HEAD"],
@@ -67726,48 +67771,8 @@ var Ziggy = {
       "methods": ["GET", "HEAD"],
       "domain": null
     },
-    "apiweb.user-bank.index": {
-      "uri": "api\/web\/user-bank",
-      "methods": ["GET", "HEAD"],
-      "domain": null
-    },
-    "apiweb.user-bank.create": {
-      "uri": "api\/web\/user-bank\/create",
-      "methods": ["GET", "HEAD"],
-      "domain": null
-    },
-    "apiweb.user-bank.store": {
-      "uri": "api\/web\/user-bank",
-      "methods": ["POST"],
-      "domain": null
-    },
-    "apiweb.user-bank.show": {
-      "uri": "api\/web\/user-bank\/{user_bank}",
-      "methods": ["GET", "HEAD"],
-      "domain": null
-    },
-    "apiweb.user-bank.edit": {
-      "uri": "api\/web\/user-bank\/{user_bank}\/edit",
-      "methods": ["GET", "HEAD"],
-      "domain": null
-    },
-    "apiweb.user-bank.update": {
-      "uri": "api\/web\/user-bank\/{user_bank}",
-      "methods": ["PUT", "PATCH"],
-      "domain": null
-    },
-    "apiweb.user-bank.destroy": {
-      "uri": "api\/web\/user-bank\/{user_bank}",
-      "methods": ["DELETE"],
-      "domain": null
-    },
     "apiweb.": {
-      "uri": "api\/web\/phonebook",
-      "methods": ["GET", "HEAD"],
-      "domain": null
-    },
-    "apiweb.products.": {
-      "uri": "api\/web\/products\/postpaid\/history",
+      "uri": "api\/web\/contact",
       "methods": ["GET", "HEAD"],
       "domain": null
     },

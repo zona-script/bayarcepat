@@ -205,12 +205,15 @@
             }
         },
         mounted() {
-            window.axios.get('/api/web/products/postpaid')
+            window.axios.get(this.route('api.products.postpaid.index').url())
                 .then(response => {
                     this.dataInit = response.data
 
                     this.initializeData()
                 })
+                .catch(error => {
+                    this.$alert(error.response.message, 'Gagal mengambil data', 'error')
+                });
         },
         created() {
         },
@@ -275,7 +278,7 @@
                 if (this.customerNumber === '') {
                     this.$alert("no pelanggan masih kosong.", '', 'warning');
                 } else {
-                    window.axios.post('/api/web/products/postpaid/check', params)
+                    window.axios.post(this.route('api.products.postpaid.check').url(), params)
                         .then(response => {
                             result = response.data
                             if(result.status) {
@@ -285,6 +288,9 @@
                                 this.$alert(result.message, 'Transaksi Tidak berhasil', 'error')
                             }
                         })
+                        .catch(error => {
+                            this.$alert(error.response.message, 'Transaksi Tidak berhasil', 'error')
+                        });
                 }
             },
             onClickBuyButton() {
@@ -297,7 +303,7 @@
                 if (this.customerNumber === '') {
                     this.$alert("no pelanggan masih kosong.", '', 'warning');
                 } else {
-                    window.axios.post('/api/web/products/prepaid', params)
+                    window.axios.post(this.route('api.products.postpaid.store').url(), params)
                         .then(response => {
                             result = response.data
                             if(result.status) {
@@ -307,6 +313,9 @@
                             }
                             this.resetForm();
                         })
+                        .catch(error => {
+                            this.$alert(error.response.message, 'Transaksi Tidak berhasil', 'error')
+                        });
                 }
             },
             resetForm() {

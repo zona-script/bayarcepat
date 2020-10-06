@@ -6,7 +6,7 @@ Route::group(['as' => 'web.'], function () {
     Route::group([
         'as' => 'dashboard.',
         'prefix' => 'dashboard',
-        'middleware' => ['auth:web', 'verified'],
+        'middleware' => ['auth:sanctum'],
         'namespace' => 'Dashboard'
     ], function () {
         Route::get('/', 'DashboardController@index')->name('index');
@@ -43,7 +43,7 @@ Route::group(['as' => 'web.'], function () {
             Route::get('/deposit/create', 'DepositController@create')->name('deposit.create');
             Route::post('/deposit/create', 'DepositController@store')->name('deposit.store');
         });
-        
+
         Route::group(['prefix' => 'cetak-struk', 'as' => 'cetak-struk.', 'namespace' => 'PrintInvoice'], function () {
             Route::get('/', 'HomeController@index')->name('index');
         });
