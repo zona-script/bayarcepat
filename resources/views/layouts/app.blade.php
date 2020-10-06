@@ -162,6 +162,8 @@
                         <u class="has-text-justified">
                             Kami bukan aplikasi untuk peminjaman uang online, bukan aplikasi jasa cicilan, bukan aplikasi investasi, bukan aplikasi p2p lending, bukan aplikasi urun dana, bukan aplikasi kredit online.
                         </u>
+                        <br>
+                        KAMI TIDAK PERNAH MEMBUAT UNDIAN DENGAN HADIAH APAPUN.
                     </p>
                 </div>
             </div>
@@ -172,20 +174,32 @@
                         <span class="icon has-text-white">
   <i class="fas fa-map-marker-alt"></i>
 </span>
-                        <span>jl. gebang wetan no.23B Gebang Putih, Sukolilo, Surabaya (60117).</span>
+                        <span>Lamongan, Indonesia</span>
+                    </p>
+                    <p>
+                        <span class="icon has-text-white">
+  <i class="fas fa-map-marker-alt"></i>
+</span>
+                        <span>Tallinn, Estonia</span>
                     </p>
                     <p>
                         <span class="icon has-text-white">
   <i class="fas fa-phone"></i>
 </span>
-                        <span>+628141414xxxx</span>
+                        <span>+628141414xxxx (Bahasa Indonesia)</span>
                     </p>
                     <p>
                         <span class="icon has-text-white">
-  <i class="fas fa-envelope"></i>
+  <i class="fas fa-phone"></i>
 </span>
-                        <span>bayarcepat@dibumi.com</span>
+                        <span>+1 853 xxxx xx (International language)</span>
                     </p>
+{{--                    <p>--}}
+{{--                        <span class="icon has-text-white">--}}
+{{--  <i class="fas fa-envelope"></i>--}}
+{{--</span>--}}
+{{--                        <span>bayarcepat@dibumi.com</span>--}}
+{{--                    </p>--}}
                 </div>
             </div>
         </div>
@@ -194,7 +208,11 @@
             <p>
                 &copy; 2020 {{ config('app.name') }}
             </p>
-            <p class="has-text-uppercase">Dibangun Dengan Sepenuh <span class="has-text-danger"><i class="fas fa-heart"></i></span> di (Lamongan) Indonesia & (Tallinn) Estonia</p>
+            <p class="has-text-uppercase">
+                Dibangun Dengan Sepenuh <span class="has-text-danger"><i class="fas fa-heart"></i></span> di (Lamongan) Indonesia & (Tallinn) Estonia
+                <br>
+                rfazulu@torbox3uiot6wchz.onion (hidden service only)
+            </p>
         </div>
     </div>
 </footer>
