@@ -43,15 +43,12 @@ Route::group(['as' => 'web.'], function () {
             Route::get('/deposit/create', 'DepositController@create')->name('deposit.create');
             Route::post('/deposit/create', 'DepositController@store')->name('deposit.store');
         });
-
-        Route::resource('/bank', 'Bank\HomeController');
-
-
-
+        
         Route::group(['prefix' => 'cetak-struk', 'as' => 'cetak-struk.', 'namespace' => 'PrintInvoice'], function () {
             Route::get('/', 'HomeController@index')->name('index');
         });
 
+        Route::resource('/bank', 'Bank\HomeController');
         Route::resource('contact', 'ContactController');
         Route::resource('refferal', 'Refferal\RefferalController')->only('index');
 

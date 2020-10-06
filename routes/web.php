@@ -10,12 +10,6 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-//
-
-//Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-//    return Inertia\Inertia::render('Dashboard');
-//})->name('dashboard');
-
 Route::group(['as' => 'web.'], function () {
     Route::get('/', 'WelcomeController@index')->name('index');
 
@@ -52,9 +46,4 @@ Route::group(['as' => 'web.'], function () {
     Route::get('/sitemap.xml', 'SitemapController@index')->name('sitemap');
 });
 
-//Auth::routes();
-//Auth::routes([
-//    'verify' => true,
-//    'register' => true
-//]);
 Route::get('/home', 'HomeController@index')->name('home');
