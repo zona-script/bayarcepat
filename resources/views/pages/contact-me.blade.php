@@ -15,24 +15,24 @@
     <div class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-6">
+                <div class="column is-6 is-offset-3">
                     <div class="box">
                         <div class="content">
                             <table>
                                 <tr>
                                     <td>Whatsapp</td>
                                     <td>:</td>
-                                    <td>085607100255</td>
+                                    <td>085607xxxxxx</td>
                                 </tr>
                                 <tr>
                                     <td>Email</td>
                                     <td>:</td>
-                                    <td>bayarcepat@dibumi.com</td>
+                                    <td>xxx@dibumi.com</td>
                                 </tr>
                                 <tr>
                                     <td>Telegram</td>
                                     <td>:</td>
-                                    <td>085607100255</td>
+                                    <td>085607xxxxxx</td>
                                 </tr>
                                 <tr>
                                     <td>Facebook</td>
@@ -48,13 +48,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="column is-6">
+            </div>
+
+            <div class="columns">
+                <div class="column is-6 is-offset-3">
                     <div class="box">
                         <div class="field">
                             <h3 class="subtitle">Surabaya</h3>
                         </div>
                         <div class="field">
-                            <p>jl. gebang wetan no 23b, Sukolilo, Surabaya.</p>
+                            <p>Segera Hadir.</p>
                         </div>
                     </div>
                     <div class="box">

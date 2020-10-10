@@ -173,6 +173,10 @@
 
 @yield('content')
 
+@if (isset($slot))
+    {{ $slot }}
+@endif
+
 @if (isset($page))
     @inertia
 @endif
