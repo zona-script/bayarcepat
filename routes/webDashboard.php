@@ -14,32 +14,46 @@ Route::group(['as' => 'web.'], function () {
         Route::post('/verified', 'DashboardController@verified')->name('verified');
 
         Route::group(['prefix' => 'send-money', 'as' => 'send-money.', 'namespace' => 'SendMoney'], function () {
-            Route::get('/', [HomeController::class, 'index'])->name('index');
-            Route::post('/', [HomeController::class, 'store'])->name('store');
+            Route::get('/', [HomeController::class, 'index'])
+                ->name('index')
+                ->middleware('option:sendmoney,1');
+            Route::post('/', [HomeController::class, 'store'])
+                ->name('store')
+                ->middleware('option:sendmoney,1');
             Route::resource('/history', 'HistoryController');
         });
 
         Route::group(['prefix' => 'prepaid', 'as' => 'prepaid.', 'namespace' => 'Prepaid'], function () {
-            Route::get('/', 'PrepaidController@index')->name('index');
+            Route::get('/', 'PrepaidController@index')
+                ->name('index')
+                ->middleware('option:prepaid,1');
             Route::get('/history', 'HistoryController@index')->name('history');
         });
 
         Route::group(['prefix' => 'postpaid', 'as' => 'postpaid.', 'namespace' => 'Postpaid'], function () {
-            Route::get('/', 'PostpaidController@index')->name('index');
+            Route::get('/', 'PostpaidController@index')
+                ->name('index')
+                ->middleware('option:postpaid,1');;
             Route::get('/history', 'HistoryController@index')->name('history');
         });
 
         Route::group(['prefix' => 'social-media-marketing', 'as' => 'social-media-marketing.', 'namespace' => 'SocialMediaMarketing'], function () {
-            Route::get('/', 'SMMController@index')->name('index');
+            Route::get('/', 'SMMController@index')
+                ->name('index')
+                ->middleware('option:smm,1');;
             Route::get('/history', 'HistoryController@index')->name('history');
         });
 
         Route::group(['prefix' => 'balance', 'as' => 'balance.', 'namespace' => 'Balance'], function () {
             Route::resource('/history', 'HistoryDepositAndWithdrawalController');
-            Route::get('/withdrawal', 'WithdrawalController@create')->name('withdrawal.create');
+            Route::get('/withdrawal', 'WithdrawalController@create')
+                ->name('withdrawal.create')
+                ->middleware('option:withdrawal,1');
             Route::post('/withdrawal', 'WithdrawalController@store')->name('withdrawal.store');
 
-            Route::get('/deposit', 'DepositController@index')->name('deposit.index');
+            Route::get('/deposit', 'DepositController@index')
+                ->name('deposit.index')
+                ->middleware('option:deposit,1');
             Route::get('/deposit/create', 'DepositController@create')->name('deposit.create');
             Route::post('/deposit/create', 'DepositController@store')->name('deposit.store');
         });
