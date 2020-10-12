@@ -17,7 +17,8 @@ class DatabaseSeeder extends Seeder
             RolesSeeder::class,
             BankSeeder::class,
             UsersTableSeeder::class,
-            BalanceSeeder::class
+            BalanceSeeder::class,
+            ProviderPanelSeeder::class
         ]);
     }
 }

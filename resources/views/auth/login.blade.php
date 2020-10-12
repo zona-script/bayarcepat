@@ -56,7 +56,7 @@
                                     <input class="input @error('email') is-danger @enderror"  name="email" type="text" placeholder="email atau username" value="{{ old('email') }}" required>
                                 </div>
                                 @error('email')
-                                <span class="invalid-feedback" role="alert">
+                                <span class="has-text-danger" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror

@@ -27,24 +27,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1fc7cadf-dd8e-4988-95f3-5be001769a75" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/errors/option.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/bayarcepat.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/bayarcepat.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Services/SMM/Adapters/Adapter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Services/SMM/Adapters/AdapterInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Services/SMM/Adapters/LolipopSMMAdapter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Services/SMM/Adapters/README.MD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Services/SMM/Factories/SMMFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Services/SMM/README.MD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/apidocs/docs/general/login.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/apidocs/docs/general/overview.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/apidocs/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/layouts/apidocs.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/DashboardController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Pages/Products/PrepaidController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Pages/Products/PrepaidController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/ProviderPanel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/ProviderPanel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/View/Components/AppLayout.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/View/Components/AppLayout.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/sanctum.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/sanctum.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_08_181517_create_provider_panel_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_08_181517_create_provider_panel_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_08_182127_create_panel_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_08_182127_create_panel_products_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/BalanceSeeder.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/BankMasterSeeder.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/BankSeeder.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/RolesSeeder.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/UsersSeeder.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/bank_master.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/contact-me.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/contact-me.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/webDashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/webDashboard.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/OptionSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/OptionSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/js/ziggy.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/js/ziggy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/membership.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/membership.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -259,19 +268,19 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\app-project\bayarcepat\app\Models" />
-      <recent name="C:\app-project\bayarcepat\app\Http\Controllers\ApiWeb" />
-      <recent name="C:\app-project\bayarcepat\resources\js\components\dashboard\SendMoney\History" />
-      <recent name="C:\app-project\bayarcepat\resources\views\layouts" />
-      <recent name="C:\app-project\bayarcepat\app" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\app-project\bayarcepat\app\Http\Controllers\Api\Products" />
       <recent name="C:\app-project\bayarcepat\app\Models" />
       <recent name="C:\app-project\bayarcepat\resources\js\Pages\Dashboard\Bank" />
       <recent name="C:\app-project\bayarcepat\app\Http\Controllers\Api" />
       <recent name="C:\app-project\bayarcepat\database\seeders" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\app-project\bayarcepat\app\Services\SMM\Adapters" />
+      <recent name="C:\app-project\bayarcepat\app\Models" />
+      <recent name="C:\app-project\bayarcepat\app\Http\Controllers\ApiWeb" />
+      <recent name="C:\app-project\bayarcepat\resources\js\components\dashboard\SendMoney\History" />
+      <recent name="C:\app-project\bayarcepat\resources\views\layouts" />
     </key>
   </component>
   <component name="RestClientSettings">
@@ -491,7 +500,8 @@
       <workItem from="1602077466271" duration="913000" />
       <workItem from="1602253384922" duration="149000" />
       <workItem from="1602257080991" duration="4756000" />
-      <workItem from="1602313098185" duration="1209000" />
+      <workItem from="1602313098185" duration="13551000" />
+      <workItem from="1602393777598" duration="10404000" />
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
@@ -524,10 +534,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="165" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1598857411283" />
-    <state x="488" y="45" key="#com.intellij.ide.util.MemberChooser" timestamp="1598806691255">
+    <state x="488" y="45" key="#com.intellij.ide.util.MemberChooser" timestamp="1602333653358">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="488" y="45" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1598806691255" />
+    <state x="488" y="45" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1602333653358" />
     <state x="363" y="99" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1596073408950">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -540,10 +550,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1596120510112" />
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1602258782228">
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1602334573348">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1602258782228" />
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1602334573348" />
     <state x="463" y="289" key="#com.jetbrains.php.lang.intentions.PhpImportClassDialog#" timestamp="1602257794755">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -564,14 +574,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="123" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1602078322035" />
-    <state x="486" y="86" key="NewPhpClassDialog" timestamp="1599995655232">
+    <state x="486" y="86" key="NewPhpClassDialog" timestamp="1602330427725">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="486" y="86" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1599995655232" />
-    <state x="517" y="287" key="NewPhpFileDialog" timestamp="1602257713813">
+    <state x="486" y="86" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1602330427725" />
+    <state x="517" y="287" key="NewPhpFileDialog" timestamp="1602410211462">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="517" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1602257713813" />
+    <state x="517" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1602410211462" />
     <state x="222" y="0" key="SettingsEditor" timestamp="1599648854276">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -592,10 +602,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1600082315961" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1601995755738">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1602503433659">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1601995755738" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1602503433659" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

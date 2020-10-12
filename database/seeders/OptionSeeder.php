@@ -26,6 +26,7 @@ class OptionSeeder extends Seeder
             ['name' => 'api', 'value' => true],
         ];
 
+
         foreach ($data as $item) {
             Option::create($item);
         }

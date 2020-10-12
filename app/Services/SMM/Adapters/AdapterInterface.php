@@ -1,14 +1,12 @@
 <?php
 
-
-namespace App\Services\SMM;
-
+namespace App\Services\SMM\Adapters;
 
 interface AdapterInterface
 {
-    public function getBalance();
     public function getProfile();
-    public function getProduct();
+    public function getServices();
+    public function syncServices();
     public function order($payload);
-    public function statusOrder();
+    public function orderStatus($payload);
 }

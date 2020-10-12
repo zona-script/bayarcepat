@@ -105,6 +105,10 @@
     </div>
 </div>
 
+@if (isset($slot))
+    {{ $slot }}
+@endif
+
 <div id="app">
     @yield('content')
 </div>

@@ -16,9 +16,6 @@ class DashboardController extends Controller
         return Inertia::render('Dashboard/Index', [
             'user' => Auth::user()
         ]);
-        $provinces = LocationEnum::provinsi();
-        $cities = LocationEnum::kabupaten();
-        return view('dashboard.index', compact('provinces', 'cities'));
     }
 
     public function update(Request $request)

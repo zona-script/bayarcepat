@@ -47,3 +47,10 @@ Route::group(['as' => 'web.'], function () {
 });
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::group(['as' => 'api-docs', 'prefix' => 'api-docs'], function () {
+    Route::get('/', function () {
+        return view('apidocs.index');
+    });
+});

@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Pages\Products;
 
 use App\Http\Controllers\Controller;
-use App\Services\Digiflazz\Buyer\Digiflazz;
 use App\Services\Digiflazz\Buyer\DigiflazzBuyer;
 use App\Services\Digiflazz\DigiflazzInterface;
 use Illuminate\Http\Request;
