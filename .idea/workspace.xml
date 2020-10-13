@@ -27,33 +27,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1fc7cadf-dd8e-4988-95f3-5be001769a75" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Services/SMM/Adapters/Adapter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Services/SMM/Adapters/AdapterInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Services/SMM/Adapters/LolipopSMMAdapter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Services/SMM/Adapters/README.MD" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Services/SMM/Factories/SMMFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Services/SMM/README.MD" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/apidocs/docs/general/login.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/apidocs/docs/general/overview.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/apidocs/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/apidocs.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/DashboardController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Pages/Products/PrepaidController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Pages/Products/PrepaidController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/ProviderPanel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/ProviderPanel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/View/Components/AppLayout.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/View/Components/AppLayout.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/sanctum.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/sanctum.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_08_181517_create_provider_panel_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_08_181517_create_provider_panel_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_08_182127_create_panel_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_08_182127_create_panel_products_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/OptionSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/OptionSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/ziggy.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/js/ziggy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/membership.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/membership.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -501,7 +476,8 @@
       <workItem from="1602253384922" duration="149000" />
       <workItem from="1602257080991" duration="4756000" />
       <workItem from="1602313098185" duration="13551000" />
-      <workItem from="1602393777598" duration="10404000" />
+      <workItem from="1602393777598" duration="11118000" />
+      <workItem from="1602583208417" duration="303000" />
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />

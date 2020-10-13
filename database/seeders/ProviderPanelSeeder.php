@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\ProviderPanel;
+use App\Services\SMM\Factories\SMMFactory;
 use Illuminate\Database\Seeder;
 
 class ProviderPanelSeeder extends Seeder
@@ -22,5 +23,7 @@ class ProviderPanelSeeder extends Seeder
             'check_status_url' => 'https://lollipop-smm.com/api/order',
             'create_order_url' => 'https://lollipop-smm.com/api/status',
         ]);
+
+        SMMFactory::make($providerPanel)->syncServices();
     }
 }
