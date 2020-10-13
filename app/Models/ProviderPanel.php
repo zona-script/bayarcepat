@@ -16,6 +16,28 @@ class ProviderPanel extends Model
 
     protected $casts = [];
 
+    /**
+     * Scope a query to only include popular users.
+     *
+     * @param  \Illuminate\Database\Eloquent\Builder  $query
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function scopeIsActive($query, $value = true)
+    {
+        return $query->isAvailable($value);
+    }
+
+    /**
+     * Scope a query to only include popular users.
+     *
+     * @param  \Illuminate\Database\Eloquent\Builder  $query
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function scopeIsAvailable($query, $value = true)
+    {
+        return $query->where('is_active', $value);
+    }
+
     public function panelProducts()
     {
         return $this->hasMany(PanelProduct::class);

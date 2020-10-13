@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api\Products;
 
 use App\Http\Controllers\Controller;
 use App\Models\PanelProduct;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
 
 class SocialMediaMarketingController extends Controller
@@ -12,6 +13,10 @@ class SocialMediaMarketingController extends Controller
     {
         $panelProducts = PanelProduct::orderBy('category', 'asc')
             ->distinct()
+            ->whereHas('providerPanel',  function (Builder $query) {
+                $query->isActive();
+            })
+            ->isAvailable()
             ->get()
             ->groupBy('category');
 

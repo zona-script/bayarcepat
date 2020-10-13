@@ -22,6 +22,7 @@ class ProviderPanelSeeder extends Seeder
             'get_services_url' => 'https://lollipop-smm.com/api/services',
             'check_status_url' => 'https://lollipop-smm.com/api/order',
             'create_order_url' => 'https://lollipop-smm.com/api/status',
+            'is_active' => true
         ]);
 
         SMMFactory::make($providerPanel)->syncServices();

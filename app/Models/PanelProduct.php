@@ -14,9 +14,31 @@ class PanelProduct extends Model
 
     protected $guarded = [];
 
+    /**
+     * Scope a query to only include popular users.
+     *
+     * @param  \Illuminate\Database\Eloquent\Builder  $query
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function scopeIsProviderAvailable($query, $value = true)
+    {
+        return $query->providerPanel->where('is_active', $value);
+    }
+
+    /**
+     * Scope a query to only include popular users.
+     *
+     * @param  \Illuminate\Database\Eloquent\Builder  $query
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function scopeIsAvailable($query, $value = true)
+    {
+        return $query->where('is_available', $value);
+    }
+
     public function providerPanel()
     {
-        return $this->hasOne(ProviderPanel::class);
+        return $this->hasOne(ProviderPanel::class, 'id', 'provider_panel_id');
     }
 
     public function setIsAvailableAttribute($value)
