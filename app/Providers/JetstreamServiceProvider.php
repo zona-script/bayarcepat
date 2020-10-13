@@ -7,6 +7,7 @@ use App\Actions\Jetstream\CreateTeam;
 use App\Actions\Jetstream\DeleteTeam;
 use App\Actions\Jetstream\DeleteUser;
 use App\Actions\Jetstream\UpdateTeamName;
+use App\Helpers\OptionHelper;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Fortify\Fortify;
 use Laravel\Jetstream\Jetstream;
@@ -34,6 +35,12 @@ class JetstreamServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->configurePermissions();
+
+        Fortify::registerView(function () {
+            if (OptionHelper::check('register', true)) {
+                return view('auth.register');
+            }
+        });
 
         Fortify::authenticateUsing(function (Request $request) {
             $user = User::where('email', $request->email)

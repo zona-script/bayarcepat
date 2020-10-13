@@ -24,6 +24,7 @@ class OptionSeeder extends Seeder
             ['name' => 'deposit', 'value' => true],
             ['name' => 'withdrawal', 'value' => true],
             ['name' => 'api', 'value' => true],
+            ['name' => 'register', 'value' => false],
         ];
 
 

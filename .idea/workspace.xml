@@ -27,8 +27,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1fc7cadf-dd8e-4988-95f3-5be001769a75" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Helpers/OptionHelper.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/auth/register-close.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Exceptions/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exceptions/Handler.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Providers/JetstreamServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/JetstreamServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/errors/option.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/errors/option.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -234,7 +238,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../catatan-pengeluaran" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/auth" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
@@ -477,7 +481,7 @@
       <workItem from="1602257080991" duration="4756000" />
       <workItem from="1602313098185" duration="13551000" />
       <workItem from="1602393777598" duration="11118000" />
-      <workItem from="1602583208417" duration="1059000" />
+      <workItem from="1602583208417" duration="2325000" />
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
@@ -518,10 +522,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="363" y="99" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1366.728@0.0.1366.728" timestamp="1596073408950" />
-    <state x="184" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1599995817967">
+    <state x="184" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1602584515187">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="184" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1599995817967" />
+    <state x="184" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1602584515187" />
     <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1596120510112">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -550,14 +554,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="123" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1602078322035" />
-    <state x="486" y="86" key="NewPhpClassDialog" timestamp="1602330427725">
+    <state x="486" y="86" key="NewPhpClassDialog" timestamp="1602584440256">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="486" y="86" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1602330427725" />
-    <state x="517" y="287" key="NewPhpFileDialog" timestamp="1602410211462">
+    <state x="486" y="86" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1602584440256" />
+    <state x="517" y="287" key="NewPhpFileDialog" timestamp="1602585135158">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="517" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1602410211462" />
+    <state x="517" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1602585135158" />
     <state x="222" y="0" key="SettingsEditor" timestamp="1599648854276">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

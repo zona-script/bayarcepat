@@ -35,6 +35,10 @@ class Handler extends ExceptionHandler
      */
     public function register()
     {
-        //
+        $this->renderable(function (OptionNotAvailableException $e, $request) {
+            return response()->view('auth.register-close', [
+
+            ], 500);
+        });
     }
 }
