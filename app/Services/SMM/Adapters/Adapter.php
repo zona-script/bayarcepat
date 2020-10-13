@@ -4,6 +4,7 @@ namespace App\Services\SMM\Adapters;
 
 use App\Models\PanelProduct;
 use Illuminate\Database\QueryException;
+use Illuminate\Http\Request;
 
 abstract class Adapter
 {
@@ -76,8 +77,10 @@ abstract class Adapter
         }
     }
 
-    public function order($payload)
+    // return harus ID
+    public function order(Request $request)
     {
+
     }
 
     public function orderStatus($payload)

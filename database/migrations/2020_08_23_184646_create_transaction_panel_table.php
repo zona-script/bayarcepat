@@ -19,16 +19,26 @@ class CreateTransactionPanelTable extends Migration
             $table->foreign('user_id')
                 ->references('id')
                 ->on('users');
-
-            $table->json('product');
+            $table->unsignedBigInteger('product_id')->nullable();
+            $table->json('product_temporary');
             $table->string('price');
-            $table->text('target')->nullable();
-            $table->unsignedBigInteger('quantity')->nullable();
-            $table->text('custom_comments')->nullable();
-            $table->text('custom_link')->nullable();
+            $table->unsignedBigInteger('quantity')
+                ->nullable();
 
-            $table->json('status');
-            $table->json('callback')->nullable();
+            $table->text('target')
+                ->nullable();
+            $table->text('custom_comments')
+                ->nullable();
+            $table->text('custom_link')
+                ->nullable();
+
+            // pending/processing/success/error/partial
+            // diupdate setiap mendapatkan status
+            $table->string('status')
+                ->default(0);
+
+            $table->json('callback')
+                ->nullable();
 
             $table->timestamps();
             $table->softDeletes();

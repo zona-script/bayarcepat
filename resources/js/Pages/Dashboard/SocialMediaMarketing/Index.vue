@@ -213,7 +213,7 @@ export default {
             this.showFormIsActive = false
         },
         tableColumnStatus(rowObj) {
-            if (rowObj.active) {
+            if (rowObj.is_available) {
                 return '<span class="tag is-primary">tersedia</span>'
             }
 

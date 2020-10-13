@@ -109,7 +109,7 @@ class PrepaidController extends Controller
         } catch (\Exception $exception) {
             $balance = Balances::create([
                 'user_id' => Auth::id(),
-                'type' => Balance::OUT,
+                'type' => Balance::IN,
                 'amount' => $product['price'],
                 'title' => \App\Enums\BalanceTitle::TRANSACTION_REFUND_PREPAID,
                 'trx_id' => $transactionPrepaid->id,

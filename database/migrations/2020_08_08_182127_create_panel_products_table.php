@@ -30,7 +30,7 @@ class CreatePanelProductsTable extends Migration
             $table->json('more_data')->nullable();
             $table->text('information')->nullable();
 
-            $table->boolean('is_available')->default(false);
+            $table->boolean('is_available')->default(true);
             $table->unique(['provider_panel_id', 'service_id']);
 
             $table->timestamps();

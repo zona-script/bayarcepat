@@ -1,6 +1,19 @@
+
+
+
+contohnya gini
+
+$orderID = SMMFactory::make($smmProvider)
+->order($payload);
+
+(new TransactionSMM($smmProvider, $product, $orderID))
+->createTransaction();
+
+
+
+----
 Design pattern yang digunakan adalah
 strategy
-
 
 ````
 class Storage {

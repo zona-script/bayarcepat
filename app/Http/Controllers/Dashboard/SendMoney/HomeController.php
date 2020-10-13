@@ -23,7 +23,6 @@ class HomeController extends Controller
     public function index()
     {
         return Inertia::render('Dashboard/Sendmoney/Index');
-        return view('dashboard.send-money.index');
     }
 
     /**

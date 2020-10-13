@@ -21,7 +21,7 @@ class TransactionFactory
 
     }
 
-    public function createSMM($user, $productCode, $customerNumber)
+    public function createSMM($user, $product, $customerNumber)
     {
 
     }
