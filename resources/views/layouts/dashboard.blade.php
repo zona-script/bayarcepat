@@ -23,8 +23,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
     <!--Core CSS -->
-{{--    <link rel="stylesheet" href="{{ asset('css/app.css') }}">--}}
-    <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
+    <link rel="stylesheet" href="{{ asset('sass/app.css') }}">
     @stack('stack-head')
     <style>
         body {
@@ -37,11 +36,6 @@
             border: solid #c9cbcd 1px;
         }
     </style>
-
-    <!-- use the latest vue-select release -->
-    <script defer src="https://unpkg.com/vue-select@latest"></script>
-    <link rel="stylesheet" href="https://unpkg.com/vue-select@latest/dist/vue-select.css">
-
 </head>
 <body class="is-fullwidth">
 <div class="navbar is-white is-fixed-top" role="navigation" aria-label="main navigation">

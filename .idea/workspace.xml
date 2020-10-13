@@ -27,11 +27,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1fc7cadf-dd8e-4988-95f3-5be001769a75" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/Products/SocialMediaMarketingController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/Products/SocialMediaMarketingController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/PanelProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/PanelProduct.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/ProviderPanel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/ProviderPanel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/dashboard.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/dashboard.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/dashboard.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -480,7 +478,7 @@
       <workItem from="1602257080991" duration="4756000" />
       <workItem from="1602313098185" duration="13551000" />
       <workItem from="1602393777598" duration="11118000" />
-      <workItem from="1602583208417" duration="6423000" />
+      <workItem from="1602583208417" duration="7000000" />
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
