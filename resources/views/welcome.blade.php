@@ -28,6 +28,8 @@
         </div>
     </div>
 
+    <x-bulma.level></x-bulma.level>
+
     <div class="hero is-medium is-light is-fullwidth" style="background: url('{{ asset('images/app-footer.svg') }}'); background-repeat: no-repeat; background-position: bottom">
         <div class="hero-body">
             <div class="columns">

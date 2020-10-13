@@ -247,19 +247,19 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\app-project\bayarcepat\app\Http\Controllers\Api\Products" />
-      <recent name="C:\app-project\bayarcepat\app\Models" />
-      <recent name="C:\app-project\bayarcepat\resources\js\Pages\Dashboard\Bank" />
-      <recent name="C:\app-project\bayarcepat\app\Http\Controllers\Api" />
-      <recent name="C:\app-project\bayarcepat\database\seeders" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\app-project\bayarcepat\app\Services\SMM\Adapters" />
       <recent name="C:\app-project\bayarcepat\app\Models" />
       <recent name="C:\app-project\bayarcepat\app\Http\Controllers\ApiWeb" />
       <recent name="C:\app-project\bayarcepat\resources\js\components\dashboard\SendMoney\History" />
       <recent name="C:\app-project\bayarcepat\resources\views\layouts" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\app-project\bayarcepat\resources\views\auth" />
+      <recent name="C:\app-project\bayarcepat\app\Http\Controllers\Api\Products" />
+      <recent name="C:\app-project\bayarcepat\app\Models" />
+      <recent name="C:\app-project\bayarcepat\resources\js\Pages\Dashboard\Bank" />
+      <recent name="C:\app-project\bayarcepat\app\Http\Controllers\Api" />
     </key>
   </component>
   <component name="RestClientSettings">
