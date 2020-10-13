@@ -37,6 +37,11 @@
             border: solid #c9cbcd 1px;
         }
     </style>
+
+    <!-- use the latest vue-select release -->
+    <script defer src="https://unpkg.com/vue-select@latest"></script>
+    <link rel="stylesheet" href="https://unpkg.com/vue-select@latest/dist/vue-select.css">
+
 </head>
 <body class="is-fullwidth">
 <div class="navbar is-white is-fixed-top" role="navigation" aria-label="main navigation">

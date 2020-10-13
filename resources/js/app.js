@@ -42,5 +42,3 @@ new Vue({
             },
         }),
 }).$mount(app);
-
-// console.log('we are hiring *^_^*')
