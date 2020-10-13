@@ -67047,6 +67047,11 @@ var Ziggy = {
       "methods": ["GET", "HEAD"],
       "domain": null
     },
+    "api-docs": {
+      "uri": "api-docs",
+      "methods": ["GET", "HEAD"],
+      "domain": null
+    },
     "web.dashboard.index": {
       "uri": "dashboard",
       "methods": ["GET", "HEAD"],
@@ -67543,7 +67548,7 @@ var Ziggy = {
       "domain": null
     },
     "api.products.social-media-marketing.index": {
-      "uri": "api\/products\/postpaid\/social-media-marketing",
+      "uri": "api\/products\/social-media-marketing",
       "methods": ["GET", "HEAD"],
       "domain": null
     },
@@ -67738,9 +67743,9 @@ var Ziggy = {
       "domain": null
     }
   },
-  baseUrl: 'https://bayarcepat.test/',
+  baseUrl: 'https://bayarcepat.com/',
   baseProtocol: 'https',
-  baseDomain: 'bayarcepat.test',
+  baseDomain: 'bayarcepat.com',
   basePort: false,
   defaultParameters: []
 };
