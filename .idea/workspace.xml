@@ -27,27 +27,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1fc7cadf-dd8e-4988-95f3-5be001769a75" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Enums/BalanceTitle.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Enums/BalanceTitle.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Enums/TransactionPanelEnum.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Enums/TransactionPanelEnum.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/Products/PrepaidController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/Products/PrepaidController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/Products/SocialMediaMarketingController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/Products/SocialMediaMarketingController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/SendMoney/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/SendMoney/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/TransactionPanel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/TransactionPanel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/SMM/Adapters/Adapter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/SMM/Adapters/Adapter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/SMM/Adapters/AdapterInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/SMM/Adapters/AdapterInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/SMM/Adapters/LolipopSMMAdapter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/SMM/Adapters/LolipopSMMAdapter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/SMM/README.MD" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/SMM/README.MD" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/Transactions/TransactionFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Transactions/TransactionFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_08_182127_create_panel_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_08_182127_create_panel_products_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_23_184646_create_transaction_panel_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_23_184646_create_transaction_panel_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/dashboard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js.LICENSE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js.LICENSE.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/sass/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/sass/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/Pages/Dashboard/SocialMediaMarketing/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/Dashboard/SocialMediaMarketing/Index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -496,7 +476,7 @@
       <workItem from="1602257080991" duration="4756000" />
       <workItem from="1602313098185" duration="13551000" />
       <workItem from="1602393777598" duration="11118000" />
-      <workItem from="1602583208417" duration="18919000" />
+      <workItem from="1602583208417" duration="19298000" />
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
