@@ -42,8 +42,8 @@ Route::group(['as' => 'api.', 'middleware' => 'auth:sanctum'], function () {
             Route::get('/history', 'HistoryPostpaidController@index')->name('history.index');
         });
 
-        Route::group(['as' => 'social-media-marketing.', 'prefix' => 'postpaid'], function () {
-            Route::get('/social-media-marketing', 'SocialMediaMarketingController@index')->name('index');
+        Route::group(['as' => 'social-media-marketing.', 'prefix' => 'social-media-marketing'], function () {
+            Route::get('/', 'SocialMediaMarketingController@index')->name('index');
         });
     });
 
@@ -51,6 +51,7 @@ Route::group(['as' => 'api.', 'middleware' => 'auth:sanctum'], function () {
     Route::resource('/bank-master', 'Api\BankMasterController');
 
     //@endlive
+
     Route::group(['as'=>'balance.', 'prefix' => 'balance', 'namespace' => 'Api\Balance'], function () {
         Route::resource('/deposit', 'DepositController');
         Route::resource('/withdrawal', 'WithdrawalController');
