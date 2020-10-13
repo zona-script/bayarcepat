@@ -26,11 +26,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1fc7cadf-dd8e-4988-95f3-5be001769a75" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/dashboard.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/dashboard.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/dashboard.blade.php" afterDir="false" />
-    </list>
+    <list default="true" id="1fc7cadf-dd8e-4988-95f3-5be001769a75" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -478,7 +474,7 @@
       <workItem from="1602257080991" duration="4756000" />
       <workItem from="1602313098185" duration="13551000" />
       <workItem from="1602393777598" duration="11118000" />
-      <workItem from="1602583208417" duration="7000000" />
+      <workItem from="1602583208417" duration="7396000" />
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
